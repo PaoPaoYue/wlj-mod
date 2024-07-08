@@ -1,0 +1,72 @@
+[
+  {
+    "ID": "Wlj:Worker",
+    "NAMES": [
+      "员工"
+    ],
+    "DESCRIPTION": "不会因为洗牌自动回到抽牌堆（摸了）。"
+  },
+  {
+    "ID": "Wlj:Layoff",
+    "NAMES": [
+      "优化"
+    ],
+    "DESCRIPTION": "选择并 #y消耗 弃牌堆一定数量的牌。每 #y消耗 1张牌，若是 #y员工 则将其复制加入抽牌堆，否则将 #y贱民 加入抽牌堆；然后抽1张牌。"
+  },
+  {
+    "ID": "Wlj:Pay",
+    "NAMES": [
+      "支付"
+    ],
+    "DESCRIPTION": "必须失去一定 #y金币 才可以获得对应效果。"
+  },
+  {
+    "ID": "Wlj:Lapse",
+    "NAMES": [
+      "叛教"
+    ],
+    "DESCRIPTION": "使用与上一张带有此关键词的不同牌名的牌时， 优化 #b3 。"
+  },
+  {
+    "ID": "Wlj:Avatar",
+    "NAMES": [
+      "化身"
+    ],
+    "DESCRIPTION": "卡牌化身为传奇角色，进场获得一定临时生命值和特殊效果。使用其他化身或临时生命值耗尽时离场并将卡牌置入弃牌堆。"
+  },
+  {
+    "ID": "Wlj:Sun Knight",
+    "NAMES": [
+      "太阳骑士"
+    ],
+    "DESCRIPTION": "进场时将手牌中的 #y员工 变为 #y优秀员工。"
+  },
+  {
+    "ID": "Wlj:Zhaoritian",
+    "NAMES": [
+      "赵日天号"
+    ],
+    "DESCRIPTION": "受到伤害时变为 #y本体 。"
+  },
+  {
+    "ID": "Wlj:Dick",
+    "NAMES": [
+      "本体"
+    ],
+    "DESCRIPTION": "进场时获得1层 #y无实体 。"
+  },
+  {
+    "ID": "Wlj:Afei",
+    "NAMES": [
+      "光溜溜的阿飞"
+    ],
+    "DESCRIPTION": "每受到一次伤害永久增加%d攻击伤害。"
+  },
+  {
+    "ID": "Wlj:Xiangdangdang",
+    "NAMES": [
+      "响当当"
+    ],
+    "DESCRIPTION": "进场时获得%d张邀为同道且太吾相关的手牌能量消耗-1。"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "Wlj:LayoffAction": {
+    "TEXT": [
+      "选择并优化至多一张牌。",
+      "选择并优化至多 ",
+      " 张牌。"
+    ]
+  },
+  "Wlj:ExhaustDiscardedWorkerAction": {
+    "TEXT": [
+      "选择并消耗一张牌。",
+      "选择并消耗 ",
+      " 张牌。"
+    ]
+  },
+  "Wlj:TransformDiscardedWorkerAction": {
+    "TEXT": [
+      "选择并变化一张牌。",
+      "选择并变化 ",
+      " 张牌。"
+    ]
+  },
+  "Wlj:WorkerTips": {
+    "TEXT": [
+      "员工管理",
+      " #y优秀员工 提供 #b",
+      " 额外攻击伤害。 NL  #y贱民 提供 #b",
+      " 回合结束 #y格挡 。 NL #y囚犯 提供 #b",
+      " 战斗结束 #y金币 。"
+    ]
+  }
+}
