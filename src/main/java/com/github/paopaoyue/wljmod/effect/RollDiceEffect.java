@@ -63,7 +63,7 @@ public class RollDiceEffect extends AbstractGameEffect {
         this.duration -= Gdx.graphics.getDeltaTime();
         if (this.duration < 0.8F && !soundPlayed) {
             soundPlayed = true;
-            CardCrawlGame.sound.play("ONMYOJI:ROLL_DICE");
+            CardCrawlGame.sound.play("Wlj:ROLL_DICE");
         }
 
         if (this.duration > 0.2F) {
