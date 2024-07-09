@@ -46,9 +46,11 @@ public class Afei extends AbstractAvatar {
     public void onDamaged(int damage, DamageInfo.DamageType damageType) {
         if (damageType != DamageInfo.DamageType.HP_LOSS && damage > 0) {
             this.card.baseDamage += incrementAmount;
+            this.card.misc += incrementAmount;
             for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
                 if (card.uuid.equals(this.card.uuid)) {
                     card.baseDamage += incrementAmount;
+                    card.misc += incrementAmount;
                 }
             }
         }

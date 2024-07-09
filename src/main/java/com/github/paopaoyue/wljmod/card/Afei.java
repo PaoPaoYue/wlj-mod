@@ -21,6 +21,7 @@ public class Afei extends AbstractAvatarCard {
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ENEMY,
                 new com.github.paopaoyue.wljmod.component.Afei(), 3);
         this.baseDamage = 3;
+        this.misc = this.baseDamage;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }

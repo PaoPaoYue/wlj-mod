@@ -162,7 +162,7 @@ public class Wlj extends CustomPlayer {
     @Override
     public List<com.megacrit.cardcrawl.cutscenes.CutscenePanel> getCutscenePanels() {
         List<com.megacrit.cardcrawl.cutscenes.CutscenePanel> panels = new ArrayList<>();
-        panels.add(new CutscenePanel("image/scene/true_ending.png", "WLJ:TRUE_ENDING"));
+        panels.add(new CutscenePanel("image/scene/true_ending.png", "Wlj:TRUE_ENDING"));
         return panels;
     }
 

@@ -23,7 +23,7 @@ public class Invite extends CustomCard {
 
     public Invite() {
         super(ID, cardStrings.NAME, Util.getImagePath(""), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
+                AbstractCardEnum.WLJ_COLOR, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.baseDamage = 2;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;

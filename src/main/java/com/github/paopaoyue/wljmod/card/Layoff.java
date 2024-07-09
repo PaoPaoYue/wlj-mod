@@ -22,7 +22,7 @@ public class Layoff extends CustomCard {
 
     public Layoff() {
         super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.BASIC, CardTarget.ENEMY);
+                AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 9;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
