@@ -17,7 +17,7 @@ public class Xiangdangdang extends AbstractAvatarCard {
     }
 
     public Xiangdangdang() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 2, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF,
                 new com.github.paopaoyue.wljmod.component.Xiangdangdang(), 2);
         this.cardsToPreview = new Love();

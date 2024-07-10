@@ -28,7 +28,7 @@ public class Wand extends CustomCard {
     }
 
     public Wand(int timesUpgraded) {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.timesUpgraded = timesUpgraded;
         this.upgraded = timesUpgraded > 0;
@@ -74,33 +74,39 @@ public class Wand extends CustomCard {
         switch (timesUpgraded) {
             case 0:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[0];
+                this.textureImg = "image/card/wand.png";
                 break;
             case 1:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[1];
+                this.textureImg = "image/card/wand_l.png";
                 break;
             case 2:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[2];
+                this.textureImg = "image/card/wand_xl.png";
                 break;
             case 3:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[3];
+                this.textureImg = "image/card/wand_xxl.png";
                 break;
             case 4:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[4];
+                this.textureImg = "image/card/wand_xxxl.png";
                 break;
             default:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[4] + "+" + (this.timesUpgraded - 4);
+                this.textureImg = "image/card/wand_xxxl.png";
                 break;
         }
+        System.out.println(this.timesUpgraded + " " + this.name + " " + this.textureImg);
         this.initializeTitle();
         this.initializeDescription();
-        // TODO: add img for different wands
-        this.textureImg = Util.getImagePath("");
         if (this.textureImg != null) {
             this.loadCardImage(this.textureImg);
         }
     }
 
     public AbstractCard makeCopy() {
-        return new Wand(this.timesUpgraded);
+        return new Wand();
     }
+
 }

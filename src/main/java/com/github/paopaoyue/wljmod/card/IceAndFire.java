@@ -18,7 +18,7 @@ import com.megacrit.cardcrawl.vfx.combat.BlizzardEffect;
 import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 
 public class IceAndFire extends CustomCard {
-    public static final String ID = "Wlj:Ice and Fire";
+    public static final String ID = "Wlj:Ice And Fire";
     private static final CardStrings cardStrings;
 
     static {
@@ -26,7 +26,7 @@ public class IceAndFire extends CustomCard {
     }
 
     public IceAndFire() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 2, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 11;
     }

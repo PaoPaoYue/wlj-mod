@@ -18,7 +18,7 @@ public class Joy extends CustomCard {
     }
 
     public Joy() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 2, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
     }

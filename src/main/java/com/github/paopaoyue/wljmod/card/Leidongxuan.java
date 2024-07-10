@@ -18,7 +18,7 @@ public class Leidongxuan extends AbstractWorkerCard {
     }
 
     public Leidongxuan() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 2, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 5;
         this.baseMagicNumber = 1;

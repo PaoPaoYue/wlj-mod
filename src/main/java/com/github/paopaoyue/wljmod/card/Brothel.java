@@ -21,7 +21,7 @@ public class Brothel extends CustomCard {
     }
 
     public Brothel() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.POWER,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.cardsToPreview = new Performer();
         this.tags.add(CardTagEnum.TAIWU);

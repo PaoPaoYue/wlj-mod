@@ -21,7 +21,7 @@ public class FutureTech extends CustomCard {
     }
 
     public FutureTech() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 2, cardStrings.DESCRIPTION, CardType.POWER,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
     }
 

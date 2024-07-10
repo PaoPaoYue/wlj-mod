@@ -27,7 +27,7 @@ public class Phoenix extends CustomCard {
     }
 
     public Phoenix(int level) {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1 << level, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1 << level, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = (1 << level) * 10;
         this.baseMagicNumber = 1;

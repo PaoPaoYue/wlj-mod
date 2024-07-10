@@ -17,7 +17,7 @@ public class Afei extends AbstractAvatarCard {
     }
 
     public Afei() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ENEMY,
                 new com.github.paopaoyue.wljmod.component.Afei(), 3);
         this.baseDamage = 3;

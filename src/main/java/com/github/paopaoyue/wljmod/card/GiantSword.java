@@ -22,9 +22,9 @@ public class GiantSword extends CustomCard {
     }
 
     public GiantSword() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 5, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 5, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = 28;
+        this.baseDamage = 32;
     }
 
     public void triggerOnCardPlayed(final AbstractCard c) {

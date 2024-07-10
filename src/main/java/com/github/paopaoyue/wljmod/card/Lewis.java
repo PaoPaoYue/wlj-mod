@@ -20,7 +20,7 @@ public class Lewis extends CustomCard {
     }
 
     public Lewis() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 6;
         this.baseMagicNumber = 3;

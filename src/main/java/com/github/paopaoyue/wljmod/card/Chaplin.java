@@ -20,7 +20,7 @@ public class Chaplin extends CustomCard {
     }
 
     public Chaplin() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.POWER,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 6;
         this.magicNumber = this.baseMagicNumber;

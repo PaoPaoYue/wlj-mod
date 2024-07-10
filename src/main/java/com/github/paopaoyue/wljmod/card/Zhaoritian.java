@@ -17,7 +17,7 @@ public class Zhaoritian extends AbstractAvatarCard {
     }
 
     public Zhaoritian() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 3, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 3, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF,
                 new com.github.paopaoyue.wljmod.component.Zhaoritian(), 10);
         this.cardsToPreview = new Dick();

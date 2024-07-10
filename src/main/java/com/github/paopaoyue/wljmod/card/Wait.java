@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class Wait extends CustomCard {
     public static final String ID = "Wlj:Wait";
@@ -19,7 +20,7 @@ public class Wait extends CustomCard {
     }
 
     public Wait() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), -1, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), -1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 5;
     }
@@ -32,6 +33,7 @@ public class Wait extends CustomCard {
                 }
             }
         }
+        p.energy.use(EnergyPanel.totalCount);
     }
 
     public void upgrade() {

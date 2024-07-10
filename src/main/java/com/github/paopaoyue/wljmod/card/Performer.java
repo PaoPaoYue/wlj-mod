@@ -19,7 +19,7 @@ public class Performer extends AbstractWorkerCard {
     }
 
     public Performer() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.baseDamage = 5;
         this.baseMagicNumber = 1;

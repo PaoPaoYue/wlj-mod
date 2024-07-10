@@ -23,7 +23,7 @@ public class Glory extends CustomCard {
     }
 
     public Glory() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 9;
         this.baseMagicNumber = 2;

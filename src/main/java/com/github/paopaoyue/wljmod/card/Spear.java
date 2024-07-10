@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 
 public class Spear extends CustomCard {
@@ -31,7 +32,7 @@ public class Spear extends CustomCard {
     }
 
     public Spear(int timesUpgraded) {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         if (timesUpgraded < UPDATE_LIMIT) {
             this.baseDamage = 8;
@@ -62,6 +63,7 @@ public class Spear extends CustomCard {
                 this.addToBot(new VFXAction(new WhirlwindEffect(), 0.0f));
                 this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, true));
             }
+            p.energy.use(EnergyPanel.totalCount);
         }
     }
 

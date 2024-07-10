@@ -21,7 +21,7 @@ public class Keel extends AbstractWorkerCard {
     }
 
     public Keel() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 6;
     }

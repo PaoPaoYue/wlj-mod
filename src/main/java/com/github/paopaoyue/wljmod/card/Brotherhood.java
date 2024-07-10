@@ -21,7 +21,7 @@ public class Brotherhood extends CustomCard {
     }
 
     public Brotherhood() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;

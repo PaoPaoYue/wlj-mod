@@ -18,7 +18,7 @@ public class Spaceship extends CustomCard {
     }
 
     public Spaceship() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 3, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 3, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;

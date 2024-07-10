@@ -20,7 +20,7 @@ public class Capitalist extends CustomCard {
     }
 
     public Capitalist() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 3, cardStrings.DESCRIPTION, CardType.POWER,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 3, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
     }
 

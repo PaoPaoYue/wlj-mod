@@ -17,7 +17,7 @@ public class SunKnight extends AbstractAvatarCard {
     }
 
     public SunKnight() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF,
                 new com.github.paopaoyue.wljmod.component.SunKnight(), 3);
     }

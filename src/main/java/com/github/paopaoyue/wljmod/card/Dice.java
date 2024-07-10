@@ -26,11 +26,10 @@ public class Dice extends CustomCard {
     }
 
     public Dice() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), -1, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), -1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        this.cardsToPreview = new Prisoner();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -43,6 +42,7 @@ public class Dice extends CustomCard {
             this.addToBot(new VFXAction((new RainingGoldEffect(5 * this.energyOnUse, true))));
             this.addToBot(new GainGoldAction(5 * this.energyOnUse));
         }
+        p.energy.use(EnergyPanel.totalCount);
     }
 
     public void applyPowers() {

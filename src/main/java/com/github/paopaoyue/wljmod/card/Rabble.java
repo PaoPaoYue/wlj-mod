@@ -18,7 +18,7 @@ public class Rabble extends AbstractWorkerCard {
     }
 
     public Rabble() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 0, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.SPECIAL, CardTarget.SELF);
         this.baseBlock = 4;
         this.baseMagicNumber = 2;

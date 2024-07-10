@@ -33,7 +33,7 @@ public class Sake extends CustomCard {
     }
 
     public Sake() {
-        super(ID, cardStrings.NAME, Util.getImagePath(""), 2, cardStrings.DESCRIPTION, CardType.SKILL,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = 8;
         this.magicNumber = this.baseMagicNumber;
