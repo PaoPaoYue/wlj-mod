@@ -21,7 +21,7 @@ public class JuVillage extends CustomCard {
     public JuVillage() {
         super(ID, cardStrings.NAME, Util.getImagePath(""), 1, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 6;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Rabble();
     }

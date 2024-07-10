@@ -7,7 +7,7 @@ public class LapseAction extends AbstractGameAction {
 
     private static final int LAYOFF_AMOUNT = 3;
 
-    private static AbstractCard lastLapseCard;
+    public static AbstractCard lastLapseCard;
 
     private final AbstractCard card;
 

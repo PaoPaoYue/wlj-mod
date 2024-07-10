@@ -45,7 +45,7 @@
     "UPGRADE_DESCRIPTION": "造成 !D! 伤害，获得 !M! 名 *贱民 。"
   },
   "Wlj:Alarm": {
-    "NAME": "敲响警钟",
+    "NAME": "警钟长鸣",
     "DESCRIPTION": " 优化 !M! ，本回合 优化 效果增加1。"
   },
   "Wlj:Poisoned Arrow": {
@@ -116,7 +116,7 @@
     "DESCRIPTION": "抽到时将一张复制加入手牌, 造成 !D! 伤害， 叛教 。 消耗 。"
   },
   "Wlj:Crab": {
-    "NAME": "麻辣十三香",
+    "NAME": "蒜蓉麻辣十三香",
     "DESCRIPTION": " 员工 。造成 !D! 伤害，被 消耗 时获得 [E] [E] 。",
     "UPGRADE_DESCRIPTION": " 员工 。造成 !D! 伤害，被 消耗 时获得 [E] [E] [E] 。"
   },
@@ -168,7 +168,7 @@
   },
   "Wlj:Ju Village": {
     "NAME": "菊家村",
-    "DESCRIPTION": "回合结束时繁殖弃牌堆内的 *贱民 !M! 倍。"
+    "DESCRIPTION": "回合开始时繁殖弃牌堆内的 *贱民 一倍 (至多新增 !M! 名)。"
   },
   "Wlj:Iga": {
     "NAME": "伊贺流大爆弹",
@@ -270,13 +270,13 @@
   },
   "Wlj:Wand": {
     "NAME": "小鸡腿",
-    "DESCRIPTION": "造成 !D! 伤害，叛教 。",
+    "DESCRIPTION": "造成 !D! 伤害， 叛教 。",
     "EXTENDED_DESCRIPTION": [
       "小鸡腿",
-      "中鸡腿",
       "大鸡腿",
       "巨鸡腿",
-      "超级黄金鸡腿"
+      "超级鸡腿",
+      "黄金超级鸡腿"
     ]
   },
   "Wlj:Sake": {
@@ -347,7 +347,7 @@
   "Wlj:Clubhouse": {
     "NAME": "飞哥瑜伽会所",
     "DESCRIPTION": "回合结束时，失去所有 荆棘 ，然后获得等同于弃牌堆中员工数量的 荆棘 。",
-    "UPGRADE_DESCRIPTION": "回合结束时，失去所有 荆棘 ，然后获得等同于弃牌堆中员工数量2倍的 荆棘 。"
+    "UPGRADE_DESCRIPTION": " 固有 。 回合结束时，失去所有 荆棘 ，然后获得等同于弃牌堆中员工数量的 荆棘 。"
   },
   "Wlj:Moon Singer": {
     "NAME": "月亮歌姬",

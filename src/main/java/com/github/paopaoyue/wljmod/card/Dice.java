@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.RollDiceAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,7 +40,7 @@ public class Dice extends CustomCard {
         AbstractGameAction rollDiceAction = new RollDiceAction();
         this.addToBot(rollDiceAction);
         if (rollDiceAction.amount >= this.magicNumber) {
-            AbstractDungeon.effectList.add(new RainingGoldEffect(5 * this.energyOnUse, true));
+            this.addToBot(new VFXAction((new RainingGoldEffect(5 * this.energyOnUse, true))));
             this.addToBot(new GainGoldAction(5 * this.energyOnUse));
         }
     }

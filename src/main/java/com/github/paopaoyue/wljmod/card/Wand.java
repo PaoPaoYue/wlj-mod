@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.WallopEffect;
@@ -60,6 +61,13 @@ public class Wand extends CustomCard {
         this.upgradeBaseCost(this.timesUpgraded);
         this.upgradeDamage(6 + this.timesUpgraded);
         this.configureNameAndImage();
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (LapseAction.lastLapseCard != null && !LapseAction.lastLapseCard.name.equals(this.name)) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     private void configureNameAndImage() {

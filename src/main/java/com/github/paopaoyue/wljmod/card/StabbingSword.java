@@ -37,6 +37,13 @@ public class StabbingSword extends CustomCard {
         this.addToTop(new MakeTempCardInHandAction(this.makeStatEquivalentCopy()));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        if (LapseAction.lastLapseCard != null && !LapseAction.lastLapseCard.name.equals(this.name)) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();

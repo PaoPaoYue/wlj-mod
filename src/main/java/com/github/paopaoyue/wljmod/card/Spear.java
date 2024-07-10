@@ -70,6 +70,13 @@ public class Spear extends CustomCard {
         return this.timesUpgraded < UPDATE_LIMIT;
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        if (LapseAction.lastLapseCard != null && !LapseAction.lastLapseCard.name.equals(this.name)) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
     public void upgrade() {
         if (!canUpgrade()) return;
         ++this.timesUpgraded;
