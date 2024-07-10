@@ -307,7 +307,7 @@
   },
   "Wlj:Xiangdangdang": {
     "NAME": "响当当",
-    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，获得 !M! 张 *倾诉爱意 且太吾相关的手牌能量消耗-1。"
+    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，获得 !M! 张 *倾诉爱意 ，太吾相关的牌能量消耗-1。"
   },
   "Wlj:Retard": {
     "NAME": "智商高达50",
@@ -333,7 +333,7 @@
   },
   "Wlj:Sun Knight": {
     "NAME": "太阳骑士",
-    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为 *优秀员工。"
+    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为随机 叛教 牌， 叛教 时获得 [E] 。"
   },
   "Wlj:Capitalist": {
     "NAME": "资本家形态",

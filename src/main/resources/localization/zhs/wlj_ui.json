@@ -15,8 +15,8 @@
   },
   "Wlj:TransformDiscardedWorkerAction": {
     "TEXT": [
-      "选择并变化一张牌。",
-      "选择并变化 ",
+      "选择并变化至多一张牌。",
+      "选择并变化至多 ",
       " 张牌。"
     ]
   },

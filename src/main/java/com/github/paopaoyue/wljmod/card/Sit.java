@@ -28,7 +28,7 @@ public class Sit extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new TransformDiscardedWorkerAction(this.magicNumber, this.cardsToPreview));
+        this.addToBot(new TransformDiscardedWorkerAction(this.magicNumber, this.cardsToPreview, true));
     }
 
 

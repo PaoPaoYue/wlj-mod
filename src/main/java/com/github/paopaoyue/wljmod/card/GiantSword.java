@@ -36,7 +36,10 @@ public class GiantSword extends CustomCard {
     @Override
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();
-        this.setCostForTurn(this.cost - WljMod.workerManager.getTotalWorkerPlayedThisTurn());
+        int newCost = this.cost - WljMod.workerManager.getTotalWorkerPlayedThisTurn();
+        if (this.costForTurn > this.cost - newCost) {
+            this.setCostForTurn(newCost);
+        }
     }
 
     @Override

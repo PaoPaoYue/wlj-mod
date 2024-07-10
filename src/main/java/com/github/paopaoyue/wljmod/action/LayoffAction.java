@@ -2,11 +2,13 @@ package com.github.paopaoyue.wljmod.action;
 
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.*;
+import com.github.paopaoyue.wljmod.component.SunKnight;
 import com.github.paopaoyue.wljmod.effect.ShowCardAndExhaustEffect;
 import com.github.paopaoyue.wljmod.power.AlarmPower;
 import com.github.paopaoyue.wljmod.power.PrisonPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -131,6 +133,9 @@ public class LayoffAction extends AbstractGameAction {
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();
+            if (WljMod.avatarManager.getCurrentAvatar() instanceof SunKnight) {
+                AbstractDungeon.actionManager.addToTop(new GainEnergyAction(1));
+            }
             AbstractDungeon.actionManager.addToTop(new DrawCardAction(selectedCards.size()));
 
             this.isDone = true;

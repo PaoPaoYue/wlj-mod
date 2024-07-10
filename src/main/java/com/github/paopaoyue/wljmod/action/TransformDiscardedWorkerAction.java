@@ -20,17 +20,18 @@ public class TransformDiscardedWorkerAction extends AbstractGameAction {
     }
 
     private AbstractCard targetCard;
-
+    private boolean anyNumber;
     private int handAmount;
     private int discardAmount;
 
-    public TransformDiscardedWorkerAction(int amount, AbstractCard targetCard) {
+    public TransformDiscardedWorkerAction(int amount, AbstractCard targetCard, boolean anyNumber) {
         this.actionType = ActionType.CARD_MANIPULATION;
         final float action_DUR_FAST = Settings.ACTION_DUR_FAST;
         this.startDuration = action_DUR_FAST;
         this.duration = action_DUR_FAST;
         this.amount = amount;
         this.targetCard = targetCard;
+        this.anyNumber = anyNumber;
     }
 
     @Override
@@ -91,9 +92,9 @@ public class TransformDiscardedWorkerAction extends AbstractGameAction {
             handAmount -= discardAmount;
         }
         if (this.amount == 1) {
-            AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, TEXT[0], false);
+            AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, anyNumber, TEXT[0]);
         } else {
-            AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, TEXT[1] + this.amount + TEXT[2], false);
+            AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, anyNumber, TEXT[1] + this.amount + TEXT[2]);
         }
         this.tickDuration();
     }
