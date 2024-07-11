@@ -20,7 +20,7 @@ public class Sts extends CustomCard {
     public Sts() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
         this.selfRetain = true;
         this.exhaust = true;
