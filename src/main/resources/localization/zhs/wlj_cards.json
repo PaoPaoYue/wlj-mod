@@ -91,7 +91,7 @@
   },
   "Wlj:Box": {
     "NAME": "箱子如何了？",
-    "DESCRIPTION": " 支付 1 金币， 优化 !M! 。"
+    "DESCRIPTION": " 支付 !M! 金币， 优化 2 。"
   },
   "Wlj:Startup": {
     "NAME": "摸油校尉",
@@ -239,9 +239,10 @@
   },
   "Wlj:Dice": {
     "NAME": "斯卡里欠色子王",
-    "DESCRIPTION": "造成X*9伤害。投掷一枚色子，若点数大于等于 !M! 则获得X*5金币，否则失去X*5金币。",
+    "DESCRIPTION": "造成X*9伤害。投掷一枚色子，若点数大于等于3则获得X*5金币，否则失去X*5金币。",
+    "UPGRADE_DESCRIPTION": "造成X*9伤害。投掷一枚色子，若点数大于等于2则获得X*5金币，否则失去X*5金币。",
     "EXTENDED_DESCRIPTION": [
-      "（造成 !D! 伤害。）"
+      "（造成 !D! 伤害, 获得 !M! 金币。）"
     ]
   },
   "Wlj:Qidiaochan": {

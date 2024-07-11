@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
+import com.github.paopaoyue.wljmod.action.QuinAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,13 +22,11 @@ public class Quin extends CustomCard {
     public Quin() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Wand();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new MakeTempCardInHandAction(new Wand(EnergyPanel.getCurrentEnergy() - this.costForTurn)));
+        this.addToBot(new QuinAction());
     }
 
 

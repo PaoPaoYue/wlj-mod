@@ -97,7 +97,6 @@ public class Wand extends CustomCard {
                 this.textureImg = "image/card/wand_xxxl.png";
                 break;
         }
-        System.out.println(this.timesUpgraded + " " + this.name + " " + this.textureImg);
         this.initializeTitle();
         this.initializeDescription();
         if (this.textureImg != null) {

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.unique.WhirlwindAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -58,12 +59,8 @@ public class Spear extends CustomCard {
             this.addToBot(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
             this.addToBot(new LapseAction(this));
         } else {
-            for (int i = 0; i < this.energyOnUse; i++) {
-                this.addToBot(new SFXAction("ATTACK_WHIRLWIND"));
-                this.addToBot(new VFXAction(new WhirlwindEffect(), 0.0f));
-                this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageType, AbstractGameAction.AttackEffect.NONE, true));
-            }
-            p.energy.use(EnergyPanel.totalCount);
+            this.addToBot(new WhirlwindAction(p, this.multiDamage, this.damageType, this.freeToPlayOnce, this.energyOnUse));
+            this.addToBot(new LapseAction(this));
         }
     }
 

@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
+import com.github.paopaoyue.wljmod.action.EldenWaitAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,14 +27,7 @@ public class Wait extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < this.energyOnUse; i++) {
-            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (!mo.isDeadOrEscaped() && mo.getIntentBaseDmg() > 0) {
-                    this.addToBot(new GainBlockAction(p, this.block));
-                }
-            }
-        }
-        p.energy.use(EnergyPanel.totalCount);
+        this.addToBot(new EldenWaitAction(this.block, this.freeToPlayOnce, this.energyOnUse));
     }
 
     public void upgrade() {

@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
+import com.github.paopaoyue.wljmod.action.DiceAction;
 import com.github.paopaoyue.wljmod.action.RollDiceAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -28,39 +29,38 @@ public class Dice extends CustomCard {
     public Dice() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), -1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseMagicNumber = 3;
-        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.baseDamage = this.energyOnUse * 9;
-        this.calculateCardDamage(m);
-        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        AbstractGameAction rollDiceAction = new RollDiceAction();
-        this.addToBot(rollDiceAction);
-        if (rollDiceAction.amount >= this.magicNumber) {
-            this.addToBot(new VFXAction((new RainingGoldEffect(5 * this.energyOnUse, true))));
-            this.addToBot(new GainGoldAction(5 * this.energyOnUse));
-        }
-        p.energy.use(EnergyPanel.totalCount);
+        this.addToBot(new DiceAction(this, m));
     }
 
     public void applyPowers() {
-        this.baseDamage = EnergyPanel.totalCount * 9;
+        int effect = EnergyPanel.totalCount;
+        if (AbstractDungeon.player.hasRelic("Chemical X")) {
+            effect += 2;
+        }
+        this.baseDamage = effect * 9;
+        this.baseMagicNumber = effect * 5;
         super.applyPowers();
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        this.baseDamage = EnergyPanel.totalCount * 9;
+        int effect = EnergyPanel.totalCount;
+        if (AbstractDungeon.player.hasRelic("Chemical X")) {
+            effect += 2;
+        }
+        this.baseDamage = effect * 9;
+        this.baseMagicNumber = effect * 5;
         super.calculateCardDamage(mo);
-        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION) + cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
     }
 
     public void onMoveToDiscard() {
-        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = (upgraded ? cardStrings.UPGRADE_DESCRIPTION : cardStrings.DESCRIPTION);
         this.initializeDescription();
     }
 
@@ -68,6 +68,8 @@ public class Dice extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(-1);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

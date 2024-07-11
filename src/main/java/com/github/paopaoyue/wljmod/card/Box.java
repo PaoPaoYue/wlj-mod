@@ -27,8 +27,8 @@ public class Box extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (p.gold >= 1) {
             CardCrawlGame.sound.play("SHOP_PURCHASE", 0f);
-            p.loseGold(1);
-            this.addToBot(new LayoffAction(this.magicNumber));
+            p.loseGold(this.magicNumber);
+            this.addToBot(new LayoffAction(2));
         }
     }
 
@@ -36,7 +36,7 @@ public class Box extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeMagicNumber(-1);
         }
     }
 
