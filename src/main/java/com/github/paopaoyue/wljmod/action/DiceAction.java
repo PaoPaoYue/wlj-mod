@@ -38,9 +38,11 @@ public class DiceAction extends AbstractGameAction
             card.baseDamage = effect * 9;
             card.calculateCardDamage((AbstractMonster) target);
             AbstractGameAction rollDiceAction = new RollDiceAction();
-            if (rollDiceAction.amount >= card.magicNumber) {
+            if (rollDiceAction.amount >= (card.upgraded ? 2 : 3)) {
                 this.addToTop(new GainGoldAction(5 * effect));
                 this.addToTop(new VFXAction((new RainingGoldEffect(5 * effect, true))));
+            } else {
+                AbstractDungeon.player.loseGold(5 * effect);
             }
             this.addToTop(rollDiceAction);
             if (!target.isDeadOrEscaped())

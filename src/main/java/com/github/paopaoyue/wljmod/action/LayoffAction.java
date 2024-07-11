@@ -78,6 +78,11 @@ public class LayoffAction extends AbstractGameAction {
             int amount = Math.min(this.amount, tmpGroup.size());
 
             if (!auto) {
+                tmpGroup.group.sort((a, b) -> {
+                    int priorityA = (a instanceof AbstractWorkerCard)? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) a) : 0;
+                    int priorityB = (b instanceof AbstractWorkerCard)? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) b) : 0;
+                    return priorityA - priorityB;
+                });
                 AbstractDungeon.gridSelectScreen.open(tmpGroup, amount, true, this.amount == 1 ? TEXT[0] : TEXT[1] + this.amount + TEXT[2]);
             } else {
                 for (int i = 0; i < amount; i++) {

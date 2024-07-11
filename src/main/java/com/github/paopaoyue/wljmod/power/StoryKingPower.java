@@ -54,6 +54,7 @@ public class StoryKingPower extends AbstractPower {
             }
         }
         this.count = 0;
+        this.updateDescription();
     }
 
     @Override

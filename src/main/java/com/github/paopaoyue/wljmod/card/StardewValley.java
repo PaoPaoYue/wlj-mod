@@ -41,6 +41,8 @@ public class StardewValley extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.isInnate = true;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

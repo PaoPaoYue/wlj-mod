@@ -356,7 +356,7 @@
   },
   "Wlj:Giant King": {
     "NAME": "巨人王",
-    "DESCRIPTION": "使一个敌人在本回合内受到攻击时使你获得 !M! 金币，造成 !D! 伤害。 NL 消耗。"
+    "DESCRIPTION": "使一个敌人在本回合内受到攻击时使你获得 !M! 金币，造成 !D! 伤害。 NL 消耗 。"
   },
   "Wlj:Future Tech": {
     "NAME": "未来科技",

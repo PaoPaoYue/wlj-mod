@@ -30,7 +30,6 @@ public class Dinosaur extends CustomCard {
         this.baseDamage = 26;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.cardsToPreview = new Prisoner();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

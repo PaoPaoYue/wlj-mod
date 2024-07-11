@@ -73,6 +73,8 @@ public class Spear extends CustomCard {
     public void triggerOnGlowCheck() {
         if (LapseAction.lastLapseCard != null && !LapseAction.lastLapseCard.name.equals(this.name)) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 
@@ -91,7 +93,6 @@ public class Spear extends CustomCard {
             this.isMultiDamage = true;
             this.target = CardTarget.ALL_ENEMY;
             this.cardsToPreview = null;
-
         }
         this.initializeTitle();
         this.initializeDescription();
@@ -105,6 +106,6 @@ public class Spear extends CustomCard {
     }
 
     public AbstractCard makeCopy() {
-        return new Spear(this.timesUpgraded);
+        return new Spear();
     }
 }

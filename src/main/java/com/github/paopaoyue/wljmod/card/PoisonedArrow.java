@@ -37,7 +37,7 @@ public class PoisonedArrow extends CustomCard {
         if (m != null) {
             this.addToBot(new VFXAction(new ThrowDaggerEffect(m.hb.cX, m.hb.cY)));
             amount = m.powers.stream()
-                    .filter(power -> power.type == AbstractPower.PowerType.DEBUFF)
+                    .filter(power -> power.type == AbstractPower.PowerType.DEBUFF && !power.ID.equals(PoisonPower.POWER_ID))
                     .mapToInt(power -> power.amount * this.magicNumber).sum();
         }
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));

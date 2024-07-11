@@ -19,14 +19,14 @@ public class WorkerManager {
 
     public WorkerManager() {
         workerCardsWithPriority = new HashMap<String, Integer>() {{
-            put(Keel.ID, 0);
-            put(Leidongxuan.ID, 1);
-            put(Crab.ID, 1);
-            put(Gaoshi.ID, 2);
-            put(Erwen.ID, 2);
+            put(Keel.ID, 1);
+            put(Leidongxuan.ID, 2);
+            put(Crab.ID, 3);
+            put(Gaoshi.ID, 4);
+            put(Erwen.ID, 5);
             put(Performer.ID, 101);
-            put(Rabble.ID, 102);
-            put(Prisoner.ID, 200);
+            put(Prisoner.ID, 102);
+            put(Rabble.ID, 103);
         }};
         this.totalWorkerPlayedThisTurn = 0;
     }
@@ -91,12 +91,8 @@ public class WorkerManager {
                 .collect(Collectors.toList());
     }
 
-    public List<AbstractCard> getHighestPriorityWorkerInDiscardPile(int amount) {
-        return AbstractDungeon.player.discardPile.group.stream()
-                .filter(c -> c instanceof AbstractWorkerCard)
-                .sorted(Comparator.comparingInt(c -> workerCardsWithPriority.get(((AbstractCard) c).cardID)))
-                .limit(amount)
-                .collect(Collectors.toList());
+    public int getWorkerPriority(AbstractWorkerCard card) {
+        return workerCardsWithPriority.getOrDefault(card.cardID, 1);
     }
 
     public AbstractCard getRandomWorkerCard() {

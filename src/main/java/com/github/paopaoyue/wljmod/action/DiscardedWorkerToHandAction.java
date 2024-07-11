@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.action;
 
 import com.github.paopaoyue.wljmod.WljMod;
+import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -61,6 +62,11 @@ public class DiscardedWorkerToHandAction extends AbstractGameAction {
             this.isDone = true;
             return;
         }
+        tmpGroup.group.sort((a, b) -> {
+            int priorityA = (a instanceof AbstractWorkerCard)? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) a) : 0;
+            int priorityB = (b instanceof AbstractWorkerCard)? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) b) : 0;
+            return priorityA - priorityB;
+        });
         if (this.amount == 1) {
             AbstractDungeon.gridSelectScreen.open(tmpGroup, this.amount, TEXT[0], false);
         } else {
