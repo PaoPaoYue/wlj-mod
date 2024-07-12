@@ -32,12 +32,17 @@ public class LayoffAction extends AbstractGameAction {
         TEXT = uiStrings.TEXT;
     }
 
-    private static final float SFX_PROB = 0.2333f;
-    private static boolean played_voice = false;
+    private static float SFX_PROB = 1.0f;
+    private static int played_voice = 0;
 
     private boolean auto;
     private List<AbstractCard> selectedCards;
     private Predicate<AbstractCard> predicate;
+
+    public static void resetSFX() {
+        played_voice = 0;
+        SFX_PROB = 1.0f;
+    }
 
     public LayoffAction(int amount) {
         this(amount, false, null);
@@ -178,15 +183,16 @@ public class LayoffAction extends AbstractGameAction {
     }
 
     private void playSFX(int amount) {
-        if (played_voice) {
-            played_voice = MathUtils.random(1.0f) < SFX_PROB;
-        } else {
-            played_voice = true;
+        boolean canPlay = false;
+        if (played_voice == 0) {
+            canPlay = MathUtils.random(1.0f) < SFX_PROB;
         }
+        played_voice = canPlay ? played_voice : 0;
 
-        if (played_voice) {
-            int random = MathUtils.random(1, 6);
-            switch (random) {
+        if (canPlay) {
+            int random = MathUtils.random(0, 5);
+            played_voice = ((random + 1 == played_voice) ? ((random + 1) % 6) : random) + 1;
+            switch (played_voice) {
                 case 1:
                     CardCrawlGame.sound.play("Wlj:LAYOFF_1", 0f);
                     break;
@@ -202,7 +208,7 @@ public class LayoffAction extends AbstractGameAction {
                 case 5:
                     CardCrawlGame.sound.play("Wlj:LAYOFF_5", 0f);
                     break;
-                case 6:
+                default:
                     if (amount == 2) {
                         CardCrawlGame.sound.play("Wlj:LAYOFF_DOUBLE", 0f);
                     } else {
@@ -210,6 +216,9 @@ public class LayoffAction extends AbstractGameAction {
                     }
                     break;
             }
+            SFX_PROB = Math.max(0.5f, SFX_PROB - 0.08f);
         }
+
+        System.out.println("LayoffAction.playSFX: played_voice = " + played_voice + ", SFX_PROB = " + SFX_PROB);
     }
 }
