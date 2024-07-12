@@ -197,7 +197,7 @@
   "Wlj:Phoenix": {
     "NAME": "圣主菲尼克斯",
     "DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。打出或被 消耗 后将其拆分放入手牌。",
-    "UPGRADE_DESCRIPTION": " 造成 !D! 伤害。"
+    "UPGRADE_DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。"
   },
   "Wlj:Overtime": {
     "NAME": "加班!",

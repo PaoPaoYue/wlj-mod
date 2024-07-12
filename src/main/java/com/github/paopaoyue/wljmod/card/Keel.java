@@ -35,6 +35,7 @@ public class Keel extends AbstractWorkerCard {
 
     public void upgrade() {
         if (!this.upgraded) {
+            this.upgradeName();
             this.upgradeDamage(2);
         }
     }
