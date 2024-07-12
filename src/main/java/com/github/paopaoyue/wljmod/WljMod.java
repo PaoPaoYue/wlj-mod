@@ -118,6 +118,16 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
         BaseMod.addAudio("Wlj:OPENING", "audio/opening.mp3");
         BaseMod.addAudio("Wlj:TRUE_ENDING", "audio/true_ending.mp3");
         BaseMod.addAudio("Wlj:ROLL_DICE", "audio/roll_dice.mp3");
+        BaseMod.addAudio("Wlj:PAY_1", "audio/pay_1.mp3");
+        BaseMod.addAudio("Wlj:PAY_2", "audio/pay_2.mp3");
+        BaseMod.addAudio("Wlj:PAY_3", "audio/pay_3.mp3");
+        BaseMod.addAudio("Wlj:LAYOFF_1", "audio/layoff_1.mp3");
+        BaseMod.addAudio("Wlj:LAYOFF_2", "audio/layoff_2.mp3");
+        BaseMod.addAudio("Wlj:LAYOFF_3", "audio/layoff_3.mp3");
+        BaseMod.addAudio("Wlj:LAYOFF_4", "audio/layoff_4.mp3");
+        BaseMod.addAudio("Wlj:LAYOFF_5", "audio/layoff_5.mp3");
+        BaseMod.addAudio("Wlj:LAYOFF_6", "audio/layoff_6.mp3");
+        BaseMod.addAudio("Wlj:LAYOFF_DOUBLE", "audio/layoff_double.mp3");
     }
 
     @Override

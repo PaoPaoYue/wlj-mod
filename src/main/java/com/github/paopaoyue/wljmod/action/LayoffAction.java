@@ -1,5 +1,6 @@
 package com.github.paopaoyue.wljmod.action;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.*;
 import com.github.paopaoyue.wljmod.component.SunKnight;
@@ -30,6 +31,9 @@ public class LayoffAction extends AbstractGameAction {
         uiStrings = CardCrawlGame.languagePack.getUIString("Wlj:LayoffAction");
         TEXT = uiStrings.TEXT;
     }
+
+    private static final float SFX_PROB = 0.2333f;
+    private static boolean played_voice = false;
 
     private boolean auto;
     private List<AbstractCard> selectedCards;
@@ -79,8 +83,8 @@ public class LayoffAction extends AbstractGameAction {
 
             if (!auto) {
                 tmpGroup.group.sort((a, b) -> {
-                    int priorityA = (a instanceof AbstractWorkerCard)? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) a) : 0;
-                    int priorityB = (b instanceof AbstractWorkerCard)? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) b) : 0;
+                    int priorityA = (a instanceof AbstractWorkerCard) ? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) a) : 0;
+                    int priorityB = (b instanceof AbstractWorkerCard) ? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) b) : 0;
                     return priorityA - priorityB;
                 });
                 AbstractDungeon.gridSelectScreen.open(tmpGroup, amount, true, this.amount == 1 ? TEXT[0] : TEXT[1] + this.amount + TEXT[2]);
@@ -100,6 +104,8 @@ public class LayoffAction extends AbstractGameAction {
         }
 
         if (!selectedCards.isEmpty()) {
+
+            playSFX(selectedCards.size());
 
             boolean randomWorker = AbstractDungeon.player.hasPower("Wlj:Future Tech");
 
@@ -169,5 +175,41 @@ public class LayoffAction extends AbstractGameAction {
         AbstractDungeon.player.exhaustPile.addToTop(c);
         AbstractDungeon.player.onCardDrawOrDiscard();
         CardCrawlGame.dungeon.checkForPactAchievement();
+    }
+
+    private void playSFX(int amount) {
+        if (played_voice) {
+            played_voice = MathUtils.random(1.0f) < SFX_PROB;
+        } else {
+            played_voice = true;
+        }
+
+        if (played_voice) {
+            int random = MathUtils.random(1, 6);
+            switch (random) {
+                case 1:
+                    CardCrawlGame.sound.play("Wlj:LAYOFF_1", 0f);
+                    break;
+                case 2:
+                    CardCrawlGame.sound.play("Wlj:LAYOFF_2", 0f);
+                    break;
+                case 3:
+                    CardCrawlGame.sound.play("Wlj:LAYOFF_3", 0f);
+                    break;
+                case 4:
+                    CardCrawlGame.sound.play("Wlj:LAYOFF_4", 0f);
+                    break;
+                case 5:
+                    CardCrawlGame.sound.play("Wlj:LAYOFF_5", 0f);
+                    break;
+                case 6:
+                    if (amount == 2) {
+                        CardCrawlGame.sound.play("Wlj:LAYOFF_DOUBLE", 0f);
+                    } else {
+                        CardCrawlGame.sound.play("Wlj:LAYOFF_6", 0f);
+                    }
+                    break;
+            }
+        }
     }
 }

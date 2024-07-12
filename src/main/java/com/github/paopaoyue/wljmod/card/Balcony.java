@@ -2,10 +2,12 @@ package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.BalconyAction;
+import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -26,11 +28,11 @@ public class Balcony extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.gold >= this.magicNumber) {
-            CardCrawlGame.sound.play("SHOP_PURCHASE", 0f);
-            p.loseGold(this.magicNumber);
-            this.addToBot(new BalconyAction(this.upgraded));
-        }
+        this.addToBot(new PurchaseAction(this.magicNumber, ok -> {
+            if (ok) {
+                this.addToTop(new BalconyAction(this.upgraded));
+            }
+        }));
     }
 
     public void upgrade() {
