@@ -61,7 +61,5 @@ public class PurchaseAction extends AbstractGameAction {
             }
             SFX_PROB = Math.max(0.5f, SFX_PROB - 0.1f);
         }
-
-        System.out.println("played_voice: " + played_voice + ", SFX_PROB: " + SFX_PROB);
     }
 }
