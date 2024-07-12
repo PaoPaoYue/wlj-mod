@@ -21,6 +21,7 @@ public class CapitalistPower extends AbstractPower {
         this.type = PowerType.BUFF;
         this.amount = -1;
         this.canGoNegative = false;
+        updateDescription();
     }
 
     public void updateDescription() {

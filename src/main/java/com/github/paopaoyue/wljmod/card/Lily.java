@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,12 +26,13 @@ public class Lily extends CustomCard {
     public Lily() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 9;
+        this.baseDamage = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         if (rotateCount == NAMES_COUNT - 1) {
-            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            this.addToBot(new DrawCardAction(1));
         }
     }
 
@@ -38,6 +40,11 @@ public class Lily extends CustomCard {
     public void triggerOnCardPlayed(AbstractCard cardPlayed) {
         this.rotateCount = (this.rotateCount + 1) % NAMES_COUNT;
         this.name = cardStrings.EXTENDED_DESCRIPTION[this.rotateCount] + (this.upgraded ? "+" : "");
+        if (rotateCount == NAMES_COUNT - 1) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        }
         this.initializeTitle();
 
     }

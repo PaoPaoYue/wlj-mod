@@ -62,7 +62,7 @@
   },
   "Wlj:Lily": {
     "NAME": "托莉莲睡拿",
-    "DESCRIPTION": "每次出牌改变牌名，牌名正确时造成 !D! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。每次出牌改变牌名，牌名正确时额外抽1张牌",
     "EXTENDED_DESCRIPTION": [
       "托莉莲睡拿",
       "托丽拿睡莲",
@@ -86,8 +86,8 @@
   },
   "Wlj:Ember": {
     "NAME": "大块余烬",
-    "DESCRIPTION": "使用或被 消耗 时 升级 所有手牌，战斗开始时位于抽牌堆底部。",
-    "UPGRADE_DESCRIPTION": "使用或被 消耗 时 升级 所有手牌。"
+    "DESCRIPTION": "打出或被 消耗 时 升级 所有手牌，战斗开始时位于抽牌堆底部。",
+    "UPGRADE_DESCRIPTION": "打出或被 消耗 时 升级 所有手牌。"
   },
   "Wlj:Box": {
     "NAME": "箱子如何了？",
@@ -96,7 +96,7 @@
   "Wlj:Startup": {
     "NAME": "摸油校尉",
     "DESCRIPTION": "支付 !M! 金币，回合结束时将1名 *优秀员工 加入弃牌堆。",
-    "UPGRADE_DESCRIPTION": "支付 !M! 金币，使用与回合结束时将1名 *优秀员工 加入弃牌堆。"
+    "UPGRADE_DESCRIPTION": "支付 !M! 金币，打出与回合结束时将1名 *优秀员工 加入弃牌堆。"
   },
   "Wlj:Glory": {
     "NAME": "荣耀属于天生战狂",
@@ -142,7 +142,7 @@
   },
   "Wlj:Giant Sword": {
     "NAME": "巨剑神教",
-    "DESCRIPTION": "造成 !D! 伤害，本回合每使用一名 员工 减少一点能量消耗。 叛教 。"
+    "DESCRIPTION": "造成 !D! 伤害，本回合每打出一名 员工 减少一点能量消耗。 叛教 。"
   },
   "Wlj:Rescue": {
     "NAME": "拯救人质",
@@ -151,7 +151,7 @@
   "Wlj:Taiwu Village": {
     "NAME": "太污村",
     "DESCRIPTION": "回合开始时增加1张 *邀为同道 到手牌。",
-    "UPGRADE_DESCRIPTION": "使用和回合开始时增加1张 *邀为同道 到手牌。"
+    "UPGRADE_DESCRIPTION": "打出和回合开始时增加1张 *邀为同道 到手牌。"
   },
   "Wlj:Bridge Engineer": {
     "NAME": "桥梁工程师",
@@ -172,7 +172,7 @@
   },
   "Wlj:Iga": {
     "NAME": "伊贺流大爆弹",
-    "DESCRIPTION": "使用或被 消耗 时对所有敌人造成 !D! 伤害， 优化 !M! 。"
+    "DESCRIPTION": "打出或被 消耗 时对所有敌人造成 !D! 伤害， 优化 !M! 。"
   },
   "Wlj:Ice And Fire": {
     "NAME": "冰火冰火冰",
@@ -196,7 +196,7 @@
   },
   "Wlj:Phoenix": {
     "NAME": "圣主菲尼克斯",
-    "DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。使用或被 消耗 后将其拆分放入手牌。",
+    "DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。打出或被 消耗 后将其拆分放入手牌。",
     "UPGRADE_DESCRIPTION": " 造成 !D! 伤害。"
   },
   "Wlj:Overtime": {
@@ -247,7 +247,7 @@
   },
   "Wlj:Qidiaochan": {
     "NAME": "漆雕蝉",
-    "DESCRIPTION": "使用战斗中上一个 化身 ，获得 !K! 临时生命值。",
+    "DESCRIPTION": "打出战斗中上一个 化身 ，获得 !K! 临时生命值。",
     "EXTENDED_DESCRIPTION": [
       "（变为",
       "。)"
@@ -259,7 +259,7 @@
   },
   "Wlj:Auto Fire": {
     "NAME": "自由开火",
-    "DESCRIPTION": "随机造成 !D! 伤害 !M! 次，随机优化 !M! 。"
+    "DESCRIPTION": "随机造成 !D! 伤害 !M! 次，随机 优化 !M! 。"
   },
   "Wlj:Wait": {
     "NAME": "艾尔等之王",
@@ -317,7 +317,7 @@
   },
   "Wlj:Story King": {
     "NAME": "故事王",
-    "DESCRIPTION": "回合结束时，每使用或消耗1张牌，随机造成 !M! 伤害。"
+    "DESCRIPTION": "回合结束时，每打出或消耗1张牌，随机造成 !M! 伤害。"
   },
   "Wlj:Zhaoritian": {
     "NAME": "赵日天号",
@@ -338,7 +338,7 @@
   },
   "Wlj:Capitalist": {
     "NAME": "资本家形态",
-    "DESCRIPTION": " 员工 被 消耗 时，会重复一次其使用的效果。"
+    "DESCRIPTION": " 员工 被 消耗 时，会重复一次其打出的效果。"
   },
   "Wlj:Spaceship": {
     "NAME": "宰人航天",

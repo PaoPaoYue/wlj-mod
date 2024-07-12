@@ -37,12 +37,6 @@ public class Wand extends CustomCard {
         this.configureNameAndImage();
     }
 
-    public void triggerOnCardPlayed(final AbstractCard c) {
-        if (c instanceof AbstractWorkerCard) {
-            this.setCostForTurn(-1);
-        }
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         this.addToBot(new VFXAction(new WallopEffect(this.damage, m.hb.cX, m.hb.cY)));
@@ -67,6 +61,8 @@ public class Wand extends CustomCard {
     public void triggerOnGlowCheck() {
         if (LapseAction.lastLapseCard != null && !LapseAction.lastLapseCard.name.equals(this.name)) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 

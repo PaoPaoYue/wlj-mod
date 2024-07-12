@@ -1,8 +1,10 @@
 package com.github.paopaoyue.wljmod.effect;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.github.paopaoyue.wljmod.utility.Reflect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -72,7 +74,9 @@ public class ShowCardAndExhaustEffect extends AbstractGameEffect {
 
     @Override
     public void update() {
-        this.duration -= Gdx.graphics.getDeltaTime();
+        if (this.duration == DUR) {
+            this.c.lighten(false);
+        }
         if (!this.exhaustedEffect && this.duration < 0.8) {
             CardCrawlGame.sound.play("CARD_EXHAUST", 0.2f);
             for (int i = 0; i < 90; ++i) {
@@ -90,6 +94,8 @@ public class ShowCardAndExhaustEffect extends AbstractGameEffect {
             this.isDone = true;
             this.c.resetAttributes();
         }
+
+        this.duration -= Gdx.graphics.getDeltaTime();
     }
 
     @Override
