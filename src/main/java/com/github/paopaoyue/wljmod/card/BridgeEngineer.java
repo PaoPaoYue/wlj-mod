@@ -2,7 +2,7 @@ package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
-import com.github.paopaoyue.wljmod.power.BridgeEngineerPower;
+import com.github.paopaoyue.wljmod.power.CorruptionPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,7 +31,7 @@ public class BridgeEngineer extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.effectList.add(new RainingGoldEffect(this.magicNumber * 2, true));
         this.addToBot(new GainGoldAction(this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new BridgeEngineerPower(p, 2), 2));
+        this.addToBot(new ApplyPowerAction(p, p, new CorruptionPower(p, 2), 2));
     }
 
     public void upgrade() {

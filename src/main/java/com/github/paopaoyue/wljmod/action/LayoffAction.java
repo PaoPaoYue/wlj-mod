@@ -112,7 +112,6 @@ public class LayoffAction extends AbstractGameAction {
 
             playSFX(selectedCards.size());
 
-            boolean randomWorker = AbstractDungeon.player.hasPower("Wlj:Future Tech");
 
             for (AbstractCard card : selectedCards) {
 
@@ -122,16 +121,7 @@ public class LayoffAction extends AbstractGameAction {
                     AbstractDungeon.player.discardPile.moveToExhaustPile(card);
                 }
 
-                if (randomWorker) {
-                    AbstractCard tempCard = WljMod.workerManager.getRandomWorkerCard();
-                    if (card instanceof Gaoshi) {
-                        for (int i = 0; i < card.magicNumber; i++) {
-                            AbstractDungeon.player.drawPile.addToRandomSpot(tempCard.makeStatEquivalentCopy());
-                        }
-                    } else {
-                        AbstractDungeon.player.drawPile.addToRandomSpot(tempCard.makeStatEquivalentCopy());
-                    }
-                } else if (card instanceof AbstractWorkerCard) {
+                if (card instanceof AbstractWorkerCard) {
                     if (card instanceof Gaoshi) {
                         for (int i = 0; i < card.magicNumber; i++) {
                             AbstractDungeon.player.drawPile.addToRandomSpot(new Performer());

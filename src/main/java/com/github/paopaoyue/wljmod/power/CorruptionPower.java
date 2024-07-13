@@ -8,12 +8,12 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class BridgeEngineerPower extends AbstractPower {
-    public static final String POWER_ID = "Wlj:Bridge Engineer";
+public class CorruptionPower extends AbstractPower {
+    public static final String POWER_ID = "Wlj:Corruption";
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final Texture IMG = ImageMaster.loadImage("image/icon/bridge_engineer.png");
 
-    public BridgeEngineerPower(AbstractCreature owner, int amount) {
+    public CorruptionPower(AbstractCreature owner, int amount) {
         this.name = strings.NAME;
         this.ID = POWER_ID;
         this.owner = owner;

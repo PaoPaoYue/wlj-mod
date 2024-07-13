@@ -23,7 +23,7 @@ public class Erwen extends AbstractWorkerCard {
     public Erwen() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 2;
+        this.baseDamage = 5;
         this.baseMagicNumber = 9;
         this.magicNumber = this.baseMagicNumber;
     }

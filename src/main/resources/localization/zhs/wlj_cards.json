@@ -17,7 +17,8 @@
   },
   "Wlj:Prisoner": {
     "NAME": "囚犯",
-    "DESCRIPTION": " 员工 。获得 [E] ，在弃牌堆外战斗结束时获得 !M! 金币 。"
+    "DESCRIPTION": " 员工 。获得 [E] ，在弃牌堆外战斗结束时获得 3 金币 。",
+    "UPGRADE_DESCRIPTION": " 员工 。获得 [E] [E] ，在弃牌堆外战斗结束时获得 3 金币 。"
   },
   "Wlj:Layoff": {
     "NAME": "优化员工",
@@ -58,7 +59,8 @@
   },
   "Wlj:Cops": {
     "NAME": "浅博里三人组",
-    "DESCRIPTION": "造成 !D! 伤害，获得 !M! 名 *囚犯 。"
+    "DESCRIPTION": "造成 !D! 伤害，增加 !M! 名 *囚犯 到抽牌堆。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 伤害，增加 !M! 名 *囚犯+ 到抽牌堆。"
   },
   "Wlj:Lily": {
     "NAME": "托莉莲睡拿",
@@ -77,7 +79,7 @@
   },
   "Wlj:Child Labor": {
     "NAME": "童工法案",
-    "DESCRIPTION": " 支付 !M! 金币 ，获得3 名 *贱民 。"
+    "DESCRIPTION": " 支付 !M! 金币 ，获得3名 *贱民 。"
   },
   "Wlj:Fertile": {
     "NAME": "肥地",
@@ -95,8 +97,8 @@
   },
   "Wlj:Startup": {
     "NAME": "摸油校尉",
-    "DESCRIPTION": "支付 !M! 金币，回合结束时将1名 *优秀员工 加入弃牌堆。",
-    "UPGRADE_DESCRIPTION": "支付 !M! 金币，打出与回合结束时将1名 *优秀员工 加入弃牌堆。"
+    "DESCRIPTION": "支付 !M! 金币，回合结束时增加1名 *优秀员工 到弃牌堆。",
+    "UPGRADE_DESCRIPTION": "支付 !M! 金币，打出与回合结束时增加1名 *优秀员工 到弃牌堆。"
   },
   "Wlj:Glory": {
     "NAME": "荣耀属于天生战狂",
@@ -108,8 +110,8 @@
   },
   "Wlj:Sermon": {
     "NAME": "精彩的布道",
-    "DESCRIPTION": "获得 !M! 张 *邀为同道 。",
-    "UPGRADE_DESCRIPTION": "获得 !M! 张 *邀为同道+ 。"
+    "DESCRIPTION": "增加 !M! 张 *邀为同道 到手牌。",
+    "UPGRADE_DESCRIPTION": "增加 !M! 张 *邀为同道+ 到手牌。"
   },
   "Wlj:Stabbing Sword": {
     "NAME": "刺剑神教",
@@ -117,12 +119,11 @@
   },
   "Wlj:Crab": {
     "NAME": "蒜蓉麻辣十三香",
-    "DESCRIPTION": " 员工 。造成 !D! 伤害，被 消耗 时获得 [E] [E] 。",
-    "UPGRADE_DESCRIPTION": " 员工 。造成 !D! 伤害，被 消耗 时获得 [E] [E] [E] 。"
+    "DESCRIPTION": " 员工 。造成 !D! 伤害，被 消耗 时获得 [E] [E] 。"
   },
   "Wlj:Awards": {
     "NAME": "年终奖",
-    "DESCRIPTION": "将 !M! 名 *优秀员工 放入抽牌堆，本回合结束时失去在弃牌堆外 *优秀员工 数量的金币。"
+    "DESCRIPTION": "增加 !M! 名 *优秀员工 到抽牌堆，本回合结束时失去在弃牌堆外 *优秀员工 数量的金币。"
   },
   "Wlj:Scone": {
     "NAME": "斯昆五剑圣",
@@ -130,11 +131,11 @@
   },
   "Wlj:Prison": {
     "NAME": "太阳监狱",
-    "DESCRIPTION": "每回合 !M! 次， 优化 员工 时增加1名 *囚犯 到手牌。"
+    "DESCRIPTION": "每回合 !M! 次， 优化 时获得1名 *囚犯 。"
   },
   "Wlj:Egg": {
     "NAME": "无蛋黄",
-    "DESCRIPTION": "使所有敌人在 !M! 回合内被 *邀为同道 时额外将1名 *贱民 和 *优秀员工 置入手牌。 消耗 。"
+    "DESCRIPTION": "使所有敌人在 !M! 回合内被 *邀为同道 时额外获得1名 *贱民 和 *优秀员工 。 消耗 。"
   },
   "Wlj:Steep": {
     "NAME": "古特峰白色闪电",
@@ -159,8 +160,8 @@
   },
   "Wlj:Brotherhood": {
     "NAME": "义结金兰",
-    "DESCRIPTION": "使一个敌人在 !M! 回合内被 *邀为同道 时额外将1名 *贱民 置入手牌,获得1 *邀为同道 。",
-    "UPGRADE_DESCRIPTION": "使一个敌人在 !M! 回合内被 *邀为同道 时额外将1名 *贱民 置入手牌,获得1 *邀为同道+ 。"
+    "DESCRIPTION": "使一个敌人在 !M! 回合内被 *邀为同道 时额外获得1名 *贱民 ，增加1张 *邀为同道 到手牌。",
+    "UPGRADE_DESCRIPTION": "使一个敌人在 !M! 回合内被 *邀为同道 时额外获得1名 *贱民 ，增加1张 *邀为同道+ 到手牌。"
   },
   "Wlj:Chaplin": {
     "NAME": "菊别林",
@@ -213,8 +214,8 @@
   },
   "Wlj:Love": {
     "NAME": "倾诉爱意",
-    "DESCRIPTION": "使一个敌人在 !M! 回合内被 *邀为同道 时额外将1名 *优秀员工 置入手牌,获得1 *邀为同道 。 消耗 。",
-    "UPGRADE_DESCRIPTION": "使一个敌人在 !M! 回合内被 *邀为同道 时额外将1名 *优秀员工 置入手牌,获得1 *邀为同道+ 。 消耗 。"
+    "DESCRIPTION": "使一个敌人在 !M! 回合内被 *邀为同道 时额外获得1名 *优秀员工 ，增加1张 *邀为同道 到手牌。 消耗 。",
+    "UPGRADE_DESCRIPTION": "使一个敌人在 !M! 回合内被 *邀为同道 时额外获得1名 *优秀员工 ，增加1张 *邀为同道+ 到手牌。 消耗 。"
   },
   "Wlj:Brothel": {
     "NAME": "玄女俱乐部",
@@ -286,8 +287,8 @@
   },
   "Wlj:Stardew Valley": {
     "NAME": "睡前故事",
-    "DESCRIPTION": "抽1张牌。在弃牌堆被 消耗 时将一张复制放入手牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。抽1张牌。在弃牌堆被 消耗 时将一张复制放入手牌。"
+    "DESCRIPTION": "抽1张牌。在弃牌堆被 消耗 时增加一张复制到手牌。",
+    "UPGRADE_DESCRIPTION": " 固有 。抽1张牌。在弃牌堆被 消耗 时增加一张复制到手牌。"
   },
   "Wlj:Sts": {
     "NAME": "这100分钟全是细节",
@@ -296,7 +297,8 @@
   },
   "Wlj:Arrogant": {
     "NAME": "完全理解",
-    "DESCRIPTION": " 固有 。弃掉抽牌堆，然后 优化 !M! 。"
+    "DESCRIPTION": " 固有 。弃掉抽牌堆，然后 优化 !M! 。 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。弃掉抽牌堆，然后 优化 !M! 。"
   },
   "Wlj:Joy": {
     "NAME": "欢愉之屋",
@@ -338,7 +340,7 @@
   },
   "Wlj:Capitalist": {
     "NAME": "资本家形态",
-    "DESCRIPTION": " 员工 被 消耗 时，会重复一次其打出的效果。"
+    "DESCRIPTION": "攻击额外造成当前 金币 个位数的的伤害。回合结束时失去 !M! 金币 。"
   },
   "Wlj:Spaceship": {
     "NAME": "宰人航天",
@@ -360,6 +362,6 @@
   },
   "Wlj:Future Tech": {
     "NAME": "未来科技",
-    "DESCRIPTION": " 优化 后新增的 员工 随机化。"
+    "DESCRIPTION": " 员工 被 消耗 时，会重复一次其打出的效果。"
   }
 }

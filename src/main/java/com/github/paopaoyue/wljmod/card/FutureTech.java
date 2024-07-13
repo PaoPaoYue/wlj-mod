@@ -3,9 +3,7 @@ package com.github.paopaoyue.wljmod.card;
 import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.power.FutureTechPower;
-import com.github.paopaoyue.wljmod.power.TaiwuVillagePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -21,7 +19,7 @@ public class FutureTech extends CustomCard {
     }
 
     public FutureTech() {
-        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.POWER,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 3, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
     }
 
@@ -32,7 +30,7 @@ public class FutureTech extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(1);
+            this.upgradeBaseCost(2);
         }
     }
 

@@ -24,6 +24,7 @@ public class Arrogant extends CustomCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.isInnate = true;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,7 +35,9 @@ public class Arrogant extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.exhaust = false;
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

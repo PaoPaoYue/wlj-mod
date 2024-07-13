@@ -20,23 +20,25 @@ public class Prisoner extends AbstractWorkerCard {
     public Prisoner() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.SPECIAL, CardTarget.SELF);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GainEnergyAction(1));
+        this.addToBot(new GainEnergyAction(this.magicNumber));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(1);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 
     public void onVictoryOutsideDiscardPile() {
-        AbstractDungeon.player.gainGold(this.magicNumber);
+        AbstractDungeon.player.gainGold(3);
     }
 
     public AbstractCard makeCopy() {

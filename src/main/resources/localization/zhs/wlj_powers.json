@@ -9,8 +9,8 @@
   "Wlj:Startup": {
     "NAME": "摸油校尉",
     "DESCRIPTIONS": [
-      "回合结束时，将 #b",
-      " 名 #y优秀员工 加入弃牌堆。"
+      "回合结束时，增加 #b",
+      " 名 #y优秀员工 到弃牌堆。"
     ]
   },
   "Wlj:Awards": {
@@ -31,14 +31,14 @@
     "NAME": "义结金兰",
     "DESCRIPTIONS": [
       "在 #b",
-      " 个回合内被 #y邀为同道 时额外将1名 #y贱民 置入手牌。"
+      " 个回合内被 #y邀为同道 时额外获得1名 #y贱民 。"
     ]
   },
   "Wlj:Love": {
     "NAME": "倾诉爱意",
     "DESCRIPTIONS": [
       "在 #b",
-      " 个回合内被 #y邀为同道 时额外将1名 #y优秀员工 置入手牌。"
+      " 个回合内被 #y邀为同道 时额外获得1名 #y优秀员工 。"
     ]
   },
   "Wlj:Steep": {
@@ -55,8 +55,8 @@
       " 张 #y邀为同道 到手牌。"
     ]
   },
-  "Wlj:Bridge Engineer": {
-    "NAME": "桥梁工程师",
+  "Wlj:Corruption": {
+    "NAME": "贪污",
     "DESCRIPTIONS": [
       "回合结束时，失去 #b",
       " 金币。"
@@ -124,7 +124,7 @@
   "Wlj:Capitalist": {
     "NAME": "资本家形态",
     "DESCRIPTIONS": [
-      " #y员工 被 #y消耗 时，会重复一次其使用的效果。"
+      "攻击额外造成当前 #y金币 个位数的的伤害。"
     ]
   },
   "Wlj:Clubhouse": {
@@ -144,7 +144,7 @@
   "Wlj:Future Tech": {
     "NAME": "未来科技",
     "DESCRIPTIONS": [
-      " #y优化 后新增的 员工 随机化。"
+      " #y员工 被 #y消耗 时，会重复一次其打出的效果。"
     ]
   }
 }
