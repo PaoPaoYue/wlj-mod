@@ -21,7 +21,7 @@ public class Love extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
-    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:LOVE_1", "Wlj:LOVE_2", "Wlj:LOVE_3", "Wlj:LOVE_4"}, true, 1.0f, 0.1f, 0.5f);
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:LOVE_1", "Wlj:LOVE_2", "Wlj:LOVE_3", "Wlj:LOVE_4"}, true, 1.0f, 0.0f, 1.0f);
 
     public Love() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,

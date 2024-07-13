@@ -21,7 +21,7 @@ public class Brotherhood extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
-    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:BROTHERHOOD_1", "Wlj:BROTHERHOOD_2", "Wlj:BROTHERHOOD_3"}, true, 1.0f, 0.1f, 0.5f);
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:BROTHERHOOD_1", "Wlj:BROTHERHOOD_2", "Wlj:BROTHERHOOD_3"}, true, 1.0f, 0.0f, 1.0f);
 
     public Brotherhood() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,

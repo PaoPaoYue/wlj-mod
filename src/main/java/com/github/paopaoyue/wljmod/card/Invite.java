@@ -22,7 +22,7 @@ public class Invite extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
-    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:INVITE_1", "Wlj:INVITE_2", "Wlj:INVITE_3", "Wlj:INVITE_4", "Wlj:INVITE_5", "Wlj:INVITE_6", "Wlj:INVITE_7"}, true, 1.0f, 0.1f, 0.5f);
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:INVITE_1", "Wlj:INVITE_2", "Wlj:INVITE_3", "Wlj:INVITE_4", "Wlj:INVITE_5", "Wlj:INVITE_6", "Wlj:INVITE_7"}, true, 1.0f, 0.0f, 1.0f);
 
     public Invite() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.ATTACK,

@@ -22,7 +22,7 @@ public class Egg extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
-    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:EGG_1", "Wlj:EGG_2", "Wlj:EGG_3"}, true, 1.0f, 0.1f, 0.5f);
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:EGG_1", "Wlj:EGG_2", "Wlj:EGG_3"}, true, 1.0f, 0.0f, 1.0f);
 
     public Egg() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,

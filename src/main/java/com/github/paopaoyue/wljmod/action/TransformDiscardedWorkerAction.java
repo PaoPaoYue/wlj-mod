@@ -21,7 +21,7 @@ public class TransformDiscardedWorkerAction extends AbstractGameAction {
         TEXT = CardCrawlGame.languagePack.getUIString("Wlj:TransformDiscardedWorkerAction").TEXT;
     }
 
-    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:SIT_1", "Wlj:SIT_2", "Wlj:SIT_3", "Wlj:SIT_4"}, true, 1.0f, 0.1f, 0.5f);
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:SIT_1", "Wlj:SIT_2", "Wlj:SIT_3", "Wlj:SIT_4"}, true, 1.0f, 0.0f, 1.0f);
 
 
     private AbstractCard targetCard;

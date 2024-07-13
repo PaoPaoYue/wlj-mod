@@ -24,7 +24,7 @@ public class SfxUtil {
 
     private String[] sfxIds;
     private boolean consecutive;
-    private float sfxProb;
+    private float initProb;
     private float deltaProb;
     private float minProb;
 
@@ -32,13 +32,13 @@ public class SfxUtil {
     private int playedVoice;
     private int numOfSfx;
 
-    private SfxUtil(String[] sfxIds, boolean consecutive, float sfxProb, float deltaProb, float minProb) {
+    private SfxUtil(String[] sfxIds, boolean consecutive, float initProb, float deltaProb, float minProb) {
         this.sfxIds = sfxIds;
         this.consecutive = consecutive;
-        this.sfxProb = sfxProb;
+        this.initProb = initProb;
         this.deltaProb = deltaProb;
         this.minProb = minProb;
-        this.prob = 1.0f;
+        this.prob = initProb;
         this.playedVoice = SFX_NONE;
         this.numOfSfx = sfxIds.length;
     }
@@ -50,7 +50,7 @@ public class SfxUtil {
     public void playSFX(float volumeMod) {
         boolean canPlay = false;
         if (consecutive || playedVoice == SFX_NONE) {
-            canPlay = MathUtils.random(1.0f) < sfxProb;
+            canPlay = MathUtils.random(1.0f) < prob;
         }
         playedVoice = canPlay ? playedVoice : SFX_NONE;
 
@@ -65,7 +65,7 @@ public class SfxUtil {
     public void playLayoffSFX(int layoffSize) {
         boolean canPlay = false;
         if (consecutive || playedVoice == SFX_NONE) {
-            canPlay = MathUtils.random(1.0f) < sfxProb;
+            canPlay = MathUtils.random(1.0f) < prob;
         }
         playedVoice = canPlay ? playedVoice : SFX_NONE;
 

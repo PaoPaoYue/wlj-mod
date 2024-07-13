@@ -18,7 +18,7 @@ public class Sermon extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
-    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:SERMON_1", "Wlj:SERMON_2", "Wlj:SERMON_3"}, true, 1.0f, 0.1f, 0.5f);
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:SERMON_1", "Wlj:SERMON_2", "Wlj:SERMON_3"}, true, 1.0f, 0.0f, 1.0f);
 
     public Sermon() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
