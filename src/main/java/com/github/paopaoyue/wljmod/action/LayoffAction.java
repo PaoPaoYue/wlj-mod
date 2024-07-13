@@ -1,12 +1,12 @@
 package com.github.paopaoyue.wljmod.action;
 
-import com.badlogic.gdx.math.MathUtils;
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.*;
 import com.github.paopaoyue.wljmod.component.SunKnight;
 import com.github.paopaoyue.wljmod.effect.ShowCardAndExhaustEffect;
 import com.github.paopaoyue.wljmod.power.AlarmPower;
 import com.github.paopaoyue.wljmod.power.PrisonPower;
+import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -32,17 +32,12 @@ public class LayoffAction extends AbstractGameAction {
         TEXT = uiStrings.TEXT;
     }
 
-    private static float SFX_PROB = 1.0f;
-    private static int played_voice = 0;
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:LAYOFF_1", "Wlj:LAYOFF_2", "Wlj:LAYOFF_3", "Wlj:LAYOFF_4", "Wlj:LAYOFF_5", "Wlj:LAYOFF_6", "Wlj:LAYOFF_DOUBLE"}, false, 1.0f, 0.08f, 0.5f);
 
     private boolean auto;
     private List<AbstractCard> selectedCards;
     private Predicate<AbstractCard> predicate;
 
-    public static void resetSFX() {
-        played_voice = 0;
-        SFX_PROB = 1.0f;
-    }
 
     public LayoffAction(int amount) {
         this(amount, false, null);
@@ -110,8 +105,7 @@ public class LayoffAction extends AbstractGameAction {
 
         if (!selectedCards.isEmpty()) {
 
-            playSFX(selectedCards.size());
-
+            sfxUtil.playLayoffSFX(selectedCards.size());
 
             for (AbstractCard card : selectedCards) {
 
@@ -172,41 +166,4 @@ public class LayoffAction extends AbstractGameAction {
         CardCrawlGame.dungeon.checkForPactAchievement();
     }
 
-    private void playSFX(int amount) {
-        boolean canPlay = false;
-        if (played_voice == 0) {
-            canPlay = MathUtils.random(1.0f) < SFX_PROB;
-        }
-        played_voice = canPlay ? played_voice : 0;
-
-        if (canPlay) {
-            int random = MathUtils.random(0, 5);
-            played_voice = ((random + 1 == played_voice) ? ((random + 1) % 6) : random) + 1;
-            switch (played_voice) {
-                case 1:
-                    CardCrawlGame.sound.play("Wlj:LAYOFF_1", 0f);
-                    break;
-                case 2:
-                    CardCrawlGame.sound.play("Wlj:LAYOFF_2", 0f);
-                    break;
-                case 3:
-                    CardCrawlGame.sound.play("Wlj:LAYOFF_3", 0f);
-                    break;
-                case 4:
-                    CardCrawlGame.sound.play("Wlj:LAYOFF_4", 0f);
-                    break;
-                case 5:
-                    CardCrawlGame.sound.play("Wlj:LAYOFF_5", 0f);
-                    break;
-                default:
-                    if (amount == 2) {
-                        CardCrawlGame.sound.play("Wlj:LAYOFF_DOUBLE", 0f);
-                    } else {
-                        CardCrawlGame.sound.play("Wlj:LAYOFF_6", 0f);
-                    }
-                    break;
-            }
-            SFX_PROB = Math.max(0.5f, SFX_PROB - 0.08f);
-        }
-    }
 }

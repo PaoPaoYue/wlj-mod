@@ -4,11 +4,10 @@ import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
-import com.github.paopaoyue.wljmod.action.LayoffAction;
-import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.card.Layoff;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.PlayerClassEnum;
+import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -183,8 +182,7 @@ public class Wlj extends CustomPlayer {
 
     @Override
     public void applyPreCombatLogic() {
-        PurchaseAction.resetSFX();
-        LayoffAction.resetSFX();
+        SfxUtil.resetAll();
         super.applyPreCombatLogic();
     }
 }

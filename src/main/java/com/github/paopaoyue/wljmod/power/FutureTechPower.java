@@ -21,6 +21,7 @@ public class FutureTechPower extends AbstractPower {
         this.type = PowerType.BUFF;
         this.amount = -1;
         this.canGoNegative = false;
+        this.updateDescription();
     }
 
     public void updateDescription() {

@@ -18,6 +18,7 @@ public class Sit extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
+
     public Sit() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);

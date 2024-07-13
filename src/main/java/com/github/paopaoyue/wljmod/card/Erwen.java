@@ -40,7 +40,7 @@ public class Erwen extends AbstractWorkerCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(4);
+            this.upgradeMagicNumber(3);
         }
     }
 

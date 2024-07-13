@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod.action;
 
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
+import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -19,6 +20,9 @@ public class TransformDiscardedWorkerAction extends AbstractGameAction {
     static {
         TEXT = CardCrawlGame.languagePack.getUIString("Wlj:TransformDiscardedWorkerAction").TEXT;
     }
+
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:SIT_1", "Wlj:SIT_2", "Wlj:SIT_3", "Wlj:SIT_4"}, true, 1.0f, 0.1f, 0.5f);
+
 
     private AbstractCard targetCard;
     private boolean anyNumber;
@@ -39,6 +43,8 @@ public class TransformDiscardedWorkerAction extends AbstractGameAction {
     public void update() {
         if (this.duration != this.startDuration) {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+
+                sfxUtil.playSFX(1.6f);
 
                 AbstractCard transformedCard = targetCard.makeStatEquivalentCopy();
                 if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
@@ -93,8 +99,8 @@ public class TransformDiscardedWorkerAction extends AbstractGameAction {
             handAmount -= discardAmount;
         }
         tmpGroup.group.sort((a, b) -> {
-            int priorityA = (a instanceof AbstractWorkerCard)? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) a) : 0;
-            int priorityB = (b instanceof AbstractWorkerCard)? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) b) : 0;
+            int priorityA = (a instanceof AbstractWorkerCard) ? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) a) : 0;
+            int priorityB = (b instanceof AbstractWorkerCard) ? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) b) : 0;
             return priorityA - priorityB;
         });
         if (this.amount == 1) {

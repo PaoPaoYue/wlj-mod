@@ -128,6 +128,30 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
         BaseMod.addAudio("Wlj:LAYOFF_5", "audio/layoff_5.mp3");
         BaseMod.addAudio("Wlj:LAYOFF_6", "audio/layoff_6.mp3");
         BaseMod.addAudio("Wlj:LAYOFF_DOUBLE", "audio/layoff_double.mp3");
+        BaseMod.addAudio("Wlj:EGG_1", "audio/egg_1.mp3");
+        BaseMod.addAudio("Wlj:EGG_2", "audio/egg_2.mp3");
+        BaseMod.addAudio("Wlj:EGG_3", "audio/egg_3.mp3");
+        BaseMod.addAudio("Wlj:SERMON_1", "audio/sermon_1.mp3");
+        BaseMod.addAudio("Wlj:SERMON_2", "audio/sermon_2.mp3");
+        BaseMod.addAudio("Wlj:SERMON_3", "audio/sermon_3.mp3");
+        BaseMod.addAudio("Wlj:BROTHERHOOD_1", "audio/brotherhood_1.mp3");
+        BaseMod.addAudio("Wlj:BROTHERHOOD_2", "audio/brotherhood_2.mp3");
+        BaseMod.addAudio("Wlj:BROTHERHOOD_3", "audio/brotherhood_3.mp3");
+        BaseMod.addAudio("Wlj:LOVE_1", "audio/love_1.mp3");
+        BaseMod.addAudio("Wlj:LOVE_2", "audio/love_2.mp3");
+        BaseMod.addAudio("Wlj:LOVE_3", "audio/love_3.mp3");
+        BaseMod.addAudio("Wlj:LOVE_4", "audio/love_4.mp3");
+        BaseMod.addAudio("Wlj:SIT_1", "audio/sit_1.mp3");
+        BaseMod.addAudio("Wlj:SIT_2", "audio/sit_2.mp3");
+        BaseMod.addAudio("Wlj:SIT_3", "audio/sit_3.mp3");
+        BaseMod.addAudio("Wlj:SIT_4", "audio/sit_4.mp3");
+        BaseMod.addAudio("Wlj:INVITE_1", "audio/invite_1.mp3");
+        BaseMod.addAudio("Wlj:INVITE_2", "audio/invite_2.mp3");
+        BaseMod.addAudio("Wlj:INVITE_3", "audio/invite_3.mp3");
+        BaseMod.addAudio("Wlj:INVITE_4", "audio/invite_4.mp3");
+        BaseMod.addAudio("Wlj:INVITE_5", "audio/invite_5.mp3");
+        BaseMod.addAudio("Wlj:INVITE_6", "audio/invite_6.mp3");
+        BaseMod.addAudio("Wlj:INVITE_7", "audio/invite_7.mp3");
     }
 
     @Override

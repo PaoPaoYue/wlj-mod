@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.CardTagEnum;
 import com.github.paopaoyue.wljmod.power.LovePower;
+import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,6 +21,8 @@ public class Love extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:LOVE_1", "Wlj:LOVE_2", "Wlj:LOVE_3", "Wlj:LOVE_4"}, true, 1.0f, 0.1f, 0.5f);
+
     public Love() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -31,6 +34,7 @@ public class Love extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        sfxUtil.playSFX(1.6f);
         this.addToBot(new ApplyPowerAction(m, p, new LovePower(m, this.magicNumber), this.magicNumber));
         this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview));
     }

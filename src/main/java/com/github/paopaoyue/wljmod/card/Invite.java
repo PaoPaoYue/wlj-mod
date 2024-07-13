@@ -3,6 +3,7 @@ package com.github.paopaoyue.wljmod.card;
 import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.CardTagEnum;
+import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -21,6 +22,8 @@ public class Invite extends CustomCard {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
 
+    public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:INVITE_1", "Wlj:INVITE_2", "Wlj:INVITE_3", "Wlj:INVITE_4", "Wlj:INVITE_5", "Wlj:INVITE_6", "Wlj:INVITE_7"}, true, 1.0f, 0.1f, 0.5f);
+
     public Invite() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.SPECIAL, CardTarget.ENEMY);
@@ -33,6 +36,7 @@ public class Invite extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        sfxUtil.playSFX(1.6f);
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         this.addToBot(new MakeTempCardInHandAction(new Rabble(), this.magicNumber));
     }

@@ -6,18 +6,16 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 
-public class DiceAction extends AbstractGameAction
-{
+public class DiceAction extends AbstractGameAction {
     private Dice card;
 
-    public DiceAction(Dice card,  AbstractMonster target) {
+    public DiceAction(Dice card, AbstractMonster target) {
         this.source = AbstractDungeon.player;
         this.card = card;
         this.target = target;
@@ -43,7 +41,7 @@ public class DiceAction extends AbstractGameAction
                 this.addToTop(new GainGoldAction(5 * effect));
                 this.addToTop(new VFXAction((new RainingGoldEffect(5 * effect, true))));
             } else {
-                CardCrawlGame.sound.play("Wlj:PAY_3", 0f);
+                PurchaseAction.sfxUtil.playSFX();
                 AbstractDungeon.player.loseGold(5 * effect);
             }
             this.addToTop(rollDiceAction);

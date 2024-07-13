@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
+import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.power.CapitalistPower;
 import com.github.paopaoyue.wljmod.power.CorruptionPower;
@@ -26,6 +27,7 @@ public class Capitalist extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        PurchaseAction.sfxUtil.playSFX();
         this.addToBot(new ApplyPowerAction(p, p, new CapitalistPower(p)));
         this.addToBot(new ApplyPowerAction(p, p, new CorruptionPower(p, this.magicNumber)));
     }
