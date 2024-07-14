@@ -17,8 +17,8 @@
   },
   "Wlj:Prisoner": {
     "NAME": "囚犯",
-    "DESCRIPTION": " 员工 。获得 [E] ，在弃牌堆外战斗结束时获得 3 金币 。",
-    "UPGRADE_DESCRIPTION": " 员工 。获得 [E] [E] ，在弃牌堆外战斗结束时获得 3 金币 。"
+    "DESCRIPTION": " 员工 。获得 [E] ，在弃牌堆外战斗结束时获得 !M! 金币 。 消耗 。",
+    "UPGRADE_DESCRIPTION": " 员工 。获得 [E] ，在弃牌堆外战斗结束时获得 !M! 金币 。"
   },
   "Wlj:Layoff": {
     "NAME": "优化员工",
@@ -64,7 +64,7 @@
   },
   "Wlj:Lily": {
     "NAME": "托莉莲睡拿",
-    "DESCRIPTION": "造成 !D! 点伤害。每次出牌改变牌名，牌名正确时额外抽1张牌",
+    "DESCRIPTION": "造成 !D! 伤害。每次出牌改变牌名，牌名正确时额外抽1张牌",
     "EXTENDED_DESCRIPTION": [
       "托莉莲睡拿",
       "托丽拿睡莲",
@@ -84,7 +84,7 @@
   "Wlj:Fertile": {
     "NAME": "肥地",
     "DESCRIPTION": "造成当前消耗牌堆牌数量的伤害。",
-    "UPGRADE_DESCRIPTION": " NL （造成 !D! 点伤害。）"
+    "UPGRADE_DESCRIPTION": " NL （造成 !D! 伤害。）"
   },
   "Wlj:Ember": {
     "NAME": "大块余烬",
@@ -102,7 +102,7 @@
   },
   "Wlj:Glory": {
     "NAME": "荣耀属于天生战狂",
-    "DESCRIPTION": "受到1点伤害 !M! 次，造成 !D! 点伤害。"
+    "DESCRIPTION": "受到1伤害 !M! 次，造成 !D! 伤害。"
   },
   "Wlj:Erwen": {
     "NAME": "拳皇二文",
@@ -256,7 +256,7 @@
   },
   "Wlj:Leidongxuan": {
     "NAME": "雷洞玄",
-    "DESCRIPTION": " 员工 。获得 !B! 格挡 ，在弃牌堆外时每格挡1点伤害使此牌格挡增加 !M! 。"
+    "DESCRIPTION": " 员工 。获得 !B! 格挡 ，在弃牌堆外时每格挡1伤害使此牌格挡增加 !M! 。"
   },
   "Wlj:Auto Fire": {
     "NAME": "自由开火",
@@ -283,7 +283,7 @@
   },
   "Wlj:Sake": {
     "NAME": "无限大哥的口嚼酒",
-    "DESCRIPTION": "使一个敌人意图变为造成 !M! 点伤害，无法对强大意图生效。 消耗 。"
+    "DESCRIPTION": "使一个敌人意图变为造成 !M! 伤害，无法对强大意图生效。 消耗 。"
   },
   "Wlj:Stardew Valley": {
     "NAME": "睡前故事",
