@@ -20,7 +20,7 @@ public class Prisoner extends AbstractWorkerCard {
     public Prisoner() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.SPECIAL, CardTarget.SELF);
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }
