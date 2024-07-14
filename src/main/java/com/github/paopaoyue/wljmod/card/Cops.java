@@ -23,7 +23,7 @@ public class Cops extends CustomCard {
     public Cops() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 11;
+        this.baseDamage = 9;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Prisoner();
@@ -37,7 +37,7 @@ public class Cops extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.cardsToPreview.upgrade();
+            this.upgradeMagicNumber(1);
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

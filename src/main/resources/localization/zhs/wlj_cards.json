@@ -60,7 +60,7 @@
   "Wlj:Cops": {
     "NAME": "浅博里三人组",
     "DESCRIPTION": "造成 !D! 伤害，增加 !M! 名 *囚犯 到抽牌堆。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 伤害，增加 !M! 名 *囚犯+ 到抽牌堆。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 伤害，增加 !M! 名 *囚犯 到抽牌堆。"
   },
   "Wlj:Lily": {
     "NAME": "托莉莲睡拿",
