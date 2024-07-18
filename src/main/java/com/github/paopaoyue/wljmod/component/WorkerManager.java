@@ -4,7 +4,6 @@ import com.github.paopaoyue.wljmod.card.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -75,14 +74,18 @@ public class WorkerManager {
         int count = 0;
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c instanceof AbstractWorkerCard) {
-                if (c instanceof Gaoshi) {
-                    count += ((Gaoshi) c).magicNumber;
-                } else {
-                    count++;
-                }
+                count++;
             }
         }
         return count;
+    }
+
+    public int getWorkerTypeCountInDiscardPile() {
+        return (int) AbstractDungeon.player.discardPile.group.stream()
+                .filter(c -> c instanceof AbstractWorkerCard)
+                .map(c -> c.cardID)
+                .distinct()
+                .count();
     }
 
     public List<AbstractCard> getWorkerInDiscardPile() {

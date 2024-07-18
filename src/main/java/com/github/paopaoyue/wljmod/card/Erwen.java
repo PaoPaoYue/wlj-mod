@@ -1,11 +1,8 @@
 package com.github.paopaoyue.wljmod.card;
 
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,26 +18,24 @@ public class Erwen extends AbstractWorkerCard {
     }
 
     public Erwen() {
-        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 5;
-        this.baseMagicNumber = 9;
-        this.magicNumber = this.baseMagicNumber;
+        this.baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        this.addToBot(new GainBlockAction(AbstractDungeon.player, this.block));
     }
 
     public void triggerOnExhaust() {
-        this.addToBot(new GainBlockAction(AbstractDungeon.player, this.magicNumber));
+        this.addToBot(new GainBlockAction(AbstractDungeon.player, this.block));
         super.triggerOnExhaust();
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(3);
+            this.upgradeBlock(2);
         }
     }
 

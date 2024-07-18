@@ -19,8 +19,8 @@ public class SunKnightAction extends AbstractGameAction {
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             if (card instanceof AbstractWorkerCard) {
                 AbstractCard replacement;
-                int randomLevel1 = AbstractDungeon.cardRandomRng.random(0, 4);
-                switch (randomLevel1) {
+                int random = AbstractDungeon.cardRandomRng.random(0, 7);
+                switch (random) {
                     case 0:
                         replacement = new StabbingSword();
                         break;
@@ -34,8 +34,7 @@ public class SunKnightAction extends AbstractGameAction {
                         replacement = new IceAndFire();
                         break;
                     default:
-                        int randomLevel2 = AbstractDungeon.cardRandomRng.random(0, 3);
-                        replacement = new Wand(randomLevel2);
+                        replacement = new Wand(random - 4);
                         break;
                 }
                 if (card.upgraded) {

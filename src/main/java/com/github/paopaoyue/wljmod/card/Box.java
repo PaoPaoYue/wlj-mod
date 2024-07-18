@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
+import com.github.paopaoyue.wljmod.patch.CardTagEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -23,6 +24,7 @@ public class Box extends CustomCard {
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        this.tags.add(CardTagEnum.PAY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

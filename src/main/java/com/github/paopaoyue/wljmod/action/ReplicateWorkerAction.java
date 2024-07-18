@@ -21,9 +21,11 @@ public class ReplicateWorkerAction extends AbstractGameAction {
     public void update() {
         int size = 10 - AbstractDungeon.player.hand.size();
         List<AbstractCard> workerInDiscardPile = WljMod.workerManager.getWorkerInDiscardPile();
-        for (int i = 0; i < size; i++) {
-            AbstractCard card = workerInDiscardPile.get(AbstractDungeon.cardRandomRng.random(workerInDiscardPile.size() - 1));
-            this.addToTop(new MakeTempCardInHandAction(card));
+        if (!workerInDiscardPile.isEmpty()) {
+            for (int i = 0; i < size; i++) {
+                AbstractCard card = workerInDiscardPile.get(AbstractDungeon.cardRandomRng.random(workerInDiscardPile.size() - 1));
+                this.addToTop(new MakeTempCardInHandAction(card));
+            }
         }
         this.isDone = true;
     }

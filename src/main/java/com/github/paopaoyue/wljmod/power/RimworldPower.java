@@ -9,12 +9,12 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-public class ChaplinPower extends AbstractPower {
-    public static final String POWER_ID = "Wlj:Chaplin";
+public class RimworldPower extends AbstractPower {
+    public static final String POWER_ID = "Wlj:Rimworld";
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
-    private static final Texture IMG = ImageMaster.loadImage("image/icon/chaplin.png");
+    private static final Texture IMG = ImageMaster.loadImage("image/icon/rimworld.png");
 
-    public ChaplinPower(AbstractCreature owner, int amount) {
+    public RimworldPower(AbstractCreature owner, int amount) {
         this.name = strings.NAME;
         this.ID = POWER_ID;
         this.owner = owner;

@@ -20,9 +20,6 @@ public class Xiangdangdang extends AbstractAvatarCard {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF,
                 new com.github.paopaoyue.wljmod.component.Xiangdangdang(), 2);
-        this.cardsToPreview = new Love();
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,8 +30,7 @@ public class Xiangdangdang extends AbstractAvatarCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
-            this.getAvatar().upgrade();
+            this.upgradeBaseCost(1);
         }
     }
 

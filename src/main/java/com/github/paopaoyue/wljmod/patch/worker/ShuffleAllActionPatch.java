@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
+import com.github.paopaoyue.wljmod.card.Phoenix;
 import com.megacrit.cardcrawl.actions.defect.ShuffleAllAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,7 +25,7 @@ public class ShuffleAllActionPatch {
         Iterator<AbstractCard> iterator = AbstractDungeon.player.discardPile.group.iterator();
         while (iterator.hasNext()) {
             AbstractCard card = iterator.next();
-            if (card instanceof AbstractWorkerCard) {
+            if (card instanceof AbstractWorkerCard || (card instanceof Phoenix && ((Phoenix) card).isMainBody())) {
                 tempCardList.add(card);
                 iterator.remove();
             }

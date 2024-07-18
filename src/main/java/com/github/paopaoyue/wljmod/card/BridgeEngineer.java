@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
+import com.github.paopaoyue.wljmod.patch.CardTagEnum;
 import com.github.paopaoyue.wljmod.power.CorruptionPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainGoldAction;
@@ -26,6 +27,7 @@ public class BridgeEngineer extends CustomCard {
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 10;
         this.magicNumber = this.baseMagicNumber;
+        this.tags.add(CardTagEnum.PAY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

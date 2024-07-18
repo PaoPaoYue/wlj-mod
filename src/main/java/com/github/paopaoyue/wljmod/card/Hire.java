@@ -3,6 +3,7 @@ package com.github.paopaoyue.wljmod.card;
 import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
+import com.github.paopaoyue.wljmod.patch.CardTagEnum;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,6 +25,7 @@ public class Hire extends CustomCard {
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Performer();
+        this.tags.add(CardTagEnum.PAY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

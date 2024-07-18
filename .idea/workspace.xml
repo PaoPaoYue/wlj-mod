@@ -4,7 +4,83 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix" />
+    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/AllTaiwuToHandAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DiscardErwenAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DiscardWithCallbackAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/RandomTransformRabbleAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/PhoenixPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/gold/LoseGoldPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/gold/OnVictoryPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/gold/RenderGoldPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/gold/UpdateGoldPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/relic/ApplyPowerActionPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/relic/BossRelicObtain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Bird.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Chicken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Rifle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Sheep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Ship.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/SpaceEngineer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/StoneHeart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Tax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DiceAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DiceAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DrawSpecificCardAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DrawSpecificCardAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/LapseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/LapseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/LayoffAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/LayoffAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/PurchaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/PurchaseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/ReplicateWorkerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/ReplicateWorkerAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/SunKnightAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/SunKnightAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/AbstractWorkerCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/AbstractWorkerCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Awards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Awards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Balcony.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Balcony.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/BridgeEngineer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/BridgeEngineer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Capitalist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Capitalist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Chaplin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Chaplin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/ChildLabor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/ChildLabor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Cops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Cops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Crab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Crab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Erwen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Erwen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Gaoshi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Gaoshi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Garbage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Garbage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Glory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Glory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Hire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Hire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Love.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Love.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Phoenix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Phoenix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Startup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Xiangdangdang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Xiangdangdang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/WorkerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/WorkerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Xiangdangdang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Xiangdangdang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/CardTagEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/CardTagEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/EmberPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/EmberPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/worker/EmptyDeckShuffleActionPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/worker/EmptyDeckShuffleActionPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/worker/ShuffleAllActionPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/worker/ShuffleAllActionPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/CapitalistPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/CapitalistPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/ChaplinPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/RimworldPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/PrisonPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/PrisonPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/1024/bg_attack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/1024/bg_attack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/1024/bg_power.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/1024/bg_power.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/1024/bg_skill.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/1024/bg_skill.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/512/bg_attack.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/512/bg_attack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/512/bg_power.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/512/bg_power.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/512/bg_skill.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/512/bg_skill.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/capitalist.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/card/capitalist.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/capitalist_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/card/capitalist_p.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/icon/chaplin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/icon/money.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/icon/money.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_powers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_powers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_relics.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_relics.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +147,7 @@
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/DamageAllEnemiesAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/DrawCardAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/GainBlockAction.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/GainGoldAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/watcher/TriggerMarksAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/cards/AbstractCard.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/cards/CardGroup.class" root0="SKIP_INSPECTION" />
@@ -122,7 +199,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.38045976&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.saveactions&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -145,11 +222,11 @@
       <recent name="C:\Users\LENOVO\Desktop\onmyoji-mod\src\main\resources\image\1024" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.paopaoyue.wljmod.card" />
       <recent name="com.github.paopaoyue.wljmod.action" />
-      <recent name="com.github.paopaoyue.wljmod.component" />
-      <recent name="com.github.paopaoyue.wljmod.patch.card" />
+      <recent name="com.github.paopaoyue.wljmod.relic" />
+      <recent name="com.github.paopaoyue.wljmod.patch.gold" />
       <recent name="com.github.paopaoyue.wljmod.patch.worker" />
+      <recent name="com.github.paopaoyue.wljmod.card" />
     </key>
   </component>
   <component name="RunManager">
@@ -261,6 +338,11 @@
       <workItem from="1720780739427" duration="2946000" />
       <workItem from="1720783776890" duration="3929000" />
       <workItem from="1720879788701" duration="14515000" />
+      <workItem from="1720932542129" duration="12961000" />
+      <workItem from="1721023121787" duration="3371000" />
+      <workItem from="1721133194075" duration="6001000" />
+      <workItem from="1721209643182" duration="20307000" />
+      <workItem from="1721279655668" duration="30927000" />
     </task>
     <servers />
   </component>

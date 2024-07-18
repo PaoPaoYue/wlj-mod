@@ -40,6 +40,6 @@ public class DrawSpecificCardAction extends AbstractGameAction {
                 this.addToTop(new DrawCardAction(this.amount));
             }
         }
-        this.tickDuration();
+        this.isDone = true;
     }
 }

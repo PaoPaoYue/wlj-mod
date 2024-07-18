@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.action;
 
-import com.github.paopaoyue.wljmod.card.Dice;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,43 +12,41 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 
 public class DiceAction extends AbstractGameAction {
-    private Dice card;
+    private int damage;
+    private int diceThreshold;
+    private int gold;
+    private int energyOnUse;
+    private boolean freeToPlayOnce;
 
-    public DiceAction(Dice card, AbstractMonster target) {
+    public DiceAction(AbstractMonster target, int damage, int diceThreshold, int gold, int energyOnUse, boolean freeToPlayOnce) {
         this.source = AbstractDungeon.player;
-        this.card = card;
         this.target = target;
+        this.damage = damage;
+        this.diceThreshold = diceThreshold;
+        this.gold = gold;
+        this.energyOnUse = energyOnUse;
+        this.freeToPlayOnce = freeToPlayOnce;
         this.duration = Settings.ACTION_DUR_XFAST;
         this.actionType = ActionType.SPECIAL;
     }
 
     @Override
     public void update() {
-        int effect = EnergyPanel.totalCount;
-        if (card.energyOnUse != -1) {
-            effect = card.energyOnUse;
-        }
-        if (AbstractDungeon.player.hasRelic("Chemical X")) {
-            effect += 2;
-            AbstractDungeon.player.getRelic("Chemical X").flash();
-        }
-        if (effect > 0) {
-            card.baseDamage = effect * 9;
-            card.calculateCardDamage((AbstractMonster) target);
+        if (gold > 0) {
             AbstractGameAction rollDiceAction = new RollDiceAction();
-            if (rollDiceAction.amount >= (card.upgraded ? 2 : 3)) {
-                this.addToTop(new GainGoldAction(5 * effect));
-                this.addToTop(new VFXAction((new RainingGoldEffect(5 * effect, true))));
+            if (rollDiceAction.amount >= diceThreshold) {
+                this.addToTop(new GainGoldAction(gold));
+                this.addToTop(new VFXAction((new RainingGoldEffect(4 * gold, true))));
             } else {
                 PurchaseAction.sfxUtil.playSFX();
-                AbstractDungeon.player.loseGold(5 * effect);
+                AbstractDungeon.player.loseGold(gold);
             }
             this.addToTop(rollDiceAction);
-            if (!target.isDeadOrEscaped())
-                this.addToTop(new DamageAction(target, new DamageInfo(source, card.damage, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-            if (!card.freeToPlayOnce) {
-                AbstractDungeon.player.energy.use(EnergyPanel.totalCount);
-            }
+        }
+        if (damage > 0 && !target.isDeadOrEscaped())
+            this.addToTop(new DamageAction(target, new DamageInfo(source, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        if (!freeToPlayOnce) {
+            AbstractDungeon.player.energy.use(EnergyPanel.totalCount);
         }
         this.isDone = true;
     }

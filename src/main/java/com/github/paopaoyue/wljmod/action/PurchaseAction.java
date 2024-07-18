@@ -1,5 +1,6 @@
 package com.github.paopaoyue.wljmod.action;
 
+import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,7 +25,7 @@ public class PurchaseAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (AbstractDungeon.player.gold >= amount) {
+        if (AbstractDungeon.player.gold + WljMod.tempGold >= amount) {
             CardCrawlGame.sound.play("SHOP_PURCHASE", 0f);
             sfxUtil.playSFX();
             AbstractDungeon.player.loseGold(this.amount);

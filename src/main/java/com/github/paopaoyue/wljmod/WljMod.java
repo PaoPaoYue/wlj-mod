@@ -37,6 +37,9 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
     public static AvatarManager avatarManager;
     public static WorkerManager workerManager;
 
+    public static int tempGold;
+    public static int displayTempGold;
+
     public WljMod() {
         logger.info("instantiating WljMod");
         BaseMod.subscribe(this);
@@ -158,6 +161,9 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
     public void receiveStartGame() {
         avatarManager = new AvatarManager();
         workerManager = new WorkerManager();
+
+        tempGold = 0;
+        displayTempGold = 0;
     }
 
     public void receiveCardUsed(AbstractCard abstractCard) {

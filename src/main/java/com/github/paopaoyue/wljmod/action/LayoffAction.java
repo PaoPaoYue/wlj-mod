@@ -1,15 +1,18 @@
 package com.github.paopaoyue.wljmod.action;
 
 import com.github.paopaoyue.wljmod.WljMod;
-import com.github.paopaoyue.wljmod.card.*;
-import com.github.paopaoyue.wljmod.component.SunKnight;
+import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
+import com.github.paopaoyue.wljmod.card.Erwen;
+import com.github.paopaoyue.wljmod.card.Keel;
+import com.github.paopaoyue.wljmod.card.Rabble;
 import com.github.paopaoyue.wljmod.effect.ShowCardAndExhaustEffect;
 import com.github.paopaoyue.wljmod.power.AlarmPower;
 import com.github.paopaoyue.wljmod.power.PrisonPower;
+import com.github.paopaoyue.wljmod.relic.Dog;
+import com.github.paopaoyue.wljmod.relic.Truck;
 import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -52,6 +55,8 @@ public class LayoffAction extends AbstractGameAction {
         this.source = AbstractDungeon.player;
         AlarmPower alarmPower = (AlarmPower) AbstractDungeon.player.getPower(AlarmPower.POWER_ID);
         this.amount = (alarmPower == null ? amount : alarmPower.modifyLayoffAmount(amount));
+        Truck truck = (Truck) AbstractDungeon.player.getRelic(Truck.ID);
+        this.amount = (truck == null ? this.amount : truck.modifyLayoffAmount(this.amount));
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
         this.auto = auto;
@@ -62,9 +67,21 @@ public class LayoffAction extends AbstractGameAction {
     public void update() {
         if (this.duration == this.startDuration) {
 
+            if (AbstractDungeon.player.drawPile.group.stream().anyMatch(c -> c instanceof Erwen)) {
+                AbstractDungeon.actionManager.addToTop(new LayoffAction(this.amount, this.auto, this.predicate));
+                AbstractDungeon.actionManager.addToTop(new DiscardErwenAction());
+                this.isDone = true;
+                return;
+            }
+
             PrisonPower prisonPower = (PrisonPower) AbstractDungeon.player.getPower(PrisonPower.POWER_ID);
             if (prisonPower != null) {
-                prisonPower.onPreLayoff();
+                prisonPower.onLayoff(this.amount);
+            }
+
+            Dog dog = (Dog) AbstractDungeon.player.getRelic(Dog.ID);
+            if (dog != null) {
+                dog.onLayoff(this.amount);
             }
 
             CardGroup tmpGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
@@ -95,7 +112,6 @@ public class LayoffAction extends AbstractGameAction {
                     selectedCards.add(card);
                 }
             }
-
         }
 
         if (!auto && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
@@ -116,11 +132,7 @@ public class LayoffAction extends AbstractGameAction {
                 }
 
                 if (card instanceof AbstractWorkerCard) {
-                    if (card instanceof Gaoshi) {
-                        for (int i = 0; i < card.magicNumber; i++) {
-                            AbstractDungeon.player.drawPile.addToRandomSpot(new Performer());
-                        }
-                    } else if (card instanceof Keel) {
+                    if (card instanceof Keel) {
                         AbstractCard tempCard = card.makeStatEquivalentCopy();
                         tempCard.baseDamage *= 2;
                         AbstractDungeon.player.drawPile.addToRandomSpot(tempCard);
@@ -133,9 +145,6 @@ public class LayoffAction extends AbstractGameAction {
             }
 
             CardCrawlGame.dungeon.checkForPactAchievement();
-            if (WljMod.avatarManager.getCurrentAvatar() instanceof SunKnight) {
-                AbstractDungeon.actionManager.addToTop(new GainEnergyAction(1));
-            }
             AbstractDungeon.actionManager.addToTop(new DrawCardAction(selectedCards.size()));
 
             this.isDone = true;

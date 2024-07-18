@@ -18,6 +18,7 @@ public abstract class AbstractWorkerCard extends CustomCard {
         if (AbstractDungeon.player.hasPower(FutureTechPower.POWER_ID)) {
             AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
             if (target != null) {
+                this.calculateCardDamage(target);
                 this.use(AbstractDungeon.player, target);
             }
         }

@@ -4,6 +4,7 @@ import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.BetterMakeTempCardInDiscardAction;
 import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
+import com.github.paopaoyue.wljmod.patch.CardTagEnum;
 import com.github.paopaoyue.wljmod.power.StartupPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,6 +27,7 @@ public class Startup extends CustomCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Performer();
+        this.tags.add(CardTagEnum.PAY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

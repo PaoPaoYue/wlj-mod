@@ -35,7 +35,7 @@ public class PrisonPower extends AbstractPower {
         updateDescription();
     }
 
-    public void onPreLayoff() {
+    public void onLayoff(int layoffSize) {
         if (this.count > 0) {
             this.addToBot(new MakeTempCardInHandAction(new Prisoner()));
             this.count--;

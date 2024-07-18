@@ -21,9 +21,9 @@ public class Garbage extends CustomCard {
     }
 
     public Garbage() {
-        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 14;
+        this.baseDamage = 11;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
@@ -36,7 +36,8 @@ public class Garbage extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(3);
+            this.upgradeDamage(7);
+            this.upgradeMagicNumber(1);
         }
     }
 

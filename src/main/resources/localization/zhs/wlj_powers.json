@@ -62,18 +62,18 @@
       " 金币。"
     ]
   },
-  "Wlj:Chaplin": {
-    "NAME": "菊别林",
+  "Wlj:Rimworld": {
+    "NAME": "环世界",
     "DESCRIPTIONS": [
-      "0费攻击牌伤害增加 #b",
+      "0费牌攻击伤害增加 #b",
       " 。"
     ]
   },
   "Wlj:Ju Village": {
     "NAME": "菊家村",
     "DESCRIPTIONS": [
-      "回合开始时, 繁殖弃牌堆内的 #y贱民 一倍 （至多新增 #b",
-      " 名）。"
+      "回合开始时, 繁殖弃牌堆内的 #y贱民 一倍 （至多复制 #b",
+      " 名 #y贱民 到弃牌堆）。"
     ]
   },
   "Wlj:Bait": {
@@ -124,7 +124,7 @@
   "Wlj:Capitalist": {
     "NAME": "资本家形态",
     "DESCRIPTIONS": [
-      "攻击额外造成当前 #y金币 个位数的的伤害。"
+      " #y支付 或失去 #y金币 的牌会重复使用一次。"
     ]
   },
   "Wlj:Clubhouse": {
