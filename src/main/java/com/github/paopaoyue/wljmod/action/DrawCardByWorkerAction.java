@@ -6,8 +6,8 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 
-public class GloryAction extends AbstractGameAction {
-    public GloryAction(final AbstractPlayer source, final int amount) {
+public class DrawCardByWorkerAction extends AbstractGameAction {
+    public DrawCardByWorkerAction(final AbstractPlayer source, final int amount) {
         this.setValues(this.target, source, amount);
         this.actionType = ActionType.WAIT;
     }

@@ -19,7 +19,7 @@ public class SfxUtil {
     }
 
     public static void resetAll() {
-        sfxList.forEach(sfx -> sfx.reset());
+        sfxList.forEach(SfxUtil::reset);
     }
 
     private String[] sfxIds;

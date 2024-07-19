@@ -53,6 +53,10 @@
     "NAME": "正义的毒箭",
     "DESCRIPTION": "造成 !D! 伤害，敌人每有一层中毒以外的负面状态给予 !M! 中毒 。"
   },
+  "Wlj:Broadsword": {
+    "NAME": "魔力大刀",
+    "DESCRIPTION": "造成 !D! 伤害，弃牌堆每有一种 员工 抽一张牌。"
+  },
   "Wlj:Lewis": {
     "NAME": "刘易斯",
     "DESCRIPTION": "造成 !D! 伤害，计算 !M! 倍 *优秀员工 的加成效果。 NL 不会杀死敌人。"
@@ -101,7 +105,7 @@
   },
   "Wlj:Glory": {
     "NAME": "荣耀属于天生战狂",
-    "DESCRIPTION": "造成 !D! 伤害，弃牌堆每有一种 员工 抽一张牌。"
+    "DESCRIPTION": "受到1伤害 !M! 次，造成 !D! 伤害。"
   },
   "Wlj:Erwen": {
     "NAME": "拳皇二文",
