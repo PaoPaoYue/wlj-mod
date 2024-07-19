@@ -19,7 +19,7 @@ public class Erwen extends AbstractWorkerCard {
 
     public Erwen() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
+                AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 5;
     }
 

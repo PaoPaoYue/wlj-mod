@@ -30,7 +30,7 @@ public class Phoenix extends CustomCard {
     public Phoenix(int level) {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), level, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = level * 8;
+        this.baseDamage = level * 7;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.misc = level;
@@ -49,8 +49,14 @@ public class Phoenix extends CustomCard {
 
     public void triggerOnExhaust() {
         if (this.isMainBody()) {
-            this.addToBot(new MakeTempCardInHandAction(new Phoenix(1)));
-            AbstractDungeon.player.discardPile.addToBottom(new Phoenix(this.misc - 1));
+            Phoenix part = new Phoenix(1);
+            Phoenix body = new Phoenix(this.misc - 1);
+            if (upgraded) {
+                part.upgrade();
+                body.upgrade();
+            }
+            this.addToBot(new MakeTempCardInHandAction(part));
+            AbstractDungeon.player.discardPile.addToBottom(body);
         }
         super.triggerOnExhaust();
     }

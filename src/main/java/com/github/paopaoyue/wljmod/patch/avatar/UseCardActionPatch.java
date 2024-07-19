@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod.patch.avatar;
 
 import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.AbstractAvatarCard;
 import com.github.paopaoyue.wljmod.utility.Reflect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -26,7 +27,9 @@ public class UseCardActionPatch {
             locator = Locator.class
     )
     public static SpireReturn<Void> Insert(UseCardAction __instance, AbstractCard ___targetCard, float ___duration) {
-        if (___targetCard instanceof AbstractAvatarCard) {
+        if (___targetCard instanceof AbstractAvatarCard &&
+                !WljMod.avatarManager.getAvatarCardGroup().isEmpty() &&
+                WljMod.avatarManager.getAvatarCardGroup().getBottomCard().equals(___targetCard)) {
             ___targetCard.exhaustOnUseOnce = false;
             ___targetCard.dontTriggerOnUseCard = false;
             AbstractDungeon.actionManager.addToBottom(new HandCheckAction());

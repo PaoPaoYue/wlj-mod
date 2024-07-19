@@ -23,7 +23,13 @@ public class Bird extends CustomRelic {
 
     @Override
     public void onLoseGold() {
-        AbstractDungeon.player.gainGold(200);
+        if (AbstractDungeon.player.gold <= 0)
+            AbstractDungeon.player.gainGold(200);
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return AbstractDungeon.player.hasRelic(Money.ID);
     }
 
     @Override

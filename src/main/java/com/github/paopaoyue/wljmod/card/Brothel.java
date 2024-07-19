@@ -29,7 +29,8 @@ public class Brothel extends CustomCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ExhaustCardGroupAction(p.discardPile, c -> c instanceof Performer, cards -> {
-            this.addToTop(new ApplyPowerAction(p, p, new BrothelPower(p, cards.size()), cards.size()));
+            if (!cards.isEmpty())
+                this.addToTop(new ApplyPowerAction(p, p, new BrothelPower(p, cards.size()), cards.size()));
         }));
     }
 

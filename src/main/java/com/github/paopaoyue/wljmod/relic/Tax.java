@@ -45,6 +45,11 @@ public class Tax extends CustomRelic {
     }
 
     @Override
+    public void bossObtainLogic() {
+        this.isObtained = true;
+    }
+
+    @Override
     public void onVictory() {
         this.counter = -1;
         this.grayscale = false;
