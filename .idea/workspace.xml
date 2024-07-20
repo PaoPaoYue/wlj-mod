@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Broadsword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/boardsword.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/boardsword_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/GloryAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DrawCardByWorkerAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Glory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Glory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Layoff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Layoff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/sfx/SfxUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/sfx/SfxUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/lewis.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/card/lewis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/lewis_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/card/lewis_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
-    </list>
+    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -286,7 +274,7 @@
       <workItem from="1721209643182" duration="20307000" />
       <workItem from="1721279655668" duration="37292000" />
       <workItem from="1721373257262" duration="6125000" />
-      <workItem from="1721400814977" duration="1964000" />
+      <workItem from="1721400814977" duration="2263000" />
     </task>
     <servers />
   </component>
