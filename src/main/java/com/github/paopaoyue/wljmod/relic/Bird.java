@@ -1,11 +1,13 @@
 package com.github.paopaoyue.wljmod.relic;
 
 import basemod.abstracts.CustomRelic;
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public class Bird extends CustomRelic {
     public static final String ID = "Wlj:Bird";
@@ -23,8 +25,11 @@ public class Bird extends CustomRelic {
 
     @Override
     public void onLoseGold() {
-        if (AbstractDungeon.player.gold <= 0)
+        if (AbstractDungeon.player.gold <= 0) {
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
+                AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(200));
             AbstractDungeon.player.gainGold(200);
+        }
     }
 
     @Override

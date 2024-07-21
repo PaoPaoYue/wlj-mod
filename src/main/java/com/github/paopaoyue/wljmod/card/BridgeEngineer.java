@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.CardTagEnum;
 import com.github.paopaoyue.wljmod.power.CorruptionPower;
@@ -12,7 +13,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 
 public class BridgeEngineer extends CustomCard {
     public static final String ID = "Wlj:Bridge Engineer";
@@ -31,7 +31,7 @@ public class BridgeEngineer extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.effectList.add(new RainingGoldEffect(this.magicNumber * 2, true));
+        AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(this.magicNumber));
         this.addToBot(new GainGoldAction(this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new CorruptionPower(p, 2), 2));
     }

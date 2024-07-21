@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.power;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -28,6 +29,7 @@ public class CorruptionPower extends AbstractPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && this.owner.isPlayer) {
+            AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(-this.amount));
             AbstractDungeon.player.loseGold(this.amount);
         }
     }

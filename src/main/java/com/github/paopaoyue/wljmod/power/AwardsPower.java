@@ -3,6 +3,7 @@ package com.github.paopaoyue.wljmod.power;
 import com.badlogic.gdx.graphics.Texture;
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.Performer;
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -38,7 +39,7 @@ public class AwardsPower extends AbstractPower {
         WljMod.workerManager.iterOutsideDiscardPile(c -> {
             gold.addAndGet((c instanceof Performer) ? 1 : 0);
         });
-        CardCrawlGame.sound.play("SHOP_PURCHASE", 0f);
+        AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(-gold.get()));
         AbstractDungeon.player.loseGold(gold.get());
     }
 

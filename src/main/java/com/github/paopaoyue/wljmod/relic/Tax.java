@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod.relic;
 
 import basemod.abstracts.CustomRelic;
 import com.github.paopaoyue.wljmod.card.Performer;
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -35,7 +36,7 @@ public class Tax extends CustomRelic {
     public void onExhaust(AbstractCard card) {
         if (!this.grayscale && card instanceof Performer) {
             this.flash();
-            CardCrawlGame.sound.play("GOLD_GAIN");
+            AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(GOLD_GAIN));
             AbstractDungeon.player.gainGold(GOLD_GAIN);
             this.counter--;
             if (this.counter == 0) {

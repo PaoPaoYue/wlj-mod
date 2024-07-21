@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
+import com.megacrit.cardcrawl.vfx.GainPennyEffect;
 
 public class GiantKingPower extends AbstractPower {
     public static final String POWER_ID = "Wlj:Giant King";
@@ -33,7 +33,9 @@ public class GiantKingPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner.isPlayer) {
-            AbstractDungeon.effectList.add(new RainingGoldEffect(this.amount * 5, true));
+            for (int i = 0; i < this.amount; i++) {
+                AbstractDungeon.effectList.add(new GainPennyEffect(AbstractDungeon.player, this.owner.hb.cX, this.owner.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true));
+            }
             this.addToBot(new GainGoldAction(this.amount));
         }
         return damageAmount;

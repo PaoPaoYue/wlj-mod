@@ -1,5 +1,6 @@
 package com.github.paopaoyue.wljmod.action;
 
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -35,10 +36,12 @@ public class DiceAction extends AbstractGameAction {
         if (gold > 0) {
             AbstractGameAction rollDiceAction = new RollDiceAction();
             if (rollDiceAction.amount >= diceThreshold) {
+                AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(gold, true));
                 this.addToTop(new GainGoldAction(gold));
                 this.addToTop(new VFXAction((new RainingGoldEffect(4 * gold, true))));
             } else {
                 PurchaseAction.sfxUtil.playSFX();
+                AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(-gold, true));
                 AbstractDungeon.player.loseGold(gold);
             }
             this.addToTop(rollDiceAction);

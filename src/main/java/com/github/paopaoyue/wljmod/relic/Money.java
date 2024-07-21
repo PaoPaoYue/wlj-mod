@@ -1,15 +1,13 @@
 package com.github.paopaoyue.wljmod.relic;
 
 import basemod.abstracts.CustomRelic;
-import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 
 public class Money extends CustomRelic {
     public static final String ID = "Wlj:Money";
@@ -29,7 +27,7 @@ public class Money extends CustomRelic {
     public void onVictory() {
         this.flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        CardCrawlGame.sound.play("GOLD_GAIN");
+        AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(6));
         AbstractDungeon.player.gainGold(6);
     }
 

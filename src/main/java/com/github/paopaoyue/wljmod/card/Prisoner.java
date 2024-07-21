@@ -1,5 +1,6 @@
 package com.github.paopaoyue.wljmod.card;
 
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,6 +40,7 @@ public class Prisoner extends AbstractWorkerCard {
     }
 
     public void onVictoryOutsideDiscardPile() {
+        AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(this.magicNumber));
         AbstractDungeon.player.gainGold(this.magicNumber);
     }
 
