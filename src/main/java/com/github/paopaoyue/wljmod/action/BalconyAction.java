@@ -59,6 +59,10 @@ public class BalconyAction extends AbstractGameAction {
             } else {
                 card = AbstractDungeon.getCard(AbstractCard.CardRarity.UNCOMMON, AbstractDungeon.cardRandomRng);
             }
+            if (choices.stream().anyMatch(c -> c.cardID.equals(card.cardID))) {
+                i--;
+                continue;
+            }
             card.setCostForTurn(0);
             choices.add(card);
         }
