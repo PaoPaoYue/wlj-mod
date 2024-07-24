@@ -1,14 +1,19 @@
 package com.github.paopaoyue.wljmod.card;
 
+import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
+import com.github.paopaoyue.wljmod.relic.Tax;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class Performer extends AbstractWorkerCard {
     public static final String ID = "Wlj:Performer";
@@ -27,6 +32,13 @@ public class Performer extends AbstractWorkerCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractRelic relic = p.getRelic(Tax.ID);
+        if (relic != null) {
+            relic.flash();
+            this.exhaust = true;
+            AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(Tax.GOLD_GAIN, true));
+            this.addToTop(new GainGoldAction(Tax.GOLD_GAIN));
+        }
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 

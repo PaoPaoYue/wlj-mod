@@ -37,7 +37,7 @@ public class SpaceEngineer extends CustomRelic {
             ++this.counter;
         } else if (this.counter == MAX_COUNTER) {
             this.flash();
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CorruptionPower(AbstractDungeon.player, 2), 2));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CorruptionPower(AbstractDungeon.player, 5), 5));
             this.counter = -1;
         }
     }

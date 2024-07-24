@@ -2,10 +2,8 @@ package com.github.paopaoyue.wljmod.relic;
 
 import basemod.abstracts.CustomRelic;
 import com.github.paopaoyue.wljmod.card.Performer;
-import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -16,8 +14,7 @@ public class Tax extends CustomRelic {
     private static final RelicTier TIER = RelicTier.BOSS;
     private static final LandingSound SOUND = LandingSound.SOLID;
 
-    private static final int MAX_COUNTER = 10;
-    private static final int GOLD_GAIN = 2;
+    public static final int GOLD_GAIN = 2;
 
     public Tax() {
         super(ID, ImageMaster.loadImage("image/icon/tax.png"), TIER, SOUND);
@@ -28,32 +25,16 @@ public class Tax extends CustomRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        this.counter = MAX_COUNTER;
-    }
-
-    @Override
-    public void onExhaust(AbstractCard card) {
-        if (!this.grayscale && card instanceof Performer) {
-            this.flash();
-            AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(GOLD_GAIN));
-            AbstractDungeon.player.gainGold(GOLD_GAIN);
-            this.counter--;
-            if (this.counter == 0) {
-                this.grayscale = true;
-            }
-        }
-    }
-
-    @Override
     public void bossObtainLogic() {
         this.isObtained = true;
     }
 
     @Override
-    public void onVictory() {
-        this.counter = -1;
-        this.grayscale = false;
+    public float atDamageModify(float damage, AbstractCard c) {
+        if (c instanceof Performer) {
+            return damage + c.baseDamage;
+        }
+        return damage;
     }
 
     @Override
