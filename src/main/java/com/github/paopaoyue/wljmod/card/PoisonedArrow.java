@@ -33,17 +33,23 @@ public class PoisonedArrow extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int amount = 0;
-        if (m != null) {
-            this.addToBot(new VFXAction(new ThrowDaggerEffect(m.hb.cX, m.hb.cY)));
-            amount = m.powers.stream()
-                    .filter(power -> power.type == AbstractPower.PowerType.DEBUFF && !power.ID.equals(PoisonPower.POWER_ID))
-                    .mapToInt(power -> power.amount * this.magicNumber).sum();
-        }
+        this.addToBot(new VFXAction(new ThrowDaggerEffect(m.hb.cX, m.hb.cY)));
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
-        if (amount > 0) {
-            this.addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, amount), amount));
-        }
+        this.addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                int amount = 0;
+                if (!m.isDeadOrEscaped())
+                    amount = m.powers.stream()
+                            .filter(power -> power.type == AbstractPower.PowerType.DEBUFF && !power.ID.equals(PoisonPower.POWER_ID))
+                            .mapToInt(power -> power.amount * magicNumber).sum();
+                if (amount > 0) {
+                    this.addToTop(new ApplyPowerAction(m, p, new PoisonPower(m, p, amount), amount));
+                }
+                this.isDone = true;
+            }
+        });
+
     }
 
     public void upgrade() {

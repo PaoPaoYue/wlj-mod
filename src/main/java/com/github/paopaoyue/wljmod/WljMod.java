@@ -15,6 +15,9 @@ import com.github.paopaoyue.wljmod.component.AvatarManager;
 import com.github.paopaoyue.wljmod.component.WorkerManager;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.PlayerClassEnum;
+import com.github.paopaoyue.wljmod.potion.Cup;
+import com.github.paopaoyue.wljmod.potion.Peglin;
+import com.github.paopaoyue.wljmod.potion.SlimeInAJar;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -67,6 +70,9 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
         BaseMod.addCharacter(new Wlj(),
                 "image/character_select/button.png",
                 "image/character_select/portrait.png", PlayerClassEnum.WLJ);
+        BaseMod.addPotion(Cup.class, Color.GREEN, Color.BROWN, null, Cup.POTION_ID, PlayerClassEnum.WLJ);
+        BaseMod.addPotion(SlimeInAJar.class, Color.PINK, Color.PURPLE, null, SlimeInAJar.POTION_ID, PlayerClassEnum.WLJ);
+        BaseMod.addPotion(Peglin.class, Color.GRAY, Color.DARK_GRAY, null, Peglin.POTION_ID, PlayerClassEnum.WLJ);
     }
 
     @Override
@@ -105,7 +111,7 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
         BaseMod.loadCustomStringsFile(PowerStrings.class, "localization/" + language + "/wlj_powers.json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, "localization/" + language + "/wlj_relics.json");
         BaseMod.loadCustomStringsFile(UIStrings.class, "localization/" + language + "/wlj_ui.json");
-
+        BaseMod.loadCustomStringsFile(PotionStrings.class, "localization/" + language + "/wlj_potions.json");
 //        BaseMod.loadCustomStringsFile(EventStrings.class, "localization/" + language + "/wlj_events.json");
 
         Gson gson = new Gson();

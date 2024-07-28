@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -54,16 +55,21 @@ public class DiscardWithCallbackAction extends AbstractGameAction {
                 this.isDone = true;
                 return;
             }
+
+            List<AbstractCard> discardedCards = new ArrayList<>();
+
             if (this.p.hand.size() <= this.amount) {
                 this.amount = this.p.hand.size();
                 for (int tmp = this.p.hand.size(), i = 0; i < tmp; ++i) {
                     final AbstractCard c = this.p.hand.getTopCard();
+                    discardedCards.add(c);
                     this.p.hand.moveToDiscardPile(c);
                     if (!this.endTurn) {
                         c.triggerOnManualDiscard();
                     }
                     GameActionManager.incrementDiscard(this.endTurn);
                 }
+                this.callback.accept(discardedCards);
                 AbstractDungeon.player.hand.applyPowers();
                 this.tickDuration();
                 return;
@@ -71,10 +77,12 @@ public class DiscardWithCallbackAction extends AbstractGameAction {
             if (this.isRandom) {
                 for (int j = 0; j < this.amount; ++j) {
                     final AbstractCard c = this.p.hand.getRandomCard(AbstractDungeon.cardRandomRng);
+                    discardedCards.add(c);
                     this.p.hand.moveToDiscardPile(c);
                     c.triggerOnManualDiscard();
                     GameActionManager.incrementDiscard(this.endTurn);
                 }
+                this.callback.accept(discardedCards);
             } else {
                 if (this.amount < 0) {
                     AbstractDungeon.handCardSelectScreen.open(TEXT[0], 99, true, true);

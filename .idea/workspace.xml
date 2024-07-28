@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/FixWaitAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/SlimeInAJarAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/Cup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/Peglin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/SlimeInAJar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_potions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DiceAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DiceAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/icon/space_engineer.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/icon/space_engineer.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DiscardWithCallbackAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/DiscardWithCallbackAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/PoisonedArrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/PoisonedArrow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,11 +169,11 @@
       <recent name="C:\Users\LENOVO\Desktop\onmyoji-mod\src\main\resources\image\1024" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.paopaoyue.wljmod.card" />
+      <recent name="com.github.paopaoyue.wljmod.potion" />
       <recent name="com.github.paopaoyue.wljmod.action" />
+      <recent name="com.github.paopaoyue.wljmod.card" />
       <recent name="com.github.paopaoyue.wljmod.relic" />
       <recent name="com.github.paopaoyue.wljmod.patch.gold" />
-      <recent name="com.github.paopaoyue.wljmod.patch.worker" />
     </key>
   </component>
   <component name="RunManager">
@@ -291,7 +298,7 @@
       <workItem from="1721735161357" duration="3118000" />
       <workItem from="1721819620983" duration="2223000" />
       <workItem from="1722060815780" duration="2964000" />
-      <workItem from="1722178354337" duration="1325000" />
+      <workItem from="1722178354337" duration="10939000" />
     </task>
     <servers />
   </component>
