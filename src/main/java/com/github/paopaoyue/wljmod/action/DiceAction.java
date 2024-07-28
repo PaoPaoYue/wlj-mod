@@ -2,9 +2,7 @@ package com.github.paopaoyue.wljmod.action;
 
 import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainGoldAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -37,8 +35,8 @@ public class DiceAction extends AbstractGameAction {
             AbstractGameAction rollDiceAction = new RollDiceAction();
             if (rollDiceAction.amount >= diceThreshold) {
                 AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(gold, true));
-                this.addToTop(new GainGoldAction(gold));
-                this.addToTop(new VFXAction((new RainingGoldEffect(4 * gold, true))));
+                AbstractDungeon.effectList.add(new RainingGoldEffect(4 * gold, true));
+                AbstractDungeon.player.gainGold(gold);
             } else {
                 PurchaseAction.sfxUtil.playSFX();
                 AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(-gold, true));
