@@ -74,7 +74,8 @@ public class Afei extends AbstractAvatar {
 
     @Override
     public void updateDescription() {
-        this.description = String.format(avatarString.DESCRIPTION, incrementAmount);
+        int insertPosition = avatarString.DESCRIPTION.length() - 5;
+        this.description = avatarString.DESCRIPTION.substring(0, insertPosition) + incrementAmount + avatarString.DESCRIPTION.substring(insertPosition);
     }
 
 }

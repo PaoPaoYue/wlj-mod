@@ -250,10 +250,10 @@
   },
   "Wlj:Qidiaochan": {
     "NAME": "漆雕蝉",
-    "DESCRIPTION": "打出战斗中上一个 化身 ，获得 !K! 临时生命值。",
+    "DESCRIPTION": "变为战斗中上一个 化身 ，获得 !K! 临时生命值。 NL ",
     "EXTENDED_DESCRIPTION": [
-      "（变为",
-      "。)"
+      "（变为 ",
+      " 。)"
     ]
   },
   "Wlj:Leidongxuan": {
