@@ -40,6 +40,7 @@ public class AllTaiwuToHandAction extends AbstractGameAction {
                 }
             }
         }
+        this.p.onCardDrawOrDiscard();
         this.isDone = true;
     }
 }
