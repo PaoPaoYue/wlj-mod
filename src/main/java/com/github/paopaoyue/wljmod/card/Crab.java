@@ -22,7 +22,7 @@ public class Crab extends AbstractWorkerCard {
     public Crab() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 12;
+        this.baseDamage = 14;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
