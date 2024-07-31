@@ -74,12 +74,10 @@ public class AvatarManager {
 
         avatarSequenceInBattle.add(avatar);
 
-        if (!card.exhaust && !card.exhaustOnUseOnce && !card.purgeOnUse && !card.exhaustOnFire) {
-            card.current_x = avatarCardGroup.getTopCard().current_x;
-            card.current_y = avatarCardGroup.getTopCard().current_y;
-            avatarCardGroup.clear();
-            avatarCardGroup.addToBottom(card);
-        }
+        card.current_x = avatarCardGroup.getTopCard().current_x;
+        card.current_y = avatarCardGroup.getTopCard().current_y;
+        avatarCardGroup.clear();
+        avatarCardGroup.addToBottom(card);
 
         avatar.onEnter();
     }

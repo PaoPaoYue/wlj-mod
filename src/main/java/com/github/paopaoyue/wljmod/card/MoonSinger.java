@@ -44,7 +44,11 @@ public class MoonSinger extends CustomCard {
             this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
             for (AbstractPower power : mo.powers) {
                 if (power.type == AbstractPower.PowerType.DEBUFF) {
-                    this.addToBot(new ApplyPowerAction(mo, p, power, 1, true, AbstractGameAction.AttackEffect.NONE));
+                    if (power.amount > 0) {
+                        this.addToBot(new ApplyPowerAction(mo, p, power, 1, true, AbstractGameAction.AttackEffect.NONE));
+                    } else {
+                        this.addToBot(new ApplyPowerAction(mo, p, power, -1, true, AbstractGameAction.AttackEffect.NONE));
+                    }
                 }
             }
         }

@@ -1,9 +1,7 @@
 package com.github.paopaoyue.wljmod.power;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.github.paopaoyue.wljmod.action.BrothelAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -24,20 +22,15 @@ public class BrothelPower extends AbstractPower {
         this.type = PowerType.BUFF;
         this.amount = amount;
         this.canGoNegative = false;
-        this.isTurnBased = true;
         updateDescription();
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
-        this.addToBot(new BrothelAction(1));
-    }
-
-    public void atEndOfRound() {
-        if (this.amount == 0) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+    public float modifyBlock(float blockAmount, AbstractCard card) {
+        if (card.costForTurn == 0) {
+            return blockAmount + this.amount;
         } else {
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+            return blockAmount;
         }
     }
 

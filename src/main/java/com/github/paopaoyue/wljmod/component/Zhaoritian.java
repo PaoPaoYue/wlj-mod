@@ -14,7 +14,7 @@ public class Zhaoritian extends AbstractAvatar {
     public static final String CHARACTER_IMG = "image/character/zhaoritian.png";
     private static final Keyword avatarString = WljMod.MOD_DICTIONARY.get(ID);
 
-    private AbstractAvatarCard dickCard;
+    private final AbstractAvatarCard dickCard;
 
     public Zhaoritian() {
         this.id = avatarString.ID;

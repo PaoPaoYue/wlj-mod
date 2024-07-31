@@ -20,7 +20,7 @@ public class Xiangdangdang extends AbstractAvatar {
 
     @Override
     public void onEnter() {
-        AbstractDungeon.actionManager.addToTop(new AllTaiwuToHandAction());
+        AbstractDungeon.actionManager.addToTop(new AllTaiwuToHandAction(this.upgraded));
     }
 
     @Override
@@ -30,7 +30,12 @@ public class Xiangdangdang extends AbstractAvatar {
 
     @Override
     public void updateDescription() {
-        this.description = String.format(avatarString.DESCRIPTION);
+        String[] description = avatarString.DESCRIPTION.split("\\|");
+        if (this.upgraded) {
+            this.description = description[1];
+        } else {
+            this.description = description[0];
+        }
     }
 
 }

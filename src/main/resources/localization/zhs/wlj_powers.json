@@ -93,8 +93,8 @@
   "Wlj:Brothel": {
     "NAME": "旋女俱乐部",
     "DESCRIPTIONS": [
-      "在 #b",
-      " 个回合开始时复制一张手牌。"
+      "你的0费牌 #y格挡 增加 #b",
+      " 。"
     ]
   },
   "Wlj:Story King": {
