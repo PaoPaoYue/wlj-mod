@@ -42,8 +42,7 @@
   },
   "Wlj:Invite": {
     "NAME": "邀为同道",
-    "DESCRIPTION": "造成 !D! 伤害，获得 !M! 名 *贱民 。 消耗 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 伤害，获得 !M! 名 *贱民 。"
+    "DESCRIPTION": "造成 !D! 伤害，获得 !M! 名 *贱民 。 消耗 。"
   },
   "Wlj:Alarm": {
     "NAME": "警钟长鸣",
@@ -298,8 +297,8 @@
   },
   "Wlj:Sts": {
     "NAME": "这100分钟全是细节",
-    "DESCRIPTION": " 保留 。 优化 !M! ， 添加牌到卡组时效果增加1。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 优化 !M! ， 添加牌到卡组时效果增加1。"
+    "DESCRIPTION": " 保留 。 优化 !M! ， 添加牌到卡组时效果增加1，但SL后重置。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 优化 !M! ， 添加牌到卡组时效果增加1，但SL后重置。"
   },
   "Wlj:Arrogant": {
     "NAME": "完全理解",
@@ -316,8 +315,7 @@
   },
   "Wlj:Xiangdangdang": {
     "NAME": "响当当",
-    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，从抽牌堆将其他太吾相关的牌放入手牌，太吾相关的牌能量消耗-1。",
-    "UPGRADE_DESCRIPTION": " 化身 ，获得 !K! 临时生命值，从抽牌堆和弃牌堆将其他太吾相关的牌放入手牌，太吾相关的牌能量消耗-1。"
+    "DESCRIPTION": " 化身 ，消耗手牌中所有 *贱民 ，每消耗一张获得 !M! 临时生命。 所有非0费攻击牌视为 *邀为同道 。"
   },
   "Wlj:Retard": {
     "NAME": "智商高达50",

@@ -1,5 +1,6 @@
 package com.github.paopaoyue.wljmod.component;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 
 public abstract class AbstractAvatar {
@@ -37,6 +38,9 @@ public abstract class AbstractAvatar {
     }
 
     public void onDamaged(int damage, DamageInfo.DamageType damageType) {
+    }
+
+    public void onUseCard(AbstractCard card) {
     }
 
     public abstract String getCharacterImage();

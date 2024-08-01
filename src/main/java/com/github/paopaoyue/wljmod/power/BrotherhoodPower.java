@@ -1,8 +1,10 @@
 package com.github.paopaoyue.wljmod.power;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.Invite;
 import com.github.paopaoyue.wljmod.card.Rabble;
+import com.github.paopaoyue.wljmod.component.Xiangdangdang;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -33,7 +35,11 @@ public class BrotherhoodPower extends AbstractPower {
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card instanceof Invite && m == this.owner) {
+        if ((card instanceof Invite ||
+                WljMod.avatarManager.getCurrentAvatar() instanceof Xiangdangdang &&
+                        card.type == AbstractCard.CardType.ATTACK &&
+                        card.costForTurn > 0) &&
+                m == this.owner) {
             this.addToBot(new MakeTempCardInHandAction(new Rabble()));
         }
     }

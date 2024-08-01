@@ -2,7 +2,6 @@ package com.github.paopaoyue.wljmod.patch.card;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.github.paopaoyue.wljmod.card.Afei;
-import com.github.paopaoyue.wljmod.card.Sts;
 import com.github.paopaoyue.wljmod.utility.Inject;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -29,11 +28,6 @@ public class LoadSaveFilePatch {
         if (retVal.cardID.equals(Afei.ID)) {
             retVal.damage = misc;
             retVal.baseDamage = misc;
-            retVal.initializeDescription();
-        }
-        if (retVal.cardID.equals(Sts.ID)) {
-            retVal.baseMagicNumber = misc;
-            retVal.magicNumber = misc;
             retVal.initializeDescription();
         }
     }

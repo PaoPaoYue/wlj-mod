@@ -1,12 +1,14 @@
 package com.github.paopaoyue.wljmod;
 
-import basemod.AutoAdd;
-import basemod.BaseMod;
+import basemod.*;
 import basemod.abstracts.CustomRelic;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
+import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
 import com.github.paopaoyue.wljmod.card.AvatarHp;
@@ -21,16 +23,20 @@ import com.github.paopaoyue.wljmod.potion.SlimeInAJar;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.util.Strings;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.HashMap;
 
 @SpireInitializer
-public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, AddAudioSubscriber, StartGameSubscriber, OnCardUseSubscriber, OnPlayerTurnStartSubscriber {
+public class WljMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, AddAudioSubscriber, StartGameSubscriber, OnCardUseSubscriber, OnPlayerTurnStartSubscriber {
 
 
     public static final String MOD_ID = "Wlj";
@@ -42,6 +48,8 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
 
     public static int tempGold;
     public static int displayTempGold;
+
+    public static boolean voiceEnabled = true;
 
     public WljMod() {
         logger.info("instantiating WljMod");
@@ -55,6 +63,26 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
 
     public static void initialize() {
         new WljMod();
+    }
+
+    public void receivePostInitialize() {
+        Texture badgeTexture = ImageMaster.loadImage("image/icon/mod_badge.png");
+        Gson gson = new Gson();
+        ModInfo info = Arrays.stream(Loader.MODINFOS).filter(modInfo -> modInfo.ID.equals(MOD_ID)).findFirst().orElse(null);
+        if (info == null) {
+            logger.error("ModInfo not found");
+            return;
+        }
+        ModPanel settingsPanel = new ModPanel();
+        settingsPanel.addUIElement(new ModLabel("王老菊 Mod - 设置", 400.0f, 700.0f, settingsPanel, (me) -> {
+        }));
+        settingsPanel.addUIElement(new ModLabeledToggleButton("启用打出部分卡牌时的老菊语音",
+                350f, 650f, Settings.CREAM_COLOR, FontHelper.charDescFont,
+                voiceEnabled, settingsPanel, (label) -> {
+        }, (button) -> {
+            voiceEnabled = button.enabled;
+        }));
+        BaseMod.registerModBadge(badgeTexture, info.Name, Strings.join(Arrays.asList(info.Authors), ','), info.Description, settingsPanel);
     }
 
     @Override
@@ -181,4 +209,5 @@ public class WljMod implements EditCharactersSubscriber, EditStringsSubscriber, 
     public void receiveOnPlayerTurnStart() {
         workerManager.reset();
     }
+
 }

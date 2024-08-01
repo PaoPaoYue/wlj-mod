@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/avatar/OnUseCardPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/icon/mod_badge.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/UseAvatarAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/UseAvatarAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Invite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Invite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Xiangdangdang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Xiangdangdang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AbstractAvatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AbstractAvatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Xiangdangdang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Xiangdangdang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/avatar/OnCardDrawOrDiscardPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/LoadSaveFilePatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/LoadSaveFilePatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/BrotherhoodPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/BrotherhoodPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/LovePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/LovePower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/sfx/SfxUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/sfx/SfxUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,11 +178,11 @@
       <recent name="C:\Users\LENOVO\Desktop\onmyoji-mod\src\main\resources\image\1024" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.paopaoyue.wljmod.patch.avatar" />
       <recent name="com.github.paopaoyue.wljmod.potion" />
       <recent name="com.github.paopaoyue.wljmod.action" />
       <recent name="com.github.paopaoyue.wljmod.card" />
       <recent name="com.github.paopaoyue.wljmod.relic" />
-      <recent name="com.github.paopaoyue.wljmod.patch.gold" />
     </key>
   </component>
   <component name="RunManager">
@@ -294,7 +309,8 @@
       <workItem from="1722060815780" duration="2964000" />
       <workItem from="1722178354337" duration="12410000" />
       <workItem from="1722230604071" duration="2700000" />
-      <workItem from="1722483186131" duration="2206000" />
+      <workItem from="1722483186131" duration="3111000" />
+      <workItem from="1722501452383" duration="7458000" />
     </task>
     <servers />
   </component>

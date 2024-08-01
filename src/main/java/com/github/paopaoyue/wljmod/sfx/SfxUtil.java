@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.sfx;
 
 import com.badlogic.gdx.math.MathUtils;
+import com.github.paopaoyue.wljmod.WljMod;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 import java.util.ArrayList;
@@ -48,6 +49,7 @@ public class SfxUtil {
     }
 
     public void playSFX(float volumeMod) {
+        if (!WljMod.voiceEnabled) return;
         boolean canPlay = false;
         if (consecutive || playedVoice == SFX_NONE) {
             canPlay = MathUtils.random(1.0f) < prob;
@@ -63,6 +65,7 @@ public class SfxUtil {
     }
 
     public void playLayoffSFX(int layoffSize) {
+        if (!WljMod.voiceEnabled) return;
         boolean canPlay = false;
         if (consecutive || playedVoice == SFX_NONE) {
             canPlay = MathUtils.random(1.0f) < prob;
