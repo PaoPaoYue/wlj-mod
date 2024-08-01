@@ -42,7 +42,7 @@ public class PoisonedArrow extends CustomCard {
                 if (!m.isDeadOrEscaped())
                     amount = m.powers.stream()
                             .filter(power -> power.type == AbstractPower.PowerType.DEBUFF && !power.ID.equals(PoisonPower.POWER_ID))
-                            .mapToInt(power -> power.amount * magicNumber).sum();
+                            .mapToInt(power -> Math.abs(power.amount) * magicNumber).sum();
                 if (amount > 0) {
                     this.addToTop(new ApplyPowerAction(m, p, new PoisonPower(m, p, amount), amount));
                 }
