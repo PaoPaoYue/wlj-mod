@@ -20,8 +20,9 @@ public class Sts extends CustomCard {
     public Sts() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        this.misc = this.magicNumber;
         this.selfRetain = true;
         this.exhaust = true;
     }
@@ -32,6 +33,7 @@ public class Sts extends CustomCard {
 
     public void triggerWhenObtainCards() {
         this.upgradeMagicNumber(1);
+        this.misc = this.magicNumber;
     }
 
     public void upgrade() {

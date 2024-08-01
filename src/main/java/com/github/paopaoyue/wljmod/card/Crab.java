@@ -40,6 +40,8 @@ public class Crab extends AbstractWorkerCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(6);
+            this.name = cardStrings.EXTENDED_DESCRIPTION[0] + "+";
+            this.initializeTitle();
         }
     }
 

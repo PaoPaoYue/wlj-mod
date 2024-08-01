@@ -122,8 +122,11 @@
     "DESCRIPTION": "抽到时将一张复制加入手牌, 造成 !D! 伤害， 叛教 。 消耗 。"
   },
   "Wlj:Crab": {
-    "NAME": "麻辣蒜蓉十三香",
-    "DESCRIPTION": " 员工 。造成 !D! 伤害，被 消耗 时获得 [E] 。"
+    "NAME": "蒜蓉麻辣十三香",
+    "DESCRIPTION": " 员工 。造成 !D! 伤害，被 消耗 时获得 [E] 。",
+    "EXTENDED_DESCRIPTION": [
+      "麻辣蒜蓉十三香"
+    ]
   },
   "Wlj:Awards": {
     "NAME": "年终奖",
