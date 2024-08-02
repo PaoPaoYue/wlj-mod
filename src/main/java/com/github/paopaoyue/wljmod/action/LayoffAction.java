@@ -115,8 +115,6 @@ public class LayoffAction extends AbstractGameAction {
                 } else {
                     AbstractDungeon.gridSelectScreen.open(tmpGroup, amount, amount == 1 ? TEXT[3] : TEXT[4] + amount + TEXT[5], false);
                 }
-                System.out.println(amount);
-                System.out.println(anyNumber);
             } else {
                 for (int i = 0; i < amount; i++) {
                     AbstractCard card = tmpGroup.getRandomCard(AbstractDungeon.cardRandomRng);
