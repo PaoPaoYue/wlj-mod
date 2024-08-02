@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod.patch.worker;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
+import com.github.paopaoyue.wljmod.card.Phoenix;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.SoulGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,7 +22,7 @@ public class DrawCardActionPatch {
     )
     public static void Insert(DrawCardAction __instance, @ByRef int[] discardSize) {
         discardSize[0] = AbstractDungeon.player.discardPile.group.stream().mapToInt(
-                c -> c instanceof AbstractWorkerCard ? 0 : 1
+                c -> (c instanceof AbstractWorkerCard || (c instanceof Phoenix && ((Phoenix) c).isMainBody())) ? 0 : 1
         ).sum();
     }
 
