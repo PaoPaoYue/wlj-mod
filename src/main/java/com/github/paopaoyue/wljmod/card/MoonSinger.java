@@ -30,7 +30,6 @@ public class MoonSinger extends CustomCard {
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
