@@ -32,7 +32,7 @@ public class Rescue extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+            this.upgradeDamage(4);
         }
     }
 
