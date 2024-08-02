@@ -20,21 +20,26 @@ public class Ember extends CustomCard {
     public Ember() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.SELF);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        CardCrawlGame.sound.play("CARD_UPGRADE");
-        this.addToBot(new ArmamentsAction(true));
+        if (upgraded) {
+            CardCrawlGame.sound.play("CARD_UPGRADE");
+            this.addToBot(new ArmamentsAction(true));
+        }
     }
 
     @Override
     public void triggerOnExhaust() {
+        CardCrawlGame.sound.play("CARD_UPGRADE");
         this.addToBot(new ArmamentsAction(true));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.exhaust = false;
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

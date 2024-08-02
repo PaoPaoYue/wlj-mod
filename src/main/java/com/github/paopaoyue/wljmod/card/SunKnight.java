@@ -30,7 +30,9 @@ public class SunKnight extends AbstractAvatarCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeHp(3);
+            this.avatar.upgrade();
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

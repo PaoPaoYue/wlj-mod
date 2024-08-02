@@ -1,7 +1,6 @@
 package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
-import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -27,9 +26,7 @@ public class Iga extends CustomCard {
     public Iga() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.baseDamage = 10;
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
+        this.baseDamage = 14;
         this.isMultiDamage = true;
     }
 
@@ -41,7 +38,6 @@ public class Iga extends CustomCard {
         }
         this.addToBot(new WaitAction(0.3f));
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        this.addToBot(new LayoffAction(this.magicNumber));
     }
 
     @Override
@@ -58,7 +54,7 @@ public class Iga extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+            this.upgradeDamage(4);
         }
     }
 

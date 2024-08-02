@@ -16,6 +16,8 @@ public class Keel extends AbstractWorkerCard {
     public static final String ID = "Wlj:Keel";
     private static final CardStrings cardStrings;
 
+    private static final int DEFAULT_DAMAGE = 6;
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
@@ -24,6 +26,7 @@ public class Keel extends AbstractWorkerCard {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 6;
+        this.misc = 0;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,10 +36,26 @@ public class Keel extends AbstractWorkerCard {
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 
+    public void triggerOnLayoff() {
+        this.misc++;
+        if (this.misc >= 8) {
+            this.name = cardStrings.EXTENDED_DESCRIPTION[0];
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.textureImg = "image/card/moonlight.png";
+            this.initializeTitle();
+            this.initializeDescription();
+            this.loadCardImage(this.textureImg);
+        }
+        if (this.misc <= 8) {
+            this.baseDamage = (int) ((upgraded ? DEFAULT_DAMAGE + 2 : DEFAULT_DAMAGE) * Math.pow(2, this.misc));
+        }
+    }
+
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(2);
+            this.baseDamage = (int) ((DEFAULT_DAMAGE + 2) * Math.pow(2, this.misc));
+            this.upgradedDamage = true;
         }
     }
 

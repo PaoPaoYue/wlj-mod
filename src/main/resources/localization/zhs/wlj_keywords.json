@@ -39,7 +39,7 @@
     "NAMES": [
       "太阳骑士"
     ],
-    "DESCRIPTION": "进场时将手牌中的 #y员工 变为随机 #y叛教 牌， #y叛教 时获得 [E] 。"
+    "DESCRIPTION": "进场时将手牌中的 #y员工 变为随机 #y叛教 牌， #y叛教 时获得 [E] 。|进场时将手牌中的 #y员工 变为随机较低费用的 #y叛教 牌， #y叛教 时获得 [E] 。"
   },
   {
     "ID": "Wlj:Zhaoritian",
@@ -60,7 +60,7 @@
     "NAMES": [
       "光溜溜的阿飞"
     ],
-    "DESCRIPTION": "每受到一次伤害永久增加攻击伤害。"
+    "DESCRIPTION": "进场时造成伤害，每受到一次伤害永久增加伤害。"
   },
   {
     "ID": "Wlj:Xiangdangdang",

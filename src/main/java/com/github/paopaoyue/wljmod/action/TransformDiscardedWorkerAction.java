@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
@@ -46,13 +45,12 @@ public class TransformDiscardedWorkerAction extends AbstractGameAction {
 
                 sfxUtil.playSFX(1.6f);
 
-                AbstractCard transformedCard = targetCard.makeStatEquivalentCopy();
-                if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
-                    transformedCard.upgrade();
-                }
                 for (final AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                     AbstractDungeon.player.discardPile.removeCard(c);
-                    AbstractCard tempCard = transformedCard.makeStatEquivalentCopy();
+                    AbstractCard tempCard = targetCard.makeStatEquivalentCopy();
+                    if (c.upgraded) {
+                        tempCard.upgrade();
+                    }
                     tempCard.current_x = c.current_x;
                     tempCard.current_y = c.current_y;
                     if (handAmount-- > 0) {

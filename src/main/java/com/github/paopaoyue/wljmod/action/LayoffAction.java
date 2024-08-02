@@ -38,28 +38,34 @@ public class LayoffAction extends AbstractGameAction {
     public static SfxUtil sfxUtil = SfxUtil.createInstance(new String[]{"Wlj:LAYOFF_1", "Wlj:LAYOFF_2", "Wlj:LAYOFF_3", "Wlj:LAYOFF_4", "Wlj:LAYOFF_5", "Wlj:LAYOFF_6", "Wlj:LAYOFF_DOUBLE"}, false, 1.0f, 0.08f, 0.5f);
 
     private boolean auto;
+    private boolean anyNumber;
     private List<AbstractCard> selectedCards;
     private Predicate<AbstractCard> predicate;
 
-
     public LayoffAction(int amount) {
-        this(amount, false, null);
+        this(amount, false, true, null);
     }
 
     public LayoffAction(int amount, Predicate<AbstractCard> predicate) {
-        this(amount, false, predicate);
+        this(amount, false, true, predicate);
     }
 
     public LayoffAction(int amount, boolean auto, Predicate<AbstractCard> predicate) {
-        this.target = AbstractDungeon.player;
-        this.source = AbstractDungeon.player;
-        AlarmPower alarmPower = (AlarmPower) AbstractDungeon.player.getPower(AlarmPower.POWER_ID);
-        this.amount = (alarmPower == null ? amount : alarmPower.modifyLayoffAmount(amount));
-        Truck truck = (Truck) AbstractDungeon.player.getRelic(Truck.ID);
-        this.amount = (truck == null ? this.amount : truck.modifyLayoffAmount(this.amount));
+        this(amount, auto, true, predicate);
+    }
+
+    public LayoffAction(int amount, boolean auto, boolean anyNumber, Predicate<AbstractCard> predicate) {
+        setValues(AbstractDungeon.player, AbstractDungeon.player, amount);
+        if (anyNumber) {
+            AlarmPower alarmPower = (AlarmPower) AbstractDungeon.player.getPower(AlarmPower.POWER_ID);
+            this.amount = (alarmPower == null ? amount : alarmPower.modifyLayoffAmount(amount));
+            Truck truck = (Truck) AbstractDungeon.player.getRelic(Truck.ID);
+            this.amount = (truck == null ? this.amount : truck.modifyLayoffAmount(this.amount));
+        }
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
         this.auto = auto;
+        this.anyNumber = anyNumber;
         this.predicate = predicate;
         this.selectedCards = new ArrayList<>();
     }
@@ -68,7 +74,7 @@ public class LayoffAction extends AbstractGameAction {
         if (this.duration == this.startDuration) {
 
             if (AbstractDungeon.player.drawPile.group.stream().anyMatch(c -> c instanceof Erwen)) {
-                AbstractDungeon.actionManager.addToTop(new LayoffAction(this.amount, this.auto, this.predicate));
+                AbstractDungeon.actionManager.addToTop(new LayoffAction(this.amount, this.auto, this.anyNumber, this.predicate));
                 AbstractDungeon.actionManager.addToTop(new DiscardErwenAction());
                 this.isDone = true;
                 return;
@@ -104,7 +110,13 @@ public class LayoffAction extends AbstractGameAction {
                     int priorityB = (b instanceof AbstractWorkerCard) ? WljMod.workerManager.getWorkerPriority((AbstractWorkerCard) b) : 0;
                     return priorityA - priorityB;
                 });
-                AbstractDungeon.gridSelectScreen.open(tmpGroup, amount, true, this.amount == 1 ? TEXT[0] : TEXT[1] + this.amount + TEXT[2]);
+                if (anyNumber) {
+                    AbstractDungeon.gridSelectScreen.open(tmpGroup, amount, true, amount == 1 ? TEXT[0] : TEXT[1] + amount + TEXT[2]);
+                } else {
+                    AbstractDungeon.gridSelectScreen.open(tmpGroup, amount, amount == 1 ? TEXT[3] : TEXT[4] + amount + TEXT[5], false);
+                }
+                System.out.println(amount);
+                System.out.println(anyNumber);
             } else {
                 for (int i = 0; i < amount; i++) {
                     AbstractCard card = tmpGroup.getRandomCard(AbstractDungeon.cardRandomRng);
@@ -132,13 +144,11 @@ public class LayoffAction extends AbstractGameAction {
                 }
 
                 if (card instanceof AbstractWorkerCard) {
+                    AbstractCard tempCard = card.makeStatEquivalentCopy();
                     if (card instanceof Keel) {
-                        AbstractCard tempCard = card.makeStatEquivalentCopy();
-                        tempCard.baseDamage *= 2;
-                        AbstractDungeon.player.drawPile.addToRandomSpot(tempCard);
-                    } else {
-                        AbstractDungeon.player.drawPile.addToRandomSpot(card.makeStatEquivalentCopy());
+                        ((Keel) tempCard).triggerOnLayoff();
                     }
+                    AbstractDungeon.player.drawPile.addToRandomSpot(tempCard);
                 } else {
                     AbstractDungeon.player.drawPile.addToRandomSpot(new Rabble());
                 }

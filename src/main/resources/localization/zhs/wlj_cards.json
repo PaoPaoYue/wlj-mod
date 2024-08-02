@@ -90,8 +90,8 @@
   },
   "Wlj:Ember": {
     "NAME": "大块余烬",
-    "DESCRIPTION": "打出或被 消耗 时 升级 所有手牌，战斗开始时位于抽牌堆底部。",
-    "UPGRADE_DESCRIPTION": "打出或被 消耗 时 升级 所有手牌。"
+    "DESCRIPTION": "被 消耗 时 升级 所有手牌，战斗开始时位于抽牌堆底部。 消耗 。",
+    "UPGRADE_DESCRIPTION": "打出或被 消耗 时 升级 所有手牌，战斗开始时位于抽牌堆底部。"
   },
   "Wlj:Box": {
     "NAME": "箱子如何了？",
@@ -108,7 +108,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 受到1伤害 !M! 次，造成 !D! 伤害。"
   },
   "Wlj:Erwen": {
-    "NAME": "拳皇二文",
+    "NAME": "二文",
     "DESCRIPTION": " 员工 。 打出与被 消耗 时获得 !B! 格挡 。 优化 时自动从抽牌堆进入弃牌堆。"
   },
   "Wlj:Sermon": {
@@ -178,7 +178,7 @@
   },
   "Wlj:Iga": {
     "NAME": "伊贺流大爆弹",
-    "DESCRIPTION": "打出或被 消耗 时对所有敌人造成 !D! 伤害， 优化 !M! 。"
+    "DESCRIPTION": "打出或被 消耗 时对所有敌人造成 !D! 伤害。"
   },
   "Wlj:Ice And Fire": {
     "NAME": "冰火冰火冰",
@@ -215,7 +215,8 @@
   },
   "Wlj:Dinosaur": {
     "NAME": "爽爽",
-    "DESCRIPTION": " 消耗 弃牌堆 !M! 名 员工 ，造成 !D! 伤害。"
+    "DESCRIPTION": "造成 !D! 伤害，必须 消耗 弃牌堆 !M! 名 员工 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 伤害，必须 优化 !M! 名 员工 。"
   },
   "Wlj:Love": {
     "NAME": "倾诉爱意",
@@ -280,6 +281,7 @@
     "DESCRIPTION": "造成 !D! 伤害， 叛教 。",
     "EXTENDED_DESCRIPTION": [
       "小鸡腿",
+      "中鸡腿",
       "大鸡腿",
       "巨鸡腿",
       "超级鸡腿",
@@ -337,11 +339,16 @@
   },
   "Wlj:Keel": {
     "NAME": "碎龙骨",
-    "DESCRIPTION": " 员工 。造成 !D! 伤害。被 优化 时在本次战斗中伤害翻倍。"
+    "DESCRIPTION": " 员工 。造成 !D! 伤害。被 优化 时在本次战斗中伤害翻倍。",
+    "UPGRADE_DESCRIPTION": " 员工 。造成 !D! 伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "月光大剑"
+    ]
   },
   "Wlj:Sun Knight": {
     "NAME": "太阳骑士",
-    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为随机 叛教 牌， 叛教 时获得 [E] 。"
+    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为随机 叛教 牌， 叛教 时获得 [E] 。",
+    "UPGRADE_DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为随机较低费用的 叛教 牌， 叛教 时获得 [E] 。"
   },
   "Wlj:Capitalist": {
     "NAME": "资本家形态",

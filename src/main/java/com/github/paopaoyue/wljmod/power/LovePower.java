@@ -5,6 +5,7 @@ import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.Invite;
 import com.github.paopaoyue.wljmod.card.Performer;
 import com.github.paopaoyue.wljmod.component.Xiangdangdang;
+import com.github.paopaoyue.wljmod.utility.Reflect;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -39,7 +40,7 @@ public class LovePower extends AbstractPower {
                 WljMod.avatarManager.getCurrentAvatar() instanceof Xiangdangdang &&
                         card.type == AbstractCard.CardType.ATTACK &&
                         card.costForTurn > 0) &&
-                m == this.owner) {
+                (m == this.owner || Boolean.TRUE.equals(Reflect.getPrivate(AbstractCard.class, card, "isMultiDamage", Boolean.class)))) {
             this.addToBot(new MakeTempCardInHandAction(new Performer()));
         }
     }

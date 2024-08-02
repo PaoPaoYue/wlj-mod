@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.WallopEffect;
@@ -32,7 +31,7 @@ public class Wand extends CustomCard {
                 AbstractCardEnum.WLJ_COLOR, CardRarity.SPECIAL, CardTarget.ENEMY);
         this.timesUpgraded = timesUpgraded;
         this.upgraded = timesUpgraded > 0;
-        this.baseDamage = 6 * (1 + timesUpgraded) + timesUpgraded * (timesUpgraded + 1) / 2;
+        this.baseDamage = 4 + 6 * timesUpgraded + timesUpgraded * (timesUpgraded + 1) / 2;
         this.updateCost(timesUpgraded);
         this.configureNameAndImage();
     }
@@ -58,6 +57,22 @@ public class Wand extends CustomCard {
     }
 
     @Override
+    protected void upgradeBaseCost(int newBaseCost) {
+        int diff = this.costForTurn - this.cost;
+        this.cost = newBaseCost;
+        if (this.costForTurn >= 0) {
+            this.costForTurn = this.cost + diff;
+        }
+
+        if (this.costForTurn < 0) {
+            this.costForTurn = 0;
+        }
+
+        this.upgradedCost = true;
+    }
+
+
+    @Override
     public void triggerOnGlowCheck() {
         if (LapseAction.lastLapseCard != null && !LapseAction.lastLapseCard.name.equals(this.name)) {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
@@ -74,22 +89,26 @@ public class Wand extends CustomCard {
                 break;
             case 1:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[1];
-                this.textureImg = "image/card/wand_l.png";
+                this.textureImg = "image/card/wand_lightening.png";
                 break;
             case 2:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[2];
-                this.textureImg = "image/card/wand_xl.png";
+                this.textureImg = "image/card/wand_l.png";
                 break;
             case 3:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[3];
-                this.textureImg = "image/card/wand_xxl.png";
+                this.textureImg = "image/card/wand_xl.png";
                 break;
             case 4:
                 this.name = cardStrings.EXTENDED_DESCRIPTION[4];
+                this.textureImg = "image/card/wand_xxl.png";
+                break;
+            case 5:
+                this.name = cardStrings.EXTENDED_DESCRIPTION[5];
                 this.textureImg = "image/card/wand_xxxl.png";
                 break;
             default:
-                this.name = cardStrings.EXTENDED_DESCRIPTION[4] + "+" + (this.timesUpgraded - 4);
+                this.name = cardStrings.EXTENDED_DESCRIPTION[5] + "+" + (this.timesUpgraded - 5);
                 this.textureImg = "image/card/wand_xxxl.png";
                 break;
         }

@@ -58,6 +58,9 @@ public class Afei extends AbstractAvatar {
 
     @Override
     public void onEnter() {
+        if (this.target.isDeadOrEscaped()) {
+            this.target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+        }
         AbstractDungeon.actionManager.addToTop(new AfeiAction(target, AbstractDungeon.player, card));
     }
 

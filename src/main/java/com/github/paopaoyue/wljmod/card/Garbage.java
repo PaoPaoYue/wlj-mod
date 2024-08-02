@@ -36,8 +36,7 @@ public class Garbage extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(7);
-            this.upgradeMagicNumber(1);
+            this.upgradeDamage(4);
         }
     }
 

@@ -8,9 +8,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class SunKnightAction extends AbstractGameAction {
 
-    public SunKnightAction() {
+    private final boolean upgraded;
+
+    public SunKnightAction(boolean upgraded) {
         this.duration = 0.0f;
         this.actionType = ActionType.CARD_MANIPULATION;
+        this.upgraded = upgraded;
     }
 
     @Override
@@ -18,25 +21,7 @@ public class SunKnightAction extends AbstractGameAction {
         int i = 0;
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             if (card instanceof AbstractWorkerCard) {
-                AbstractCard replacement;
-                int random = AbstractDungeon.cardRandomRng.random(0, 7);
-                switch (random) {
-                    case 0:
-                        replacement = new StabbingSword();
-                        break;
-                    case 1:
-                        replacement = new GiantSword();
-                        break;
-                    case 2:
-                        replacement = new Spear();
-                        break;
-                    case 3:
-                        replacement = new IceAndFire();
-                        break;
-                    default:
-                        replacement = new Wand(random - 4);
-                        break;
-                }
+                AbstractCard replacement = getRandomCard();
                 if (card.upgraded) {
                     replacement.upgrade();
                 }
@@ -45,5 +30,50 @@ public class SunKnightAction extends AbstractGameAction {
             i++;
         }
         this.isDone = true;
+    }
+
+    private AbstractCard getRandomCard() {
+        int random = AbstractDungeon.cardRandomRng.random(0, 7);
+        if (upgraded) {
+            switch (random) {
+                case 0:
+                    return new StabbingSword();
+                case 1:
+                case 2:
+                    return new Spear();
+                case 3:
+                    return new IceAndFire();
+                case 4:
+                    return new Wand(0);
+                case 5:
+                case 6:
+                    return new Wand(1);
+                case 7:
+                    return new Wand(2);
+                default:
+                    return new Wand(3);
+            }
+        } else {
+            switch (random) {
+                case 0:
+                    return new StabbingSword();
+                case 1:
+                    return new Spear();
+                case 2:
+                    return new IceAndFire();
+                case 3:
+                    return new GiantSword();
+                case 4:
+                    return new Wand(0);
+                case 5:
+                    return new Wand(1);
+                case 6:
+                    return new Wand(2);
+                case 7:
+                    return new Wand(3);
+                default:
+                    return new Wand(4);
+            }
+        }
     }
 }
