@@ -21,8 +21,8 @@ public class EmberPatch {
     public static void Prefix(AbstractPlayer __instance) {
         List<AbstractCard> tmpGroup =
                 Stream.concat(
-                                __instance.drawPile.group.stream().filter(card -> card instanceof Ember && !card.upgraded),
-                                __instance.drawPile.group.stream().filter(card -> !(card instanceof Ember && !card.upgraded)))
+                                __instance.drawPile.group.stream().filter(card -> card instanceof Ember && !card.inBottleLightning),
+                                __instance.drawPile.group.stream().filter(card -> !(card instanceof Ember && !card.inBottleLightning)))
                         .collect(Collectors.toList());
         __instance.drawPile.group = (ArrayList<AbstractCard>) tmpGroup;
     }
