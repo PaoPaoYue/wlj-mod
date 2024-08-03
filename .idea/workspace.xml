@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +14,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/../mesh/examples/demo">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
@@ -39,13 +43,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="wlj-mod" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="wlj-mod" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -73,6 +76,7 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-8.0-bin/ca5e32bp14vu59qr306oxotwh/gradle-8.0/lib/gradle-kotlin-dsl-8.0.jar!/org/gradle/kotlin/dsl/support/delegates/ProjectDelegate.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/IUIElement.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/ModLabeledToggleButton.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/abstracts/CustomCard.class" root0="SKIP_INSPECTION" />
@@ -134,8 +138,13 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Gradle.onmyoji-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wlj-mod [cleanPublishFolder].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wlj-mod [cleanTestFolder].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [clean].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wlj-mod [deployToPublishFolder].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wlj-mod [deployToTestFolder].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wlj-mod [runGame].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -144,7 +153,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/wlj-mod/src/main/resources/localization/zhs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/mesh/examples/demo/build.gradle&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -184,8 +193,8 @@
       <recent name="com.github.paopaoyue.wljmod.card" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.wlj-mod [deployToMODFolder]">
-    <configuration name="wlj-mod [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.wlj-mod [runGame]">
+    <configuration name="wlj-mod [cleanPublishFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -196,7 +205,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value="cleanPublishFolder" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,7 +216,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="wlj-mod [deployToMODFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="wlj-mod [cleanTestFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,7 +227,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="deployToMODFolder" />
+            <option value="cleanTestFolder" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -229,10 +238,86 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="wlj-mod [deployToPublishFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="deployToPublishFolder" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="wlj-mod [deployToTestFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="deployToTestFolder" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="wlj-mod [runGame]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runGame" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.wlj-mod [cleanPublishFolder]" />
+      <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
+      <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
+      <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
+      <item itemvalue="Gradle.wlj-mod [runGame]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.wlj-mod [deployToMODFolder]" />
-        <item itemvalue="Gradle.wlj-mod [clean]" />
+        <item itemvalue="Gradle.wlj-mod [runGame]" />
+        <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
+        <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
+        <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
+        <item itemvalue="Gradle.wlj-mod [cleanPublishFolder]" />
       </list>
     </recent_temporary>
   </component>
@@ -338,6 +423,9 @@
       <workItem from="1722661347331" duration="14478000" />
       <workItem from="1722684910573" duration="1188000" />
       <workItem from="1722686320893" duration="412000" />
+      <workItem from="1722701937137" duration="3214000" />
+      <workItem from="1722705234283" duration="97000" />
+      <workItem from="1722705384064" duration="272000" />
     </task>
     <servers />
   </component>
