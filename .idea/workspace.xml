@@ -5,27 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AvatarStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/effect/EjectStoneEffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/effect/StoneParticle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/LewisPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/space_engineer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/space_engineer_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/icon/culture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/icon/lewis.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Xiangdangdang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Xiangdangdang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Afei.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Afei.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Dick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Dick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/SunKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/SunKnight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Xiangdangdang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Xiangdangdang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Zhaoritian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Zhaoritian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/worker/RenderPowerTipsPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/worker/RenderPowerTipsPatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/Peglin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/Peglin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/SlimeInAJar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/SlimeInAJar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_cards.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_characters.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_avatars.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_potions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_powers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_relics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_ui.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Lewis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/SpaceEngineer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Performer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Performer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/SpaceEngineer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Culture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/lewis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/lewis_p.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_powers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_powers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_relics.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_relics.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,11 +192,11 @@
       <recent name="C:\Users\LENOVO\Desktop\onmyoji-mod\src\main\resources\image\1024" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.paopaoyue.wljmod.power" />
       <recent name="com.github.paopaoyue.wljmod.patch.avatar" />
       <recent name="com.github.paopaoyue.wljmod.potion" />
       <recent name="com.github.paopaoyue.wljmod.action" />
       <recent name="com.github.paopaoyue.wljmod.card" />
-      <recent name="com.github.paopaoyue.wljmod.relic" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.wlj-mod [deployToMODFolder]">
@@ -355,7 +350,7 @@
       <workItem from="1722501452383" duration="15352000" />
       <workItem from="1722569727236" duration="16318000" />
       <workItem from="1722612742824" duration="14034000" />
-      <workItem from="1722661347331" duration="5624000" />
+      <workItem from="1722661347331" duration="11205000" />
     </task>
     <servers />
   </component>

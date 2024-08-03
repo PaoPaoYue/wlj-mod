@@ -56,9 +56,9 @@
     "NAME": "魔力大刀",
     "DESCRIPTION": "造成 !D! 伤害，弃牌堆每有一种 员工 抽一张牌。"
   },
-  "Wlj:Lewis": {
-    "NAME": "刘易斯",
-    "DESCRIPTION": "造成 !D! 伤害，计算 !M! 倍 *优秀员工 的加成效果。 NL 不会杀死敌人。"
+  "Wlj:Space Engineer": {
+    "NAME": "重力炮",
+    "DESCRIPTION": "造成 !D! 伤害，计算 !M! 倍 *优秀员工 的加成效果。"
   },
   "Wlj:Cops": {
     "NAME": "浅博里三人组",

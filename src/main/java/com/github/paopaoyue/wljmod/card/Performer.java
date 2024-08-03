@@ -51,7 +51,7 @@ public class Performer extends AbstractWorkerCard {
 
     public float atDamageGiveOutsideDiscardPile(float damage, DamageInfo.DamageType type, AbstractCard card) {
         if (type == DamageInfo.DamageType.NORMAL) {
-            if (card instanceof Lewis) {
+            if (card instanceof SpaceEngineer) {
                 return damage + this.magicNumber * card.magicNumber;
             }
             return damage + this.magicNumber;
