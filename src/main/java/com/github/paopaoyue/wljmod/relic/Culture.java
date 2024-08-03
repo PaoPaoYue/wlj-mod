@@ -2,13 +2,12 @@ package com.github.paopaoyue.wljmod.relic;
 
 import basemod.abstracts.CustomRelic;
 import com.github.paopaoyue.wljmod.power.LewisPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class Culture extends CustomRelic {
@@ -27,10 +26,16 @@ public class Culture extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-        this.flash();
-        for (AbstractCreature m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            this.addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new LewisPower(m, 1), 1));
+        for (final AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            m.addPower(new LewisPower(m, 1));
         }
+        AbstractDungeon.onModifyPower();
+    }
+
+    @Override
+    public void onSpawnMonster(final AbstractMonster monster) {
+        monster.addPower(new LewisPower(monster, 1));
+        AbstractDungeon.onModifyPower();
     }
 
     @Override
