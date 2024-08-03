@@ -5,8 +5,10 @@ import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.card.Performer;
 import com.github.paopaoyue.wljmod.card.Prisoner;
 import com.github.paopaoyue.wljmod.card.Rabble;
+import com.github.paopaoyue.wljmod.character.Wlj;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import javassist.CtBehavior;
@@ -47,8 +49,8 @@ public class RenderPowerTipsPatch {
             }
         });
 
-        if (performer.get() > 0 || rabble.get() > 0 || prisoner.get() > 0) {
-            tips.add(new PowerTip(TEXT[0], TEXT[1] + performer.get() + TEXT[2] + rabble.get() + TEXT[3] + prisoner.get() + TEXT[4]));
+        if (AbstractDungeon.player instanceof Wlj || performer.get() > 0 || rabble.get() > 0 || prisoner.get() > 0) {
+            tips.add(0, new PowerTip(TEXT[0], TEXT[1] + performer.get() + TEXT[2] + rabble.get() + TEXT[3] + prisoner.get() + TEXT[4]));
         }
     }
 

@@ -31,7 +31,7 @@ public class SlimeInAJar extends AbstractPotion {
         this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        Keyword wljWorker = WljMod.MOD_DICTIONARY.get("Wlj:Worker");
+        Keyword wljWorker = WljMod.KEYWORD_DICTIONARY.get("Wlj:Worker");
         this.tips.add(new PowerTip(wljWorker.NAMES[0], wljWorker.DESCRIPTION));
     }
 

@@ -257,7 +257,7 @@
     "DESCRIPTION": "变为战斗中上一个 化身 ，获得 !K! 临时生命值。 NL ",
     "EXTENDED_DESCRIPTION": [
       "（变为 ",
-      " 。)"
+      " )"
     ]
   },
   "Wlj:Leidongxuan": {
@@ -317,7 +317,7 @@
   },
   "Wlj:Xiangdangdang": {
     "NAME": "响当当",
-    "DESCRIPTION": " 化身 ，消耗手牌中所有 *贱民 ，每消耗一张获得 !M! 临时生命。 所有非0费攻击牌视为 *邀为同道 。"
+    "DESCRIPTION": " 化身 ，消耗手牌中所有 *贱民 ，每消耗一张获得 !M! 临时生命； 所有非0费攻击牌视为 *邀为同道 。"
   },
   "Wlj:Retard": {
     "NAME": "智商高达50",
@@ -347,8 +347,8 @@
   },
   "Wlj:Sun Knight": {
     "NAME": "太阳骑士",
-    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为随机 叛教 牌， 叛教 时获得 [E] 。",
-    "UPGRADE_DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为随机较低费用的 叛教 牌， 叛教 时获得 [E] 。"
+    "DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为随机 叛教 牌； 叛教 时获得 [E] 。",
+    "UPGRADE_DESCRIPTION": " 化身 ，获得 !K! 临时生命值，将手牌中的 员工 变为随机较低费用的 叛教 牌； 叛教 时获得 [E] 。"
   },
   "Wlj:Capitalist": {
     "NAME": "资本家形态",

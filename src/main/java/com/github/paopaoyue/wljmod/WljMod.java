@@ -14,6 +14,7 @@ import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
 import com.github.paopaoyue.wljmod.card.AvatarHp;
 import com.github.paopaoyue.wljmod.character.Wlj;
 import com.github.paopaoyue.wljmod.component.AvatarManager;
+import com.github.paopaoyue.wljmod.component.AvatarStrings;
 import com.github.paopaoyue.wljmod.component.WorkerManager;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.PlayerClassEnum;
@@ -40,7 +41,8 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
 
 
     public static final String MOD_ID = "Wlj";
-    public static final HashMap<String, Keyword> MOD_DICTIONARY = new HashMap<>();
+    public static final HashMap<String, Keyword> KEYWORD_DICTIONARY = new HashMap<>();
+    public static final HashMap<String, AvatarStrings> AVATAR_DICTIONARY = new HashMap<>();
     private static final Logger logger = LogManager.getLogger(WljMod.class);
 
     public static AvatarManager avatarManager;
@@ -105,8 +107,8 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
 
     @Override
     public void receiveEditKeywords() {
-        if (MOD_DICTIONARY != null) {
-            for (Keyword keyword : MOD_DICTIONARY.values()) {
+        if (KEYWORD_DICTIONARY != null) {
+            for (Keyword keyword : KEYWORD_DICTIONARY.values()) {
                 BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
@@ -131,7 +133,7 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
                 language = "zhs";
                 break;
             default:
-                language = "eng";
+                language = "zhs";
                 break;
         }
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "localization/" + language + "/wlj_characters.json");
@@ -146,7 +148,12 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
         String json = Gdx.files.internal("localization/" + language + "/wlj_keywords.json").readString(String.valueOf(StandardCharsets.UTF_8));
         Keyword[] keywords = gson.fromJson(json, Keyword[].class);
         for (Keyword keyword : keywords) {
-            MOD_DICTIONARY.put(keyword.ID, keyword);
+            KEYWORD_DICTIONARY.put(keyword.ID, keyword);
+        }
+        json = Gdx.files.internal("localization/" + language + "/wlj_avatars.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        AvatarStrings[] avatars = gson.fromJson(json, AvatarStrings[].class);
+        for (AvatarStrings avatar : avatars) {
+            AVATAR_DICTIONARY.put(avatar.ID, avatar);
         }
     }
 

@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.component;
 
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.action.UseAvatarAction;
 import com.github.paopaoyue.wljmod.card.AbstractAvatarCard;
@@ -12,13 +11,13 @@ public class Zhaoritian extends AbstractAvatar {
     public static final String ID = "Wlj:Zhaoritian";
 
     public static final String CHARACTER_IMG = "image/character/zhaoritian.png";
-    private static final Keyword avatarString = WljMod.MOD_DICTIONARY.get(ID);
+    private static final AvatarStrings avatarString = WljMod.AVATAR_DICTIONARY.get(ID);
 
     private final AbstractAvatarCard dickCard;
 
     public Zhaoritian() {
         this.id = avatarString.ID;
-        this.name = avatarString.NAMES[0];
+        this.name = avatarString.NAME;
         this.dickCard = new com.github.paopaoyue.wljmod.card.Dick();
         this.updateDescription();
     }

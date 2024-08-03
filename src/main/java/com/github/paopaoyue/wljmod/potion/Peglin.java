@@ -34,8 +34,8 @@ public class Peglin extends AbstractPotion {
         this.description = potionStrings.DESCRIPTIONS[0];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        Keyword wljWorker = WljMod.MOD_DICTIONARY.get("Wlj:Worker");
-        Keyword wljLayoff = WljMod.MOD_DICTIONARY.get("Wlj:Layoff");
+        Keyword wljWorker = WljMod.KEYWORD_DICTIONARY.get("Wlj:Worker");
+        Keyword wljLayoff = WljMod.KEYWORD_DICTIONARY.get("Wlj:Layoff");
         this.tips.add(new PowerTip(wljWorker.NAMES[0], wljWorker.DESCRIPTION));
         this.tips.add(new PowerTip(wljLayoff.NAMES[0], wljLayoff.DESCRIPTION));
     }

@@ -23,7 +23,7 @@ public class Xiangdangdang extends AbstractAvatarCard {
                 new com.github.paopaoyue.wljmod.component.Xiangdangdang(), 0);
         this.tags.add(CardTagEnum.TAIWU);
         this.cardsToPreview = new Invite();
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;
     }
 

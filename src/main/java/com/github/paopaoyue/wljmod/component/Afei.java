@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.component;
 
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.action.AfeiAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,7 +12,7 @@ public class Afei extends AbstractAvatar {
     public static final String ID = "Wlj:Afei";
 
     public static final String CHARACTER_IMG = "image/character/afei.png";
-    private static final Keyword avatarString = WljMod.MOD_DICTIONARY.get(ID);
+    private static final AvatarStrings avatarString = WljMod.AVATAR_DICTIONARY.get(ID);
 
     private AbstractCard card;
     private AbstractMonster target;
@@ -21,7 +20,7 @@ public class Afei extends AbstractAvatar {
 
     public Afei() {
         this.id = avatarString.ID;
-        this.name = avatarString.NAMES[0];
+        this.name = avatarString.NAME;
         this.incrementAmount = 2;
         this.updateDescription();
     }
@@ -53,6 +52,7 @@ public class Afei extends AbstractAvatar {
                     card.misc += incrementAmount;
                 }
             }
+            updateDescription();
         }
     }
 
@@ -77,8 +77,7 @@ public class Afei extends AbstractAvatar {
 
     @Override
     public void updateDescription() {
-        int insertPosition = avatarString.DESCRIPTION.length() - 5;
-        this.description = avatarString.DESCRIPTION.substring(0, insertPosition) + incrementAmount + avatarString.DESCRIPTION.substring(insertPosition);
+        this.description = String.format(avatarString.DESCRIPTION, card == null ? 0 : card.baseDamage, incrementAmount);
     }
 
 }

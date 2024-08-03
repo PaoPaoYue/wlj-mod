@@ -1,0 +1,28 @@
+[
+  {
+    "ID": "Wlj:Sun Knight",
+    "NAME": "太阳骑士",
+    "DESCRIPTION": "进场时将手牌中的 #y员工 变为随机 #y叛教 牌； #y叛教 时获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "进场时将手牌中的 #y员工 变为随机较低费用的 #y叛教 牌； #y叛教 时获得 [E] 。"
+  },
+  {
+    "ID": "Wlj:Zhaoritian",
+    "NAME": "赵日天号",
+    "DESCRIPTION": "受到伤害时变为 #y本体 。"
+  },
+  {
+    "ID": "Wlj:Dick",
+    "NAME": "本体",
+    "DESCRIPTION": "进场时获得1层 #y无实体 。"
+  },
+  {
+    "ID": "Wlj:Afei",
+    "NAME": "光溜溜的阿飞",
+    "DESCRIPTION": "进场时造成 #b%d 伤害，每受到一次伤害永久增加 #b%d 伤害。"
+  },
+  {
+    "ID": "Wlj:Xiangdangdang",
+    "NAME": "响当当",
+    "DESCRIPTION": "进场时消耗手牌中所有 #y贱民 ，每消耗一张获得 #b%d 临时生命； 所有非0费攻击牌视为 #y邀为同道 。"
+  }
+]
