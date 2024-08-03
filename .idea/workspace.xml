@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/effect/EjectStoneEffect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/effect/StoneParticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/LewisPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/space_engineer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/space_engineer_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/icon/culture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/icon/lewis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Lewis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/SpaceEngineer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Performer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Performer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/SpaceEngineer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Culture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/lewis.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/lewis_p.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_powers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_powers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_relics.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_relics.json" afterDir="false" />
-    </list>
+    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -350,7 +333,7 @@
       <workItem from="1722501452383" duration="15352000" />
       <workItem from="1722569727236" duration="16318000" />
       <workItem from="1722612742824" duration="14034000" />
-      <workItem from="1722661347331" duration="11205000" />
+      <workItem from="1722661347331" duration="11526000" />
     </task>
     <servers />
   </component>
