@@ -25,7 +25,7 @@ public class Fishing extends CustomCard {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 6;
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
 

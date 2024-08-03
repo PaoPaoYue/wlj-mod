@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "com.github.paopaoyue"
-version = "1.0.1-SNAPSHOT"
+version = "1.0.2-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ tasks.test {
 }
 
 tasks.register<Copy>("deployToMODFolder") {
-    dependsOn(tasks.jar)
+    dependsOn(tasks.clean, tasks.jar)
     from(layout.buildDirectory.dir("libs"))
     include("*.jar")
     into(layout.buildDirectory.dir("E:\\Steam Games\\steamapps\\common\\SlayTheSpire\\mods"))

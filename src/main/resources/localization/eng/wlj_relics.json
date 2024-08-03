@@ -1,0 +1,79 @@
+{
+  "Wlj:Money": {
+    "NAME": "启动资金",
+    "FLAVOR": "先有老菊后有天，太阳骑士日神仙！",
+    "DESCRIPTIONS": [
+      "战斗结束时，获得 #b6 #y金币 。"
+    ]
+  },
+  "Wlj:Stone Heart": {
+    "NAME": "石炉",
+    "FLAVOR": "故事的开始总是那么一票人。",
+    "DESCRIPTIONS": [
+      "战斗开始时，增加3名 #y 贱民到弃牌堆。"
+    ]
+  },
+  "Wlj:Truck": {
+    "NAME": "欧洲卡车",
+    "FLAVOR": "维修费由雇主承担。",
+    "DESCRIPTIONS": [
+      "第一个回合内 #y优化 效果增加1。"
+    ]
+  },
+  "Wlj:Dog": {
+    "NAME": "KBDYD",
+    "FLAVOR": "KB呀~你死的好惨啊~",
+    "DESCRIPTIONS": [
+      "第一次 #y优化 时恢复等同于 #y优化 效果数量的生命值。"
+    ]
+  },
+  "Wlj:Chicken": {
+    "NAME": "小鸡母鸡",
+    "FLAVOR": "母鸡生小鸡，小鸡生母鸡。",
+    "DESCRIPTIONS": [
+      "回合结束时，获得等同于弃牌堆外 #y员工 数量的 #y格挡 。"
+    ]
+  },
+  "Wlj:Rifle": {
+    "NAME": "步枪",
+    "FLAVOR": "王氏甩枪法！",
+    "DESCRIPTIONS": [
+      "#y消耗 #y员工 时，随机造成 #b3 伤害。"
+    ]
+  },
+  "Wlj:Sheep": {
+    "NAME": "羊房",
+    "FLAVOR": "这一晚我们将决不后退，因为背后就是羊村！",
+    "DESCRIPTIONS": [
+      "战斗中失去 #y金币 时，将手牌中一名 #y贱民 变为其他随机 #y员工 。"
+    ]
+  },
+  "Wlj:Ship": {
+    "NAME": "海盗船",
+    "FLAVOR": "大海啊~都是屎~",
+    "DESCRIPTIONS": [
+      "施加 #y负面状态 时，若敌人有其他 #y负面状态 ，则额外施加 #b1 层。"
+    ]
+  },
+  "Wlj:Tax": {
+    "NAME": "取之于民",
+    "FLAVOR": "所谓取之于民，用之于菊也。",
+    "DESCRIPTIONS": [
+      "替换 #r启动资金 ， #y优秀员工 打出时获得 #b2 #y金币 且基础伤害翻倍，但是会被 #y消耗 。"
+    ]
+  },
+  "Wlj:Space Engineer": {
+    "NAME": "太空工程师",
+    "FLAVOR": "钢铁黑菊花号",
+    "DESCRIPTIONS": [
+      "每回合开始获得 [E] 。从第三个回合开始，回合结束时失去 #b5 金币。"
+    ]
+  },
+  "Wlj:Bird": {
+    "NAME": "失足鸟",
+    "FLAVOR": "全场消费都由鸟公子买单。",
+    "DESCRIPTIONS": [
+      "耗尽 #y金币 时，获得 #b200 #y金币 。"
+    ]
+  }
+}
