@@ -3,6 +3,7 @@ package com.github.paopaoyue.wljmod.power;
 import com.badlogic.gdx.graphics.Texture;
 import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
+import com.github.paopaoyue.wljmod.card.LayoffAmount;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
@@ -28,7 +29,7 @@ public class FireCopperPower extends AbstractPower {
 
     @Override
     public void atStartOfTurnPostDraw() {
-        this.addToTop(new LayoffAction(this.amount, c -> c instanceof AbstractWorkerCard));
+        this.addToTop(new LayoffAction(LayoffAmount.calculateLayoffAmount(this.amount), c -> c instanceof AbstractWorkerCard));
     }
 
     public void updateDescription() {

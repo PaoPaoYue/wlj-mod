@@ -13,6 +13,9 @@ public class Leidongxuan extends AbstractWorkerCard {
     public static final String ID = "Wlj:Leidongxuan";
     private static final CardStrings cardStrings;
 
+    private static final int DEFAULT_BLOCK = 5;
+    private static final int UPGRADE_BLOCK = 4;
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
@@ -20,7 +23,7 @@ public class Leidongxuan extends AbstractWorkerCard {
     public Leidongxuan() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseBlock = 5;
+        this.baseBlock = DEFAULT_BLOCK;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTagEnum.TAIWU);
@@ -38,7 +41,7 @@ public class Leidongxuan extends AbstractWorkerCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(4);
+            this.upgradeBlock(UPGRADE_BLOCK);
         }
     }
 
@@ -47,29 +50,8 @@ public class Leidongxuan extends AbstractWorkerCard {
     }
 
     public AbstractCard makeStatEquivalentCopy() {
-        AbstractCard card = this.makeCopy();
-
-        for (int i = 0; i < this.timesUpgraded; ++i) {
-            card.upgrade();
-        }
-
-        card.name = this.name;
-        card.target = this.target;
-        card.upgraded = this.upgraded;
-        card.timesUpgraded = this.timesUpgraded;
-        card.baseDamage = this.baseDamage;
-        card.baseMagicNumber = this.baseMagicNumber;
-        card.cost = this.cost;
-        card.costForTurn = this.costForTurn;
-        card.isCostModified = this.isCostModified;
-        card.isCostModifiedForTurn = this.isCostModifiedForTurn;
-        card.inBottleLightning = this.inBottleLightning;
-        card.inBottleFlame = this.inBottleFlame;
-        card.inBottleTornado = this.inBottleTornado;
-        card.isSeen = this.isSeen;
-        card.isLocked = this.isLocked;
-        card.misc = this.misc;
-        card.freeToPlayOnce = this.freeToPlayOnce;
+        AbstractCard card = super.makeStatEquivalentCopy();
+        card.baseBlock = (DEFAULT_BLOCK + (upgraded ? UPGRADE_BLOCK : 0));
         return card;
     }
 

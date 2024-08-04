@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.component.AbstractAvatar;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -61,12 +62,12 @@ public abstract class AbstractAvatarCard extends CustomCard {
     public void modifyBaseHp(int amount) {
         this.baseHp = this.baseHp + amount;
         this.hp = this.baseHp;
-        this.hpModified = true;
+        this.hpModified = amount != 0;
     }
 
     public void modifyHp(int amount) {
         this.hp = this.baseHp + amount;
-        this.hpModified = true;
+        this.hpModified = amount != 0;
     }
 
     public void upgradeAvatar() {
@@ -76,7 +77,14 @@ public abstract class AbstractAvatarCard extends CustomCard {
     public void upgradeHp(int amount) {
         this.baseHp += amount;
         this.hp = this.baseHp;
-        this.hpUpgraded = true;
+        this.hpUpgraded = amount != 0;
+    }
+
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard card = super.makeStatEquivalentCopy();
+        ((AbstractAvatarCard) card).baseHp = this.baseHp;
+        ((AbstractAvatarCard) card).hpUpgraded = this.hpUpgraded;
+        return card;
     }
 
 }

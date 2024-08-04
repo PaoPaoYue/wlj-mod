@@ -35,7 +35,7 @@ public class Xiangdangdang extends AbstractAvatarCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.avatar.upgrade();
+            this.upgradeAvatar();
             this.upgradeMagicNumber(2);
         }
     }

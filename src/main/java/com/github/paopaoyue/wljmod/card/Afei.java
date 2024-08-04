@@ -39,7 +39,7 @@ public class Afei extends AbstractAvatarCard {
             this.upgradeName();
             this.upgradeHp(2);
             this.upgradeMagicNumber(1);
-            this.getAvatar().upgrade();
+            this.upgradeAvatar();
         }
     }
 

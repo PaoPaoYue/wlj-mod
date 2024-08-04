@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Sts extends CustomCard {
+public class Sts extends AbstractLayoffCard {
     public static final String ID = "Wlj:Sts";
     private static final CardStrings cardStrings;
 
@@ -19,21 +18,17 @@ public class Sts extends CustomCard {
 
     public Sts() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 3;
-        this.magicNumber = this.baseMagicNumber;
-        this.misc = this.magicNumber;
+                AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF, 3);
         this.selfRetain = true;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new LayoffAction(this.magicNumber));
+        this.addToBot(new LayoffAction(this.getLayoffAmount()));
     }
 
-    public void triggerWhenObtainCards() {
-        this.upgradeMagicNumber(1);
-        this.misc = this.magicNumber;
+    public void triggerWhenObtainCards(AbstractCard card) {
+        if (!card.uuid.equals(this.uuid)) this.upgradeLayoffAmount(1);
     }
 
     public void upgrade() {

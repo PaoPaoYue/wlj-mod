@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.power.AlarmPower;
@@ -11,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Alarm extends CustomCard {
+public class Alarm extends AbstractLayoffCard {
     public static final String ID = "Wlj:Alarm";
     private static final CardStrings cardStrings;
 
@@ -21,13 +20,11 @@ public class Alarm extends CustomCard {
 
     public Alarm() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
+                AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF, 2);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new LayoffAction(this.magicNumber));
+        this.addToBot(new LayoffAction(this.getLayoffAmount()));
         this.addToBot(new ApplyPowerAction(p, p, new AlarmPower(p, 1), 1));
     }
 
@@ -35,7 +32,7 @@ public class Alarm extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeLayoffAmount(1);
         }
     }
 

@@ -19,7 +19,7 @@ public class StoryKing extends CustomCard {
     }
 
     public StoryKing() {
-        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.POWER,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 3, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
@@ -32,7 +32,7 @@ public class StoryKing extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeBaseCost(2);
         }
     }
 

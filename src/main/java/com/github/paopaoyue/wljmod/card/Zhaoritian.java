@@ -31,7 +31,7 @@ public class Zhaoritian extends AbstractAvatarCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.getAvatar().upgrade();
+            this.upgradeAvatar();
             this.cardsToPreview.upgrade();
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();

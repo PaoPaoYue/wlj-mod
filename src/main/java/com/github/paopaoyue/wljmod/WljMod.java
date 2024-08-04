@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
 import com.github.paopaoyue.wljmod.card.AvatarHp;
+import com.github.paopaoyue.wljmod.card.LayoffAmount;
 import com.github.paopaoyue.wljmod.character.Wlj;
 import com.github.paopaoyue.wljmod.component.AvatarManager;
 import com.github.paopaoyue.wljmod.component.AvatarStrings;
@@ -90,6 +91,7 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
     @Override
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new AvatarHp());
+        BaseMod.addDynamicVariable(new LayoffAmount());
         new AutoAdd(MOD_ID)
                 .setDefaultSeen(true)
                 .cards();

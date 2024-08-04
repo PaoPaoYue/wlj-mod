@@ -5,8 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/AbstractLayoffCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/LayoffAmount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AvatarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AvatarManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/FixWaitAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/ForcedWaitAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/LapseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/LapseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/LayoffAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/LayoffAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/AbstractAvatarCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/AbstractAvatarCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Afei.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Afei.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Alarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Alarm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Arrogant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Arrogant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/AutoFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/AutoFire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Beauty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Beauty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Clubhouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Clubhouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Dinosaur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Dinosaur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Foreman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Foreman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Layoff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Layoff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Leidongxuan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Leidongxuan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Phoenix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Phoenix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Spaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Spaceship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/StoryKing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/StoryKing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Sts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Sts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/SunKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/SunKnight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Xiangdangdang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Xiangdangdang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Zhaoritian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Zhaoritian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/EmberPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/PlaceOnDrawPileBottomPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/PhoenixPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/PhoenixPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/StsPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/StsPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/Peglin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/Peglin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/FireCopperPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/FireCopperPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/SteepPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/SteepPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/relic/Truck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_avatars.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_avatars.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,39 +168,40 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.onmyoji-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [cleanPublishFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [cleanTestFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToPublishFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToTestFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [runGame].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/mesh/examples/demo/build.gradle&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.38045976&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.onmyoji-mod [deployToMODFolder].executor": "Run",
+    "Gradle.wlj-mod [cleanPublishFolder].executor": "Run",
+    "Gradle.wlj-mod [cleanTestFolder].executor": "Run",
+    "Gradle.wlj-mod [clean].executor": "Run",
+    "Gradle.wlj-mod [deployToMODFolder].executor": "Run",
+    "Gradle.wlj-mod [deployToPublishFolder].executor": "Run",
+    "Gradle.wlj-mod [deployToTestFolder].executor": "Run",
+    "Gradle.wlj-mod [publishMod].executor": "Run",
+    "Gradle.wlj-mod [runGame].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/LENOVO/Desktop/projects/mesh/examples/demo/build.gradle",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.38045976",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.paopaoyue.wljmod.action" />
@@ -186,36 +221,14 @@
       <recent name="C:\Users\LENOVO\Desktop\onmyoji-mod\src\main\resources\image\1024" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.paopaoyue.wljmod.card" />
       <recent name="com.github.paopaoyue.wljmod.power" />
       <recent name="com.github.paopaoyue.wljmod.patch.avatar" />
       <recent name="com.github.paopaoyue.wljmod.potion" />
       <recent name="com.github.paopaoyue.wljmod.action" />
-      <recent name="com.github.paopaoyue.wljmod.card" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.wlj-mod [runGame]">
-    <configuration name="wlj-mod [cleanPublishFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="cleanPublishFolder" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="wlj-mod [cleanTestFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -282,6 +295,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="wlj-mod [publishMod]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishMod" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="wlj-mod [runGame]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -305,7 +340,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.wlj-mod [cleanPublishFolder]" />
+      <item itemvalue="Gradle.wlj-mod [publishMod]" />
       <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
       <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
       <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
@@ -314,10 +349,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.wlj-mod [runGame]" />
+        <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
+        <item itemvalue="Gradle.wlj-mod [publishMod]" />
         <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
-        <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
-        <item itemvalue="Gradle.wlj-mod [cleanPublishFolder]" />
       </list>
     </recent_temporary>
   </component>
@@ -426,7 +461,7 @@
       <workItem from="1722701937137" duration="3214000" />
       <workItem from="1722705234283" duration="97000" />
       <workItem from="1722705384064" duration="272000" />
-      <workItem from="1722739529222" duration="987000" />
+      <workItem from="1722739529222" duration="15876000" />
     </task>
     <servers />
   </component>

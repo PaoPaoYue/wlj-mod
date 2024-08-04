@@ -36,6 +36,7 @@ public class Phoenix extends CustomCard {
         this.misc = level;
         if (isMainBody()) {
             this.purgeOnUse = true;
+            this.cardsToPreview = new Phoenix(1);
         } else {
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
@@ -68,6 +69,7 @@ public class Phoenix extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            if (isMainBody()) this.cardsToPreview.upgrade();
             this.upgradeDamage(this.misc * 3);
         }
     }

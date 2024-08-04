@@ -22,7 +22,7 @@
   },
   "Wlj:Layoff": {
     "NAME": "优化员工",
-    "DESCRIPTION": "造成 !D! 伤害， 优化 !M! 。"
+    "DESCRIPTION": "造成 !D! 伤害， 优化 !L! 。"
   },
   "Wlj:Hire": {
     "NAME": "急聘优秀员工",
@@ -30,7 +30,7 @@
   },
   "Wlj:Beauty": {
     "NAME": "古神面容",
-    "DESCRIPTION": "给予 !M! 易伤 ， 优化 1。"
+    "DESCRIPTION": "给予 !M! 易伤 ， 优化 !L! 。"
   },
   "Wlj:Lip": {
     "NAME": "扬唇一笑",
@@ -46,7 +46,7 @@
   },
   "Wlj:Alarm": {
     "NAME": "警钟长鸣",
-    "DESCRIPTION": " 优化 !M! ，本回合 优化 效果增加1。"
+    "DESCRIPTION": " 优化 !L! ，本回合 优化 效果增加1。"
   },
   "Wlj:Poisoned Arrow": {
     "NAME": "正义的毒箭",
@@ -95,7 +95,7 @@
   },
   "Wlj:Box": {
     "NAME": "箱子如何了？",
-    "DESCRIPTION": " 支付 !M! 金币， 优化 2 。"
+    "DESCRIPTION": " 支付 !M! 金币， 优化 !L! 。"
   },
   "Wlj:Startup": {
     "NAME": "摸油校尉",
@@ -203,7 +203,7 @@
   "Wlj:Phoenix": {
     "NAME": "圣主菲尼克斯",
     "DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。永久位于弃牌堆，被 消耗 后将其拆分分别加入手牌和弃牌堆。",
-    "UPGRADE_DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。"
+    "UPGRADE_DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。手牌满10张此牌时消灭所有敌人。"
   },
   "Wlj:Overtime": {
     "NAME": "加班!",
@@ -215,8 +215,8 @@
   },
   "Wlj:Dinosaur": {
     "NAME": "爽爽",
-    "DESCRIPTION": "造成 !D! 伤害，必须 消耗 弃牌堆 !M! 名 员工 。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 伤害，必须 优化 !M! 名 员工 。"
+    "DESCRIPTION": "造成 !D! 伤害，必须 消耗 弃牌堆 !L! 名 员工 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 伤害，必须 优化 !L! 名 员工 。"
   },
   "Wlj:Love": {
     "NAME": "倾诉爱意",
@@ -229,7 +229,7 @@
   },
   "Wlj:Foreman": {
     "NAME": "工头喊一嗓子",
-    "DESCRIPTION": " 优化 !M! ，抽2张牌。 "
+    "DESCRIPTION": " 优化 !L! ，抽 !M! 张牌。 "
   },
   "Wlj:Fire Copper": {
     "NAME": "火铜房",
@@ -266,7 +266,7 @@
   },
   "Wlj:Auto Fire": {
     "NAME": "自由开火",
-    "DESCRIPTION": "随机造成 !D! 伤害 !M! 次，随机 优化 !M! 。"
+    "DESCRIPTION": "随机造成 !D! 伤害 !M! 次，随机 优化 !L! 。"
   },
   "Wlj:Wait": {
     "NAME": "艾尔等之王",
@@ -299,13 +299,13 @@
   },
   "Wlj:Sts": {
     "NAME": "这100分钟全是细节",
-    "DESCRIPTION": " 保留 。 优化 !M! ， 添加牌到卡组时效果增加1，但SL后重置。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 优化 !M! ， 添加牌到卡组时效果增加1，但SL后重置。"
+    "DESCRIPTION": " 保留 。 优化 !L! ， 添加牌到卡组时效果增加1，但SL后重置。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 优化 !L! ， 添加牌到卡组时效果增加1，但SL后重置。"
   },
   "Wlj:Arrogant": {
     "NAME": "完全理解",
-    "DESCRIPTION": " 固有 。弃掉抽牌堆，然后 优化 !M! 。 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。弃掉抽牌堆，然后 优化 !M! 。"
+    "DESCRIPTION": " 固有 。弃掉抽牌堆，然后 优化 !L! 。 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。弃掉抽牌堆，然后 优化 !L! 。"
   },
   "Wlj:Joy": {
     "NAME": "欢愉之屋",
@@ -317,7 +317,7 @@
   },
   "Wlj:Xiangdangdang": {
     "NAME": "响当当",
-    "DESCRIPTION": " 化身 ，消耗手牌中所有 *贱民 ，每消耗一张获得 !M! 临时生命； 所有非0费攻击牌视为 *邀为同道 。"
+    "DESCRIPTION": " 化身 ，消耗手牌中所有 *贱民 ，每消耗一张获得 !M! 临时生命值； 所有非0费攻击牌视为 *邀为同道 。"
   },
   "Wlj:Retard": {
     "NAME": "智商高达50",
@@ -362,7 +362,7 @@
   "Wlj:Clubhouse": {
     "NAME": "飞哥瑜伽会所",
     "DESCRIPTION": "回合结束时，失去所有 荆棘 ，然后获得等同于弃牌堆中员工数量的 荆棘 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 回合结束时，失去所有 荆棘 ，然后获得等同于弃牌堆中员工数量的 荆棘 。"
+    "UPGRADE_DESCRIPTION": "回合结束时，失去所有 荆棘 ，然后获得等同于弃牌堆中员工数量的 荆棘 。战斗开始时位于抽牌堆底部。"
   },
   "Wlj:Moon Singer": {
     "NAME": "月亮歌姬",

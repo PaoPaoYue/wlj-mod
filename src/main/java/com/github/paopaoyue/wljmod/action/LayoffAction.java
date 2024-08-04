@@ -6,10 +6,8 @@ import com.github.paopaoyue.wljmod.card.Erwen;
 import com.github.paopaoyue.wljmod.card.Keel;
 import com.github.paopaoyue.wljmod.card.Rabble;
 import com.github.paopaoyue.wljmod.effect.ShowCardAndExhaustEffect;
-import com.github.paopaoyue.wljmod.power.AlarmPower;
 import com.github.paopaoyue.wljmod.power.PrisonPower;
 import com.github.paopaoyue.wljmod.relic.Dog;
-import com.github.paopaoyue.wljmod.relic.Truck;
 import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -56,12 +54,6 @@ public class LayoffAction extends AbstractGameAction {
 
     public LayoffAction(int amount, boolean auto, boolean anyNumber, Predicate<AbstractCard> predicate) {
         setValues(AbstractDungeon.player, AbstractDungeon.player, amount);
-        if (anyNumber) {
-            AlarmPower alarmPower = (AlarmPower) AbstractDungeon.player.getPower(AlarmPower.POWER_ID);
-            this.amount = (alarmPower == null ? amount : alarmPower.modifyLayoffAmount(amount));
-            Truck truck = (Truck) AbstractDungeon.player.getRelic(Truck.ID);
-            this.amount = (truck == null ? this.amount : truck.modifyLayoffAmount(this.amount));
-        }
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
         this.auto = auto;

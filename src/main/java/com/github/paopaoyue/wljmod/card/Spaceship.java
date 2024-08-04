@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.SpaceShipAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Spaceship extends CustomCard {
+public class Spaceship extends AbstractLayoffCard {
     public static final String ID = "Wlj:Spaceship";
     private static final CardStrings cardStrings;
 
@@ -19,7 +18,7 @@ public class Spaceship extends CustomCard {
 
     public Spaceship() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 3, cardStrings.DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ALL_ENEMY, -1);
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.isMultiDamage = true;

@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.action.DiscardWithCallbackAction;
-import com.github.paopaoyue.wljmod.action.FixWaitAction;
+import com.github.paopaoyue.wljmod.action.ForcedWaitAction;
 import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -45,7 +45,7 @@ public class Peglin extends AbstractPotion {
         target = AbstractDungeon.player;
         this.addToBot(new DiscardWithCallbackAction(target, target, 99, true, false, cards -> {
             this.addToTop(new LayoffAction(99, true, cards::contains));
-            this.addToTop(new FixWaitAction(0.5F));
+            this.addToTop(new ForcedWaitAction(0.5F));
         }));
     }
 

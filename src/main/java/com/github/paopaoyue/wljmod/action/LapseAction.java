@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.action;
 
 import com.github.paopaoyue.wljmod.WljMod;
+import com.github.paopaoyue.wljmod.card.LayoffAmount;
 import com.github.paopaoyue.wljmod.component.SunKnight;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -32,7 +33,7 @@ public class LapseAction extends AbstractGameAction {
             if (WljMod.avatarManager.getCurrentAvatar() instanceof SunKnight) {
                 AbstractDungeon.actionManager.addToTop(new GainEnergyAction(1));
             }
-            this.addToTop(new LayoffAction(amount));
+            this.addToTop(new LayoffAction(LayoffAmount.calculateLayoffAmount(amount)));
         }
         lastLapseCard = card;
         this.isDone = true;

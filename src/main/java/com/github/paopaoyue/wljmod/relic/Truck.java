@@ -23,6 +23,7 @@ public class Truck extends CustomRelic {
 
     @Override
     public void atBattleStart() {
+        this.flash();
         this.beginPulse();
         this.pulse = true;
     }
@@ -39,7 +40,6 @@ public class Truck extends CustomRelic {
 
     public int modifyLayoffAmount(int amountToLayoff) {
         if (this.pulse) {
-            this.flash();
             return amountToLayoff + 1;
         }
         return amountToLayoff;

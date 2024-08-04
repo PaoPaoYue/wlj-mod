@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
@@ -11,7 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Box extends CustomCard {
+public class Box extends AbstractLayoffCard {
     public static final String ID = "Wlj:Box";
     private static final CardStrings cardStrings;
 
@@ -21,7 +20,7 @@ public class Box extends CustomCard {
 
     public Box() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 0, cardStrings.DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.SELF);
+                AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.SELF, 2);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTagEnum.PAY);
@@ -30,7 +29,7 @@ public class Box extends CustomCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new PurchaseAction(this.magicNumber, ok -> {
             if (ok) {
-                this.addToTop(new LayoffAction(2));
+                this.addToTop(new LayoffAction(this.getLayoffAmount()));
             }
         }));
     }

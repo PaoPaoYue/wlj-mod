@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.graphics.Color;
 import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
@@ -17,7 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.DieDieDieEffect;
 
-public class AutoFire extends CustomCard {
+public class AutoFire extends AbstractLayoffCard {
     public static final String ID = "Wlj:Auto Fire";
     private static final CardStrings cardStrings;
 
@@ -27,7 +26,7 @@ public class AutoFire extends CustomCard {
 
     public AutoFire() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+                AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, 3);
         this.baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
@@ -40,13 +39,14 @@ public class AutoFire extends CustomCard {
         for (int i = 0; i < this.magicNumber; i++) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
         }
-        this.addToBot(new LayoffAction(this.magicNumber, true, c -> true));
+        this.addToBot(new LayoffAction(this.getLayoffAmount(), true, null));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(1);
+            this.upgradeLayoffAmount(1);
         }
     }
 

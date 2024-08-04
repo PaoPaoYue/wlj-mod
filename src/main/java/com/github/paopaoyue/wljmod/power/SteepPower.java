@@ -3,6 +3,7 @@ package com.github.paopaoyue.wljmod.power;
 import com.badlogic.gdx.graphics.Texture;
 import com.github.paopaoyue.wljmod.action.LayoffAction;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
+import com.github.paopaoyue.wljmod.card.LayoffAmount;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,7 +39,7 @@ public class SteepPower extends AbstractPower {
 
     public void onDamagedAfterBlockDecrement(int damageAmount, DamageInfo.DamageType damageType) {
         if (damageAmount > 0 && this.count > 0) {
-            this.addToBot(new LayoffAction(1, true, c -> c instanceof AbstractWorkerCard));
+            this.addToBot(new LayoffAction(LayoffAmount.calculateLayoffAmount(1), true, c -> c instanceof AbstractWorkerCard));
             this.count--;
             updateDescription();
         }
