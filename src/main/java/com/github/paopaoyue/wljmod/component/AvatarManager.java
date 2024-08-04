@@ -74,8 +74,8 @@ public class AvatarManager {
 
         avatarSequenceInBattle.add(avatar);
 
-        card.current_x = avatarCardGroup.getTopCard().current_x;
-        card.current_y = avatarCardGroup.getTopCard().current_y;
+        card.current_x = AbstractDungeon.player.hb.cX;
+        card.current_y = AbstractDungeon.player.hb.cY;
         avatarCardGroup.clear();
         avatarCardGroup.addToBottom(card);
 

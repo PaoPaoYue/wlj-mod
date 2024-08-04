@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AvatarManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AvatarManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -426,6 +426,7 @@
       <workItem from="1722701937137" duration="3214000" />
       <workItem from="1722705234283" duration="97000" />
       <workItem from="1722705384064" duration="272000" />
+      <workItem from="1722739529222" duration="987000" />
     </task>
     <servers />
   </component>
