@@ -203,7 +203,7 @@
   "Wlj:Phoenix": {
     "NAME": "圣主菲尼克斯",
     "DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。永久位于弃牌堆，被 消耗 后将其拆分分别加入手牌和弃牌堆。",
-    "UPGRADE_DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。手牌满10张此牌时消灭所有敌人。"
+    "UPGRADE_DESCRIPTION": " 造成 !D! 伤害，获得 [E] 。手牌中有10张此牌时消灭所有敌人。"
   },
   "Wlj:Overtime": {
     "NAME": "加班!",
