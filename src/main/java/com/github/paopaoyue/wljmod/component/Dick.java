@@ -1,9 +1,11 @@
 package com.github.paopaoyue.wljmod.component;
 
 import com.github.paopaoyue.wljmod.WljMod;
+import com.github.paopaoyue.wljmod.patch.avatar.ZhaoritianPatch;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 
 public class Dick extends AbstractAvatar {
 
@@ -20,7 +22,9 @@ public class Dick extends AbstractAvatar {
 
     @Override
     public void onEnter() {
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new IntangiblePower(AbstractDungeon.player, 1), 1));
+        AbstractPower power = new IntangiblePlayerPower(AbstractDungeon.player, 1);
+        ZhaoritianPatch.IsAppliedAtMonsterTurnField.value.set(power, AbstractDungeon.actionManager.turnHasEnded);
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, power));
     }
 
     @Override

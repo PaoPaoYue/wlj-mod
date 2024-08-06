@@ -35,7 +35,6 @@ public class Phoenix extends CustomCard {
         this.magicNumber = this.baseMagicNumber;
         this.misc = level;
         if (isMainBody()) {
-            this.purgeOnUse = true;
             this.cardsToPreview = new Phoenix(1);
         } else {
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
@@ -50,6 +49,7 @@ public class Phoenix extends CustomCard {
 
     public void triggerOnExhaust() {
         if (this.isMainBody()) {
+            this.purgeOnUse = true;
             Phoenix part = new Phoenix(1);
             Phoenix body = new Phoenix(this.misc - 1);
             if (upgraded) {
