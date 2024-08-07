@@ -1,6 +1,7 @@
 package com.github.paopaoyue.wljmod.card;
 
 import basemod.abstracts.CustomCard;
+import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.action.DrawCardByWorkerAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -33,6 +34,14 @@ public class Broadsword extends CustomCard {
         this.addToBot(new ExpungeVFXAction(m));
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         this.addToBot(new DrawCardByWorkerAction(p, this.magicNumber));
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        int toDraw = WljMod.workerManager.getWorkerTypeCountInDiscardPile() * this.magicNumber;
+        this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + toDraw + cardStrings.EXTENDED_DESCRIPTION[1];
+        this.initializeDescription();
     }
 
     public void upgrade() {

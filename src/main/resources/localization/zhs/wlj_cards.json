@@ -54,7 +54,11 @@
   },
   "Wlj:Broadsword": {
     "NAME": "魔力大刀",
-    "DESCRIPTION": "造成 !D! 伤害，弃牌堆每有一种 员工 抽一张牌。"
+    "DESCRIPTION": "造成 !D! 伤害，弃牌堆每有一种 员工 抽一张牌。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （抽 ",
+      " 张牌)"
+    ]
   },
   "Wlj:Space Engineer": {
     "NAME": "重力炮",
