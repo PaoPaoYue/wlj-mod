@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 
-public class Peglin extends AbstractPotion {
+public class Peglin extends AbstractWljPotion {
 
     public static final String POTION_ID = "Wlj:Peglin";
     private static final PotionStrings potionStrings;

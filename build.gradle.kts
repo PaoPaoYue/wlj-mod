@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "com.github.paopaoyue"
-version = "1.0.4-SNAPSHOT"
+version = "1.1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()

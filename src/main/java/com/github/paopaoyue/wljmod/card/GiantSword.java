@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.action.LapseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
@@ -13,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class GiantSword extends CustomCard {
+public class GiantSword extends AbstractWljCard {
     public static final String ID = "Wlj:Giant Sword";
     private static final CardStrings cardStrings;
 

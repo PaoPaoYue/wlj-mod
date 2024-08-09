@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 
-public class SlimeInAJar extends AbstractPotion {
+public class SlimeInAJar extends AbstractWljPotion {
 
     public static final String POTION_ID = "Wlj:SlimeInAJar";
     private static final PotionStrings potionStrings;

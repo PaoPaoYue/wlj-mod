@@ -49,7 +49,7 @@ public class SfxUtil {
     }
 
     public void playSFX(float volumeMod) {
-        if (!WljMod.voiceEnabled) return;
+        if (WljMod.getVoiceDisabled()) return;
         boolean canPlay = false;
         if (consecutive || playedVoice == SFX_NONE) {
             canPlay = MathUtils.random(1.0f) < prob;
@@ -65,7 +65,7 @@ public class SfxUtil {
     }
 
     public void playLayoffSFX(int layoffSize) {
-        if (!WljMod.voiceEnabled) return;
+        if (WljMod.getVoiceDisabled()) return;
         boolean canPlay = false;
         if (consecutive || playedVoice == SFX_NONE) {
             canPlay = MathUtils.random(1.0f) < prob;

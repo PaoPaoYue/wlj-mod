@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.relic;
 
-import basemod.abstracts.CustomRelic;
 import com.github.paopaoyue.wljmod.action.RandomTransformRabbleAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,7 +7,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class Sheep extends CustomRelic {
+public class Sheep extends AbstractWljRelic {
     public static final String ID = "Wlj:Sheep";
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final RelicTier TIER = RelicTier.UNCOMMON;

@@ -1,7 +1,6 @@
 package com.github.paopaoyue.wljmod.action;
 
 import com.github.paopaoyue.wljmod.WljMod;
-import com.github.paopaoyue.wljmod.card.Rabble;
 import com.github.paopaoyue.wljmod.character.Wlj;
 import com.github.paopaoyue.wljmod.component.AbstractAvatar;
 import com.github.paopaoyue.wljmod.component.AvatarManager;
@@ -34,7 +33,7 @@ public class UseAvatarAction extends AbstractGameAction {
             AvatarManager avatarManager = WljMod.avatarManager;
 
             if (this.newAvatar instanceof Xiangdangdang) {
-                this.amount += AbstractDungeon.player.hand.group.stream().mapToInt(c -> c instanceof Rabble ? ((Xiangdangdang) this.newAvatar).getGainHpAmount() : 0).sum();
+                this.amount = ((Xiangdangdang) this.newAvatar).onEnterModifyHp(this.amount);
             }
 
             avatarManager.setHp(amount + avatarManager.getHp() <= 0 ? 1 : amount + avatarManager.getHp());

@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.relic;
 
-import basemod.abstracts.CustomRelic;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
@@ -11,7 +10,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class Rifle extends CustomRelic {
+public class Rifle extends AbstractWljRelic {
     public static final String ID = "Wlj:Rifle";
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final RelicTier TIER = RelicTier.RARE;

@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.CardTagEnum;
 import com.github.paopaoyue.wljmod.power.BrotherhoodPower;
@@ -13,7 +12,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Brotherhood extends CustomCard {
+public class Brotherhood extends AbstractWljCard {
     public static final String ID = "Wlj:Brotherhood";
     private static final CardStrings cardStrings;
 

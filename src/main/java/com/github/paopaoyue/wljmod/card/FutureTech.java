@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.power.FutureTechPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class FutureTech extends CustomCard {
+public class FutureTech extends AbstractWljCard {
     public static final String ID = "Wlj:Future Tech";
     private static final CardStrings cardStrings;
 

@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
-public class Cup extends AbstractPotion {
+public class Cup extends AbstractWljPotion {
 
     public static final String POTION_ID = "Wlj:Cup";
     private static final PotionStrings potionStrings;

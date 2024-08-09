@@ -1,13 +1,17 @@
 package com.github.paopaoyue.wljmod.component;
 
 import com.github.paopaoyue.wljmod.WljMod;
+import com.github.paopaoyue.wljmod.action.ExhaustCardGroupAction;
 import com.github.paopaoyue.wljmod.card.Invite;
 import com.github.paopaoyue.wljmod.card.Rabble;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Xiangdangdang extends AbstractAvatar {
 
@@ -22,16 +26,22 @@ public class Xiangdangdang extends AbstractAvatar {
         this.id = avatarString.ID;
         this.name = avatarString.NAME;
         this.updateDescription();
-        this.gainHpAmount = 5;
+        this.gainHpAmount = 6;
     }
 
     @Override
     public void onEnter() {
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof Rabble) {
-                AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, Settings.FAST_MODE));
-            }
-        }
+        // exhaust half of rabbles inside discard pile, non-upgraded first if possible
+        List<AbstractCard> cards = AbstractDungeon.player.discardPile.group.stream()
+                .filter(c -> c instanceof Rabble)
+                .sorted(Comparator.comparingInt(c -> c.timesUpgraded))
+                .collect(Collectors.toList());
+        Set<AbstractCard> cardsToExhaust = cards.stream().limit((cards.size() + 1) / 2).collect(Collectors.toSet());
+        AbstractDungeon.actionManager.addToTop(new ExhaustCardGroupAction(AbstractDungeon.player.discardPile, cardsToExhaust::contains, null));
+    }
+
+    public int onEnterModifyHp(int hp) {
+        return (int) (hp + ((AbstractDungeon.player.discardPile.group.stream().filter(c -> c instanceof Rabble).count() + 1) / 2 * this.gainHpAmount));
     }
 
     @Override
@@ -46,6 +56,7 @@ public class Xiangdangdang extends AbstractAvatar {
     public void upgrade() {
         super.upgrade();
         this.gainHpAmount += 2;
+        updateDescription();
     }
 
     @Override
@@ -56,10 +67,6 @@ public class Xiangdangdang extends AbstractAvatar {
     @Override
     public void updateDescription() {
         this.description = String.format(avatarString.DESCRIPTION, gainHpAmount);
-    }
-
-    public int getGainHpAmount() {
-        return gainHpAmount;
     }
 
 }

@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.relic;
 
-import basemod.abstracts.CustomRelic;
 import com.github.paopaoyue.wljmod.power.LewisPower;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -10,7 +9,7 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class Culture extends CustomRelic {
+public class Culture extends AbstractWljRelic {
     public static final String ID = "Wlj:Culture";
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final RelicTier TIER = RelicTier.BOSS;

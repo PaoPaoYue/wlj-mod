@@ -25,9 +25,9 @@ public class Dinosaur extends AbstractLayoffCard {
     }
 
     public Dinosaur() {
-        super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.ATTACK,
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY, 2, false);
-        this.baseDamage = 24;
+        this.baseDamage = 17;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

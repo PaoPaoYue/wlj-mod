@@ -4,76 +4,87 @@
     "FLAVOR": "先有老菊后有天，太阳骑士日神仙！",
     "DESCRIPTIONS": [
       "战斗结束时，获得 #b6 #y金币 。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《采访 | 王老菊做游戏亏了 600 万，是什么在支撑他？》。"
   },
   "Wlj:Stone Heart": {
     "NAME": "石炉",
     "FLAVOR": "故事的开始总是那么一票人。",
     "DESCRIPTIONS": [
       "战斗开始时，增加3名 #y 贱民到弃牌堆。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《王老菊的石炉故事》系列。"
   },
   "Wlj:Truck": {
     "NAME": "欧洲卡车",
     "FLAVOR": "维修费由雇主承担。",
     "DESCRIPTIONS": [
       "第一个回合内 #y优化 效果增加1。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《王老菊教你开车》。"
   },
   "Wlj:Dog": {
     "NAME": "KBDYD",
     "FLAVOR": "KB呀~你死的好惨啊~",
     "DESCRIPTIONS": [
       "第一次 #y优化 时恢复等同于 #y优化 效果数量的生命值。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《王老菊的避难所生存第二周：愁云惨雾》。"
   },
   "Wlj:Chicken": {
     "NAME": "小鸡母鸡",
     "FLAVOR": "母鸡生小鸡，小鸡生母鸡。",
     "DESCRIPTIONS": [
       "回合结束时，获得等同于弃牌堆外 #y员工 数量的 #y格挡 。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《王老菊】小鸡冲鸭！！！！》。"
   },
   "Wlj:Rifle": {
     "NAME": "步枪",
     "FLAVOR": "王氏甩枪法！",
     "DESCRIPTIONS": [
       "#y消耗 #y员工 时，随机造成 #b3 伤害。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《王老菊带你冲锋陷阵》。"
   },
   "Wlj:Sheep": {
     "NAME": "羊房",
     "FLAVOR": "这一晚我们将决不后退，因为背后就是羊村！",
     "DESCRIPTIONS": [
       "战斗中失去 #y金币 时，将手牌中一名 #y贱民 变为其他随机 #y员工 。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《王老菊教你守卫村庄》系列。"
   },
   "Wlj:Ship": {
     "NAME": "海盗船",
     "FLAVOR": "大海啊~都是屎~",
     "DESCRIPTIONS": [
       "施加 #y负面状态 时，若敌人有其他 #y负面状态 ，则额外施加 #b1 层。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《老菊的海盗生涯01~03：大海啊，都是屎》。"
   },
   "Wlj:Tax": {
     "NAME": "取之于民",
     "FLAVOR": "所谓取之于民，用之于菊也。",
     "DESCRIPTIONS": [
       "替换 #r启动资金 ， #y优秀员工 打出时获得 #b2 #y金币 且基础伤害翻倍，但是会被 #y消耗 。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《王老菊教你取之于民》。"
   },
   "Wlj:Culture": {
     "NAME": "企业文化",
     "FLAVOR": "怎么又留一丝啊~",
     "DESCRIPTIONS": [
       "每回合开始时获得 [E] 。所有敌人首次受到致命伤害时保留1生命值。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "广泛存在于埃尔登法环等游戏实况视频中。"
   },
   "Wlj:Bird": {
     "NAME": "失足鸟",
     "FLAVOR": "全场消费都由鸟公子买单。",
     "DESCRIPTIONS": [
       "耗尽 #y金币 时，获得 #b200 #y金币 。"
-    ]
+    ],
+    "EXTRA_FLAVOR": "出自《【王老菊】精致傲娇永不退版本 | 艾尔登法环EP.11》。"
   }
 }

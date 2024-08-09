@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.relic;
 
-import basemod.abstracts.CustomRelic;
 import com.github.paopaoyue.wljmod.effect.GoldTextOnPlayerEffect;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -9,7 +8,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class Money extends CustomRelic {
+public class Money extends AbstractWljRelic {
     public static final String ID = "Wlj:Money";
     private static final RelicStrings strings = CardCrawlGame.languagePack.getRelicStrings(ID);
     private static final RelicTier TIER = RelicTier.STARTER;

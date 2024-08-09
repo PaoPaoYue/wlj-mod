@@ -1,12 +1,11 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.component.AbstractAvatar;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public abstract class AbstractAvatarCard extends CustomCard {
+public abstract class AbstractAvatarCard extends AbstractWljCard {
 
     private static final Logger logger = LogManager.getLogger(AbstractAvatarCard.class.getName());
 

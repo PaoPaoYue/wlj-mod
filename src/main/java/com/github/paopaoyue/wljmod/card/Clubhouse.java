@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.power.ClubhousePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Clubhouse extends CustomCard {
+public class Clubhouse extends AbstractWljCard {
     public static final String ID = "Wlj:Clubhouse";
     private static final CardStrings cardStrings;
 

@@ -40,6 +40,16 @@ public class StsPatch {
                 ((Sts) c).triggerWhenObtainCards(card);
             }
         }
+        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+            if (c instanceof Sts) {
+                ((Sts) c).triggerWhenObtainCards(card);
+            }
+        }
+        for (AbstractCard c : AbstractDungeon.player.limbo.group) {
+            if (c instanceof Sts) {
+                ((Sts) c).triggerWhenObtainCards(card);
+            }
+        }
     }
 
     private static class Locator extends SpireInsertLocator {

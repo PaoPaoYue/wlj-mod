@@ -27,7 +27,7 @@ public class MeatPower extends AbstractPower {
 
     public void onVictory() {
         if (this.owner.isPlayer)
-            this.owner.heal(this.amount * WljMod.workerManager.getWorkerCountOutsideDiscardPile(), true);
+            this.owner.increaseMaxHp(this.amount * WljMod.workerManager.getWorkerCountOutsideDiscardPile() / 2, true);
     }
 
     public void updateDescription() {

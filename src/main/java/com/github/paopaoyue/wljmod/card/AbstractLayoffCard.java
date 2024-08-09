@@ -1,11 +1,10 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public abstract class AbstractLayoffCard extends CustomCard {
+public abstract class AbstractLayoffCard extends AbstractWljCard {
 
     private static final Logger logger = LogManager.getLogger(AbstractLayoffCard.class.getName());
 

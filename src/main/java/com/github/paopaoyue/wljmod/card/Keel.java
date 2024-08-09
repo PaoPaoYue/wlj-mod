@@ -16,7 +16,7 @@ public class Keel extends AbstractWorkerCard {
     public static final String ID = "Wlj:Keel";
     private static final CardStrings cardStrings;
 
-    private static final int DEFAULT_DAMAGE = 6;
+    private static final int DEFAULT_DAMAGE = 3;
 
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -25,7 +25,7 @@ public class Keel extends AbstractWorkerCard {
     public Keel() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ENEMY);
-        this.baseDamage = 6;
+        this.baseDamage = DEFAULT_DAMAGE;
         this.misc = 0;
     }
 
@@ -47,14 +47,14 @@ public class Keel extends AbstractWorkerCard {
             this.loadCardImage(this.textureImg);
         }
         if (this.misc <= 8) {
-            this.baseDamage = (int) ((upgraded ? DEFAULT_DAMAGE + 2 : DEFAULT_DAMAGE) * Math.pow(2, this.misc));
+            this.baseDamage = (int) ((upgraded ? DEFAULT_DAMAGE + 1 : DEFAULT_DAMAGE) * Math.pow(2, this.misc));
         }
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.baseDamage = (int) ((DEFAULT_DAMAGE + 2) * Math.pow(2, this.misc));
+            this.baseDamage = (int) ((DEFAULT_DAMAGE + 1) * Math.pow(2, this.misc));
             this.upgradedDamage = true;
         }
     }

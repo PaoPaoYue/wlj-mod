@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
 import com.github.paopaoyue.wljmod.card.AvatarHp;
@@ -33,6 +34,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.util.Strings;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -40,8 +42,8 @@ import java.util.HashMap;
 @SpireInitializer
 public class WljMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, AddAudioSubscriber, StartGameSubscriber, OnCardUseSubscriber, OnPlayerTurnStartSubscriber {
 
-
     public static final String MOD_ID = "Wlj";
+    public static SpireConfig config = null;
     public static final HashMap<String, Keyword> KEYWORD_DICTIONARY = new HashMap<>();
     public static final HashMap<String, AvatarStrings> AVATAR_DICTIONARY = new HashMap<>();
     private static final Logger logger = LogManager.getLogger(WljMod.class);
@@ -52,7 +54,20 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
     public static int tempGold;
     public static int displayTempGold;
 
-    public static boolean voiceEnabled = true;
+    public enum ConfigField {
+        VOICE_DISABLED("VoiceDisabled");
+
+        final String id;
+
+        ConfigField(String val) {
+            this.id = val;
+        }
+    }
+
+    public static boolean getVoiceDisabled() {
+        if (config == null) return false;
+        return config.getBool(ConfigField.VOICE_DISABLED.id);
+    }
 
     public WljMod() {
         logger.info("instantiating WljMod");
@@ -62,6 +77,11 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
                 "image/512/energy_orb.png", "image/1024/bg_attack.png",
                 "image/1024/bg_skill.png", "image/1024/bg_power.png",
                 "image/1024/energy_orb.png", "image/icon/small_energy_orb.png");
+        try {
+            config = new SpireConfig(MOD_ID, "PrideModConfig");
+        } catch (IOException e) {
+            logger.error("WljMod config initialisation failed:", e);
+        }
     }
 
     public static void initialize() {
@@ -79,14 +99,20 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
         ModPanel settingsPanel = new ModPanel();
         settingsPanel.addUIElement(new ModLabel("王老菊 Mod - 设置", 400.0f, 700.0f, settingsPanel, (me) -> {
         }));
-        settingsPanel.addUIElement(new ModLabeledToggleButton("启用打出部分卡牌时的老菊语音",
+        settingsPanel.addUIElement(new ModLabeledToggleButton("禁用打出部分卡牌时的老菊语音",
                 350f, 650f, Settings.CREAM_COLOR, FontHelper.charDescFont,
-                voiceEnabled, settingsPanel, (label) -> {
+                getVoiceDisabled(), settingsPanel, (label) -> {
         }, (button) -> {
-            voiceEnabled = button.enabled;
+            config.setBool(ConfigField.VOICE_DISABLED.id, button.enabled);
+            try {
+                config.save();
+            } catch (IOException e) {
+                logger.error("WljMod config save failed:", e);
+            }
         }));
         BaseMod.registerModBadge(badgeTexture, info.Name, Strings.join(Arrays.asList(info.Authors), ','), info.Description, settingsPanel);
     }
+
 
     @Override
     public void receiveEditCards() {

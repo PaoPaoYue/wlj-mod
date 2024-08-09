@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import basemod.abstracts.CustomCard;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.Arrays;
 import java.util.List;
 
-public class Sake extends CustomCard {
+public class Sake extends AbstractWljCard {
     public static final String ID = "Wlj:Sake";
     public static final byte MOCKED_MOVE = (byte) 233; // Mock the move to make the monster do nothing for a turn
     private static final CardStrings cardStrings;
