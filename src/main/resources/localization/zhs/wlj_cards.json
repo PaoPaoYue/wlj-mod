@@ -103,7 +103,7 @@
   },
   "Wlj:Child Labor": {
     "NAME": "童工法案",
-    "DESCRIPTION": "支付 !M! 金币，增加 !M! 名 *贱民 到抽牌堆，抽3张牌。",
+    "DESCRIPTION": "抽3张牌，每有一张牌不是 *贱民 失去 !M! 金币。",
     "FLAVOR": "出自 《王老菊教你冰原求生》系列。"
   },
   "Wlj:Fertile": {

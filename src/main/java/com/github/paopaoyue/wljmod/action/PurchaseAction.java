@@ -29,9 +29,9 @@ public class PurchaseAction extends AbstractGameAction {
             sfxUtil.playSFX();
             AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(-this.amount));
             AbstractDungeon.player.loseGold(this.amount);
-            callback.accept(true);
+            if (callback != null) callback.accept(true);
         } else {
-            callback.accept(false);
+            if (callback != null) callback.accept(false);
         }
         this.isDone = true;
     }
