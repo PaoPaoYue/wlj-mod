@@ -24,7 +24,7 @@ public class GiantKing extends AbstractWljCard {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 5;
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 7;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }

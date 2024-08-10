@@ -144,8 +144,8 @@
   "Wlj:Giant King": {
     "NAME": "巨人王",
     "DESCRIPTIONS": [
-      "在 #b",
-      " 个回合内受到攻击时，使你抽 #b1 张牌。"
+      "在本回合内受到攻击时，使你手牌抽满 #b",
+      " 张。"
     ]
   },
   "Wlj:Future Tech": {

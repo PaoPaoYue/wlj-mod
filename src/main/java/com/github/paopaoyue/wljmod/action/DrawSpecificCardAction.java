@@ -36,7 +36,6 @@ public class DrawSpecificCardAction extends AbstractGameAction {
                         Collections.swap(drawPile, i, i + 1);
                     }
                 }
-
                 this.addToTop(new DrawCardAction(this.amount));
             }
         }

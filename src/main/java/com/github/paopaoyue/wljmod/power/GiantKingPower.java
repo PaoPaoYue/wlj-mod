@@ -1,9 +1,8 @@
 package com.github.paopaoyue.wljmod.power;
 
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -32,17 +31,19 @@ public class GiantKingPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner.isPlayer) {
-            this.addToBot(new DrawCardAction(1));
+            this.addToBot(new ExpertiseAction(this.owner, this.amount));
         }
         return damageAmount;
     }
 
-    public void atEndOfRound() {
-        if (this.amount == 0) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
-        } else {
-            this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
-        }
+    @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        this.amount = Math.min(this.amount, 10);
+    }
+
+    public void atStartOfTurn() {
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
     }
 
     public void updateDescription() {

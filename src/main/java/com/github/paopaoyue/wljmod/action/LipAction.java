@@ -22,12 +22,20 @@ public class LipAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        for (final AbstractCard c : DrawCardAction.drawnCards) {
-            if (c.costForTurn == 0) {
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.m, AbstractDungeon.player, new WeakPower(this.m, this.amount, false), 1));
-                break;
+        int weakAmount = amount;
+        AbstractDungeon.actionManager.addToTop(new DrawCardAction(1, new AbstractGameAction() {
+            @Override
+            public void update() {
+                for (final AbstractCard c : DrawCardAction.drawnCards) {
+                    if (c.costForTurn == 0) {
+                        AbstractDungeon.actionManager.addToTop(new LipAction(m, 1));
+                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, weakAmount, false)));
+                        break;
+                    }
+                }
+                this.isDone = true;
             }
-        }
+        }));
         this.isDone = true;
     }
 }
