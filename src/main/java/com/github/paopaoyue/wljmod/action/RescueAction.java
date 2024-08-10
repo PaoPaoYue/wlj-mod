@@ -66,8 +66,7 @@ public class RescueAction extends AbstractGameAction {
             for (final AbstractPower p : AbstractDungeon.player.powers) {
                 p.onDamageAllEnemies(this.damage);
             }
-            boolean replay = false;
-            for (int temp2 = AbstractDungeon.getCurrRoom().monsters.monsters.size(), j = 0; j < temp2; ++j) {
+            for (int size = AbstractDungeon.getCurrRoom().monsters.monsters.size(), j = 0; j < size; ++j) {
                 AbstractMonster target = AbstractDungeon.getCurrRoom().monsters.monsters.get(j);
                 if (!target.isDeadOrEscaped()) {
                     if (this.attackEffect == AttackEffect.POISON) {
@@ -78,10 +77,6 @@ public class RescueAction extends AbstractGameAction {
                         target.tint.changeColor(Color.WHITE.cpy());
                     }
                     AbstractDungeon.getCurrRoom().monsters.monsters.get(j).damage(new DamageInfo(this.source, this.damage[j], this.damageType));
-                    if (!replay && (((AbstractMonster) target).isDying || target.currentHealth <= 0) && !target.halfDead) {
-                        replay = true;
-                        AbstractDungeon.actionManager.addToTop(new RescueAction(this.source, this.damage, this.damageType, this.attackEffect, false));
-                    }
                 }
             }
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {

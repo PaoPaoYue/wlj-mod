@@ -4,11 +4,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-public class EldenWaitAction extends AbstractGameAction
-{
+public class EldenWaitAction extends AbstractGameAction {
     private boolean freeToPlayOnce;
     private int energyOnUse;
 
@@ -16,7 +14,7 @@ public class EldenWaitAction extends AbstractGameAction
         this.amount = amount;
         this.freeToPlayOnce = freeToPlayOnce;
         this.duration = Settings.ACTION_DUR_XFAST;
-        this.actionType = ActionType.SPECIAL;
+        this.actionType = ActionType.BLOCK;
         this.energyOnUse = energyOnUse;
     }
 
@@ -32,11 +30,7 @@ public class EldenWaitAction extends AbstractGameAction
         }
         if (effect > 0) {
             for (int i = 0; i < effect; ++i) {
-                for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                    if (!mo.isDeadOrEscaped() && mo.getIntentBaseDmg() > 0) {
-                        this.addToBot(new GainBlockAction(AbstractDungeon.player, this.amount));
-                    }
-                }
+                this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, AbstractDungeon.player.drawPile.size()));
             }
             if (!this.freeToPlayOnce) {
                 AbstractDungeon.player.energy.use(EnergyPanel.totalCount);

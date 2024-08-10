@@ -34,7 +34,8 @@ public class GoldTextOnPlayerEffect extends AbstractGameEffect {
         if (this.duration < 0.0F)
             this.isDone = true;
         this.duration -= Gdx.graphics.getDeltaTime();
-        int nextAmount = (int) MathUtils.lerp(this.amount, 0, this.duration / 0.6F);
+        int nextAmount = (int) MathUtils.lerp(this.amount, 0, Math.max(0F, (this.duration - 0.1F) / 0.6F));
+
         int delta = nextAmount - this.lastAmount;
         if (delta > 0) {
             this.lastAmount = nextAmount;

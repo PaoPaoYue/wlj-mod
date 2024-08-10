@@ -35,11 +35,15 @@ public class Broadsword extends AbstractWljCard {
         this.addToBot(new DrawCardByWorkerAction(p, this.magicNumber));
     }
 
-    @Override
     public void applyPowers() {
         super.applyPowers();
         int toDraw = WljMod.workerManager.getWorkerTypeCountInDiscardPile() * this.magicNumber;
         this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + toDraw + cardStrings.EXTENDED_DESCRIPTION[1];
+        this.initializeDescription();
+    }
+
+    public void onMoveToDiscard() {
+        this.rawDescription = cardStrings.DESCRIPTION;
         this.initializeDescription();
     }
 

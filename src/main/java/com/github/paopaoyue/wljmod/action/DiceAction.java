@@ -35,7 +35,7 @@ public class DiceAction extends AbstractGameAction {
             AbstractGameAction rollDiceAction = new RollDiceAction();
             if (rollDiceAction.amount >= diceThreshold) {
                 AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(gold, true));
-                AbstractDungeon.effectList.add(new RainingGoldEffect(4 * gold, true));
+                AbstractDungeon.effectList.add(new RainingGoldEffect(gold, true));
                 AbstractDungeon.player.gainGold(gold);
             } else {
                 PurchaseAction.sfxUtil.playSFX();

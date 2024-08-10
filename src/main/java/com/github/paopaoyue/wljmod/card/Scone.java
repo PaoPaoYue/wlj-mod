@@ -2,10 +2,8 @@ package com.github.paopaoyue.wljmod.card;
 
 import com.github.paopaoyue.wljmod.action.ScryWithCallbackAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
@@ -20,23 +18,24 @@ public class Scone extends AbstractWljCard {
     }
 
     public Scone() {
-        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseMagicNumber = 5;
-        this.magicNumber = this.baseMagicNumber;
+        super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
+                AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ScryWithCallbackAction(5, selectedCards -> {
-            int damage = selectedCards.stream().filter(card -> card instanceof AbstractWorkerCard).mapToInt(card -> magicNumber).sum();
-            this.addToTop(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+            int count = (int) selectedCards.stream().filter(card -> card instanceof AbstractWorkerCard).count();
+            for (int i = 0; i < count; i++) {
+                this.addToTop(new GainBlockAction(p, p, this.block));
+            }
         }));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(2);
+            this.upgradeBlock(2);
         }
     }
 

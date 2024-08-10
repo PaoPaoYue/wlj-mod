@@ -6,12 +6,14 @@ import com.github.paopaoyue.wljmod.power.LovePower;
 import com.github.paopaoyue.wljmod.sfx.SfxUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 
 public class Egg extends AbstractWljCard {
     public static final String ID = "Wlj:Egg";
@@ -34,9 +36,13 @@ public class Egg extends AbstractWljCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         sfxUtil.playSFX(1.3f);
-        for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            this.addToBot(new ApplyPowerAction(mo, p, new BrotherhoodPower(mo, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-            this.addToBot(new ApplyPowerAction(mo, p, new LovePower(mo, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        AbstractDungeon.effectList.add(new IntenseZoomEffect(p.hb.cX, p.hb.cY, false));
+        for (int i = 0; i < this.magicNumber; i++) {
+            for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                this.addToBot(new ApplyPowerAction(mo, p, new BrotherhoodPower(mo, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
+                this.addToBot(new ApplyPowerAction(mo, p, new LovePower(mo, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
+            }
+            this.addToBot(new DrawCardAction(1));
         }
     }
 
