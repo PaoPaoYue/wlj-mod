@@ -23,14 +23,14 @@ public class ChildLabor extends AbstractWljCard {
     public ChildLabor() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Rabble();
         this.tags.add(CardTagEnum.PAY);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new PurchaseAction(this.magicNumber, ok -> {
+        this.addToBot(new PurchaseAction(2, ok -> {
             if (ok) {
                 addToTop(new DrawCardAction(this.magicNumber));
                 WljMod.workerManager.iterOutsideDiscardPile(c -> {
@@ -45,7 +45,7 @@ public class ChildLabor extends AbstractWljCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(-1);
+            this.upgradeMagicNumber(1);
         }
     }
 
