@@ -39,6 +39,7 @@ public class BaitPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner.isPlayer) {
+            this.flash();
             List<AbstractCard> drawPile = AbstractDungeon.player.drawPile.group;
             List<AbstractCard> tmp = drawPile.stream().filter(c -> c instanceof AbstractWorkerCard).collect(Collectors.toList());
             if (!tmp.isEmpty()) {

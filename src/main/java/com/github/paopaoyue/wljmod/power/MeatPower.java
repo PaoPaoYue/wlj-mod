@@ -26,8 +26,10 @@ public class MeatPower extends AbstractPower {
     }
 
     public void onVictory() {
-        if (this.owner.isPlayer)
+        if (this.owner.isPlayer) {
+            this.flash();
             this.owner.increaseMaxHp(this.amount * WljMod.workerManager.getWorkerCountOutsideDiscardPile() / 2, true);
+        }
     }
 
     public void updateDescription() {

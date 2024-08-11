@@ -29,6 +29,7 @@ public class FireCopperPower extends AbstractPower {
 
     @Override
     public void atStartOfTurnPostDraw() {
+        this.flash();
         this.addToTop(new LayoffAction(LayoffAmount.calculateLayoffAmount(this.amount), c -> c instanceof AbstractWorkerCard));
     }
 

@@ -30,6 +30,7 @@ public class JuVillagePower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         if (this.owner.isPlayer) {
+            this.flash();
             int count = AbstractDungeon.player.discardPile.group.stream().filter(c -> c instanceof Rabble).mapToInt(c -> 1).sum();
             count = Math.min(count, this.amount);
             this.addToTop(new BetterMakeTempCardInDiscardAction(new Rabble(), count, false, true));

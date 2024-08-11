@@ -31,6 +31,7 @@ public class LewisPower extends AbstractPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (damageAmount > 0) {
             if (damageAmount >= this.owner.currentHealth && this.amount > 0) {
+                this.flash();
                 damageAmount = this.owner.currentHealth - 1;
                 this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
             }

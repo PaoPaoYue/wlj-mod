@@ -33,6 +33,7 @@ public class OverTimePower extends AbstractPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && this.owner.isPlayer) {
+            this.flash();
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
                 if (c instanceof AbstractWorkerCard) {
                     c.retain = true;

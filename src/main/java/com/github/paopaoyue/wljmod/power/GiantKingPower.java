@@ -31,6 +31,7 @@ public class GiantKingPower extends AbstractPower {
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL && info.owner != null && info.owner.isPlayer) {
+            this.flash();
             this.addToBot(new ExpertiseAction(this.owner, this.amount));
         }
         return damageAmount;

@@ -28,7 +28,10 @@ public class TaiwuVillagePower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        this.addToBot(new MakeTempCardInHandAction(new Invite(), this.amount));
+        if (this.owner.isPlayer) {
+            this.flash();
+            this.addToBot(new MakeTempCardInHandAction(new Invite(), this.amount));
+        }
     }
 
     public void updateDescription() {

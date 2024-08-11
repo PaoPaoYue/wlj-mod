@@ -31,6 +31,7 @@ public class PolicePower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         if (this.owner.isPlayer) {
+            this.flash();
             this.addToBot(new MakeTempCardInHandAction(new Prisoner(), this.amount));
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }

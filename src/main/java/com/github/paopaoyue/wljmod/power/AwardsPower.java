@@ -39,11 +39,11 @@ public class AwardsPower extends AbstractPower {
         WljMod.workerManager.iterOutsideDiscardPile(c -> {
             gold.addAndGet((c instanceof Performer) ? 1 : 0);
         });
-        AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(-gold.get()));
-        AbstractDungeon.player.loseGold(gold.get());
-    }
-
-    public void atEndOfRound() {
+        if (gold.get() > 0) {
+            this.flash();
+            AbstractDungeon.effectList.add(new GoldTextOnPlayerEffect(-gold.get()));
+            AbstractDungeon.player.loseGold(gold.get());
+        }
         if (this.amount == 0) {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         } else {

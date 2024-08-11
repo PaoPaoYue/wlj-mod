@@ -36,6 +36,7 @@ public class StoryKingPower extends AbstractPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer && this.owner.isPlayer) {
+            this.flash();
             if (Settings.FAST_MODE) {
                 this.addToBot(new VFXAction(new GrandFinalEffect(), 0.7f));
             } else {

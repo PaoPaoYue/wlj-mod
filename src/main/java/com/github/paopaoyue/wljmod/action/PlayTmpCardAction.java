@@ -2,8 +2,6 @@ package com.github.paopaoyue.wljmod.action;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
-import com.megacrit.cardcrawl.actions.utility.UnlimboAction;
-import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
@@ -17,7 +15,7 @@ public class PlayTmpCardAction extends AbstractGameAction {
     private AbstractCreature target;
 
     public PlayTmpCardAction(AbstractCard card, boolean purgeOnUse, boolean exhaust) {
-        this.duration = Settings.ACTION_DUR_FAST;
+        this.duration = Settings.ACTION_DUR_MED;
         this.actionType = ActionType.WAIT;
         this.source = AbstractDungeon.player;
         this.card = card;
@@ -32,7 +30,7 @@ public class PlayTmpCardAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {
+        if (this.duration == Settings.ACTION_DUR_MED) {
             if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                 this.isDone = true;
                 return;
@@ -47,25 +45,18 @@ public class PlayTmpCardAction extends AbstractGameAction {
                 card.exhaustOnUseOnce = this.exhaust;
             }
             AbstractDungeon.player.limbo.group.add(card);
-            card.current_y = -200F;
-            card.current_x = -200F;
-            card.target_x = card.current_x;
-            card.target_y = card.current_y;
+            card.target_x = (float) Settings.WIDTH / 2 - 300F * Settings.scale;
+            card.target_y = (float) Settings.HEIGHT / 2;
             card.targetAngle = 0.0f;
-            card.drawScale = 0.12F;
+            card.drawScale = 0.01F;
             card.targetDrawScale = 0.75F;
             card.lighten(false);
             card.applyPowers();
+            this.addToTop(new ForcedWaitAction(0.25F));
             if (this.target != null && !this.target.isDying) {
                 this.addToTop(new NewQueueCardAction(card, target, true, true));
             } else {
                 this.addToTop(new NewQueueCardAction(card, true, true, true));
-            }
-            this.addToTop(new UnlimboAction(card));
-            if (!Settings.FAST_MODE) {
-                this.addToTop(new WaitAction(Settings.ACTION_DUR_MED));
-            } else {
-                this.addToTop(new WaitAction(Settings.ACTION_DUR_FAST));
             }
             this.isDone = true;
         }

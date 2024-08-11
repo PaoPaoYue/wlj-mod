@@ -35,6 +35,7 @@ public class DrawSpecificCardAction extends AbstractGameAction {
                     for (int i = drawPile.indexOf(card); i < drawPile.size() - j - 1; i++) {
                         Collections.swap(drawPile, i, i + 1);
                     }
+                    tmp.remove(card);
                 }
                 this.addToTop(new DrawCardAction(this.amount));
             }

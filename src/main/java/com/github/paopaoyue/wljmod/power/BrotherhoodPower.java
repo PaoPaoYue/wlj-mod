@@ -41,6 +41,7 @@ public class BrotherhoodPower extends AbstractPower {
                         card.type == AbstractCard.CardType.ATTACK &&
                         card.costForTurn > 0) &&
                 (m == this.owner || Boolean.TRUE.equals(Reflect.getPrivate(AbstractCard.class, card, "isMultiDamage", Boolean.class)))) {
+            this.flash();
             this.addToBot(new MakeTempCardInHandAction(new Rabble()));
         }
     }

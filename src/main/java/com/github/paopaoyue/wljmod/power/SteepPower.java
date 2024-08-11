@@ -38,7 +38,8 @@ public class SteepPower extends AbstractPower {
     }
 
     public void onDamagedAfterBlockDecrement(int damageAmount, DamageInfo.DamageType damageType) {
-        if (damageAmount > 0 && this.count > 0) {
+        if (this.owner.isPlayer && damageAmount > 0 && this.count > 0) {
+            this.flash();
             this.addToBot(new LayoffAction(LayoffAmount.calculateLayoffAmount(1), true, c -> c instanceof AbstractWorkerCard));
             this.count--;
             updateDescription();

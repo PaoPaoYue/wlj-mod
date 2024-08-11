@@ -131,7 +131,8 @@
   "Wlj:Capitalist": {
     "NAME": "资本家形态",
     "DESCRIPTIONS": [
-      " #y支付 或失去 #y金币 的牌会重复使用一次。"
+      "回合开始时，随机打出 #b",
+      " 张包含 #y支付 或失去金币的牌"
     ]
   },
   "Wlj:Clubhouse": {

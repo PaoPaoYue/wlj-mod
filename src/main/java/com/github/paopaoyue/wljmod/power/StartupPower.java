@@ -28,7 +28,8 @@ public class StartupPower extends AbstractPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer && this.owner.isPlayer) {
+        if (this.owner.isPlayer && this.amount > 0) {
+            this.flash();
             this.addToTop(new BetterMakeTempCardInDiscardAction(new Performer(), this.amount));
         }
     }

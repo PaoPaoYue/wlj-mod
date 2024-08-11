@@ -22,19 +22,19 @@ public class Capitalist extends AbstractWljCard {
     public Capitalist() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 18;
+        this.baseMagicNumber = 8;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         PurchaseAction.sfxUtil.playSFX();
         WljMod.tempGold += this.baseMagicNumber;
-        this.addToBot(new ApplyPowerAction(p, p, new CapitalistPower(p)));
+        this.addToBot(new ApplyPowerAction(p, p, new CapitalistPower(p, 1)));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(10);
+            this.upgradeMagicNumber(12);
         }
     }
 
