@@ -12,7 +12,7 @@ public class RollDiceAction extends AbstractGameAction {
         this.duration = this.startDuration;
         this.actionType = ActionType.SPECIAL;
 
-        amount = AbstractDungeon.cardRng.random(1, 6);
+        amount = AbstractDungeon.cardRandomRng.random(1, 6);
     }
 
     @Override
