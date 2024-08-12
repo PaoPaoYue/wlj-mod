@@ -1,8 +1,8 @@
 package com.github.paopaoyue.wljmod.card;
 
 import com.github.paopaoyue.wljmod.action.EldenWaitAction;
+import com.github.paopaoyue.wljmod.action.HandToDrawPileBottomAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
-import com.megacrit.cardcrawl.actions.unique.ForethoughtAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -23,7 +23,7 @@ public class Wait extends AbstractWljCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ForethoughtAction(true));
+        this.addToBot(new HandToDrawPileBottomAction(true));
         this.addToBot(new EldenWaitAction(this.block, this.freeToPlayOnce, this.energyOnUse));
     }
 
