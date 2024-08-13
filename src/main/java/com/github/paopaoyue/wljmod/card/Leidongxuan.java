@@ -13,7 +13,7 @@ public class Leidongxuan extends AbstractWorkerCard {
     public static final String ID = "Wlj:Leidongxuan";
     private static final CardStrings cardStrings;
 
-    private static final int DEFAULT_BLOCK = 8;
+    private static final int DEFAULT_BLOCK = 6;
     private static final int UPGRADE_BLOCK = 4;
 
     static {

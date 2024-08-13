@@ -39,6 +39,7 @@ public class Egg extends AbstractWljCard {
         AbstractDungeon.effectList.add(new IntenseZoomEffect(p.hb.cX, p.hb.cY, false));
         for (int i = 0; i < this.magicNumber; i++) {
             for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                if (mo.isDeadOrEscaped()) continue;
                 this.addToBot(new ApplyPowerAction(mo, p, new BrotherhoodPower(mo, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
                 this.addToBot(new ApplyPowerAction(mo, p, new LovePower(mo, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
             }
