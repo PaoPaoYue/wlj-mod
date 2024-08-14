@@ -202,7 +202,7 @@
       <recent name="com.github.paopaoyue.wljmod.potion" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.wlj-mod [publishMod]">
+  <component name="RunManager" selected="Gradle.wlj-mod [runGame]">
     <configuration name="wlj-mod [cleanTestFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -322,8 +322,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.wlj-mod [publishMod]" />
         <item itemvalue="Gradle.wlj-mod [runGame]" />
+        <item itemvalue="Gradle.wlj-mod [publishMod]" />
         <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
