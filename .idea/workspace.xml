@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/potion/CupPotionPatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/potion/FirePotionPatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/CupPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/icon/cup.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Egg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Egg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Leidongxuan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Leidongxuan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/Cup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/potion/Cup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_potions.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_potions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_powers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_powers.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +79,7 @@
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/IUIElement.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/ModLabeledToggleButton.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/abstracts/CustomCard.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/abstracts/CustomPlayer.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/ModTheSpire.jar!/com/evacipated/cardcrawl/modthespire/lib/SpireInsertPatch.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/ModTheSpire.jar!/com/evacipated/cardcrawl/modthespire/lib/SpirePostfixPatch.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/badlogic/gdx/math/MathUtils.class" root0="SKIP_INSPECTION" />
@@ -101,6 +93,7 @@
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/DrawCardAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/GainBlockAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/GainGoldAction.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/ObtainPotionAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/TransformCardInHandAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/unique/ExpertiseAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/unique/WhirlwindAction.class" root0="SKIP_INSPECTION" />
@@ -114,6 +107,8 @@
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/core/AbstractCreature.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/core/Settings.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/dungeons/AbstractDungeon.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/helpers/FontHelper.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/helpers/TipHelper.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/monsters/AbstractMonster.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/monsters/MonsterGroup.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/powers/IntangiblePlayerPower.class" root0="SKIP_INSPECTION" />
@@ -207,7 +202,7 @@
       <recent name="com.github.paopaoyue.wljmod.potion" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.wlj-mod [runGame]">
+  <component name="RunManager" selected="Gradle.wlj-mod [publishMod]">
     <configuration name="wlj-mod [cleanTestFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -327,8 +322,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Gradle.wlj-mod [publishMod]" />
+        <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
@@ -447,7 +442,8 @@
       <workItem from="1723272847592" duration="21601000" />
       <workItem from="1723348617975" duration="15753000" />
       <workItem from="1723449484391" duration="4041000" />
-      <workItem from="1723487162684" duration="5155000" />
+      <workItem from="1723487162684" duration="7019000" />
+      <workItem from="1723572190614" duration="1450000" />
     </task>
     <servers />
   </component>
