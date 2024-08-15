@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public class Reflect {
 
@@ -36,5 +37,21 @@ public class Reflect {
 
     public static <O, T> void setStaticPrivate(Class<O> cls, String varName, T value) {
         setPrivate(cls, null, varName, value);
+    }
+
+    public static Object invokePrivateMethod(Object obj, String methodName, Object... args) {
+        try {
+            Class<?> clazz = obj.getClass();
+            Class<?>[] parameterTypes = new Class<?>[args.length];
+            for (int i = 0; i < args.length; i++) {
+                parameterTypes[i] = args[i].getClass();
+            }
+            Method method = clazz.getDeclaredMethod(methodName, parameterTypes);
+            method.setAccessible(true);
+            return method.invoke(obj, args);
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+            return null;
+        }
     }
 }

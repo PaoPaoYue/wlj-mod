@@ -1,7 +1,8 @@
 package com.github.paopaoyue.wljmod.card;
 
+import com.github.paopaoyue.wljmod.action.PutAtExhaustPileBottomAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
-import com.github.paopaoyue.wljmod.power.GiantKingPower;
+import com.github.paopaoyue.wljmod.power.BonfirePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -24,13 +25,14 @@ public class GiantKing extends AbstractWljCard {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 5;
-        this.baseMagicNumber = 7;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, p, new GiantKingPower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new PutAtExhaustPileBottomAction(8));
+        this.addToBot(new ApplyPowerAction(p, p, new BonfirePower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 

@@ -1,19 +1,15 @@
 package com.github.paopaoyue.wljmod.card;
 
+import com.github.paopaoyue.wljmod.action.EggAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
-import com.github.paopaoyue.wljmod.power.BrotherhoodPower;
-import com.github.paopaoyue.wljmod.power.LovePower;
 import com.github.paopaoyue.wljmod.sfx.SfxUtil;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 
 public class Egg extends AbstractWljCard {
     public static final String ID = "Wlj:Egg";
@@ -28,22 +24,29 @@ public class Egg extends AbstractWljCard {
     public Egg() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
-        this.cardsToPreview = new Invite();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         sfxUtil.playSFX(1.3f);
-        AbstractDungeon.effectList.add(new IntenseZoomEffect(p.hb.cX, p.hb.cY, false));
-        for (int i = 0; i < this.magicNumber; i++) {
-            for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (mo.isDeadOrEscaped()) continue;
-                this.addToBot(new ApplyPowerAction(mo, p, new BrotherhoodPower(mo, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
-                this.addToBot(new ApplyPowerAction(mo, p, new LovePower(mo, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new EggAction(this.magicNumber));
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        boolean glow = false;
+        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!m.isDeadOrEscaped() && m.hasPower(ArtifactPower.POWER_ID)) {
+                glow = true;
+                break;
             }
-            this.addToBot(new DrawCardAction(1));
+        }
+        if (glow) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 
@@ -51,6 +54,8 @@ public class Egg extends AbstractWljCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeMagicNumber(1);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

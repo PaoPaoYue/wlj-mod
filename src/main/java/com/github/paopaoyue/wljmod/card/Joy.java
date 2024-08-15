@@ -1,5 +1,6 @@
 package com.github.paopaoyue.wljmod.card;
 
+import com.github.paopaoyue.wljmod.action.DiscardWithCallbackAction;
 import com.github.paopaoyue.wljmod.action.ReplicateWorkerAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,17 +20,22 @@ public class Joy extends AbstractWljCard {
     public Joy() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
+        this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ReplicateWorkerAction());
+        this.addToBot(new DiscardWithCallbackAction(p, p, -1, false, cards -> {
+            this.addToTop(new ReplicateWorkerAction(cards.size() + this.magicNumber, this.upgraded));
+        }));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(1);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

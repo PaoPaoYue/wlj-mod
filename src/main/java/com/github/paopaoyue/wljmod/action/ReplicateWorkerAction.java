@@ -10,20 +10,23 @@ import java.util.List;
 
 public class ReplicateWorkerAction extends AbstractGameAction {
 
+    private boolean upgraded;
 
-    public ReplicateWorkerAction() {
+    public ReplicateWorkerAction(int amount, boolean upgraded) {
+        this.setValues(AbstractDungeon.player, AbstractDungeon.player, amount);
+        this.upgraded = upgraded;
         this.duration = 0.0f;
-        this.actionType = ActionType.WAIT;
-
+        this.actionType = ActionType.CARD_MANIPULATION;
     }
 
     @Override
     public void update() {
-        int size = 10 - AbstractDungeon.player.hand.size();
         List<AbstractCard> workerInDiscardPile = WljMod.workerManager.getWorkerInDiscardPile();
         if (!workerInDiscardPile.isEmpty()) {
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < amount; i++) {
                 AbstractCard card = workerInDiscardPile.get(AbstractDungeon.cardRandomRng.random(workerInDiscardPile.size() - 1));
+                if (upgraded)
+                    card.setCostForTurn(0);
                 this.addToTop(new MakeTempCardInHandAction(card));
             }
         }

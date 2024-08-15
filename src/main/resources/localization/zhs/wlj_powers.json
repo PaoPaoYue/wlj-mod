@@ -149,6 +149,13 @@
       " 张。"
     ]
   },
+  "Wlj:Bonfire": {
+    "NAME": "营火探究者",
+    "DESCRIPTIONS": [
+      "本回合内攻击时，从消耗牌堆底部将 #b",
+      " 张牌加入手牌。"
+    ]
+  },
   "Wlj:Future Tech": {
     "NAME": "未来科技",
     "DESCRIPTIONS": [

@@ -40,15 +40,21 @@ public class MoonSinger extends AbstractWljCard {
         }
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
-            for (AbstractPower power : mo.powers) {
-                if (power.type == AbstractPower.PowerType.DEBUFF) {
-                    if (power.amount > 0) {
-                        this.addToBot(new ApplyPowerAction(mo, p, power, 1, true, AbstractGameAction.AttackEffect.NONE));
-                    } else {
-                        this.addToBot(new ApplyPowerAction(mo, p, power, -1, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    for (AbstractPower power : mo.powers) {
+                        if (power.type == AbstractPower.PowerType.DEBUFF) {
+                            if (power.amount > 0) {
+                                this.addToTop(new ApplyPowerAction(mo, p, power, 1, true, AbstractGameAction.AttackEffect.NONE));
+                            } else {
+                                this.addToTop(new ApplyPowerAction(mo, p, power, -1, true, AbstractGameAction.AttackEffect.NONE));
+                            }
+                        }
                     }
+                    isDone = true;
                 }
-            }
+            });
         }
     }
 

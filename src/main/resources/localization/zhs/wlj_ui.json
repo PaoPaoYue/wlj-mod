@@ -16,6 +16,13 @@
       " 张牌。"
     ]
   },
+  "Wlj:PutAtExhaustPileBottomAction": {
+    "TEXT": [
+      "选择并将至多一张牌放入消耗牌堆底部。",
+      "选择并将至多 ",
+      " 张牌放入消耗牌堆底部。"
+    ]
+  },
   "Wlj:TransformDiscardedWorkerAction": {
     "TEXT": [
       "选择并变化至多一张牌。",
