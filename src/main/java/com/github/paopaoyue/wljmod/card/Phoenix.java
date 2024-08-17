@@ -29,7 +29,7 @@ public class Phoenix extends AbstractWljCard {
     public Phoenix(int level) {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), level, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = level * 7;
+        this.baseDamage = level * 5;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.misc = level;
@@ -69,7 +69,7 @@ public class Phoenix extends AbstractWljCard {
         if (!this.upgraded) {
             this.upgradeName();
             if (isMainBody()) this.cardsToPreview.upgrade();
-            this.upgradeDamage(this.misc * 3);
+            this.upgradeDamage(this.misc * 2);
         }
     }
 
