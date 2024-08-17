@@ -1,10 +1,12 @@
 package com.github.paopaoyue.wljmod.patch.card;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.github.paopaoyue.wljmod.utility.Inject;
 import com.github.paopaoyue.wljmod.utility.Reflect;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.ExhaustPileViewScreen;
 import javassist.CtBehavior;
 import org.apache.logging.log4j.LogManager;
@@ -24,12 +26,20 @@ public class ExhaustPileViewScreenPatch {
             locator = Locator.class
     )
     public static SpireReturn<Void> Insert(ExhaustPileViewScreen __instance) {
-        Reflect.invokePrivateMethod(__instance, "calculateScrollBounds");
         CardGroup exhaustPileCopy = Reflect.getPrivate(ExhaustPileViewScreen.class, __instance, "exhaustPileCopy", CardGroup.class);
         if (exhaustPileCopy == null) {
             logger.error("ExhaustPileViewScreenPatch: exhaustPileCopy is null");
             return SpireReturn.Return(null);
         }
+        for (final AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+            final AbstractCard toAdd = c.makeStatEquivalentCopy();
+            toAdd.setAngle(0.0f, true);
+            toAdd.targetDrawScale = 0.75f;
+            toAdd.drawScale = 0.75f;
+            toAdd.lighten(true);
+            exhaustPileCopy.addToTop(toAdd);
+        }
+        Reflect.invokePrivateMethod(__instance, "calculateScrollBounds");
         if (exhaustPileCopy.group.size() <= 5) {
             Reflect.setStaticPrivate(ExhaustPileViewScreen.class, "drawStartY", Settings.HEIGHT * 0.5f);
         } else {
@@ -42,8 +52,8 @@ public class ExhaustPileViewScreenPatch {
     private static class Locator extends SpireInsertLocator {
 
         public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
-            Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractPlayer.class, "hasRelic");
-            return LineFinder.findAllInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher);
+            Matcher finalMatcher = new Matcher.MethodCallMatcher(CardGroup.class, "clear");
+            return Inject.insertAfter(LineFinder.findAllInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher), 1);
         }
     }
 }
