@@ -6,14 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Balcony.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Balcony.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Gaoshi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Gaoshi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/ExhaustPileViewScreenPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/ExhaustPileViewScreenPatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/gaoshi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/card/gaoshi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/gaoshi_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/card/gaoshi_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/scone.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/card/scone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/card/scone_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/card/scone_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +205,7 @@
       <recent name="com.github.paopaoyue.wljmod.card" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.wlj-mod [runGame]">
+  <component name="RunManager" selected="Gradle.wlj-mod [publishMod]">
     <configuration name="wlj-mod [cleanTestFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -333,8 +325,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Gradle.wlj-mod [publishMod]" />
+        <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
@@ -457,7 +449,7 @@
       <workItem from="1723572190614" duration="1450000" />
       <workItem from="1723710553472" duration="22482000" />
       <workItem from="1723815519554" duration="23000" />
-      <workItem from="1723870736924" duration="1655000" />
+      <workItem from="1723870736924" duration="2469000" />
     </task>
     <servers />
   </component>

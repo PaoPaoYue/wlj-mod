@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
 
+import java.util.Collections;
+
 public class PutAtExhaustPileBottomAction extends AbstractGameAction {
 
     public static final String[] TEXT;
@@ -31,7 +33,7 @@ public class PutAtExhaustPileBottomAction extends AbstractGameAction {
     public void update() {
         if (this.duration != this.startDuration) {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-
+                Collections.reverse(AbstractDungeon.gridSelectScreen.selectedCards);
                 for (final AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
 
                     if (AbstractDungeon.player.hoveredCard == c) {
