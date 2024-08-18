@@ -20,7 +20,7 @@ public class Joy extends AbstractWljCard {
     public Joy() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.SKILL,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
     }

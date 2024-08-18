@@ -28,7 +28,7 @@ public class ReplicateWorkerAction extends AbstractGameAction {
                         .get(AbstractDungeon.cardRandomRng.random(workerInDiscardPile.size() - 1))
                         .makeStatEquivalentCopy();
                 if (upgraded)
-                    card.setCostForTurn(0);
+                    card.setCostForTurn(card.cost - 1);
                 this.addToTop(new MakeTempCardInHandAction(card));
             }
         }
