@@ -1,13 +1,16 @@
 package com.github.paopaoyue.wljmod;
 
-import basemod.*;
-import basemod.abstracts.CustomRelic;
+import basemod.BaseMod;
+import basemod.ModLabel;
+import basemod.ModLabeledToggleButton;
+import basemod.ModPanel;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
+import com.evacipated.cardcrawl.modthespire.MTSClassLoader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -23,21 +26,25 @@ import com.github.paopaoyue.wljmod.patch.PlayerClassEnum;
 import com.github.paopaoyue.wljmod.potion.Cup;
 import com.github.paopaoyue.wljmod.potion.Peglin;
 import com.github.paopaoyue.wljmod.potion.SlimeInAJar;
+import com.github.paopaoyue.wljmod.proto.WljProto;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import io.github.paopaoyue.mesh.rpc.api.CallOption;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.util.Strings;
 
 import java.io.IOException;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 @SpireInitializer
 public class WljMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, AddAudioSubscriber, StartGameSubscriber, OnCardUseSubscriber, OnPlayerTurnStartSubscriber {
@@ -86,6 +93,14 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
 
     public static void initialize() {
         new WljMod();
+        try {
+            MTSClassLoader classLoader = new MTSClassLoader(Loader.class.getResourceAsStream("/corepatches.jar"), buildUrlArray(Loader.MODINFOS), WljMod.class.getClassLoader());
+            WljServiceApplication.initializeClient(classLoader);
+        } catch (IOException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+        WljProto.EchoResponse response = WljServiceApplication.getCaller().echo(WljProto.EchoRequest.newBuilder().setText("hello").build(), new CallOption());
+        logger.info(response.getText());
     }
 
     public void receivePostInitialize() {
@@ -113,14 +128,11 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
         BaseMod.registerModBadge(badgeTexture, info.Name, Strings.join(Arrays.asList(info.Authors), ','), info.Description, settingsPanel);
     }
 
-
     @Override
     public void receiveEditCards() {
         BaseMod.addDynamicVariable(new AvatarHp());
         BaseMod.addDynamicVariable(new LayoffAmount());
-        new AutoAdd(MOD_ID)
-                .setDefaultSeen(true)
-                .cards();
+        BaseMod.addCard(new com.github.paopaoyue.wljmod.card.Layoff());
     }
 
     @Override
@@ -144,13 +156,7 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
 
     @Override
     public void receiveEditRelics() {
-        new AutoAdd(MOD_ID)
-                .any(CustomRelic.class, (info, relic) -> {
-                    BaseMod.addRelicToCustomPool(relic, AbstractCardEnum.WLJ_COLOR);
-                    if (info.seen) {
-                        UnlockTracker.markRelicAsSeen(relic.relicId);
-                    }
-                });
+        BaseMod.addRelicToCustomPool(new com.github.paopaoyue.wljmod.relic.Money(), AbstractCardEnum.WLJ_COLOR);
     }
 
     @Override
@@ -243,6 +249,17 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
 
     public void receiveOnPlayerTurnStart() {
         workerManager.reset();
+    }
+
+    private static URL[] buildUrlArray(ModInfo[] modInfos) {
+        List<URL> urls = new ArrayList<>(modInfos.length + 1);
+
+        // Mods
+        for (ModInfo modInfo : modInfos) {
+            urls.add(modInfo.jarURL);
+        }
+
+        return urls.toArray(new URL[0]);
     }
 
 }

@@ -1,2 +1,1 @@
-rootProject.name = "wlj-mod"
-
+rootProject.name = "wljmod"
