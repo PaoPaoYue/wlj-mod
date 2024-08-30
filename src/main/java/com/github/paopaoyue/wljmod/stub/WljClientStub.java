@@ -1,17 +1,13 @@
 package com.github.paopaoyue.wljmod.stub;
 
-import io.github.paopaoyue.mesh.rpc.api.CallOption;
-import io.github.paopaoyue.mesh.rpc.RpcAutoConfiguration;
-import io.github.paopaoyue.mesh.rpc.proto.Protocol;
-import io.github.paopaoyue.mesh.rpc.stub.IClientStub;
-import io.github.paopaoyue.mesh.rpc.stub.ServiceClientStub;
-import io.github.paopaoyue.mesh.rpc.util.Context;
-import io.github.paopaoyue.mesh.rpc.util.Flag;
-import io.github.paopaoyue.mesh.rpc.util.RespBaseUtil;
-import io.github.paopaoyue.mesh.rpc.util.TraceInfoUtil;
 import com.github.paopaoyue.wljmod.proto.WljProto;
 import com.google.protobuf.Any;
 import com.google.protobuf.GeneratedMessage;
+import io.github.paopaoyue.mesh.rpc.RpcAutoConfiguration;
+import io.github.paopaoyue.mesh.rpc.api.CallOption;
+import io.github.paopaoyue.mesh.rpc.stub.IClientStub;
+import io.github.paopaoyue.mesh.rpc.stub.ServiceClientStub;
+import io.github.paopaoyue.mesh.rpc.util.RespBaseUtil;
 
 @ServiceClientStub(serviceName = "wlj-service")
 public class WljClientStub implements IClientStub {

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/stub/WljClientStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/stub/WljClientStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,60 +167,60 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.Build wlj-mod.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.onmyoji-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [:WljMod.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [bootJar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [cleanPublishFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [cleanTestFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToPublishFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToTestFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [generateIdl].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [generateRpc].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [jar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [publishMod].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [runGame].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [stsModJar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [verifyConfig].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod:wlj-service [generateIdl].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod:wlj-service [generateRpc].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.构建 wlj-mod.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.RpcApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WljServiceApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WljServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;rpc&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/wlj-mod/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.38045976&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.jsOptions&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.Build wlj-mod.executor": "Run",
+    "Gradle.onmyoji-mod [deployToMODFolder].executor": "Run",
+    "Gradle.wlj-mod [:WljMod.main()].executor": "Run",
+    "Gradle.wlj-mod [bootJar].executor": "Run",
+    "Gradle.wlj-mod [build].executor": "Run",
+    "Gradle.wlj-mod [cleanPublishFolder].executor": "Run",
+    "Gradle.wlj-mod [cleanTestFolder].executor": "Run",
+    "Gradle.wlj-mod [clean].executor": "Run",
+    "Gradle.wlj-mod [deployToMODFolder].executor": "Run",
+    "Gradle.wlj-mod [deployToPublishFolder].executor": "Run",
+    "Gradle.wlj-mod [deployToTestFolder].executor": "Run",
+    "Gradle.wlj-mod [generateIdl].executor": "Run",
+    "Gradle.wlj-mod [generateRpc].executor": "Run",
+    "Gradle.wlj-mod [jar].executor": "Run",
+    "Gradle.wlj-mod [publishMod].executor": "Run",
+    "Gradle.wlj-mod [runGame].executor": "Run",
+    "Gradle.wlj-mod [stsModJar].executor": "Run",
+    "Gradle.wlj-mod [verifyConfig].executor": "Run",
+    "Gradle.wlj-mod:wlj-service [generateIdl].executor": "Run",
+    "Gradle.wlj-mod:wlj-service [generateRpc].executor": "Run",
+    "Gradle.构建 wlj-mod.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.RpcApplication.executor": "Run",
+    "Spring Boot.WljServiceApplication (1).executor": "Run",
+    "Spring Boot.WljServiceApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "rpc",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/LENOVO/Desktop/projects/wlj-mod/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.38045976",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editor.preferences.jsOptions",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.paopaoyue.wljmod.action" />
@@ -245,7 +247,7 @@
       <recent name="com.github.paopaoyue.wljmod.patch.potion" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.wlj-mod [runGame]">
+  <component name="RunManager" selected="Spring Boot.WljServiceApplication">
     <configuration name="wlj-mod [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -369,9 +371,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Spring Boot.WljServiceApplication" />
         <item itemvalue="Gradle.wlj-mod [bootJar]" />
+        <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Gradle.wlj-mod [clean]" />
         <item itemvalue="Gradle.wlj-mod [build]" />
       </list>
@@ -504,7 +506,7 @@
       <workItem from="1724831512284" duration="30545000" />
       <workItem from="1724934400758" duration="13602000" />
       <workItem from="1725003189323" duration="17049000" />
-      <workItem from="1725031813338" duration="751000" />
+      <workItem from="1725031813338" duration="2368000" />
     </task>
     <servers />
   </component>
@@ -583,11 +585,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.paopaoyue/ypp-rpc/0.0.8-jdk8/621c0a0113d9b1951a2b84bb861e79713b80f34f/ypp-rpc-0.0.8-jdk8.jar!/io/github/paopaoyue/mesh/rpc/core/client/Reactor.class</url>
-          <line>146</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.paopaoyue/ypp-rpc/0.0.8-jdk8/621c0a0113d9b1951a2b84bb861e79713b80f34f/ypp-rpc-0.0.8-jdk8.jar!/io/github/paopaoyue/mesh/rpc/core/client/Reactor.class</url>
           <line>132</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
@@ -602,19 +599,29 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.7.18/f6dbdd8da7c2bded63dff9b1f48d01a4923f20a0/spring-boot-2.7.18.jar!/org/springframework/boot/context/config/Profiles.class</url>
-          <line>54</line>
-          <option name="timeStamp" value="29" />
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.paopaoyue/ypp-rpc/0.0.16-jdk8/4caec2c272631e635b759a399c454a50e39d5b72/ypp-rpc-0.0.16-jdk8.jar!/io/github/paopaoyue/mesh/rpc/core/client/Sender.class</url>
+          <line>52</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.7.18/f6dbdd8da7c2bded63dff9b1f48d01a4923f20a0/spring-boot-2.7.18.jar!/org/springframework/boot/SpringApplication.class</url>
-          <line>422</line>
-          <option name="timeStamp" value="30" />
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.paopaoyue/ypp-rpc/0.0.16-jdk8/4caec2c272631e635b759a399c454a50e39d5b72/ypp-rpc-0.0.16-jdk8.jar!/io/github/paopaoyue/mesh/rpc/core/client/Sender.class</url>
+          <line>50</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.7.18/f6dbdd8da7c2bded63dff9b1f48d01a4923f20a0/spring-boot-2.7.18.jar!/org/springframework/boot/context/properties/source/ConfigurationPropertySourcesPropertyResolver.class</url>
-          <line>78</line>
-          <option name="timeStamp" value="31" />
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.paopaoyue/ypp-rpc/0.0.16-jdk8/4caec2c272631e635b759a399c454a50e39d5b72/ypp-rpc-0.0.16-jdk8.jar!/io/github/paopaoyue/mesh/rpc/core/client/Sender.class</url>
+          <line>55</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.paopaoyue/ypp-rpc/0.0.16-jdk8/4caec2c272631e635b759a399c454a50e39d5b72/ypp-rpc-0.0.16-jdk8.jar!/io/github/paopaoyue/mesh/rpc/core/client/Reactor.class</url>
+          <line>124</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.paopaoyue/ypp-rpc/0.0.16-jdk8/4caec2c272631e635b759a399c454a50e39d5b72/ypp-rpc-0.0.16-jdk8.jar!/io/github/paopaoyue/mesh/rpc/core/client/Reactor.class</url>
+          <line>125</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
