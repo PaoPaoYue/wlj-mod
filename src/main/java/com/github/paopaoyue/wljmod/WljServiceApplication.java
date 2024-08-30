@@ -23,7 +23,7 @@ public class WljServiceApplication {
     private static ConfigurableApplicationContext context;
 
     public static void main(String[] args) {
-        context = SpringApplication.run(WljServiceApplication.class);
+        context = SpringApplication.run(WljServiceApplication.class, args);
     }
 
     public static void initializeClient(ClassLoader classLoader) {

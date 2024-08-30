@@ -5,40 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/protoeditor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idl/base.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idl/wlj-service/wlj.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408291640_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408291648_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408291649_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408291653_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408291727_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408291728_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408291729_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408291756_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408301111_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408301112_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408301116_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408301257_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408301258_1.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sendToDevs/logs/SlayTheSpire_202408301258_2.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/api/IWljCaller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/api/WljCaller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/proto/WljProto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/service/IWljService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/service/WljService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/stub/WljClientStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/stub/WljServerStub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-client.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +56,7 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="wljmod" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="rpc-generator" type="c8890929:TasksNode$1" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -203,6 +172,7 @@
     &quot;Gradle.onmyoji-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [:WljMod.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [bootJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wlj-mod [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [cleanPublishFolder].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [cleanTestFolder].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [clean].executor&quot;: &quot;Run&quot;,
@@ -214,6 +184,7 @@
     &quot;Gradle.wlj-mod [jar].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [publishMod].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [runGame].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.wlj-mod [stsModJar].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod [verifyConfig].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod:wlj-service [generateIdl].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.wlj-mod:wlj-service [generateRpc].executor&quot;: &quot;Run&quot;,
@@ -275,6 +246,50 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.wlj-mod [runGame]">
+    <configuration name="wlj-mod [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-PbuildBootJar" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="wlj-mod [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="wlj-mod [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -287,50 +302,6 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="wlj-mod [generateIdl]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="generateIdl" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="wlj-mod [generateRpc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="generateRpc" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -390,9 +361,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.wlj-mod [generateIdl]" />
-      <item itemvalue="Gradle.wlj-mod [generateRpc]" />
+      <item itemvalue="Gradle.wlj-mod [build]" />
       <item itemvalue="Gradle.wlj-mod [clean]" />
+      <item itemvalue="Gradle.wlj-mod [bootJar]" />
       <item itemvalue="Gradle.wlj-mod [runGame]" />
       <item itemvalue="Spring Boot.WljServiceApplication" />
     </list>
@@ -400,9 +371,9 @@
       <list>
         <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Spring Boot.WljServiceApplication" />
-        <item itemvalue="Gradle.wlj-mod [generateRpc]" />
-        <item itemvalue="Gradle.wlj-mod [generateIdl]" />
+        <item itemvalue="Gradle.wlj-mod [bootJar]" />
         <item itemvalue="Gradle.wlj-mod [clean]" />
+        <item itemvalue="Gradle.wlj-mod [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -532,7 +503,8 @@
       <workItem from="1724794296489" duration="7688000" />
       <workItem from="1724831512284" duration="30545000" />
       <workItem from="1724934400758" duration="13602000" />
-      <workItem from="1725003189323" duration="10339000" />
+      <workItem from="1725003189323" duration="17049000" />
+      <workItem from="1725031813338" duration="751000" />
     </task>
     <servers />
   </component>

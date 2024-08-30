@@ -22,9 +22,13 @@ repositories {
     mavenCentral()
 }
 
-configurations.forEach {
-    it.exclude(group = "ch.qos.logback", module = "logback-classic")
-    it.exclude(group = "org.apache.logging.log4j", module = "log4j-to-slf4j")
+if (!project.hasProperty("buildBootJar")) {
+    configurations {
+        all {
+            exclude(group = "ch.qos.logback", module = "logback-classic")
+            exclude(group = "org.apache.logging.log4j", module = "log4j-to-slf4j")
+        }
+    }
 }
 
 dependencies {
@@ -38,11 +42,18 @@ dependencies {
     implementation(files("C:\\Users\\LENOVO\\Desktop\\projects\\mtsLib\\StSLib.jar"))
 }
 
+tasks.test {
+    useJUnitPlatform()
+}
 
-tasks.withType<Jar>() {
+tasks.bootJar {
+    archiveClassifier.set("boot")
+    exclude("BaseMod.jar", "desktop-1.0.jar", "ModTheSpire.jar", "StSLib.jar")
+}
 
+tasks.jar {
+    archiveClassifier.set("stsMod")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-
     configurations["compileClasspath"].forEach { _: File ->
         from({
             configurations.compileClasspath.get().filter {
@@ -55,10 +66,6 @@ tasks.withType<Jar>() {
             exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA", "META-INF/LICENSE.txt", "META-INF/NOTICE.txt")
         }
     }
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
 
 tasks.register<Delete>("cleanTestFolder") {
