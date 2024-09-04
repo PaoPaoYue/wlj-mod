@@ -22,17 +22,7 @@ repositories {
     mavenCentral()
 }
 
-if (!project.hasProperty("buildBootJar")) {
-    configurations {
-        all {
-            exclude(group = "ch.qos.logback", module = "logback-classic")
-            exclude(group = "org.apache.logging.log4j", module = "log4j-to-slf4j")
-        }
-    }
-}
-
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 
@@ -40,32 +30,11 @@ dependencies {
     implementation(files("C:\\Users\\LENOVO\\Desktop\\projects\\mtsLib\\desktop-1.0.jar"))
     implementation(files("C:\\Users\\LENOVO\\Desktop\\projects\\mtsLib\\ModTheSpire.jar"))
     implementation(files("C:\\Users\\LENOVO\\Desktop\\projects\\mtsLib\\StSLib.jar"))
+    implementation(files("C:\\Users\\LENOVO\\Desktop\\projects\\rpc-mod\\build\\libs\\rpc-mod-0.1.0-SNAPSHOT-stsMod.jar"))
 }
 
 tasks.test {
     useJUnitPlatform()
-}
-
-tasks.bootJar {
-    archiveClassifier.set("boot")
-    exclude("BaseMod.jar", "desktop-1.0.jar", "ModTheSpire.jar", "StSLib.jar")
-}
-
-tasks.jar {
-    archiveClassifier.set("stsMod")
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    configurations["compileClasspath"].forEach { _: File ->
-        from({
-            configurations.compileClasspath.get().filter {
-                !(it.name.endsWith("BaseMod.jar") ||
-                        it.name.endsWith("desktop-1.0.jar") ||
-                        it.name.endsWith("ModTheSpire.jar") ||
-                        it.name.endsWith("StSLib.jar"))
-            }.map { zipTree(it) }
-        }) {
-            exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA", "META-INF/LICENSE.txt", "META-INF/NOTICE.txt")
-        }
-    }
 }
 
 tasks.register<Delete>("cleanTestFolder") {

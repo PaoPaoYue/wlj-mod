@@ -10,10 +10,11 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.Loader;
-import com.evacipated.cardcrawl.modthespire.MTSClassLoader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.github.paopaoyue.rpcmod.RpcApi;
+import com.github.paopaoyue.wljmod.api.IWljCaller;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
 import com.github.paopaoyue.wljmod.card.AvatarHp;
 import com.github.paopaoyue.wljmod.card.LayoffAmount;
@@ -39,12 +40,9 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.util.Strings;
 
 import java.io.IOException;
-import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 @SpireInitializer
 public class WljMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, AddAudioSubscriber, StartGameSubscriber, OnCardUseSubscriber, OnPlayerTurnStartSubscriber {
@@ -93,19 +91,10 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
 
     public static void initialize() {
         new WljMod();
-        try {
-            MTSClassLoader classLoader = new MTSClassLoader(Loader.class.getResourceAsStream("/corepatches.jar"), buildUrlArray(Loader.MODINFOS), WljMod.class.getClassLoader());
-            WljServiceApplication.initializeClient(classLoader);
-        } catch (IOException | IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
-        WljProto.EchoResponse response = WljServiceApplication.getCaller().echo(WljProto.EchoRequest.newBuilder().setText("hello").build(), new CallOption());
-        logger.info(response.getText());
     }
 
     public void receivePostInitialize() {
         Texture badgeTexture = ImageMaster.loadImage("image/icon/mod_badge.png");
-        Gson gson = new Gson();
         ModInfo info = Arrays.stream(Loader.MODINFOS).filter(modInfo -> modInfo.ID.equals(MOD_ID)).findFirst().orElse(null);
         if (info == null) {
             logger.error("ModInfo not found");
@@ -239,6 +228,11 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
 
         tempGold = 0;
         displayTempGold = 0;
+
+        IWljCaller caller = RpcApi.getCaller(IWljCaller.class);
+        WljProto.EchoResponse response = caller.echo(WljProto.EchoRequest.newBuilder().setText("Hello").build(), new CallOption());
+        logger.info("Echo response: {}", response.getBase().getMessage());
+        logger.info("Echo text: {}", response.getText());
     }
 
     public void receiveCardUsed(AbstractCard abstractCard) {
@@ -249,17 +243,6 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
 
     public void receiveOnPlayerTurnStart() {
         workerManager.reset();
-    }
-
-    private static URL[] buildUrlArray(ModInfo[] modInfos) {
-        List<URL> urls = new ArrayList<>(modInfos.length + 1);
-
-        // Mods
-        for (ModInfo modInfo : modInfos) {
-            urls.add(modInfo.jarURL);
-        }
-
-        return urls.toArray(new URL[0]);
     }
 
 }
