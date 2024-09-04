@@ -1,31 +1,35 @@
 package com.github.paopaoyue.wljmod.patch.relic;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
-import com.github.paopaoyue.wljmod.relic.Ship;
-import com.github.paopaoyue.wljmod.utility.Reflect;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.github.paopaoyue.wljmod.potion.Ball;
+import com.github.paopaoyue.wljmod.relic.Useless;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.screens.CombatRewardScreen;
+import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import javassist.CtBehavior;
 
 import java.util.ArrayList;
 
 @SpirePatch(
-        clz = ApplyPowerAction.class,
-        method = "update"
+        clz = CombatRewardScreen.class,
+        method = "setupItemReward"
 )
-public class ApplyPowerActionPatch {
+public class RewardDropPatch {
 
     @SpireInsertPatch(
             locator = Locator.class
     )
-    public static void Insert(ApplyPowerAction __instance) {
-        if (AbstractDungeon.player.hasRelic(Ship.ID) && __instance.source != null && __instance.source.isPlayer && __instance.target != __instance.source && !__instance.target.hasPower("Artifact")) {
-            AbstractPower powerToApply = Reflect.getPrivate(ApplyPowerAction.class, __instance, "powerToApply", AbstractPower.class);
-            if (powerToApply != null && powerToApply.amount > 0 && powerToApply.type == AbstractPower.PowerType.DEBUFF && __instance.target.powers.stream().anyMatch(p -> !p.ID.equals(powerToApply.ID) && p.type == AbstractPower.PowerType.DEBUFF)) {
-                powerToApply.amount++;
-                __instance.amount++;
+    public static void Insert(CombatRewardScreen __instance) {
+        if (AbstractDungeon.player.hasRelic(Useless.ID)) {
+            Useless relic = (Useless) AbstractDungeon.player.getRelic(Useless.ID);
+            relic.onRewardDrop(__instance.rewards);
+        }
+        for (AbstractPotion potion : AbstractDungeon.player.potions) {
+            if (potion instanceof Ball) {
+                Ball ball = (Ball) potion;
+                ball.onRewardDrop(__instance.rewards);
+                AbstractDungeon.topPanel.destroyPotion(potion.slot);
             }
         }
     }
@@ -35,7 +39,7 @@ public class ApplyPowerActionPatch {
         }
 
         public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
-            Matcher finalMatcher = new Matcher.MethodCallMatcher(AbstractCreature.class, "hasPower");
+            Matcher finalMatcher = new Matcher.MethodCallMatcher(ProceedButton.class, "show");
             return LineFinder.findInOrder(ctMethodToPatch, new ArrayList<>(), finalMatcher);
         }
     }

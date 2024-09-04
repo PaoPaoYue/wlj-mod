@@ -1,48 +1,65 @@
 package com.github.paopaoyue.wljmod.potion;
 
-import com.github.paopaoyue.wljmod.power.CupPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
-import com.megacrit.cardcrawl.powers.PoisonPower;
+import com.megacrit.cardcrawl.rewards.RewardItem;
 
-public class Cup extends AbstractWljPotion {
+import java.util.ArrayList;
+import java.util.List;
 
-    public static final String POTION_ID = "Wlj:Cup";
+public class Ball extends AbstractWljPotion {
+
+    public static final String POTION_ID = "Wlj:Ball";
     private static final PotionStrings potionStrings;
-    private static final int DEFAULT_POTENCY = 7;
+    private static final int DEFAULT_POTENCY = 1;
 
     static {
         potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
     }
 
-    public Cup() {
-        super(potionStrings.NAME, POTION_ID, PotionRarity.RARE, PotionSize.GHOST, PotionColor.GREEN);
+    public Ball() {
+        super(potionStrings.NAME, POTION_ID, PotionRarity.PLACEHOLDER, PotionSize.SPHERE, PotionColor.WHITE);
         this.labOutlineColor = Settings.LIGHT_YELLOW_COLOR;
-        this.isThrown = true;
-        this.targetRequired = true;
+        this.isThrown = false;
+        this.targetRequired = false;
     }
 
     @Override
     public void initializeData() {
         this.potency = this.getPotency();
-        this.description = potionStrings.DESCRIPTIONS[0] + this.potency + potionStrings.DESCRIPTIONS[1];
+        this.description = potionStrings.DESCRIPTIONS[0] + potency + potionStrings.DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.POISON.NAMES[0]), GameDictionary.keywords.get(GameDictionary.POISON.NAMES[0])));
     }
 
     @Override
     public void use(AbstractCreature target) {
-        this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new PoisonPower(target, AbstractDungeon.player, this.potency), this.potency));
-        this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new CupPower(target, 1), 1));
+    }
+
+    public void onRewardDrop(List<RewardItem> rewards) {
+        this.flash();
+        List<RewardItem> replicates = new ArrayList<>();
+        for (RewardItem reward : rewards) {
+            for (int i = 0; i < potency; i++) {
+                if (reward.type == RewardItem.RewardType.CARD) {
+                    if (reward.cards.stream().allMatch(card -> card.color == AbstractCard.CardColor.COLORLESS)) {
+                        replicates.add(new RewardItem(AbstractCard.CardColor.COLORLESS));
+                    } else {
+                        replicates.add(new RewardItem());
+                    }
+                } else if (reward.type == RewardItem.RewardType.STOLEN_GOLD) {
+                    replicates.add(new RewardItem(reward.goldAmt, true));
+                } else if (reward.type == RewardItem.RewardType.GOLD) {
+                    replicates.add(new RewardItem(reward.goldAmt));
+                }
+            }
+        }
+        rewards.addAll(replicates);
     }
 
     @Override
@@ -52,7 +69,7 @@ public class Cup extends AbstractWljPotion {
 
     @Override
     public AbstractPotion makeCopy() {
-        return new Cup();
+        return new Ball();
     }
 
 }

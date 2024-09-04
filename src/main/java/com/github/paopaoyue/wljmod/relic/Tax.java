@@ -3,6 +3,7 @@ package com.github.paopaoyue.wljmod.relic;
 import com.github.paopaoyue.wljmod.card.Performer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -34,6 +35,11 @@ public class Tax extends AbstractWljRelic {
             return damage + c.baseDamage;
         }
         return damage;
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return AbstractDungeon.player.hasRelic(Money.ID);
     }
 
     @Override

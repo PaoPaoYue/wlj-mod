@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod;
 
 import basemod.*;
 import basemod.abstracts.CustomRelic;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -23,6 +24,7 @@ import com.github.paopaoyue.wljmod.patch.PlayerClassEnum;
 import com.github.paopaoyue.wljmod.potion.Cup;
 import com.github.paopaoyue.wljmod.potion.Peglin;
 import com.github.paopaoyue.wljmod.potion.SlimeInAJar;
+import com.github.paopaoyue.wljmod.relic.Useless;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -146,7 +148,11 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
     public void receiveEditRelics() {
         new AutoAdd(MOD_ID)
                 .any(CustomRelic.class, (info, relic) -> {
-                    BaseMod.addRelicToCustomPool(relic, AbstractCardEnum.WLJ_COLOR);
+                    if (relic instanceof Useless) {
+                        BaseMod.addRelic(relic, RelicType.SHARED);
+                    } else {
+                        BaseMod.addRelicToCustomPool(relic, AbstractCardEnum.WLJ_COLOR);
+                    }
                     if (info.seen) {
                         UnlockTracker.markRelicAsSeen(relic.relicId);
                     }

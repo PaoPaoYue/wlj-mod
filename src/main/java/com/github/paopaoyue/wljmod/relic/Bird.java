@@ -32,11 +32,6 @@ public class Bird extends AbstractWljRelic {
     }
 
     @Override
-    public boolean canSpawn() {
-        return AbstractDungeon.player.hasRelic(Money.ID);
-    }
-
-    @Override
     public AbstractRelic makeCopy() {
         return new Bird();
     }
