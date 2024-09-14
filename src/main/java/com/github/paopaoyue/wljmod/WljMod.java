@@ -21,6 +21,7 @@ import com.github.paopaoyue.wljmod.component.AvatarStrings;
 import com.github.paopaoyue.wljmod.component.WorkerManager;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.PlayerClassEnum;
+import com.github.paopaoyue.wljmod.potion.Ball;
 import com.github.paopaoyue.wljmod.potion.Cup;
 import com.github.paopaoyue.wljmod.potion.Peglin;
 import com.github.paopaoyue.wljmod.potion.SlimeInAJar;
@@ -133,6 +134,7 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
         BaseMod.addPotion(Cup.class, Color.GREEN, Color.BROWN, null, Cup.POTION_ID, PlayerClassEnum.WLJ);
         BaseMod.addPotion(SlimeInAJar.class, Color.PINK, Color.PURPLE, null, SlimeInAJar.POTION_ID, PlayerClassEnum.WLJ);
         BaseMod.addPotion(Peglin.class, Color.GRAY, Color.DARK_GRAY, null, Peglin.POTION_ID, PlayerClassEnum.WLJ);
+        BaseMod.addPotion(Ball.class, Color.WHITE, Color.WHITE, null, Ball.POTION_ID, PlayerClassEnum.WLJ);
     }
 
     @Override
