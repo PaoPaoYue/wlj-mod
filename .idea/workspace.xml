@@ -168,7 +168,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/mesh/examples/demo/build.gradle&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/sts-service&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -457,6 +457,8 @@
       <workItem from="1723993649571" duration="4063000" />
       <workItem from="1725614972942" duration="1362000" />
       <workItem from="1725625709101" duration="24000" />
+      <workItem from="1726305543999" duration="1419000" />
+      <workItem from="1726404968579" duration="107000" />
     </task>
     <servers />
   </component>

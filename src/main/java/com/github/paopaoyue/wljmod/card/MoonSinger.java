@@ -46,9 +46,9 @@ public class MoonSinger extends AbstractWljCard {
                     for (AbstractPower power : mo.powers) {
                         if (power.type == AbstractPower.PowerType.DEBUFF) {
                             if (power.amount > 0) {
-                                this.addToTop(new ApplyPowerAction(mo, p, power, 1, true, AbstractGameAction.AttackEffect.NONE));
+                                this.addToTop(new ApplyPowerAction(mo, p, power, magicNumber, true, AbstractGameAction.AttackEffect.NONE));
                             } else {
-                                this.addToTop(new ApplyPowerAction(mo, p, power, -1, true, AbstractGameAction.AttackEffect.NONE));
+                                this.addToTop(new ApplyPowerAction(mo, p, power, -magicNumber, true, AbstractGameAction.AttackEffect.NONE));
                             }
                         }
                     }
