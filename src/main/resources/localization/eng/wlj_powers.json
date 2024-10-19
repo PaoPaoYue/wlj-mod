@@ -1,0 +1,179 @@
+{
+  "Wlj:Alarm": {
+    "NAME": "Alarm",
+    "DESCRIPTIONS": [
+      "For #b",
+      " turns, the #yLayoff effect increases by #b1."
+    ]
+  },
+  "Wlj:Startup": {
+    "NAME": "Oil Surveyor",
+    "DESCRIPTIONS": [
+      "At the end of your turn, add #b",
+      " #yPerformer to discard pile."
+    ]
+  },
+  "Wlj:Awards": {
+    "NAME": "Year-End Bonus",
+    "DESCRIPTIONS": [
+      "At the end of #b",
+      " turns, lose gold equal to the number of #yPerformer in hand or draw pile."
+    ]
+  },
+  "Wlj:Prison": {
+    "NAME": "Sun Prison",
+    "DESCRIPTIONS": [
+      "For #b",
+      " times in this turn, add #b1 #yPrisoner to your hand after #yLayoff."
+    ]
+  },
+  "Wlj:Police": {
+    "NAME": "Police Story",
+    "DESCRIPTIONS": [
+      "At the beginning of the next turn, add #b",
+      " #yPrisoner to your hand."
+    ]
+  },
+  "Wlj:Brotherhood": {
+    "NAME": "Comradely",
+    "DESCRIPTIONS": [
+      "For #b",
+      " turns, gain additional #b1 #Rabble when being #yInvited."
+    ]
+  },
+  "Wlj:Love": {
+    "NAME": "Enchanted",
+    "DESCRIPTIONS": [
+      "For #b",
+      " turns, gain additional #b1 #Performer when being #yInvited."
+    ]
+  },
+  "Wlj:Steep": {
+    "NAME": "Steep",
+    "DESCRIPTIONS": [
+      "For #b",
+      " times in this turn, randomly #yLayoff #b1 #yWorker upon taken damage."
+    ]
+  },
+  "Wlj:Taiwu Village": {
+    "NAME": "Taiwu Village",
+    "DESCRIPTIONS": [
+      "At the start of your turn, add #b",
+      " #yInvites to your hand."
+    ]
+  },
+  "Wlj:Corruption": {
+    "NAME": "Corruption",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose #b",
+      " golds."
+    ]
+  },
+  "Wlj:Rimworld": {
+    "NAME": "Rimworld",
+    "DESCRIPTIONS": [
+      "0-cost card attack damage increases by #b",
+      "."
+    ]
+  },
+  "Wlj:Ju Village": {
+    "NAME": "Ju Village",
+    "DESCRIPTIONS": [
+      "At the start of your turn, reproduce #yRabble (at most #b",
+      " ) in the discard pile."
+    ]
+  },
+  "Wlj:Bait": {
+    "NAME": "Bait",
+    "DESCRIPTIONS": [
+      "For #b",
+      " turns, randomly draw #b1 #yWorker after attack."
+    ]
+  },
+  "Wlj:Overtime": {
+    "NAME": "Overtime",
+    "DESCRIPTIONS": [
+      "For #b",
+      " turns, #yRetain all #yWorkers."
+    ]
+  },
+  "Wlj:Brothel": {
+    "NAME": "Xuan Nu Brothel",
+    "DESCRIPTIONS": [
+      "Your 0-cost cards’ #yBlock increases by #b",
+      "."
+    ]
+  },
+  "Wlj:Story King": {
+    "NAME": "Story King",
+    "DESCRIPTIONS": [
+      "At the end of your turn, for each card used or exhausted, randomly deal #b",
+      " damage.",
+      "(Randomly deal #b",
+      " damage #b",
+      " times.)"
+    ]
+  },
+  "Wlj:Fire Copper": {
+    "NAME": "Fire Copper Room",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yLayoff #b",
+      " #yWorkers."
+    ]
+  },
+  "Wlj:Meat": {
+    "NAME": "Desperate Meat",
+    "DESCRIPTIONS": [
+      "At the end of combat, for each #b2 #yWorkers in hand or draw pile, gain #b",
+      " permanent health."
+    ]
+  },
+  "Wlj:Capitalist": {
+    "NAME": "Capitalist Form",
+    "DESCRIPTIONS": [
+      "At the start of your turn, randomly play #b",
+      " cards that contain #yPayment or lose gold effect."
+    ]
+  },
+  "Wlj:Clubhouse": {
+    "NAME": "Afei Yoga Club",
+    "DESCRIPTIONS": [
+      "At the end of your turn, lose all #yThorns, then gain #yThorns #b",
+      " times the number of #yWorkers in discard pile."
+    ]
+  },
+  "Wlj:Giant King": {
+    "NAME": "The Giant King",
+    "DESCRIPTIONS": [
+      "In this turn, fill your hand with #b",
+      " cards after attack."
+    ]
+  },
+  "Wlj:Bonfire": {
+    "NAME": "Bonfire",
+    "DESCRIPTIONS": [
+      "In this turn, add #b",
+      " cards from the bottom of the exhausted pile to your hand after attack."
+    ]
+  },
+  "Wlj:Future Tech": {
+    "NAME": "Future Tech",
+    "DESCRIPTIONS": [
+      "Use #yWorkers one more time when #yExhausted."
+    ]
+  },
+  "Wlj:Lewis": {
+    "NAME": "Corporate Culture",
+    "DESCRIPTIONS": [
+      "Upon receiving fatal damage next #b",
+      " times, retain #b1 health."
+    ]
+  },
+  "Wlj:Cup": {
+    "NAME": "Sweet as Honey",
+    "DESCRIPTIONS": [
+      "When dying from poison damage, gain #b",
+      " #yPoison #yMasturbation #yCup."
+    ]
+  }
+}

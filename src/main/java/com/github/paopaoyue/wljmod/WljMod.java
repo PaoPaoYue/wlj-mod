@@ -68,7 +68,13 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
     }
 
     public static boolean getVoiceDisabled() {
-        if (config == null) return false;
+        if (config == null) {
+            if (Settings.language == Settings.GameLanguage.ZHS) {
+                return false;
+            } else {
+                return true;
+            }
+        }
         return config.getBool(ConfigField.VOICE_DISABLED.id);
     }
 
@@ -165,9 +171,10 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
     public void receiveEditStrings() {
         String language;
         switch (Settings.language) {
-            case ZHS:
-                language = "zhs";
+            case ENG:
+                language = "eng";
                 break;
+            case ZHS:
             default:
                 language = "zhs";
                 break;

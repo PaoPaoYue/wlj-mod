@@ -1,0 +1,472 @@
+{
+  "Wlj:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage.",
+    "FLAVOR": "Card art from 'Wang Lao Ju Teaches You Ink Sword'."
+  },
+  "Wlj:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block.",
+    "FLAVOR": "Card art from 'Wang Lao Ju Teaches You Bulldozer'."
+  },
+  "Wlj:Performer": {
+    "NAME": "Performer",
+    "DESCRIPTION": "Worker. Deal !D! damage. While in hand or draw pile, increase your attack damage by !M! .",
+    "FLAVOR": "Card art from 'Wang Lao Ju Teaches You Fire Transfer SP: I May Have Destroyed the Balance'. Handy weapons and NPCs are often granted as outstanding worker by WangLJ."
+  },
+  "Wlj:Rabble": {
+    "NAME": "Rabble",
+    "DESCRIPTION": "Worker. Gain !B! Block. At the end of the turn, while in hand or draw pile, gain !M! Block.",
+    "FLAVOR": "Card art from 'Wang Lao Ju Plays with Rabble Mod'. This term refers to common citizens in simulation games, first seen in Tropico 4."
+  },
+  "Wlj:Prisoner": {
+    "NAME": "Prisoner",
+    "DESCRIPTION": "Worker. Gain [E]. At the end of battle, while in hand or draw pile, gain !M! Gold. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Worker. Gain [E]. At the end of battle, while in hand or draw pile, gain !M! Gold.",
+    "FLAVOR": "Card art from 'Wang Lao Ju Teaches You to Become the Broken Sword Hero 04: Your Daughter, I Shall Raise Her!' Frequently seen in games with prison management elements, such as Prison Architect."
+  },
+  "Wlj:Layoff": {
+    "NAME": "Layoff",
+    "DESCRIPTION": "Deal !D! damage. NL Layoff !L!.",
+    "FLAVOR": "Card art from 'Why Wang Lao Ju Killed Wang Lao Ju'. Refers to corporate cost-cutting and replacing the old employee with the new."
+  },
+  "Wlj:Hire": {
+    "NAME": "Urgently Hire",
+    "DESCRIPTION": "Pay !M! Gold to hire 2 *Performer.",
+    "FLAVOR": "Card art from 'Wang Lao Ju Teaches You to Be a Foreman'. The card name comes from '[Wang Lao Ju] Urgently Hiring Outstanding Employees | Elden Ring EP.02'."
+  },
+  "Wlj:Beauty": {
+    "NAME": "Beauty",
+    "DESCRIPTION": "Apply !M! Vulnerable, Layoff !L!.",
+    "FLAVOR": "From 'Wang Lao Ju's Bloodborne Journey 01'. Refers to a unique aesthetic for the character's face."
+  },
+  "Wlj:Lip": {
+    "NAME": "Smile",
+    "DESCRIPTION": "Draw 1 card. If the card is 0-cost, apply !M! Weak and repeat the effect of this card again.",
+    "FLAVOR": "From '[Wang Lao Ju] Thousand-Year Tragic Romance'. WangLJ tried to mimic the smile of the character in the game."
+  },
+  "Wlj:Gaoshi": {
+    "NAME": "Gaoshi",
+    "DESCRIPTION": "Worker. Deal !D! damage. Increase all 0-cost card attack damage by !M! .",
+    "FLAVOR": "From '[Wang Lao Ju] RimWorld Legend of Future Technology'. A NPC who exists across multiple video series."
+  },
+  "Wlj:Invite": {
+    "NAME": "Invite",
+    "DESCRIPTION": "Deal !D! damage and gain !M! *Rabble. Exhaust.",
+    "FLAVOR": "From 'Wang Lao Ju Teaches You to Become the Broken Sword Hero' series. In the game The Scroll Of Taiwu you can invite people to join your village."
+  },
+  "Wlj:Alarm": {
+    "NAME": "TikTok Alarm",
+    "DESCRIPTION": "Layoff !L!. In this turn, increase Layoff effects by 1.",
+    "FLAVOR": "Refers to workers complaints when videos are not long enough to enjoy, even though most videos are 1 hour long."
+  },
+  "Wlj:Poisoned Arrow": {
+    "NAME": "Arrow of Justice",
+    "DESCRIPTION": "Deal !D! damage. For every Debuff except Poison the enemy has, apply !M! Poison.",
+    "FLAVOR": "From 'Wang Lao Ju's Dark Souls Journey' series. As a sun knight, the most justice he can do is to shoot poison arrows from long distance."
+  },
+  "Wlj:Broadsword": {
+    "NAME": "Magic Broadsword",
+    "DESCRIPTION": "Deal !D! damage. For each type of Worker in the discard pile, draw 1 card.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Draw ",
+      " card(s).)"
+    ],
+    "FLAVOR": "Card art from 'Wang Lao Ju Teaches You Magic Broadsword'. Originated from '[Wang Lao Ju] Rogue-like Souls, Bloodstained Buttocks! 03'."
+  },
+  "Wlj:Space Engineer": {
+    "NAME": "Gravity Cannon",
+    "DESCRIPTION": "Deal !D! damage. The effect of *Performer count !M! times on this card.",
+    "FLAVOR": "From 'Wang Lao Ju Teaches You to Become a Space Engineer 08'."
+  },
+  "Wlj:Cops": {
+    "NAME": "Cops",
+    "DESCRIPTION": "Deal !D! damage, and next turn gain !M! *Prisoner.",
+    "FLAVOR": "From the 'WangLJ's Police Stories' series."
+  },
+  "Wlj:Lily": {
+    "NAME": "To-Li-Lin-Shu-Na",
+    "DESCRIPTION": "Deal !D! damage. Changes card name each time after played; If played with a correct name, draw 1 extra card.",
+    "EXTENDED_DESCRIPTION": [
+      "To-Li-Lin-Shu-Na",
+      "To-Li-Na-Shu-Lin",
+      "Firede-Shu-Lin",
+      "Frieren-Shu-Na",
+      "To-Li-Na-Shu-Lin"
+    ],
+    "FLAVOR": "The chinese pronunciation of an lily in Elden Ring. The correct name is 'To-Li-Na-Shu-Lin', but WangLJ couldn't read it right every time."
+  },
+  "Wlj:Theft": {
+    "NAME": "Expertise",
+    "DESCRIPTION": "Steal !M! Strength from the enemy. If the enemy has no Strength, Exhaust.",
+    "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. The expertise of Afei is to steal and lock picking."
+  },
+  "Wlj:Child Labor": {
+    "NAME": "Child Labor",
+    "DESCRIPTION": "Pay 2 gold, trigger the end of turn effect for all *Rabble in hand or draw pile, and draw !M! cards.",
+    "FLAVOR": "From 'WangLJ Teaches You Frostpunk Survival' series."
+  },
+  "Wlj:Fertile": {
+    "NAME": "Fertile",
+    "DESCRIPTION": "Deal damage based on the number of cards in the Exhaust pile.",
+    "UPGRADE_DESCRIPTION": " NL (Deal !D! damage.)",
+    "FLAVOR": "From 'WangLJ Teaches You Cultivation' series. The worker bodies are the best fertilizer."
+  },
+  "Wlj:Ember": {
+    "NAME": "Large Ember",
+    "DESCRIPTION": "Upgrade all cards in hand when Exhausted. Always at the bottom of the draw pile at the start of combat. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Upgrade all cards in hand when played or Exhausted. Always at the bottom of the draw pile at the start of combat.",
+    "FLAVOR": "From the 'Rogue-like Souls' series. A critical material to upgrade weapon which WangLJ desperately looking for while could not found it after 11 episodes."
+  },
+  "Wlj:Box": {
+    "NAME": "How's the Box?",
+    "DESCRIPTION": "Pay !M! gold to Layoff !L!.",
+    "FLAVOR": "From 'WangLJ's Love in the Countryside Story' series. The box is a metaphor for the work progress of WangLJ's indie game."
+  },
+  "Wlj:Startup": {
+    "NAME": "Oil Surveyor",
+    "DESCRIPTION": "Pay !M! gold, add 1 *Performer to discard pile at the end of the turn.",
+    "UPGRADE_DESCRIPTION": "Pay !M! gold, add 1 *Performer to discard pile when played and at the end of the turn.",
+    "FLAVOR": "From 'WangLJ Teaches You Oil Tycoon' series."
+  },
+  "Wlj:Glory": {
+    "NAME": "Glory to Afei",
+    "DESCRIPTION": "Take 1 damage !M! times, then deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Retain. Take 1 damage !M! times, then deal !D! damage.",
+    "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. It is how NPCs in the game praised Afei."
+  },
+  "Wlj:Erwen": {
+    "NAME": "Erwen",
+    "DESCRIPTION": "Worker. Gain !B! Block when played or Exhausted. Automatically discard from the draw pile during Layoff.",
+    "FLAVOR": "From 'WangLJ's Survival in the Shelter' series. A NPC acted as a guard, also appeared in multiple game series."
+  },
+  "Wlj:Sermon": {
+    "NAME": "Sermon",
+    "DESCRIPTION": "Add !M! *Invite to your hand.",
+    "UPGRADE_DESCRIPTION": "Add !M! *Invite+ to your hand.",
+    "FLAVOR": "From 'WangLJ's Graveyard Keeper' series."
+  },
+  "Wlj:Stabbing Sword": {
+    "NAME": "Stabbing Sword Cult",
+    "DESCRIPTION": "When drawn, add a copy to your hand. Deal !D! damage, Apostasy. Exhaust.",
+    "FLAVOR": "From 'WangLJ's Dark Souls Journey' series. Double Stabbing Sword is a imbalanced build in Dark Souls 2 PVP."
+  },
+  "Wlj:Crab": {
+    "NAME": "Garlic and Spicy",
+    "DESCRIPTION": "Worker. Deal !D! damage, gain [E] when Exhausted.",
+    "EXTENDED_DESCRIPTION": [
+      "Spicy and Garlic"
+    ],
+    "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. Three crabs bought to guard Afei's club."
+  },
+  "Wlj:Awards": {
+    "NAME": "Year-End Bonus",
+    "DESCRIPTION": "Add !M! *Performer to the draw pile. At the end of this turn, lose gold equal to the number of *Performer in hand or draw pile.",
+    "FLAVOR": "From the Demon’s Souls Remake video series, rewards to the beloved weapon. The card image is the titanite slab in Dark Souls 3."
+  },
+  "Wlj:Scone": {
+    "NAME": "Five Sword Saints",
+    "DESCRIPTION": "Scry 5. Gain !B! Block for each Worker you Scry.",
+    "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. Afei mislead attackers to The five city guards to get protection for free."
+  },
+  "Wlj:Prison": {
+    "NAME": "Sun Prison",
+    "DESCRIPTION": "Up to !M! times per turn, add 1 *Prisoner to hand after Layoff.",
+    "FLAVOR": "From the series 'WangLaoJu Teaches You How to Be a Warden'."
+  },
+  "Wlj:Egg": {
+    "NAME": "No Yolk Egg",
+    "DESCRIPTION": "Remove all enemies' Artifacts. NL If any enemy has no Artifacts, gain [E] [E] [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove all enemies' Artifacts. NL If any enemy has no Artifacts, gain [E] [E] [E] [E]. NL Exhaust.",
+    "FLAVOR": "From the series 'WangLaoJu Teaches You to Become a Broken Sword Hero'. No one can resist the invitation because of the egg."
+  },
+  "Wlj:Steep": {
+    "NAME": "Steep",
+    "DESCRIPTION": "Up to !M! times per turn, randomly Layoff 1 Worker upon taken damage.",
+    "FLAVOR": "From 'Wang Lao Ju Takes You Extreme Skiing'. Unleash the gay power on landing!"
+  },
+  "Wlj:Giant Sword": {
+    "NAME": "Giant Sword Cult",
+    "DESCRIPTION": "Deal !D! damage. Whenever you play a Worker this turn, reduce its cost by 1. Apostasy.",
+    "FLAVOR": "From WangLaoJu's Dark Souls series and other Souls games. Long live the Giant Sword!"
+  },
+  "Wlj:Rescue": {
+    "NAME": "Rescue Hostage",
+    "DESCRIPTION": "Exhaust all *Rabble in draw pile. Deal !D! damage to all enemies for each Rabble exhausted.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal damage",
+      "times.)"
+    ],
+    "FLAVOR": "From 'WangLaoJu Teaches You to Rescue Hostage'. Hostages will be save under the shotgun."
+  },
+  "Wlj:Taiwu Village": {
+    "NAME": "Taiwu Village",
+    "DESCRIPTION": "At the start of your turn, add 1 *Invite to your hand.",
+    "UPGRADE_DESCRIPTION": "Upon played and at the start of your turn, add 1 *Invite to your hand.",
+    "FLAVOR": "From the series 'WangLaoJu Teaches You to Become a Broken Sword Hero'. The HQ of Xiangdangdang."
+  },
+  "Wlj:Bridge Engineer": {
+    "NAME": "Bridge Engineer",
+    "DESCRIPTION": "Gain !M! gold. Lose 2 gold at the end of your turn.",
+    "FLAVOR": "From the series 'WangLaoJu Teaches You to Build Bridges'. With only half the budget, it's common sense that the bridge can only be crossed from one side."
+  },
+  "Wlj:Brotherhood": {
+    "NAME": "Comrade",
+    "DESCRIPTION": "Gain additional 1 Rabble when the target being Invited for !M! turns. Add 1 *Invite to hand.",
+    "FLAVOR": "From the series 'WangLaoJu Teaches You to Become a Broken Sword Hero'. In the game Taiwu, the player can develop a brotherhood with NPCs."
+  },
+  "Wlj:Chaplin": {
+    "NAME": "Ju Chaplin",
+    "DESCRIPTION": "Discard any number of cards. For each card discarded, increase the damage of your next attack by !M! .",
+    "FLAVOR": "From 'WangLaoJu Teaches You Hunting 03'. Due to device issues, the video was made as a pantomime."
+  },
+  "Wlj:Ju Village": {
+    "NAME": "Ju Village",
+    "DESCRIPTION": "At the start of your turn, reproduce *Rabble ( at most !M! ) in the discard pile.",
+    "FLAVOR": "From 'WangLaoJu Teaches You to Be a Village Chief'. The most frequently word in the series is 'reproduce'."
+  },
+  "Wlj:Iga": {
+    "NAME": "Iga Big Bomb",
+    "DESCRIPTION": "Deal !D! damage to all enemies when played or Exhausted.",
+    "FLAVOR": "From the Nioh game series videos. Goblin bomb is more useful than warrior knife."
+  },
+  "Wlj:Ice And Fire": {
+    "NAME": "Ice and Fire",
+    "DESCRIPTION": "Deal !D! damage twice. Apostasy.",
+    "FLAVOR": "From WangLaoJu's Dark Souls series. An exaggerated name for the build in Dark Souls 2."
+  },
+  "Wlj:Garbage": {
+    "NAME": "Trash Game",
+    "DESCRIPTION": "Discard !M! cards. Deal !D! damage.",
+    "FLAVOR": "Wang Lao Ju's review of ALL games. The card art comes from 'WangLaoJu Teaches You to buy trash game'."
+  },
+  "Wlj:Fishing": {
+    "NAME": "Baiting",
+    "DESCRIPTION": "Randomly draw 1 Workers after attacking the target for !M! turns. Deal !D! damage.",
+    "FLAVOR": "Wang Lao Ju often intentionally create drama for effect to bait the audience. The card art comes from 'WangLaoJu Teaches You to Fish'."
+  },
+  "Wlj:Spear": {
+    "NAME": "Newbie Spear",
+    "DESCRIPTION": "Deal !D! damage, Apostasy. Change the effect after upgrading !M! times; the upgrade in battle can be retained.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies x times, Apostasy.",
+    "EXTENDED_DESCRIPTION": [
+      "Spear Cult"
+    ],
+    "FLAVOR": "From the series 'Wang Lao Ju's Journey in Dark Souls'. The spear needs to be sharpened to unlock all its powers."
+  },
+  "Wlj:Phoenix": {
+    "NAME": "Saint Phoenix",
+    "DESCRIPTION": "Deal !D! damage, gain [E]. Always in the discard pile, will split after being exhausted, adding to both the hand and discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage, gain [E]. If there are 10 of this card in hand, eliminate all enemies.",
+    "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. The emperor was split into parts in meat grinder."
+  },
+  "Wlj:Overtime": {
+    "NAME": "Overtime!",
+    "DESCRIPTION": "Put !M! Worker from the discard pile into your hand; retain all Worker this turn.",
+    "FLAVOR": "From 'WangLJ Teaches You Frostpunk Survival' series."
+  },
+  "Wlj:Sit": {
+    "NAME": "VIP Seat",
+    "DESCRIPTION": "Turn !M! Worker from the discard pile into *Prisoner and put them into your hand.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Be the Broken Sword Hero'. In the game Taiwu, the goal to invite people is to make use of them."
+  },
+  "Wlj:Dinosaur": {
+    "NAME": "Shuang-Shuang",
+    "DESCRIPTION": "Deal !D! damage; must Exhaust !L! Worker in the discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage; must Layoff !L! Worker in the discard pile.",
+    "FLAVOR": "From the series 'Wang Lao Ju Takes You to Jurassic World'."
+  },
+  "Wlj:Love": {
+    "NAME": "Enchant",
+    "DESCRIPTION": "Gain additional 1 Performer when the target being Invited for !M! turns. Add 1 *Invite to hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain additional 1 Performer when the target being Invited for !M! turns. Add 1 *Invite to hand.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Be the Broken Sword Hero'. In the game Taiwu, the player can seduce NPCs with beauty."
+  },
+  "Wlj:Brothel": {
+    "NAME": "Xuan Nu Brothel",
+    "DESCRIPTION": "Exhaust all *Performer in the discard pile. Your 0-cost cards’ Block increases the same amount.",
+    "FLAVOR": "From 'Wang Lao Ju Teaches You to Be the Broken Sword Hero (Season 2 Episode 02)'. A bunch of nuns was deceived into the brothel."
+  },
+  "Wlj:Foreman": {
+    "NAME": "Foreman",
+    "DESCRIPTION": "Layoff !L! and draw !M! cards.",
+    "FLAVOR": "From 'WangLJ Teaches You Frostpunk Survival' series."
+  },
+  "Wlj:Fire Copper": {
+    "NAME": "Fire Copper Room",
+    "DESCRIPTION": "At the start of your turn, Layoff !M! Workers.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You Cultivation'. The reception room in the game."
+  },
+  "Wlj:Meat": {
+    "NAME": "Desperate Meat",
+    "DESCRIPTION": "At the end of the combat, for every 2 Workers in hand or draw pile, gain 1 permanent health.",
+    "FLAVOR": "From the series 'Wang Lao Ju Takes You to Scavenge in the Apocalypse'. To survive, you can do anything to the bodies."
+  },
+  "Wlj:Balcony": {
+    "NAME": "Homemade",
+    "DESCRIPTION": "Pay !M! gold, choose one from 3 uncommon cards to add to your hand; this card costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Pay !M! gold, choose one from 3 rare cards to add to your hand; this card costs 0 this turn. NL Exhaust.",
+    "FLAVOR": "From the series 'Wang Lao Ju's Happy Dining Time'. WangLJ declared that everything in the video is grown in his balcony."
+  },
+  "Wlj:Dice": {
+    "NAME": "Dice King",
+    "DESCRIPTION": "Deal X*9 damage. Roll a dice; if the result is 3 or higher, gain X*5 gold, otherwise lose X*5 gold.",
+    "UPGRADE_DESCRIPTION": "Deal X*9 damage. Roll a dice; if the result is 2 or higher, gain X*5 gold, otherwise lose X*5 gold.",
+    "EXTENDED_DESCRIPTION": [
+      "(Deal !D! damage, gain !M! gold.)"
+    ],
+    "FLAVOR": "From the series 'King Henry's Inspirational Life'. In Kingdom Come: Deliverance you can treat in the dice game."
+  },
+  "Wlj:Qidiaochan": {
+    "NAME": "Qidiaochan",
+    "DESCRIPTION": "Transform into the previous Avatar in combat, gain !K! temporary health.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Transform into ",
+      ".)"
+    ],
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Be the Broken Sword Hero'. The Girl was kidnapped by Xiangdangdang but eventually became the successor of the Broken Sword."
+  },
+  "Wlj:Leidongxuan": {
+    "NAME": "Leidongxuan",
+    "DESCRIPTION": "Worker. Gain !B! block; While in hand or draw pile, increase the Block by the damage you block.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Be the Broken Sword Hero'. He is used as a body shield to beat one of the most powerful bosses."
+  },
+  "Wlj:Auto Fire": {
+    "NAME": "Open Fire!",
+    "DESCRIPTION": "Randomly deal !D! damage !M! times, randomly Layoff !L!.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Be the Warden'. The daily routine of the Sun Prison."
+  },
+  "Wlj:Wait": {
+    "NAME": "Wait a Moment!",
+    "DESCRIPTION": "Put any number of cards from your hand to the bottom of draw pile. Gain Block equal to the number of cards in draw pile, repeat X times.",
+    "UPGRADE_DESCRIPTION": "Inherent. Put any number of cards to the bottom of draw pile. Gain Block equal to the number of cards in draw pile, repeat X times.",
+    "FLAVOR": "From the video series of Elden Ring. WangLJ often died with the word 'Wait a moment!' in a panic."
+  },
+  "Wlj:Quin": {
+    "NAME": "Wand Cult",
+    "DESCRIPTION": "Add a *Small *Chicken *Leg to your hand and Upgrade it based on your remaining energy.",
+    "FLAVOR": "Another famous video maker, Quin, used wand in his Dark Souls 2 videos. WangLJ's video style is partially affected by Quin."
+  },
+  "Wlj:Wand": {
+    "NAME": "Chicken Leg",
+    "DESCRIPTION": "Deal !D! damage, Apostasy.",
+    "EXTENDED_DESCRIPTION": [
+      "Small Chicken Leg",
+      "Medium Chicken Leg",
+      "Large Chicken Leg",
+      "Giant Chicken Leg",
+      "Super Chicken Leg",
+      "Golden Super Chicken Leg"
+    ],
+    "FLAVOR": "From the series 'Wang Lao Ju's Journey in Dark Souls' and other Soul series. Wand is the most powerful and beginner friendly weapon."
+  },
+  "Wlj:Sake": {
+    "NAME": "Samurai Saliva Sake",
+    "DESCRIPTION": "Change an enemy's intention to be dealing !M! damage; Will not affect strong intentions. Exhaust.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Kill the General'. In the game Shadow Tatics, a samurai can throw a sake bottle to distract enemies."
+  },
+  "Wlj:Stardew Valley": {
+    "NAME": "Bedtime Story",
+    "DESCRIPTION": "Draw 1 card. When Exhausted in discard pile, add a copy to your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. Draw 1 card. When Exhausted in discard pile, add a copy to your hand.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Be a Farmer'. I've never watched it all the way through while awake..."
+  },
+  "Wlj:Sts": {
+    "NAME": "StS in 100 Minutes",
+    "DESCRIPTION": "Retain. Layoff !L!, increase the effect by 1 when adding a card to the deck, but reset after S/L. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. Layoff !L!, increase the effect by 1 when adding a card to the deck, but reset after S/L.",
+    "FLAVOR": "The first video WangLJ made for Slay the Spire. Most of Chinese players will never know the game without his video."
+  },
+  "Wlj:Arrogant": {
+    "NAME": "Fully Understand",
+    "DESCRIPTION": "Innate. Discard the draw pile, then Layoff !L!. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. Discard the draw pile, then Layoff !L!.",
+    "FLAVOR": "An ability of WangLJ is to master a game in 10 minutes. The card art is from 'Wang Lao Ju Teaches You to master Vtuber'."
+  },
+  "Wlj:Joy": {
+    "NAME": "House of Joy",
+    "DESCRIPTION": "Discard any number of cards, randomly copy discarded amount + !M! Workers from the discard pile to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discard any number of cards, randomly copy discarded amount + !M! Workers from the discard pile to your hand and reduce cost by 1 this turn. NL Exhaust.",
+    "FLAVOR": "From 'WangLJ Teaches You Frostpunk Survival' series. What will happen if we put child labor in the house of joy?"
+  },
+  "Wlj:Afei": {
+    "NAME": "Naked Afei",
+    "DESCRIPTION": "Avatar, gain !K! temporary health, deal !D! damage. Damage permanently increases !M! whenever Afei takes damage",
+    "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. The main character in this series, grew up from a naked slave to a hero."
+  },
+  "Wlj:Xiangdangdang": {
+    "NAME": "Xiangdangdang",
+    "DESCRIPTION": "Avatar, Exhaust half of the discard pile *Rabble, gain !M! temporary health for each; all non-0-cost attack cards have the same effect as *Invite.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Be the Broken Sword Hero'. The main character in the series, takes every method to beat the bosses and saves Taiwu world."
+  },
+  "Wlj:Retard": {
+    "NAME": "IQ 50",
+    "DESCRIPTION": "Gain 50 energy, die at the start of the next turn. Void.",
+    "UPGRADE_DESCRIPTION": "Gain 50 energy, die at the start of the next turn.",
+    "FLAVOR": "Wang Lao Ju's profile signature. The card art is from 'Aces and Adventures' series."
+  },
+  "Wlj:Story King": {
+    "NAME": "King of Stories",
+    "DESCRIPTION": "At the end of your turn, randomly deal !M! damage for every card played or Exhausted.",
+    "FLAVOR": "From the TV show 'StoryMan' Season 1 on Bilibili."
+  },
+  "Wlj:Zhaoritian": {
+    "NAME": "Zhao the Skybreaker",
+    "DESCRIPTION": "Avatar, gain !K! temporary health, transforms into *Dick when taking damage.",
+    "UPGRADE_DESCRIPTION": "Avatar, gain !K! temporary health, transforms into *Dick+ when taking damage.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to besiege'. Declared invincible by WangLJ but breaks apart easily upon contact."
+  },
+  "Wlj:Dick": {
+    "NAME": "Dick",
+    "DESCRIPTION": "Avatar, gain !K! temporary health, gain 1 Intangible. Exhaust.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to besiege'. It is the core of Zhao the Skybreaker."
+  },
+  "Wlj:Keel": {
+    "NAME": "Keel",
+    "DESCRIPTION": "Worker. Deal !D! damage. When being Layoff, damage doubles in this combat.",
+    "UPGRADE_DESCRIPTION": "Worker. Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "Moonlight Greatsword"
+    ],
+    "FLAVOR": "From the Demon Souls Remake series videos. Keel behaved so well but WangLJ always favors the Moonlight Greatsword."
+  },
+  "Wlj:Sun Knight": {
+    "NAME": "Sun Knight",
+    "DESCRIPTION": "Avatar, gain !K! temporary health, transforms Workers in hand into random Apostasy cards; gains [E] during Apostasy.",
+    "UPGRADE_DESCRIPTION": "Avatar, gain !K! temporary health, transforms Workers in hand into random lower-cost Apostasy cards; gains [E] during Apostasy.",
+    "FLAVOR": "Wang Lao Ju has always been a member of Warrior of Sunlight Covenant in the Dark Souls series. "
+  },
+  "Wlj:Capitalist": {
+    "NAME": "Capitalist Form",
+    "DESCRIPTION": "At the start of your turn, randomly play a card that contains Payment or lose gold effect.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Temporary Gold. At the start of your turn, randomly play a card that contains Payment or lose gold effect.",
+    "FLAVOR": "The card art is from 'Wang Lao Ju Teaches You to Be a Principal'. WangLJ always act as a evil capitalist in the game."
+  },
+  "Wlj:Spaceship": {
+    "NAME": "Space Executor",
+    "DESCRIPTION": "Exhaust the discard pile, deal damage to all enemies equal to the number of cards Exhausted * !M!.",
+    "UPGRADE_DESCRIPTION": "Layoff the discard pile, deal damage to all enemies equal to the number of cards Exhausted * !M!.",
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Conquer the Universe'. The failure rate of the spaceship is higher than SpaceX."
+  },
+  "Wlj:Clubhouse": {
+    "NAME": "Afei Yoga Club",
+    "DESCRIPTION": "At the end of your turn, lose all Thorns, then gain Thorns equal to the number of Workers in discard pile.",
+    "UPGRADE_DESCRIPTION": "Draw !M! Workers. At the end of your turn, lose all Thorns, then gain Thorns equal to the number of Workers in discard pile.",
+    "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. The fortress Afei built in the game."
+  },
+  "Wlj:Moon Singer": {
+    "NAME": "Moon Singer",
+    "DESCRIPTION": "Apply 1 Weak to all enemies, then increase all Debuff of enemies by !M! .",
+    "FLAVOR": "WangLJ and his wifi are called 'Sun Knight' and 'Moon Singer' respectively by fans."
+  },
+  "Wlj:Giant King": {
+    "NAME": "The Giant King",
+    "DESCRIPTION": "Choose up to 8 cards from the top of draw pile and place them at the bottom of discard pile; Draw !M! cards from there upon attack the target. NL Deal !D! damage. Exhaust.",
+    "FLAVOR": "One famous boss in Dark Souls 2 that players farm souls on him. Frequently referred by WangLJ in his videos to describe an enemy as ATM."
+  },
+  "Wlj:Future Tech": {
+    "NAME": "Future Tech",
+    "DESCRIPTION": "When Workers are Exhausted, their effects will repeat once.",
+    "FLAVOR": "The company notion first appeared in 'Wang Lao Ju Takes You Beyond the Sky'. Later became the background stories of Wang Lao Ju's universe."
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "Wlj:Money": {
+    "NAME": "Investment",
+    "FLAVOR": "Praise the sun!!!",
+    "DESCRIPTIONS": [
+      "At the end of the battle, gain #b6 #yGold."
+    ],
+    "EXTRA_FLAVOR": "From 'Interview | Wang Lao Ju Lost 6 Million Making Games, What Supports Him?'. The indie game WangLJ is working on is still not available until now..."
+  },
+  "Wlj:Stone Heart": {
+    "NAME": "Stonehearth",
+    "FLAVOR": "The beginning of the story is always a group of people.",
+    "DESCRIPTIONS": [
+      "At the start of the battle, add 3 #yRabble to the discard pile."
+    ],
+    "EXTRA_FLAVOR": "From 'Wang Lao Ju's Stonehearth Story' series."
+  },
+  "Wlj:Truck": {
+    "NAME": "European Truck",
+    "FLAVOR": "Maintenance costs are covered by the employer.",
+    "DESCRIPTIONS": [
+      "In the first round, #yLayoff effects increase by 1."
+    ],
+    "EXTRA_FLAVOR": "From 'Wang Lao Ju Teaches You to Drive'. He played European Truck Simulator like GTA."
+  },
+  "Wlj:Dog": {
+    "NAME": "KBDYD",
+    "FLAVOR": "KB, oh~ you died so tragically~",
+    "DESCRIPTIONS": [
+      "Heal health equal to the amount of effect during the first #yLayoff in a combat."
+    ],
+    "EXTRA_FLAVOR": "From 'Wang Lao Ju's Survival in the Shelter Week 2: Gloomy and Gloomy'. KBDYD is a friend of WangLJ but he played as a dog/food in the game."
+  },
+  "Wlj:Chicken": {
+    "NAME": "Chicken",
+    "FLAVOR": "Hens give birth to chicks, chicks give birth to hens.",
+    "DESCRIPTIONS": [
+      "At the end of the turn, gain #yBlock equal to the number of #yWorkers in hand or draw pile."
+    ],
+    "EXTRA_FLAVOR": "From '[Wang Lao Ju] Chicks Charge Quack!!!!'."
+  },
+  "Wlj:Rifle": {
+    "NAME": "Rifle",
+    "FLAVOR": "Wang's Gun Kiting Technique!",
+    "DESCRIPTIONS": [
+      "When #yExhausting #yWorkers, randomly deal #b3 damage."
+    ],
+    "EXTRA_FLAVOR": "From 'Wang Lao Ju Running With Rifle'."
+  },
+  "Wlj:Sheep": {
+    "NAME": "Sheep Pen",
+    "FLAVOR": "Tonight, we will never retreat, because what behind us is our sheep village!",
+    "DESCRIPTIONS": [
+      "When losing #yGold in battle, turn 1 #yRabble in your hand into another random #yWorker."
+    ],
+    "EXTRA_FLAVOR": "From 'Wang Lao Ju Teaches You to Defend the Village' series."
+  },
+  "Wlj:Ship": {
+    "NAME": "Pirate Ship",
+    "FLAVOR": "Oh the sea~ There is shit everywhere on the boat~",
+    "DESCRIPTIONS": [
+      "When applying #yDebuff, if the enemy has other #yDebuff, increase the effect by #b1 ."
+    ],
+    "EXTRA_FLAVOR": "From 'Lao Ju's Pirate Life 01~03'."
+  },
+  "Wlj:Tax": {
+    "NAME": "Tax",
+    "FLAVOR": "Harvest the people, and make profits for yourself.",
+    "DESCRIPTIONS": [
+      "Replaces #rInvestment; when a #yPerformer is played, gain #b2 #yGold and double the base damage, but he will be #yExhausted."
+    ],
+    "EXTRA_FLAVOR": "From 'Wang Lao Ju Teaches You to Harvest the People'."
+  },
+  "Wlj:Culture": {
+    "NAME": "Corporate Culture",
+    "FLAVOR": "Why is it always one shot?",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of each round. All enemies retain 1 health upon receiving fatal damage for the first time."
+    ],
+    "EXTRA_FLAVOR": "Widely seen in gameplay videos of games like Elden Ring. The enemy retains 1 HP and kills WangLJ in return."
+  },
+  "Wlj:Bird": {
+    "NAME": "Clumsy Bird",
+    "FLAVOR": "The Bird Master pay for the drinks tonight!",
+    "DESCRIPTIONS": [
+      "When you run out of #yGold, gain #b200 #yGold."
+    ],
+    "EXTRA_FLAVOR": "From '[Wang Lao Ju] Elden Ring EP.11'. He showed how to farm souls in the game."
+  },
+  "Wlj:Useless": {
+    "NAME": "Useless Ball",
+    "FLAVOR": "As useless as a your balls.",
+    "DESCRIPTIONS": [
+      "There is a small chance that the cards and #yGold reward drops will be replaced by #yUseless #yBalloon."
+    ],
+    "EXTRA_FLAVOR": "An ancient Chinese slang, frequently appearing in Wang Lao Ju's Dark Souls 2 videos."
+  }
+}

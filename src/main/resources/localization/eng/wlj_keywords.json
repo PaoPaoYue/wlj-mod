@@ -1,0 +1,79 @@
+[
+  {
+    "ID": "Wlj:Worker",
+    "NAMES": [
+      "worker", "workers"
+    ],
+    "DESCRIPTION": "Slacking off in the discard pile and never return to the draw pile."
+  },
+  {
+    "ID": "Wlj:Layoff",
+    "NAMES": [
+      "layoff"
+    ],
+    "DESCRIPTION": "Select and #yExhaust a certain number of cards in the discard pile. If the #yExhausted card is a #yWorker, add a copy to the draw pile; otherwise, add a #yRabble to the draw pile. Then draw the same amount of cards."
+  },
+  {
+    "ID": "Wlj:Pay",
+    "NAMES": [
+      "pay", "payment"
+    ],
+    "DESCRIPTION": "Must lose a certain amount of #yGold to gain the corresponding effect."
+  },
+  {
+    "ID": "Wlj:Lapse",
+    "NAMES": [
+      "apostasy"
+    ],
+    "DESCRIPTION": "When using a card with this keyword but a different name from the last card, #yLayoff #b3."
+  },
+  {
+    "ID": "Wlj:Avatar",
+    "NAMES": [
+      "avatar"
+    ],
+    "DESCRIPTION": "The card turns into a legendary character, entering the combat with temporary health and special effects. Move to discard pile when switching to another avatar or temporary health is depleted."
+  },
+  {
+    "ID": "Wlj:Sun Knight",
+    "NAMES": [
+      "sun knight"
+    ],
+    "DESCRIPTION": "Transforms #yWorkers in hand into random #yApostasy cards on enter; Gains [E] during #yApostasy."
+  },
+  {
+    "ID": "Wlj:Zhaoritian",
+    "NAMES": [
+      "zhao the skybreaker"
+    ],
+    "DESCRIPTION": "Transforms into the #yDick when taking damage."
+  },
+  {
+    "ID": "Wlj:Dick",
+    "NAMES": [
+      "dick"
+    ],
+    "DESCRIPTION": "Gains 1 stack of #yIntangible on enter."
+  },
+  {
+    "ID": "Wlj:Afei",
+    "NAMES": [
+      "naked afei"
+    ],
+    "DESCRIPTION": "Deals damage on enter; Permanently increases the damage whenever he takes damage."
+  },
+  {
+    "ID": "Wlj:Xiangdangdang",
+    "NAMES": [
+      "xiangdangdang"
+    ],
+    "DESCRIPTION": "#yExhausts half of the #Rabbles in the discard pile on enter, gaining temporary health for each one; All non-0-cost attack cards have the same effect as #yInvite."
+  },
+  {
+    "ID": "Wlj:TempGold",
+    "NAMES": [
+      "temporary gold"
+    ],
+    "DESCRIPTION": "Use temporary gold first during battle; Removed at the end of the battle."
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "Wlj:SlimeInAJar": {
+    "NAME": "Slime in a Jar",
+    "DESCRIPTIONS": [
+      "Choose one type from #b3 #yWorkers and add #b",
+      " copies to your hand."
+    ],
+    "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Host a Slime Rancher'."
+  },
+  "Wlj:Peglin": {
+    "NAME": "Peglin",
+    "DESCRIPTIONS": [
+      "Discard and #yLayoff your hand."
+    ],
+    "FLAVOR": "From 'Wang Lao Ju Teaches Goblin Art'."
+  },
+  "Wlj:Cup": {
+    "NAME": "Poison Masturbation Cup",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " stacks of #yPoison; if the enemy dies from poison damage, recover this poison."
+    ],
+    "FLAVOR": "From 'Wang Lao Ju's Dark Soul Journey 12'. The cup is used by WangLJ to describe the statues in Black Gulch in Dark Souls 2."
+  },
+  "Wlj:Fire": {
+    "NAME": "Flame Hu Ge",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to the enemy."
+    ],
+    "FLAVOR": "From 'Demon's Souls Remastered' series. Hu Ge is a famous Chinese actor whose name sounds like 'pot' in Chinese."
+  },
+  "Wlj:Ball": {
+    "NAME": "Useless Balloon",
+    "DESCRIPTIONS": [
+      "Automatically use and copy the reward #b",
+      " times on drop."
+    ],
+    "FLAVOR": "From the 'Wang Lao Ju Sekiro' series, originally named Mibu Balloon of Wealth, which is, in fact, useless but can be found everywhere."
+  }
+}

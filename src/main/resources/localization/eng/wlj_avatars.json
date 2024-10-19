@@ -1,0 +1,28 @@
+[
+  {
+    "ID": "Wlj:Sun Knight",
+    "NAME": "Sun Knight",
+    "DESCRIPTION": "Transforms #yWorkers in hand into random #yApostasy cards on enter; gains [E] during #yApostasy.",
+    "UPGRADE_DESCRIPTION": "Transforms #yWorkers in hand into random lower-cost #yApostasy cards on enter; gains [E] during #yApostasy."
+  },
+  {
+    "ID": "Wlj:Zhaoritian",
+    "NAME": "Zhao the Skybreaker",
+    "DESCRIPTION": "Transforms into #yDick when taking damage."
+  },
+  {
+    "ID": "Wlj:Dick",
+    "NAME": "Dick",
+    "DESCRIPTION": "Gains 1 stack of #yIntangible on enter."
+  },
+  {
+    "ID": "Wlj:Afei",
+    "NAME": "Naked Afei",
+    "DESCRIPTION": "Deals #b%d damage on enter; permanently increases the damage by #b%d whenever he takes damage."
+  },
+  {
+    "ID": "Wlj:Xiangdangdang",
+    "NAME": "Xiangdangdang",
+    "DESCRIPTION": "Exhausts half of the #yRabbles in the discard pile on enter, gaining #b%d temporary health for each one; all non-0-cost attack cards have the same effect as #yInvite."
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "Wlj:LayoffAction": {
+    "TEXT": [
+      "Select and optimize up to one card.",
+      "Select and optimize up to ",
+      " card(s).",
+      "Select and optimize one card.",
+      "Select and optimize ",
+      " card(s)."
+    ]
+  },
+  "Wlj:ExhaustDiscardedWorkerAction": {
+    "TEXT": [
+      "Select and exhaust one card.",
+      "Select and exhaust ",
+      " card(s)."
+    ]
+  },
+  "Wlj:PutAtExhaustPileBottomAction": {
+    "TEXT": [
+      "Select and place up to one card at the bottom of the exhaust pile.",
+      "Select and place up to ",
+      " card(s) at the bottom of the exhaust pile."
+    ]
+  },
+  "Wlj:TransformDiscardedWorkerAction": {
+    "TEXT": [
+      "Select and transform up to one card.",
+      "Select and transform up to ",
+      " card(s)."
+    ]
+  },
+  "Wlj:WorkerTips": {
+    "TEXT": [
+      "Worker Management",
+      "#yPerformers provide #b",
+      " additional attack damage. NL #yRabble provides #b",
+      " block at the end of the turn. NL #yPrisoners provide #b",
+      " gold at the end of the battle."
+    ]
+  }
+}

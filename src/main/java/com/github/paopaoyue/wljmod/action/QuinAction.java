@@ -17,7 +17,7 @@ public class QuinAction extends AbstractGameAction
     @Override
     public void update() {
         int effect = EnergyPanel.getCurrentEnergy();
-        this.addToTop(new MakeTempCardInHandAction(new Wand(Math.max(0, effect))));
+        this.addToTop(new BetterMakeTempCardInHandAction(new Wand(Math.max(0, effect))));
         this.isDone = true;
     }
 }
