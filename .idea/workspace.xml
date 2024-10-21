@@ -168,7 +168,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/sts-service&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/wlj-mod/src/main/resources/localization&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -187,9 +187,9 @@
       <recent name="com.github.paopaoyue.wljmod.action" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LENOVO\Desktop\projects\wlj-mod\src\main\resources\localization" />
       <recent name="C:\Users\LENOVO\Desktop\projects\wlj-mod\src\main\resources\localization\zhs" />
       <recent name="C:\Users\LENOVO\Desktop\projects\wlj-mod\src\main\resources\localization\eng" />
-      <recent name="C:\Users\LENOVO\Desktop\projects\wlj-mod\src\main\resources\localization" />
       <recent name="C:\Users\LENOVO\Desktop\projects\wlj-mod\src\main\resources\image\icon" />
       <recent name="C:\Users\LENOVO\Desktop\onmyoji-mod\src\main\resources\localization\eng" />
     </key>
@@ -208,7 +208,7 @@
       <recent name="com.github.paopaoyue.wljmod.power" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.wlj-mod [runGame]">
+  <component name="RunManager" selected="Gradle.wlj-mod [deployToTestFolder]">
     <configuration name="wlj-mod [cleanTestFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -320,19 +320,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.wlj-mod [publishMod]" />
       <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
       <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
       <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
+      <item itemvalue="Gradle.wlj-mod [publishMod]" />
       <item itemvalue="Gradle.wlj-mod [runGame]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.wlj-mod [runGame]" />
+        <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
         <item itemvalue="Gradle.wlj-mod [publishMod]" />
+        <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
-        <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
       </list>
     </recent_temporary>
   </component>
@@ -459,6 +459,8 @@
       <workItem from="1725625709101" duration="24000" />
       <workItem from="1726305543999" duration="1419000" />
       <workItem from="1726404968579" duration="107000" />
+      <workItem from="1729411818249" duration="2000" />
+      <workItem from="1729518633822" duration="1580000" />
     </task>
     <servers />
   </component>
