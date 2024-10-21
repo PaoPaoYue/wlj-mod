@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/room/TrueEndingSoundPatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -460,7 +461,7 @@
       <workItem from="1726305543999" duration="1419000" />
       <workItem from="1726404968579" duration="107000" />
       <workItem from="1729411818249" duration="2000" />
-      <workItem from="1729518633822" duration="1580000" />
+      <workItem from="1729518633822" duration="3794000" />
     </task>
     <servers />
   </component>
