@@ -319,9 +319,9 @@
   },
   "Wlj:Qidiaochan": {
     "NAME": "Qidiaochan",
-    "DESCRIPTION": "Transform into the previous Avatar in combat, gain !K! temporary health.",
+    "DESCRIPTION": " Avatar , gain !K! temporary health. Copy the effect of previous Avatar if exists.",
     "EXTENDED_DESCRIPTION": [
-      " NL (Transform into ",
+      " NL (Copy the effect of ",
       ".)"
     ],
     "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Be the Broken Sword Hero'. The Girl was kidnapped by Xiangdangdang but eventually became the successor of the Broken Sword."
@@ -362,7 +362,7 @@
   },
   "Wlj:Sake": {
     "NAME": "Samurai Saliva Sake",
-    "DESCRIPTION": "Change an enemy's intention to be dealing !M! damage; Will not affect strong intentions. Exhaust.",
+    "DESCRIPTION": "Change an enemy's intention to be dealing !M! damage. Exhaust.",
     "FLAVOR": "From the series 'Wang Lao Ju Teaches You to Kill the General'. In the game Shadow Tatics, a samurai can throw a sake bottle to distract enemies."
   },
   "Wlj:Stardew Valley": {
@@ -468,5 +468,23 @@
     "NAME": "Future Tech",
     "DESCRIPTION": "When Workers are Exhausted, their effects will repeat once.",
     "FLAVOR": "The company notion first appeared in 'Wang Lao Ju Takes You Beyond the Sky'. Later became the background stories of Wang Lao Ju's universe."
+  },
+  "Wlj:Frog": {
+    "NAME": "Lang-Li-Guhh-Lang",
+    "DESCRIPTION": "Avatar, gain !K! temporary health, deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      " NL The effect changes permanently each time after played.",
+      " On attack deal 3 damage to enemies wearing metal or constructs.",
+      " On attack reduce 1 Strength on enemy this turn.",
+      " On attack deal 1 Poison to organic enemies.",
+      " On attack deal 3 damage to enemies wearing flammables.",
+      " Damage taken cannot exceed temporary health."
+    ],
+    "FLAVOR": "From the 'Black Myth Wukong' series."
+  },
+  "Wlj:Koro": {
+    "NAME": "Koro",
+    "DESCRIPTION": "Worker, deal !D! damage to all enemies. While in hand or draw pile prevent all damage and add to this card's damage; While in discard pile, take equal damage at the start of your turn.",
+    "FLAVOR": "From 'Wang Lao Ju’s Esports Genesis Year'."
   }
 }

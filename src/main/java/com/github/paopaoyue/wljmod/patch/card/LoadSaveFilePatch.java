@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod.patch.card;
 
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.github.paopaoyue.wljmod.card.Afei;
+import com.github.paopaoyue.wljmod.card.Frog;
 import com.github.paopaoyue.wljmod.utility.Inject;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
@@ -10,6 +11,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+
+import static com.github.paopaoyue.wljmod.card.Frog.NUM_FROGS;
 
 @SpirePatch(
         clz = CardLibrary.class,
@@ -29,6 +32,10 @@ public class LoadSaveFilePatch {
             retVal.damage = misc;
             retVal.baseDamage = misc;
             retVal.initializeDescription();
+        }
+        if (retVal.cardID.equals(Frog.ID)) {
+            retVal.misc = misc % NUM_FROGS;
+            ((Frog) retVal).configFrog();
         }
     }
 

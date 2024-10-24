@@ -24,5 +24,40 @@
     "ID": "Wlj:Xiangdangdang",
     "NAME": "响当当",
     "DESCRIPTION": "进场时消耗弃牌堆一半 #y贱民 ，每消耗一名获得 #b%d 临时生命值； 所有非0费攻击牌视为 #y邀为同道 。"
+  },
+  {
+    "ID": "Wlj:Qidiaochan",
+    "NAME": "漆雕蝉",
+    "DESCRIPTION": "无特殊效果。"
+  },
+  {
+    "ID": "Wlj:Frog_n",
+    "NAME": "波里个浪",
+    "DESCRIPTION": "无特殊效果。"
+  },
+  {
+    "ID": "Wlj:Frog_y",
+    "NAME": "浪里个波",
+    "DESCRIPTION": "攻击对身着金属或构造体敌人额外造成3伤害。"
+  },
+  {
+    "ID": "Wlj:Frog_c",
+    "NAME": "浪里个浪",
+    "DESCRIPTION": "攻击会使敌人在本回合内减少1 #y力量 。"
+  },
+  {
+    "ID": "Wlj:Frog_g",
+    "NAME": "波里个波",
+    "DESCRIPTION": "攻击对有机物敌人额外施加1 #y中毒 。"
+  },
+  {
+    "ID": "Wlj:Frog_r",
+    "NAME": "波浪浪",
+    "DESCRIPTION": "攻击对有衣物毛皮等可燃物的敌人额外造成3伤害。"
+  },
+  {
+    "ID": "Wlj:Frog_o",
+    "NAME": "浪波波",
+    "DESCRIPTION": "受到的伤害不会超过临时生命值。"
   }
 ]

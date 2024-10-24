@@ -8,12 +8,12 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class AfeiAction extends AbstractGameAction {
+public class AvatarAttackAction extends AbstractGameAction {
     private static final float DURATION = 0.0F;
     private DamageInfo info;
     private AbstractCard card;
 
-    public AfeiAction(AbstractCreature target, AbstractCreature source, AbstractCard card) {
+    public AvatarAttackAction(AbstractCreature target, AbstractCreature source, AbstractCard card) {
         this.setValues(target, source);
         this.actionType = ActionType.DAMAGE;
         this.duration = DURATION;

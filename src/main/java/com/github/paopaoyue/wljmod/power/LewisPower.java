@@ -33,7 +33,7 @@ public class LewisPower extends AbstractPower {
             if (damageAmount >= this.owner.currentHealth && this.amount > 0) {
                 this.flash();
                 damageAmount = this.owner.currentHealth - 1;
-                this.addToBot(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+                this.addToTop(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
             }
         }
         return damageAmount;

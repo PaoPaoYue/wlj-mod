@@ -1,7 +1,9 @@
 package com.github.paopaoyue.wljmod.component;
 
+import com.github.paopaoyue.wljmod.WljMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public abstract class AbstractAvatar {
 
@@ -37,7 +39,11 @@ public abstract class AbstractAvatar {
     public void onExit(AbstractAvatar nextKami) {
     }
 
-    public void onDamaged(int damage, DamageInfo.DamageType damageType) {
+    public void onAttack(AbstractMonster target, DamageInfo info) {
+    }
+
+    public int onDamaged(int damage, DamageInfo.DamageType damageType) {
+        return damage;
     }
 
     public void onUseCard(AbstractCard card) {

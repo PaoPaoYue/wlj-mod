@@ -12,13 +12,13 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
-import com.github.paopaoyue.wljmod.card.AvatarHp;
-import com.github.paopaoyue.wljmod.card.LayoffAmount;
+import com.github.paopaoyue.wljmod.card.*;
 import com.github.paopaoyue.wljmod.character.Wlj;
 import com.github.paopaoyue.wljmod.component.AvatarManager;
 import com.github.paopaoyue.wljmod.component.AvatarStrings;
 import com.github.paopaoyue.wljmod.component.WorkerManager;
+import com.github.paopaoyue.wljmod.event.CeremonyEvent;
+import com.github.paopaoyue.wljmod.event.FrogEvent;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.PlayerClassEnum;
 import com.github.paopaoyue.wljmod.potion.Ball;
@@ -29,6 +29,10 @@ import com.github.paopaoyue.wljmod.relic.Useless;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheBeyond;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.*;
@@ -120,6 +124,9 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
             }
         }));
         BaseMod.registerModBadge(badgeTexture, info.Name, Strings.join(Arrays.asList(info.Authors), ','), info.Description, settingsPanel);
+
+        BaseMod.addEvent("Wlj:Frog", FrogEvent.class, Exordium.ID, TheCity.ID);
+        BaseMod.addEvent("Wlj:Ceremony", CeremonyEvent.class, TheCity.ID, TheBeyond.ID);
     }
 
 
@@ -185,7 +192,7 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
         BaseMod.loadCustomStringsFile(RelicStrings.class, "localization/" + language + "/wlj_relics.json");
         BaseMod.loadCustomStringsFile(UIStrings.class, "localization/" + language + "/wlj_ui.json");
         BaseMod.loadCustomStringsFile(PotionStrings.class, "localization/" + language + "/wlj_potions.json");
-//        BaseMod.loadCustomStringsFile(EventStrings.class, "localization/" + language + "/wlj_events.json");
+        BaseMod.loadCustomStringsFile(EventStrings.class, "localization/" + language + "/wlj_events.json");
 
         Gson gson = new Gson();
         String json = Gdx.files.internal("localization/" + language + "/wlj_keywords.json").readString(String.valueOf(StandardCharsets.UTF_8));
@@ -239,6 +246,11 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
         BaseMod.addAudio("Wlj:INVITE_5", "audio/invite_5.mp3");
         BaseMod.addAudio("Wlj:INVITE_6", "audio/invite_6.mp3");
         BaseMod.addAudio("Wlj:INVITE_7", "audio/invite_7.mp3");
+        BaseMod.addAudio("Wlj:EVENT_LOL", "audio/event_lol.mp3");
+        BaseMod.addAudio("Wlj:EVENT_SONG", "audio/event_song.mp3");
+        BaseMod.addAudio("Wlj:EVENT_LOVE", "audio/event_love.mp3");
+        BaseMod.addAudio("Wlj:EVENT_BOX", "audio/event_box.mp3");
+        BaseMod.addAudio("Wlj:EVENT_OH", "audio/event_oh.mp3");
     }
 
     @Override

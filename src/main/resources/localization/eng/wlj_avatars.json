@@ -24,5 +24,40 @@
     "ID": "Wlj:Xiangdangdang",
     "NAME": "Xiangdangdang",
     "DESCRIPTION": "Exhausts half of the #yRabbles in the discard pile on enter, gaining #b%d temporary health for each one; all non-0-cost attack cards have the same effect as #yInvite."
+  },
+  {
+    "ID": "Wlj:Qidiaochan",
+    "NAME": "Qidiaochan",
+    "DESCRIPTION": "No special effects."
+  },
+  {
+    "ID": "Wlj:Frog_n",
+    "NAME": "Lang-Li-Guhh-Lang",
+    "DESCRIPTION": "No special effects."
+  },
+  {
+    "ID": "Wlj:Frog_y",
+    "NAME": "Lang-Li-Guhh-Lang Lightening",
+    "DESCRIPTION": "On attack deal 3 damage to enemies wearing metal or constructs."
+  },
+  {
+    "ID": "Wlj:Frog_c",
+    "NAME": "Lang-Li-Guhh-Lang Ice",
+    "DESCRIPTION": "On attack reduce 1 #yStrength on enemy this turn."
+  },
+  {
+    "ID": "Wlj:Frog_g",
+    "NAME": "Lang-Li-Guhh-Lang Poison",
+    "DESCRIPTION": "On attack deal 1 #yPoison to organic enemies."
+  },
+  {
+    "ID": "Wlj:Frog_r",
+    "NAME": "Lang-Li-Guhh-Lang Fire",
+    "DESCRIPTION": "On attack deal 3 damage to enemies wearing flammables."
+  },
+  {
+    "ID": "Wlj:Frog_o",
+    "NAME": "Lang-Li-Guhh-Lang Solid",
+    "DESCRIPTION": "Damage taken cannot exceed temporary health."
   }
 ]

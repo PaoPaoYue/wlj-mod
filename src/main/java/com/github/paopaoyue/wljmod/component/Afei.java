@@ -1,7 +1,7 @@
 package com.github.paopaoyue.wljmod.component;
 
 import com.github.paopaoyue.wljmod.WljMod;
-import com.github.paopaoyue.wljmod.action.AfeiAction;
+import com.github.paopaoyue.wljmod.action.AvatarAttackAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -42,7 +42,7 @@ public class Afei extends AbstractAvatar {
     }
 
     @Override
-    public void onDamaged(int damage, DamageInfo.DamageType damageType) {
+    public int onDamaged(int damage, DamageInfo.DamageType damageType) {
         if (damageType != DamageInfo.DamageType.HP_LOSS && damage > 0) {
             this.card.baseDamage += incrementAmount;
             this.card.misc += incrementAmount;
@@ -54,6 +54,7 @@ public class Afei extends AbstractAvatar {
             }
             updateDescription();
         }
+        return damage;
     }
 
     @Override
@@ -61,7 +62,7 @@ public class Afei extends AbstractAvatar {
         if (this.target.isDeadOrEscaped()) {
             this.target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
         }
-        AbstractDungeon.actionManager.addToTop(new AfeiAction(target, AbstractDungeon.player, card));
+        AbstractDungeon.actionManager.addToTop(new AvatarAttackAction(target, AbstractDungeon.player, card));
     }
 
     @Override

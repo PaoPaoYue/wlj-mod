@@ -22,10 +22,11 @@ public class Zhaoritian extends AbstractAvatar {
         this.updateDescription();
     }
 
-    public void onDamaged(int damage, DamageInfo.DamageType damageType) {
+    public int onDamaged(int damage, DamageInfo.DamageType damageType) {
         if (damageType != DamageInfo.DamageType.HP_LOSS && damage > 0) {
             AbstractDungeon.actionManager.addToTop(new UseAvatarAction(this.dickCard, new Dick(), this.dickCard.getHp(), true));
         }
+        return damage;
     }
 
     @Override

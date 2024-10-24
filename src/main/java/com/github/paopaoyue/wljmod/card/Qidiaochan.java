@@ -30,9 +30,10 @@ public class Qidiaochan extends AbstractAvatarCard {
         if (this.avatar == AbstractAvatar.NONE) {
             this.avatar = WljMod.avatarManager.getPreviousAvatar();
         }
-        if (this.avatar != AbstractAvatar.NONE) {
-            this.addToBot(new UseAvatarAction(this, getAvatar(), getHp()));
+        if (this.avatar == AbstractAvatar.NONE) {
+            this.avatar = new com.github.paopaoyue.wljmod.component.Qidiaochan();
         }
+        this.addToBot(new UseAvatarAction(this, getAvatar(), getHp()));
     }
 
     public void upgrade() {

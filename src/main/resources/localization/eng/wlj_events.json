@@ -1,0 +1,51 @@
+{
+  "Wlj:Frog": {
+    "NAME": "Lang-Li-Guhh-Lang",
+    "DESCRIPTIONS": [
+      "One day, Wang Lao Ju was passing through a small, foreign-looking town and saw a lively night market outside the city gate. He reached an oil vendor’s stall. Wang Lao Ju looked closely and saw that:",
+      " NL Wrinkles on his skin so snug, NL A whiff of air, a fishy hug. NL Legs that spring to heights above, NL From the dirt and muck they love.",
+      " NL With swollen belly, strange skills arise, NL A frog's croaks can summon thunder's cries, NL No loong needed to call the breeze, NL In shallow waters, frogs' songs please.",
+      " NL Unafraid of the northern chill, NL With skin like jade, it loves the thrill. NL Mist turns to frost and snow, NL In icy play, its spirit grows.",
+      " NL By rocks, a living spring does flow, NL Glistening clear, glitters with glow. NL In its charm, a froglord does dwell, NL Frogs' venom, both sweet and foul.",
+      " NL Radiant hues of crimson bright, NL Majestic with its towering might. NL Seeking a place of cool repose, NL Releasing fire, a neat trick shows.",
+      " NL In fairy mountains, fate decides my stay, NL By nature's flow, I turn to stone each day. NL Seeking truth with purpose, unaware of the length, NL With steadfast heart, I carve my path, my strength.",
+      " NL Wang Lao Ju discovered something and shouted loudly:",
+      "The oil vendor didn’t struggle and quickly reverted to his true form—indeed, a green-skinned, large frog.",
+      " NL NL 'How did you know my true name, sir?' the old man asked. 'Ever since my father was killed by the destined one, I have wandered to this place, using my slime to impersonate oil and make a living. Since you know my name, you must be the Frog Immortal that my father spoke of. I am willing to serve you! My slime has life-extending properties, and I offer it to you.'",
+      " NL NL 'Spare my life, great hero!' the old man pleaded. 'Since my father was killed by the destined one, I have wandered here, using my slime to impersonate oil and make a living. If you spare me, I will serve you loyally!'"
+    ],
+    "OPTIONS": [
+      "Lang-Li-Guhh-Lang!",
+      "#yLang-Li-Guhh-Lang!",
+      "#cLang-Li-Guhh-Lang!",
+      "#gLang-Li-Guhh-Lang!",
+      "#rLang-Li-Guhh-Lang!",
+      "#oLang-Li-Guhh-Lang!",
+      "Invite Him! (acquire #yLang-Li-Guhh-Lang and #b4 #gmax #gHP )",
+      "Invite Him! (acquire #yLang-Li-Guhh-Lang )",
+      "Leave"
+    ]
+  },
+  "Wlj:Ceremony": {
+    "NAME": "Employee Ceremony",
+    "DESCRIPTIONS": [
+      "Today is the annual employee ceremony of Future Technology Unlimited Corporation. Senior employees of more than ten years gathered, chatting in the livestream about various topics. NL As the chairman of Future Technology, Wang Lao Ju cleared his throat and decided that the theme of this year would be?",
+      "Wang Lao Ju opened the game that once crowned him the King of Newbie, showcasing his past glory. But he quickly fell behind, being repeatedly solo killed, and couldn’t help but curse, 'Only idiots play this!' NL Soon, the old employees in the stream noticed that the opposing champion’s ID was actually #yKoro !!!",
+      "Wang Lao Ju turned on a familiar musical accompaniment and sang. His rendition of 'Three Hundred and Sixty-Five Miles' fully expressed the bitter sorrows of the ashen ones. NL The employees enjoyed it immensely, showering the stream with donations.",
+      "Wang Lao Ju presented his debut work, 'Love♂You,' transforming into a Dungeon Master. He demonstrated the Muji Ghost Walk and the King's Clenching proficiently. NL Wang Lao Ju and the employees had a happy evening together in New Sunset City~",
+      "Wang Lao Ju opened the employee mailbox, which was overflowing with messages from employees all over the world. He casually opened one, expecting some trivial emotional complaints, but instead found it filled with the words 'How’s the box?' repeated over and over. NL Furious, Wang Lao Ju immediately decided to layoff the employee."
+    ],
+    "OPTIONS": [
+      "King of Newbie",
+      "Midnight Concert",
+      "Dungeon Master",
+      "Employee Mailbox",
+      "Acquire #yKoro",
+      "#yGold + #b40%",
+      "Take #b6 #rdamage ; Gain #b6 #gmax #gHP",
+      "Layoff #r",
+      "The ceremony concluded successfully!",
+      "Forgive him"
+    ]
+  }
+}

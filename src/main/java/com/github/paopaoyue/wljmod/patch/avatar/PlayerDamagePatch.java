@@ -50,15 +50,17 @@ public class PlayerDamagePatch {
                 CardCrawlGame.screenShake.shake(ShakeIntensity.MED, ShakeDur.SHORT, false);
                 if (tempHp > damageAmount[0]) {
                     AbstractDungeon.effectsQueue.add(new TempDamageNumberEffect(__instance, __instance.hb.cX, __instance.hb.cY, damageAmount[0]));
-                    avatarManager.setHp(tempHp - damageAmount[0]);
-                    avatarManager.getCurrentAvatar().onDamaged(damageAmount[0], info.type);
+                    int damage = avatarManager.getCurrentAvatar().onDamaged(damageAmount[0], info.type);
+                    avatarManager.setHp(tempHp - damage);
                     damageAmount[0] = 0;
                 } else {
                     AbstractDungeon.effectsQueue.add(new TempDamageNumberEffect(__instance, __instance.hb.cX, __instance.hb.cY, tempHp));
-                    avatarManager.setHp(0);
-                    avatarManager.getCurrentAvatar().onDamaged(tempHp, info.type);
-                    avatarManager.onDead();
-                    damageAmount[0] -= tempHp;
+                    int damage  = avatarManager.getCurrentAvatar().onDamaged(damageAmount[0], info.type);
+                    avatarManager.setHp(Math.max(0, tempHp - damage));
+                    if (avatarManager.getHp() == 0) {
+                        avatarManager.onDead();
+                    }
+                    damageAmount[0] = (damage - tempHp);
                 }
             }
         }
