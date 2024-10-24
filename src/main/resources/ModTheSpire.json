@@ -5,7 +5,7 @@
     "PaoPaoYue"
   ],
   "description": "王老菊MOD，MOD开发交流群：787757483。\n素材大部分源自网络，侵删。 \n可以在设置界面选择关闭老菊语音包。 \n作者:PaoPaoYue 邮箱：846260131@qq.com。\n\nA mod dedicated to the famous chinese video creator WangLJ, thanking him for 10 years of companionship. \nThe Chinese voiceover for cards is disabled by default, but you can enable it in the settings menu. \nI have written flavor text next to every card, relic, and potion to explain the meme or story behind it. However, due to the author's limited abilities, most translations may not fully convey the intended meaning. If you are willing to help with polishing the translations, please contact me. \nDiscord channel: https://discord.gg/K5KcRReS \nAuthor: PaoPaoYue",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "sts_version": "12-12-2020",
   "mts_version": "3.10.1",
   "dependencies": [

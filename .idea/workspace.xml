@@ -4,60 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Frog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Koro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Frog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Qidiaochan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/effect/SparkEffect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/event/CeremonyEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/event/FrogEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/avatar/OnAttackPatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/color/ColorPatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/color/WordColorEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/worker/onLoseHPPatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/event_box.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/event_lol.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/event_love.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/event_oh.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/event_song.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/frog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/frog_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/koro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/koro_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/character/frog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/character/qidiaochan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/event/event_ceremony.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/event/event_frog_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/event/event_frog_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/event/event_frog_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/event/event_frog_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/event/event_frog_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/image/event/event_frog_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_events.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_events.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/AfeiAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/AvatarAttackAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Qidiaochan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Qidiaochan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Sake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Sake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AbstractAvatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/AbstractAvatar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Afei.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Afei.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Zhaoritian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/component/Zhaoritian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/avatar/PlayerDamagePatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/avatar/PlayerDamagePatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/LoadSaveFilePatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/LoadSaveFilePatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/SakePatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/ChangeIntentPatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/card/SakePointyPatch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/room/TrueEndingSoundPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/patch/sound/TrueEndingSoundPatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/LewisPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/power/LewisPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/image/character/xiangdangdang.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/image/character/xiangdangdang.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_avatars.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_avatars.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_cards.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_keywords.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_avatars.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_avatars.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_keywords.json" afterDir="false" />
-    </list>
+    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -399,6 +346,13 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="StandaloneScriptsStorage">
+    <option name="files">
+      <set>
+        <option value="$PROJECT_DIR$/build.gradle.kts" />
+      </set>
+    </option>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="" />
@@ -516,7 +470,7 @@
       <workItem from="1729411818249" duration="2000" />
       <workItem from="1729518633822" duration="6662000" />
       <workItem from="1729534718540" duration="86794000" />
-      <workItem from="1729798988730" duration="6305000" />
+      <workItem from="1729798988730" duration="7173000" />
     </task>
     <servers />
   </component>
