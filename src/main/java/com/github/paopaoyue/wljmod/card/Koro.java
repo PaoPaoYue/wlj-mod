@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.ShakeScreenAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,35 +43,45 @@ public class Koro extends AbstractWorkerCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new AbstractGameAction() {
+        if (this.dontTriggerOnUseCard) {
+            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        } else {
+            this.addToBot(new AbstractGameAction() {
 
-            private float duration = 0.15f;
-            private float prevDuration = duration;
+                private float duration = 0.5f;
+                private float prevDuration = duration;
 
-            @Override
-            public void update() {
+                @Override
+                public void update() {
 
-                if (duration == 0.15f) {
-                    CardCrawlGame.sound.playA("ATTACK_WHIFF_1", -0.6f);
-                    CardCrawlGame.sound.playA("ORB_LIGHTNING_CHANNEL", 0.6f);
-                    AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.BLUE.cpy(), true));
-                    for (int i = 0; i < 6; i++) {
-                        AbstractDungeon.effectsQueue.add(new SparkEffect(-100.0f * Settings.scale - 100.0f * (i + 1), Settings.HEIGHT / 2.0f + 50.0f * (i + 1), 1000.0f, 5000.0f + 500.0f * (5 - i)));
+                    if (duration == 0.5f) {
+                        CardCrawlGame.sound.playA("ATTACK_WHIFF_1", -0.6f);
+                        CardCrawlGame.sound.playA("ORB_LIGHTNING_CHANNEL", 0.6f);
+                        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.BLUE.cpy(), true));
+                        for (int i = 0; i < 6; i++) {
+                            AbstractDungeon.effectsQueue.add(new SparkEffect(-100.0f * Settings.scale - 100.0f * (i + 1), Settings.HEIGHT / 2.0f + 50.0f * (i + 1), 1000.0f, 5000.0f + 500.0f * (5 - i)));
+                        }
+                        AbstractDungeon.effectsQueue.add(new SparkEffect(-100.0f * Settings.scale, Settings.HEIGHT / 2.0f, 1000.0f, 8000.0f));
+                        for (int i = 0; i < 6; i++) {
+                            AbstractDungeon.effectsQueue.add(new SparkEffect(-100.0f * Settings.scale - 100.0f * (i + 1), Settings.HEIGHT / 2.0f - 50.0f * (i + 1), 1000.0f, 5000.0f + 500.0f * (5 - i)));
+                        }
                     }
-                    AbstractDungeon.effectsQueue.add(new SparkEffect(-100.0f * Settings.scale, Settings.HEIGHT / 2.0f, 1000.0f, 8000.0f));
-                    for (int i = 0; i < 6; i++) {
-                        AbstractDungeon.effectsQueue.add(new SparkEffect(-100.0f * Settings.scale - 100.0f * (i + 1), Settings.HEIGHT / 2.0f - 50.0f * (i + 1), 1000.0f, 5000.0f + 500.0f * (5 - i)));
+
+                    duration -= Gdx.graphics.getDeltaTime();
+                    if (duration < 0.0F) {
+                        this.isDone = true;
                     }
                 }
+            });
+            this.addToBot(new ShakeScreenAction(0.0f, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.HIGH));
+            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        }
+    }
 
-                duration -= Gdx.graphics.getDeltaTime();
-                if (duration < 0.0F) {
-                    this.isDone = true;
-                }
-            }
-        });
-        this.addToBot(new ShakeScreenAction(0.0f, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.HIGH));
-        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+    @Override
+    public void triggerOnEndOfTurnForPlayingCard() {
+        this.dontTriggerOnUseCard = true;
+        AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
     public int onLoseHP(int damageAmount) {
@@ -79,12 +90,6 @@ public class Koro extends AbstractWorkerCard {
             this.applyPowers();
         }
         return 0;
-    }
-
-    public void atTurnStart() {
-        if (this.baseDamage > 0 && AbstractDungeon.player.discardPile.contains(this)) {
-            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.baseDamage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        }
     }
 
     public void upgrade() {

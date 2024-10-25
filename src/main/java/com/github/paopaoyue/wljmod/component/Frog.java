@@ -1,8 +1,10 @@
 package com.github.paopaoyue.wljmod.component;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.action.AvatarAttackAction;
+import com.github.paopaoyue.wljmod.effect.FrogDefendEffect;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,6 +14,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.*;
 import com.megacrit.cardcrawl.monsters.city.*;
@@ -182,6 +185,8 @@ public abstract class Frog extends AbstractAvatar {
         public static final String ID = "Wlj:Frog_o";
         private static final AvatarStrings avatarString = WljMod.AVATAR_DICTIONARY.get(ID);
 
+        private static final Texture effectImg = ImageMaster.loadImage("image/icon/shield.png");
+
         public FrogO() {
             this.id = ID;
             this.name = avatarString.NAME;
@@ -191,7 +196,7 @@ public abstract class Frog extends AbstractAvatar {
         @Override
         public void onEnter() {
             super.onEnter();
-            AbstractDungeon.actionManager.addToTop(new VFXAction(new FlashAtkImgEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, AbstractGameAction.AttackEffect.SHIELD)));
+            AbstractDungeon.actionManager.addToTop(new VFXAction(new FrogDefendEffect()));
         }
 
         @Override

@@ -484,7 +484,7 @@
   },
   "Wlj:Koro": {
     "NAME": "Koro",
-    "DESCRIPTION": "Worker, deal !D! damage to all enemies. While in hand or draw pile prevent all damage and add to this card's damage; While in discard pile, take equal damage at the start of your turn.",
+    "DESCRIPTION": "Worker, deal !D! damage to all enemies, at the end of your turn deal !D! to yourself if in hand. While in draw pile prevent all damage and add to this card's damage.",
     "FLAVOR": "From 'Wang Lao Ju’s Esports Genesis Year'."
   }
 }

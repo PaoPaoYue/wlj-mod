@@ -15,12 +15,12 @@
       " NL NL 'Spare my life, great hero!' the old man pleaded. 'Since my father was killed by the destined one, I have wandered here, using my slime to impersonate oil and make a living. If you spare me, I will serve you loyally!'"
     ],
     "OPTIONS": [
-      "Lang-Li-Guhh-Lang!",
-      "#yLang-Li-Guhh-Lang!",
-      "#cLang-Li-Guhh-Lang!",
-      "#gLang-Li-Guhh-Lang!",
-      "#rLang-Li-Guhh-Lang!",
-      "#oLang-Li-Guhh-Lang!",
+      "[Normal] Lang-Li-Guhh-Lang!",
+      "#y[Lightening] Lang-Li-Guhh-Lang!",
+      "#c[Ice] Lang-Li-Guhh-Lang!",
+      "#g[Poison] Lang-Li-Guhh-Lang!",
+      "#r[Fire] Lang-Li-Guhh-Lang!",
+      "#o[Solid] Lang-Li-Guhh-Lang!",
       "Invite Him! (acquire #yLang-Li-Guhh-Lang and #b4 #gmax #gHP )",
       "Invite Him! (acquire #yLang-Li-Guhh-Lang )",
       "Leave"

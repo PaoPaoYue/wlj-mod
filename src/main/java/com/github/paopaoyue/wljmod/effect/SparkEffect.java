@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector2;
 import com.megacrit.cardcrawl.core.Settings;
@@ -37,7 +38,7 @@ public class SparkEffect extends AbstractGameEffect
     @Override
     public void update() {
         this.prevPositions.add(this.position.cpy());
-        this.velocity.x = easeInLerp(initialVelocity, maxVelocity, MathUtils.clamp(1.5f - duration, 0.0f, 0.5f) / 0.5f);
+        this.velocity.x = Interpolation.exp5In.apply(initialVelocity, maxVelocity, MathUtils.clamp(1.5f - duration, 0.0f, 0.5f) / 0.5f);
         this.position.mulAdd(this.velocity, Gdx.graphics.getDeltaTime());
         if (this.prevPositions.size() > 30) {
             this.prevPositions.remove(0);
@@ -65,10 +66,6 @@ public class SparkEffect extends AbstractGameEffect
     @Override
     public void dispose() {
 
-    }
-
-    private static float easeInLerp(float a, float b, float t) {
-        return a + (b - a) * t * t;
     }
 
 }
