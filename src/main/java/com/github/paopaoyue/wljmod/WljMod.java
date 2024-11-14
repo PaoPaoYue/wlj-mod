@@ -12,6 +12,7 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.evacipated.cardcrawl.modthespire.lib.SpireSideload;
 import com.github.paopaoyue.wljmod.card.*;
 import com.github.paopaoyue.wljmod.character.Wlj;
 import com.github.paopaoyue.wljmod.component.AvatarManager;
@@ -29,7 +30,6 @@ import com.github.paopaoyue.wljmod.relic.Useless;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheBeyond;
 import com.megacrit.cardcrawl.dungeons.TheCity;
@@ -47,6 +47,12 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 @SpireInitializer
+@SpireSideload(
+        modIDs = {
+                "sts-metrics",
+                "ypp-rpc"
+        }
+)
 public class WljMod implements PostInitializeSubscriber, EditCharactersSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, EditRelicsSubscriber, EditCardsSubscriber, AddAudioSubscriber, StartGameSubscriber, OnCardUseSubscriber, OnPlayerTurnStartSubscriber {
 
     public static final String MOD_ID = "Wlj";

@@ -33,7 +33,8 @@
       "Wang Lao Ju opened the game that once crowned him the King of Newbie, showcasing his past glory. But he quickly fell behind, being repeatedly solo killed, and couldn’t help but curse, 'Only idiots play this!' NL Soon, the old employees in the stream noticed that the opposing champion’s ID was actually #yKoro !!!",
       "Wang Lao Ju turned on a familiar musical accompaniment and sang. His rendition of 'Three Hundred and Sixty-Five Miles' fully expressed the bitter sorrows of the ashen ones. NL The employees enjoyed it immensely, showering the stream with donations.",
       "Wang Lao Ju presented his debut work, 'Love♂You,' transforming into a Dungeon Master. He demonstrated the Muji Ghost Walk and the King's Clenching proficiently. NL Wang Lao Ju and the employees had a happy evening together in New Sunset City~",
-      "Wang Lao Ju opened the employee mailbox, which was overflowing with messages from employees all over the world. He casually opened one, expecting some trivial emotional complaints, but instead found it filled with the words 'How’s the box?' repeated over and over. NL Furious, Wang Lao Ju immediately decided to layoff the employee."
+      "Wang Lao Ju opened the employee mailbox, which was overflowing with messages from employees all over the world. He casually opened one, expecting some trivial emotional complaints, but instead found it filled with the words 'How’s the box?' repeated over and over. NL Furious, Wang Lao Ju immediately decided to layoff the employee.",
+      "Wang Lao Ju turned on a familiar musical accompaniment and sang. His rendition of 'Three Hundred and Sixty-Five Miles' fully expressed the bitter sorrows of the ashen ones. NL The employees enjoyed it immensely, and playfully urged him to invite the 'Moon Singer' to join him in a duet, recreating the radiant 'sun and moon shining together'!"
     ],
     "OPTIONS": [
       "King of Newbie",
@@ -45,7 +46,10 @@
       "Take #b6 #rdamage ; Gain #b6 #gmax #gHP",
       "Layoff #r",
       "The ceremony concluded successfully!",
-      "Forgive him"
+      "Forgive him",
+      "[Require #rMoon #rSinger]",
+      "Heal #gALL #gHP, upgrade #yALL #yWorkers",
+      "Acquire #yFencing"
     ]
   }
 }

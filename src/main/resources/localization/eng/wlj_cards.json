@@ -486,5 +486,10 @@
     "NAME": "Koro",
     "DESCRIPTION": "Worker, deal !D! damage to all enemies, at the end of your turn deal !D! to yourself if in hand. While in draw pile prevent all damage and add to this card's damage.",
     "FLAVOR": "From 'Wang Lao Ju’s Esports Genesis Year'."
+  },
+  "Wlj:Fencing": {
+    "NAME": "Fencing",
+    "DESCRIPTION": "Deal !D! Damage, the enemy loses Strength equal to unblocked damage dealt for this turn.",
+    "FLAVOR": "From 'Wang Lao Ju Teaches You Fencing'."
   }
 }

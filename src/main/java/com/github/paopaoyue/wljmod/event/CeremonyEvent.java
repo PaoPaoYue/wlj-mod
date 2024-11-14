@@ -1,18 +1,24 @@
 package com.github.paopaoyue.wljmod.event;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
+import com.github.paopaoyue.wljmod.card.Fencing;
 import com.github.paopaoyue.wljmod.card.Koro;
+import com.github.paopaoyue.wljmod.card.MoonSinger;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import com.megacrit.cardcrawl.vfx.FastCardObtainEffect;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
+import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,37 +84,79 @@ public class CeremonyEvent extends AbstractImageEvent {
 		switch(state) {
 			case BEGINNING:
 				this.option = buttonPressed;
-				imageEventText.updateBodyText(DESCRIPTIONS[buttonPressed + 1]);
+				this.imageEventText.updateBodyText(DESCRIPTIONS[buttonPressed + 1]);
 				this.imageEventText.clearAllDialogs();
-				if (buttonPressed < 3) {
-					this.imageEventText.setDialogOption(OPTIONS[buttonPressed + 4]);
-				} else {
-					setCard();
-					if (this.cardToRemove != null) {
-						this.imageEventText.setDialogOption(OPTIONS[7] + this.cardToRemove.name, this.cardToRemove);
-					} else {
-						this.imageEventText.setDialogOption(OPTIONS[9]);
-					}
+				switch (buttonPressed) {
+					case 0:
+						this.imageEventText.setDialogOption(OPTIONS[4]);
+						break;
+					case 1:
+						this.imageEventText.setDialogOption(OPTIONS[5]);
+						if (AbstractDungeon.player.masterDeck.group.stream().anyMatch(c -> c instanceof MoonSinger)) {
+							this.imageEventText.updateBodyText(DESCRIPTIONS[5]);
+							this.imageEventText.setDialogOption(OPTIONS[11], false);
+						}
+						else
+							this.imageEventText.setDialogOption(OPTIONS[10], true);
+						break;
+					case 2:
+						this.imageEventText.setDialogOption(OPTIONS[6]);
+						this.imageEventText.setDialogOption(OPTIONS[12]);
+						break;
+					case 3:
+						setCard();
+						if (this.cardToRemove != null) {
+							this.imageEventText.setDialogOption(OPTIONS[7] + this.cardToRemove.name, this.cardToRemove);
+						} else {
+							this.imageEventText.setDialogOption(OPTIONS[9]);
+						}
+						break;
+					default:
+						break;
 				}
 				this.state = State.SELECTED;
 				this.changeBGM();
 				break;
 			case SELECTED:
+				ArrayList<AbstractCard> rewards;
 				switch(option) {
 				case 0:
-					ArrayList<AbstractCard> rewards = new ArrayList<>();
-					rewards.add(new Koro());
+                    rewards = new ArrayList<>();
+                    rewards.add(new Koro());
 					AbstractDungeon.cardRewardScreen.customCombatOpen(rewards, CardRewardScreen.TEXT[1], true);
 					break;
 				case 1:
-					int goldAmount = (int)(AbstractDungeon.player.gold * GOLD_BOOST);
-					AbstractDungeon.effectList.add(new RainingGoldEffect(10));
-					AbstractDungeon.player.gainGold(goldAmount);
+					if (buttonPressed == 0) {
+						int goldAmount = (int)(AbstractDungeon.player.gold * GOLD_BOOST);
+						AbstractDungeon.effectList.add(new RainingGoldEffect(10));
+						AbstractDungeon.player.gainGold(goldAmount);
+					} else {
+						AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
+						int effectCount = 0;
+						for (final AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+							if (c instanceof AbstractWorkerCard && c.canUpgrade()) {
+								if (++effectCount <= 20) {
+									final float x = MathUtils.random(0.1f, 0.9f) * Settings.WIDTH;
+									final float y = MathUtils.random(0.2f, 0.8f) * Settings.HEIGHT;
+									AbstractDungeon.effectList.add(new ShowCardBrieflyEffect(c.makeStatEquivalentCopy(), x, y));
+									AbstractDungeon.topLevelEffects.add(new UpgradeShineEffect(x, y));
+								}
+								c.upgrade();
+								AbstractDungeon.player.bottledCardUpgradeCheck(c);
+							}
+						}
+					}
 					break;
 				case 2:
 					CardCrawlGame.sound.play("Wlj:EVENT_OH");
-					AbstractDungeon.player.damage(new DamageInfo(null, DAMAGE_AMOUNT));
-					AbstractDungeon.player.increaseMaxHp(HEAL_AMOUNT, true);
+					if (buttonPressed == 0) {
+						AbstractDungeon.player.damage(new DamageInfo(null, DAMAGE_AMOUNT));
+						AbstractDungeon.player.increaseMaxHp(HEAL_AMOUNT, true);
+					} else {
+						rewards = new ArrayList<>();
+						rewards.add(new Fencing());
+						AbstractDungeon.cardRewardScreen.customCombatOpen(rewards, CardRewardScreen.TEXT[1], true);
+					}
 					break;
 				case 3:
 					AbstractDungeon.effectList.add(new PurgeCardEffect(this.cardToRemove));

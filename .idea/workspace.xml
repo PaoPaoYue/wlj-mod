@@ -4,11 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix" />
+    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/FencingAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Fencing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/fencing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/image/card/fencing_p.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/event/CeremonyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/event/CeremonyEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_cards.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_events.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_events.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_events.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_events.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/../mesh/examples/demo">
@@ -75,12 +90,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-8.0-bin/ca5e32bp14vu59qr306oxotwh/gradle-8.0/lib/gradle-kotlin-dsl-8.0.jar!/org/gradle/kotlin/dsl/support/delegates/ProjectDelegate.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/BaseMod.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/IUIElement.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/ModBadge.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/ModLabeledToggleButton.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/abstracts/CustomCard.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/abstracts/CustomPlayer.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/ModTheSpire.jar!/com/evacipated/cardcrawl/modthespire/lib/SpireInsertPatch.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/ModTheSpire.jar!/com/evacipated/cardcrawl/modthespire/lib/SpirePostfixPatch.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/badlogic/gdx/graphics/g2d/SpriteBatch.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/badlogic/gdx/math/MathUtils.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/badlogic/gdx/math/RandomXS128.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/google/gson/Gson.class" root0="SKIP_INSPECTION" />
@@ -122,14 +140,18 @@
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/screens/CardRewardScreen.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/screens/select/BossRelicSelectScreen.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/screens/select/GridCardSelectScreen.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/AbstractGameEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/GainGoldTextEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/RainingGoldEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/TouchPickupGold.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/cardManip/ShowCardAndAddToDiscardEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/cardManip/ShowCardAndAddToDrawPileEffect.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/combat/FallingIceEffect.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/combat/FlashAtkImgEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/combat/GainPowerEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/combat/PowerDebuffEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/combat/PressurePointEffect.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://D:/Program Files/Java/jdk-8/src.zip!/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
     <setting file="jar://D:/Program Files/Java/jdk-8/src.zip!/java/util/List.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -149,40 +171,40 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.onmyoji-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [cleanPublishFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [cleanTestFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToMODFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToPublishFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [deployToTestFolder].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [publishMod].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.wlj-mod [runGame].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/LENOVO/Desktop/projects/wlj-mod/src/main/resources/localization/eng&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.38045976&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.onmyoji-mod [deployToMODFolder].executor": "Run",
+    "Gradle.wlj-mod [cleanPublishFolder].executor": "Run",
+    "Gradle.wlj-mod [cleanTestFolder].executor": "Run",
+    "Gradle.wlj-mod [clean].executor": "Run",
+    "Gradle.wlj-mod [deployToMODFolder].executor": "Run",
+    "Gradle.wlj-mod [deployToPublishFolder].executor": "Run",
+    "Gradle.wlj-mod [deployToTestFolder].executor": "Run",
+    "Gradle.wlj-mod [publishMod].executor": "Run",
+    "Gradle.wlj-mod [runGame].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/LENOVO/Desktop/projects/wlj-mod/src/main/resources/localization/eng",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.38045976",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.paopaoyue.wljmod.action" />
@@ -471,6 +493,16 @@
       <workItem from="1729518633822" duration="6662000" />
       <workItem from="1729534718540" duration="86794000" />
       <workItem from="1729798988730" duration="7669000" />
+      <workItem from="1729846389569" duration="9900000" />
+      <workItem from="1729865297377" duration="779000" />
+      <workItem from="1729899565222" duration="26000" />
+      <workItem from="1730041081776" duration="79000" />
+      <workItem from="1730352328313" duration="57000" />
+      <workItem from="1730416116778" duration="125000" />
+      <workItem from="1730612912869" duration="5268000" />
+      <workItem from="1730651729207" duration="605000" />
+      <workItem from="1730683010992" duration="584000" />
+      <workItem from="1731599805617" duration="4836000" />
     </task>
     <servers />
   </component>
