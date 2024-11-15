@@ -491,5 +491,11 @@
     "NAME": "Fencing",
     "DESCRIPTION": "Deal !D! Damage, the enemy loses Strength equal to unblocked damage dealt for this turn.",
     "FLAVOR": "From 'Wang Lao Ju Teaches You Fencing'."
+  },
+  "Wlj:Pinocchio": {
+    "NAME": "Pinocchio",
+    "DESCRIPTION": "Heal !M! HP. The number of cards in hand must be less than !M!; If you lie, enhance the effect permanently. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. Heal !M! HP. The number of cards in hand must be less than !M!; If you lie, enhance the effect permanently. NL Exhaust.",
+    "FLAVOR": "From 'Wang Lao Ju Teaches You to Lie and Turn into a Donkey' series."
   }
 }

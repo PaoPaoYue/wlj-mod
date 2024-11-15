@@ -1,10 +1,7 @@
 package com.github.paopaoyue.wljmod.event;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
-import com.github.paopaoyue.wljmod.card.Fencing;
-import com.github.paopaoyue.wljmod.card.Koro;
-import com.github.paopaoyue.wljmod.card.MoonSinger;
+import com.github.paopaoyue.wljmod.card.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -100,15 +97,16 @@ public class CeremonyEvent extends AbstractImageEvent {
 							this.imageEventText.setDialogOption(OPTIONS[10], true);
 						break;
 					case 2:
-						this.imageEventText.setDialogOption(OPTIONS[6]);
 						this.imageEventText.setDialogOption(OPTIONS[12]);
+						this.imageEventText.setDialogOption(OPTIONS[6]);
 						break;
 					case 3:
+						this.imageEventText.setDialogOption(OPTIONS[13]);
 						setCard();
 						if (this.cardToRemove != null) {
 							this.imageEventText.setDialogOption(OPTIONS[7] + this.cardToRemove.name, this.cardToRemove);
 						} else {
-							this.imageEventText.setDialogOption(OPTIONS[9]);
+							this.imageEventText.setDialogOption(OPTIONS[9], true);
 						}
 						break;
 					default:
@@ -150,17 +148,23 @@ public class CeremonyEvent extends AbstractImageEvent {
 				case 2:
 					CardCrawlGame.sound.play("Wlj:EVENT_OH");
 					if (buttonPressed == 0) {
-						AbstractDungeon.player.damage(new DamageInfo(null, DAMAGE_AMOUNT));
-						AbstractDungeon.player.increaseMaxHp(HEAL_AMOUNT, true);
-					} else {
 						rewards = new ArrayList<>();
 						rewards.add(new Fencing());
 						AbstractDungeon.cardRewardScreen.customCombatOpen(rewards, CardRewardScreen.TEXT[1], true);
+					} else {
+						AbstractDungeon.player.damage(new DamageInfo(null, DAMAGE_AMOUNT));
+						AbstractDungeon.player.increaseMaxHp(HEAL_AMOUNT, true);
 					}
 					break;
 				case 3:
-					AbstractDungeon.effectList.add(new PurgeCardEffect(this.cardToRemove));
-					AbstractDungeon.player.masterDeck.removeCard(this.cardToRemove);
+					if (buttonPressed == 0) {
+						rewards = new ArrayList<>();
+						rewards.add(new Pinocchio());
+						AbstractDungeon.cardRewardScreen.customCombatOpen(rewards, CardRewardScreen.TEXT[1], true);
+					} else {
+						AbstractDungeon.effectList.add(new PurgeCardEffect(this.cardToRemove));
+						AbstractDungeon.player.masterDeck.removeCard(this.cardToRemove);
+					}
 					break;
 				default:
 					break;
@@ -181,24 +185,12 @@ public class CeremonyEvent extends AbstractImageEvent {
 
 	private void setCard() {
         List<AbstractCard> workers = new ArrayList<>();
-		List<AbstractCard> commonCards = new ArrayList<>();
-		List<AbstractCard> otherCards = new ArrayList<>();
 		for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
-			if (c instanceof AbstractWorkerCard) {
+			if (c instanceof AbstractWorkerCard)
 				workers.add(c);
-			} else if (c.rarity == AbstractCard.CardRarity.COMMON) {
-				commonCards.add(c);
-			} else {
-				otherCards.add(c);
-			}
 		}
-		if (!workers.isEmpty()) {
+		if (!workers.isEmpty())
 			this.cardToRemove = workers.get(AbstractDungeon.miscRng.random(workers.size() - 1));
-		} else if (!commonCards.isEmpty()) {
-			this.cardToRemove = commonCards.get(AbstractDungeon.miscRng.random(commonCards.size() - 1));
-		} else {
-			this.cardToRemove = otherCards.get(AbstractDungeon.miscRng.random(otherCards.size() - 1));
-		}
     }
 
 	private void changeBGM() {
