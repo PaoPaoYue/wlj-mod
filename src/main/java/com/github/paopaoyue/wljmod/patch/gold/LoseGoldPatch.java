@@ -31,7 +31,7 @@ public class LoseGoldPatch {
                     .collect(Collectors.toList());
             if (!monsters.isEmpty()) {
                 __instance.gold += goldAmount;
-                int goldToBorrowFromEach = Math.max(1, goldAmount / monsters.size());
+                int goldToBorrowFromEach = (int) Math.max(1, Math.ceil( (double) goldAmount / monsters.size()));
                 for (AbstractMonster monster: monsters) {
                     int goldToBorrow = goldAmount <= 0 ? 0: goldToBorrowFromEach;
                     goldAmount -= goldToBorrow;
