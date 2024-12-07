@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.power.CapitalistPower;
@@ -22,15 +21,22 @@ public class Capitalist extends AbstractWljCard {
     public Capitalist() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 12;
+        this.baseMagicNumber = 6;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         PurchaseAction.sfxUtil.playSFX();
-        if (upgraded) {
-            WljMod.tempGold += this.baseMagicNumber;
+        if (!upgraded) {
+            this.addToBot(new PurchaseAction(this.magicNumber, ok -> {
+                if (ok) {
+                    this.addToTop(new ApplyPowerAction(p, p, new CapitalistPower(p, 1)));
+                }
+            }));
         }
-        this.addToBot(new ApplyPowerAction(p, p, new CapitalistPower(p, 1)));
+        else {
+            this.addToBot(new ApplyPowerAction(p, p, new CapitalistPower(p, 1)));
+        }
     }
 
     public void upgrade() {

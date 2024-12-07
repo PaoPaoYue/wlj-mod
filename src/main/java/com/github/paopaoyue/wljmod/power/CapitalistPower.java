@@ -31,6 +31,8 @@ public class CapitalistPower extends AbstractPower {
         cardPool.add(new Dice());
         cardPool.add(new Box());
         cardPool.add(new BridgeEngineer());
+        cardPool.add(new Capitalist());
+        cardPool.add(new Scone());
     }
 
     public CapitalistPower(AbstractCreature owner, int amount) {

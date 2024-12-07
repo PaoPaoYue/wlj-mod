@@ -94,16 +94,17 @@
       "Frieren-Shu-Na",
       "To-Li-Na-Shu-Lin"
     ],
-    "FLAVOR": "The chinese pronunciation of an lily in Elden Ring. The correct name is 'To-Li-Na-Shu-Lin', but WangLJ couldn't read it right every time."
+    "FLAVOR": "The chinese pronunciation of an lily in Elden Ring. After being played 4 times, it will reset to the correct name is 'To-Li-Na-Shu-Lin', but WangLJ couldn't read it right every time."
   },
   "Wlj:Theft": {
     "NAME": "Expertise",
-    "DESCRIPTION": "Steal !M! Strength from the enemy. If the enemy has no Strength, Exhaust.",
+    "DESCRIPTION": "Steal !M! Strength from the enemy. You can steel even if the enemy has no Strength, but it will Exhaust.",
     "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. The expertise of Afei is to steal and lock picking."
   },
   "Wlj:Child Labor": {
     "NAME": "Child Labor",
-    "DESCRIPTION": "Pay 2 gold, trigger the end of turn effect for all *Rabble in hand or draw pile, and draw !M! cards.",
+    "DESCRIPTION": "Pay 2 gold, draw !M! cards and randomly turn one of them into *Rabble.",
+    "UPGRADE_DESCRIPTION": "Pay 2 gold, draw !M! cards and turn one of them into *Rabble+.",
     "FLAVOR": "From 'WangLJ Teaches You Frostpunk Survival' series."
   },
   "Wlj:Fertile": {
@@ -166,7 +167,7 @@
   },
   "Wlj:Scone": {
     "NAME": "Five Sword Saints",
-    "DESCRIPTION": "Scry 5. Gain !B! Block for each Worker you Scry.",
+    "DESCRIPTION": "Pay !M! gold to gain !B! Block.",
     "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. Afei mislead attackers to The five city guards to get protection for free."
   },
   "Wlj:Prison": {
@@ -176,8 +177,7 @@
   },
   "Wlj:Egg": {
     "NAME": "No Yolk Egg",
-    "DESCRIPTION": "Remove all enemies' Artifacts. NL If any enemy has no Artifacts, gain [E] [E] [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Remove all enemies' Artifacts. NL If any enemy has no Artifacts, gain [E] [E] [E] [E]. NL Exhaust.",
+    "DESCRIPTION": "Remove all enemies' Artifacts, apply !M! Weak to all enemies. NL Exhaust.",
     "FLAVOR": "From the series 'WangLaoJu Teaches You to Become a Broken Sword Hero'. No one can resist the invitation because of the egg."
   },
   "Wlj:Steep": {
@@ -450,18 +450,18 @@
   },
   "Wlj:Clubhouse": {
     "NAME": "Afei Yoga Club",
-    "DESCRIPTION": "At the end of your turn, lose all Thorns, then gain Thorns equal to the number of Workers in discard pile.",
-    "UPGRADE_DESCRIPTION": "Draw !M! Workers. At the end of your turn, lose all Thorns, then gain Thorns equal to the number of Workers in discard pile.",
+    "DESCRIPTION": "At the end of your turn, remove all Thorns, then gain Thorns equal to the number of Workers in discard pile.",
+    "UPGRADE_DESCRIPTION": "Retain. At the end of your turn, remove all Thorns, then gain Thorns equal to the number of Workers in discard pile.",
     "FLAVOR": "From 'WangLJ's Slave Afei's Inspiring Life' series. The fortress Afei built in the game."
   },
   "Wlj:Moon Singer": {
     "NAME": "Moon Singer",
-    "DESCRIPTION": "Apply 1 Weak to all enemies, then increase all Debuff of enemies by !M! .",
+    "DESCRIPTION": "For each *Rabble in hand, reduce all enemies' Strength by !M! this turn.",
     "FLAVOR": "WangLJ and his wifi are called 'Sun Knight' and 'Moon Singer' respectively by fans."
   },
   "Wlj:Giant King": {
     "NAME": "The Giant King",
-    "DESCRIPTION": "Choose up to 8 cards from the top of draw pile and place them at the bottom of discard pile; Draw !M! cards from there upon attack the target. NL Deal !D! damage. Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. Exempt you from Payment or losing gold and deal damage equal to this attack to the target. Exhaust.",
     "FLAVOR": "One famous boss in Dark Souls 2 that players farm souls on him. Frequently referred by WangLJ in his videos to describe an enemy as ATM."
   },
   "Wlj:Future Tech": {
@@ -484,7 +484,7 @@
   },
   "Wlj:Koro": {
     "NAME": "Koro",
-    "DESCRIPTION": "Worker, deal !D! damage to all enemies, at the end of your turn deal !D! to yourself if in hand. While in draw pile prevent all damage and add to this card's damage.",
+    "DESCRIPTION": "Worker, deal !D! damage to all enemies, While in draw pile prevent all damage and add to this card's damage. At the end of your turn deal the damage to yourself if in hand",
     "FLAVOR": "From 'Wang Lao Ju’s Esports Genesis Year'."
   },
   "Wlj:Fencing": {

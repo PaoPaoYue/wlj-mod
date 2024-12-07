@@ -1,11 +1,10 @@
 package com.github.paopaoyue.wljmod.card;
 
-import com.github.paopaoyue.wljmod.WljMod;
 import com.github.paopaoyue.wljmod.action.PurchaseAction;
+import com.github.paopaoyue.wljmod.action.TransformDrawnCardsAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.patch.CardTagEnum;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -22,8 +21,8 @@ public class ChildLabor extends AbstractWljCard {
 
     public ChildLabor() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.SELF);
-        this.baseMagicNumber = 1;
+                AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Rabble();
         this.tags.add(CardTagEnum.PAY);
@@ -32,12 +31,7 @@ public class ChildLabor extends AbstractWljCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new PurchaseAction(2, ok -> {
             if (ok) {
-                addToTop(new DrawCardAction(this.magicNumber));
-                WljMod.workerManager.iterOutsideDiscardPile(c -> {
-                    if (c instanceof Rabble) {
-                        addToTop(new GainBlockAction(p, c.magicNumber));
-                    }
-                });
+                addToTop(new DrawCardAction(this.magicNumber, new TransformDrawnCardsAction(new Rabble(), false, !this.upgraded)));
             }
         }));
     }
@@ -45,7 +39,8 @@ public class ChildLabor extends AbstractWljCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(1);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 

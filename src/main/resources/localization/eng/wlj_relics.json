@@ -51,7 +51,7 @@
     "NAME": "Sheep Pen",
     "FLAVOR": "Tonight, we will never retreat, because what behind us is our sheep village!",
     "DESCRIPTIONS": [
-      "When losing #yGold in battle, turn 1 #yRabble in your hand into another random #yWorker."
+      "When #yPay or losing #yGold in battle, turn 1 #yRabble in your hand into another random #yWorker."
     ],
     "EXTRA_FLAVOR": "From 'Wang Lao Ju Teaches You to Defend the Village' series."
   },

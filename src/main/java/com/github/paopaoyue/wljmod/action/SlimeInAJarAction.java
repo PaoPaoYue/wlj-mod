@@ -10,19 +10,21 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SlimeInAJarAction extends AbstractGameAction {
 
-    private static final AbstractCard[] WORKER_CARDS = new AbstractCard[]{
-            new Keel(),
-            new Erwen(),
-            new Crab(),
-            new Gaoshi(),
-            new Leidongxuan(),
-            new Prisoner(),
-            new Performer(),
-            new Rabble(),
-    };
+    private static final List<AbstractCard> cardPool = new ArrayList<>();
+
+    static {
+        cardPool.add(new Keel());
+        cardPool.add(new Erwen());
+        cardPool.add(new Crab());
+        cardPool.add(new Gaoshi());
+        cardPool.add(new Leidongxuan());
+        cardPool.add(new Prisoner());
+        cardPool.add(new Koro());
+    }
 
     private boolean retrieveCard;
 
@@ -64,9 +66,9 @@ public class SlimeInAJarAction extends AbstractGameAction {
 
     private ArrayList<AbstractCard> generateCardChoices() {
         ArrayList<AbstractCard> choices = new ArrayList<AbstractCard>();
-        choices.add(WORKER_CARDS[7]);
-        choices.add(WORKER_CARDS[6]);
-        choices.add(WORKER_CARDS[AbstractDungeon.cardRandomRng.random(0, 5)]);
+        choices.add(new Rabble());
+        choices.add(new Performer());
+        choices.add(cardPool.get(AbstractDungeon.cardRandomRng.random(cardPool.size() - 1)));
         return choices;
     }
 }

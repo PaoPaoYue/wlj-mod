@@ -22,7 +22,7 @@ public class Rescue extends AbstractWljCard {
     public Rescue() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.baseDamage = 6;
+        this.baseDamage = 7;
         this.isMultiDamage = true;
         this.cardsToPreview = new Rabble();
     }

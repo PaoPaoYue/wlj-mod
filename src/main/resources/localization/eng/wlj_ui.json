@@ -1,4 +1,9 @@
 {
+  "Wlj:PurchaseAction": {
+    "TEXT": [
+      "I need more gold!"
+    ]
+  },
   "Wlj:LayoffAction": {
     "TEXT": [
       "Select and optimize up to one card.",
@@ -37,6 +42,13 @@
       " additional attack damage. NL #yRabble provides #b",
       " block at the end of the turn. NL #yPrisoners provide #b",
       " gold at the end of the battle."
+    ]
+  },
+  "Wlj:Pinocchio": {
+    "TEXT": [
+      "You Lie!",
+      "Liar!",
+      "Bad Puppet!"
     ]
   }
 }

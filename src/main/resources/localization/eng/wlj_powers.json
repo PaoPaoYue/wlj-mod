@@ -138,15 +138,15 @@
   "Wlj:Clubhouse": {
     "NAME": "Afei Yoga Club",
     "DESCRIPTIONS": [
-      "At the end of your turn, lose all #yThorns, then gain #yThorns #b",
+      "At the end of your turn, remove all #yThorns, then gain #yThorns #b",
       " times the number of #yWorkers in discard pile."
     ]
   },
   "Wlj:Giant King": {
     "NAME": "The Giant King",
     "DESCRIPTIONS": [
-      "In this turn, fill your hand with #b",
-      " cards after attack."
+      "Exempt you from #yPayment or losing gold while receiving #b",
+      " damage."
     ]
   },
   "Wlj:Bonfire": {

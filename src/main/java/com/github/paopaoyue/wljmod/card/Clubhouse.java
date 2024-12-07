@@ -1,6 +1,5 @@
 package com.github.paopaoyue.wljmod.card;
 
-import com.github.paopaoyue.wljmod.action.DrawSpecificCardAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.github.paopaoyue.wljmod.power.ClubhousePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -21,21 +20,18 @@ public class Clubhouse extends AbstractWljCard {
     public Clubhouse() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 2, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 0;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            this.addToBot(new DrawSpecificCardAction(this.magicNumber, c -> c instanceof AbstractWorkerCard));
-        }
-        this.addToBot(new ApplyPowerAction(p, p, new ClubhousePower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new ClubhousePower(p, this.magicNumber), this.magicNumber));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeMagicNumber(2);
+            this.selfRetain = true;
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }

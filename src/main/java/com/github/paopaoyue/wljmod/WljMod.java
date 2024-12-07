@@ -252,6 +252,7 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
         BaseMod.addAudio("Wlj:INVITE_5", "audio/invite_5.mp3");
         BaseMod.addAudio("Wlj:INVITE_6", "audio/invite_6.mp3");
         BaseMod.addAudio("Wlj:INVITE_7", "audio/invite_7.mp3");
+        BaseMod.addAudio("Wlj:MOON_SINGER", "audio/moon_singer.mp3");
         BaseMod.addAudio("Wlj:EVENT_LOL", "audio/event_lol.mp3");
         BaseMod.addAudio("Wlj:EVENT_SONG", "audio/event_song.mp3");
         BaseMod.addAudio("Wlj:EVENT_LOVE", "audio/event_love.mp3");

@@ -20,7 +20,7 @@ public class RandomTransformRabbleAction extends AbstractGameAction {
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             if (card instanceof Rabble) {
                 AbstractCard replacement;
-                int random = AbstractDungeon.cardRandomRng.random(0, 8);
+                int random = AbstractDungeon.cardRandomRng.random(0, 9);
                 switch (random) {
                     case 0:
                         replacement = new Prisoner();
@@ -39,6 +39,9 @@ public class RandomTransformRabbleAction extends AbstractGameAction {
                         break;
                     case 5:
                         replacement = new Keel();
+                        break;
+                    case 6:
+                        replacement = new Koro();
                         break;
                     default:
                         replacement = new Performer();

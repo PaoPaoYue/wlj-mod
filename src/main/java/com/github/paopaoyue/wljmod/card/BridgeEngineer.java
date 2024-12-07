@@ -24,7 +24,7 @@ public class BridgeEngineer extends AbstractWljCard {
     public BridgeEngineer() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.POWER,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 10;
+        this.baseMagicNumber = 12;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTagEnum.PAY);
     }

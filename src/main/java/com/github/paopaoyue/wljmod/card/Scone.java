@@ -1,6 +1,6 @@
 package com.github.paopaoyue.wljmod.card;
 
-import com.github.paopaoyue.wljmod.action.ScryWithCallbackAction;
+import com.github.paopaoyue.wljmod.action.PurchaseAction;
 import com.github.paopaoyue.wljmod.patch.AbstractCardEnum;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,14 +19,15 @@ public class Scone extends AbstractWljCard {
 
     public Scone() {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.SKILL,
-                AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseBlock = 5;
+                AbstractCardEnum.WLJ_COLOR, CardRarity.COMMON, CardTarget.SELF);
+        this.baseBlock = 13;
+        this.baseMagicNumber = 4;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ScryWithCallbackAction(5, selectedCards -> {
-            int count = (int) selectedCards.stream().filter(card -> card instanceof AbstractWorkerCard).count();
-            for (int i = 0; i < count; i++) {
+        this.addToBot(new PurchaseAction(this.magicNumber, ok -> {
+            if (ok) {
                 this.addToTop(new GainBlockAction(p, p, this.block));
             }
         }));
@@ -35,7 +36,7 @@ public class Scone extends AbstractWljCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(2);
+            this.upgradeMagicNumber(-2);
         }
     }
 
