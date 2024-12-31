@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix" />
+    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,12 +80,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-8.0-bin/ca5e32bp14vu59qr306oxotwh/gradle-8.0/lib/gradle-kotlin-dsl-8.0.jar!/org/gradle/kotlin/dsl/support/delegates/ProjectDelegate.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/AutoAdd.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/BaseMod.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/IUIElement.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/ModBadge.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/ModLabeledToggleButton.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/abstracts/CustomCard.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/abstracts/CustomPlayer.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/BaseMod.jar!/basemod/abstracts/CustomRelic.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/ModTheSpire.jar!/com/evacipated/cardcrawl/modthespire/lib/SpireInsertPatch.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/ModTheSpire.jar!/com/evacipated/cardcrawl/modthespire/lib/SpirePostfixPatch.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/badlogic/gdx/graphics/g2d/SpriteBatch.class" root0="SKIP_INSPECTION" />
@@ -103,6 +107,7 @@
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/common/TransformCardInHandAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/unique/ExpertiseAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/unique/WhirlwindAction.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/utility/SFXAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/utility/WaitAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/actions/watcher/TriggerMarksAction.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/cards/AbstractCard.class" root0="SKIP_INSPECTION" />
@@ -116,6 +121,7 @@
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/events/AbstractEvent.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/events/AbstractImageEvent.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/events/GenericEventDialog.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/helpers/CardLibrary.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/helpers/FontHelper.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/helpers/TipHelper.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/monsters/AbstractMonster.class" root0="SKIP_INSPECTION" />
@@ -139,6 +145,7 @@
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/combat/GainPowerEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/combat/PowerDebuffEffect.class" root0="SKIP_INSPECTION" />
     <setting file="jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/vfx/combat/PressurePointEffect.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://D:/Program Files/Java/jdk-8/src.zip!/java/lang/Math.java" root0="SKIP_INSPECTION" />
     <setting file="jar://D:/Program Files/Java/jdk-8/src.zip!/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
     <setting file="jar://D:/Program Files/Java/jdk-8/src.zip!/java/util/List.java" root0="SKIP_INSPECTION" />
   </component>
@@ -219,7 +226,7 @@
       <recent name="com.github.paopaoyue.wljmod.patch.relic" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.wlj-mod [publishMod]">
+  <component name="RunManager" selected="Gradle.wlj-mod [deployToTestFolder]">
     <configuration name="wlj-mod [cleanTestFolder]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -339,8 +346,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.wlj-mod [publishMod]" />
         <item itemvalue="Gradle.wlj-mod [deployToTestFolder]" />
+        <item itemvalue="Gradle.wlj-mod [publishMod]" />
         <item itemvalue="Gradle.wlj-mod [runGame]" />
         <item itemvalue="Gradle.wlj-mod [cleanTestFolder]" />
         <item itemvalue="Gradle.wlj-mod [deployToPublishFolder]" />
@@ -494,6 +501,12 @@
       <workItem from="1731637051029" duration="11547000" />
       <workItem from="1733481090822" duration="18712000" />
       <workItem from="1733558670082" duration="12371000" />
+      <workItem from="1733715972195" duration="800000" />
+      <workItem from="1733811220897" duration="18000" />
+      <workItem from="1734244146659" duration="2033000" />
+      <workItem from="1734275178484" duration="1738000" />
+      <workItem from="1735018937694" duration="3338000" />
+      <workItem from="1735556926869" duration="22000" />
     </task>
     <servers />
   </component>
@@ -536,7 +549,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$PROJECT_DIR$/../mtsLib/desktop-1.0.jar!/com/megacrit/cardcrawl/stances/NeutralStance.class</url>
           <line>29</line>
-          <properties class="com.megacrit.cardcrawl.stances.NeutralStance">
+          <properties class="com.megacrit.cardcrawl.stances.NeutralStance" method="render">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
