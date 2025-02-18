@@ -60,7 +60,7 @@ public class ChangeIntentPatch {
             localvars = {"m"}
         )
         public static SpireReturn<Void> Insert(GameActionManager __instance, AbstractMonster m) {
-            if (moveRecord.containsKey(m)) {
+            if (moveRecord.containsKey(m) && m.intent == AbstractMonster.Intent.ATTACK) {
                 Integer damage = Reflect.getPrivate(AbstractMonster.class, m, "intentDmg", Integer.class);
                 if (damage == null) {
                     logger.error("Failed to get intent damage");

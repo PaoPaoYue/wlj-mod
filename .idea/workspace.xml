@@ -45,12 +45,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="wlj-mod" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="wlj-mod" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
@@ -148,6 +142,12 @@
     <setting file="jar://D:/Program Files/Java/jdk-8/src.zip!/java/lang/Math.java" root0="SKIP_INSPECTION" />
     <setting file="jar://D:/Program Files/Java/jdk-8/src.zip!/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
     <setting file="jar://D:/Program Files/Java/jdk-8/src.zip!/java/util/List.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="KotlinScriptingSettings">
+    <scriptDefinition className="org.jetbrains.kotlin.scripting.resolve.KotlinScriptDefinitionFromAnnotatedTemplate" definitionName="KotlinBuildScript">
+      <order>2147483647</order>
+      <autoReloadConfigurations>true</autoReloadConfigurations>
+    </scriptDefinition>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -507,6 +507,11 @@
       <workItem from="1734275178484" duration="1738000" />
       <workItem from="1735018937694" duration="3338000" />
       <workItem from="1735556926869" duration="22000" />
+      <workItem from="1737449871419" duration="3194000" />
+      <workItem from="1737654195576" duration="1540000" />
+      <workItem from="1737907536049" duration="1795000" />
+      <workItem from="1738399582938" duration="3139000" />
+      <workItem from="1738853792695" duration="199000" />
     </task>
     <servers />
   </component>
