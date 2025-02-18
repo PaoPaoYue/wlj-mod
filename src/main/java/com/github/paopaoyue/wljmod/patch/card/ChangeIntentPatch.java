@@ -24,6 +24,8 @@ public class ChangeIntentPatch {
     private static final Map<AbstractMonster, EnemyMoveInfo> moveRecord = new HashMap<>();
     private static final Map<AbstractMonster, String> moveNameRecord = new HashMap<>();
 
+    private static final byte MOCKED_MOVE = (byte) 233;
+
     private static final List<AbstractMonster.Intent> allowedIntents = Arrays.asList(
         AbstractMonster.Intent.ATTACK,
         AbstractMonster.Intent.ATTACK_BUFF,
@@ -44,7 +46,7 @@ public class ChangeIntentPatch {
                 moveRecord.put(m, Reflect.getPrivate(AbstractMonster.class, m, "move", EnemyMoveInfo.class));
                 moveNameRecord.put(m, m.moveName);
             }
-            m.setMove(m.nextMove, AbstractMonster.Intent.ATTACK, damage);
+            m.setMove(null, MOCKED_MOVE, AbstractMonster.Intent.ATTACK, damage);
             m.createIntent();
         }
     }
@@ -60,27 +62,30 @@ public class ChangeIntentPatch {
             localvars = {"m"}
         )
         public static SpireReturn<Void> Insert(GameActionManager __instance, AbstractMonster m) {
-            if (moveRecord.containsKey(m) && m.intent == AbstractMonster.Intent.ATTACK) {
-                Integer damage = Reflect.getPrivate(AbstractMonster.class, m, "intentDmg", Integer.class);
-                if (damage == null) {
-                    logger.error("Failed to get intent damage");
-                    damage = 0;
-                }
-                AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(m, "ATTACK"));
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5f));
-                AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, new DamageInfo(m, damage), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
-                m.applyTurnPowers();
+            if (moveRecord.containsKey(m)) {
+                EnemyMoveInfo currentMove = Reflect.getPrivate(AbstractMonster.class, m, "move", EnemyMoveInfo.class);
                 String moveName = moveNameRecord.get(m);
-                EnemyMoveInfo move = moveRecord.get(m);
-                m.setMove(moveName, move.nextMove, move.intent, move.baseDamage, move.multiplier, move.isMultiDamage);
+                EnemyMoveInfo replacedMove = moveRecord.get(m);
                 moveRecord.remove(m);
                 moveNameRecord.remove(m);
-                __instance.monsterQueue.remove(0);
-                if (__instance.monsterQueue.isEmpty()) {
-                    __instance.addToBottom(new WaitAction(1.5F));
+                if (currentMove != null && currentMove.nextMove == MOCKED_MOVE) {
+                    Integer damage = Reflect.getPrivate(AbstractMonster.class, m, "intentDmg", Integer.class);
+                    if (damage == null) {
+                        logger.error("Failed to get intent damage");
+                        damage = 0;
+                    }
+                    AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(m, "ATTACK"));
+                    AbstractDungeon.actionManager.addToBottom(new WaitAction(0.5f));
+                    AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player, new DamageInfo(m, damage), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+
+                    m.applyTurnPowers();
+                    m.setMove(moveName, replacedMove.nextMove, replacedMove.intent, replacedMove.baseDamage, replacedMove.multiplier, replacedMove.isMultiDamage);
+                    __instance.monsterQueue.remove(0);
+                    if (__instance.monsterQueue.isEmpty()) {
+                        __instance.addToBottom(new WaitAction(1.5F));
+                    }
+                    return SpireReturn.Return(null);
                 }
-                return SpireReturn.Return(null);
             }
             return SpireReturn.Continue();
         }
