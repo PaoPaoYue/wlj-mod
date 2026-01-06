@@ -27,7 +27,7 @@ public class PoisonedArrow extends AbstractWljCard {
         super(ID, cardStrings.NAME, Util.getImagePath(ID), 1, cardStrings.DESCRIPTION, CardType.ATTACK,
                 AbstractCardEnum.WLJ_COLOR, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 7;
-        this.baseMagicNumber = 5;
+        this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
     }
 
@@ -40,7 +40,7 @@ public class PoisonedArrow extends AbstractWljCard {
                 int amount = 0;
                 if (!m.isDeadOrEscaped())
                     amount = (int) m.powers.stream()
-                            .filter(power -> power.type == AbstractPower.PowerType.DEBUFF && !power.ID.equals(PoisonPower.POWER_ID))
+                            .filter(power -> power.type == AbstractPower.PowerType.DEBUFF)
                             .count() * magicNumber;
                 if (amount > 0) {
                     this.addToTop(new ApplyPowerAction(m, p, new PoisonPower(m, p, amount), amount));

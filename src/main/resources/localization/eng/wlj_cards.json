@@ -62,7 +62,7 @@
   },
   "Wlj:Poisoned Arrow": {
     "NAME": "Arrow of Justice",
-    "DESCRIPTION": "Deal !D! damage. For every Debuff except Poison the enemy has, apply !M! Poison.",
+    "DESCRIPTION": "Deal !D! damage. For every Debuff the enemy has, apply !M! Poison.",
     "FLAVOR": "From 'Wang Lao Ju's Dark Souls Journey' series. As a sun knight, the most justice he can do is to shoot poison arrows from long distance."
   },
   "Wlj:Broadsword": {
@@ -177,7 +177,7 @@
   },
   "Wlj:Egg": {
     "NAME": "No Yolk Egg",
-    "DESCRIPTION": "Remove all enemies' Artifacts, apply !M! Weak to all enemies. NL Exhaust.",
+    "DESCRIPTION": "Apply !M! random Debuff to all enemies for 3 times. NL Exhaust.",
     "FLAVOR": "From the series 'WangLaoJu Teaches You to Become a Broken Sword Hero'. No one can resist the invitation because of the egg."
   },
   "Wlj:Steep": {

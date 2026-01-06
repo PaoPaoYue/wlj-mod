@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix" />
+    <list default="true" id="a66948c5-5f94-452d-af22-4e9eb5a1d32c" name="更改" comment="bug fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/WljMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/EggAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/action/EggAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Egg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/Egg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/PoisonedArrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/paopaoyue/wljmod/card/PoisonedArrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/eng/wlj_cards.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization/zhs/wlj_cards.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -511,6 +521,13 @@
       <workItem from="1738399582938" duration="3139000" />
       <workItem from="1738853792695" duration="199000" />
       <workItem from="1739875548357" duration="1508000" />
+      <workItem from="1739878077043" duration="2361000" />
+      <workItem from="1750749498807" duration="7815000" />
+      <workItem from="1753100928776" duration="238000" />
+      <workItem from="1753788098999" duration="3000" />
+      <workItem from="1754756542948" duration="601000" />
+      <workItem from="1756729668162" duration="70000" />
+      <workItem from="1767709329523" duration="2619000" />
     </task>
     <servers />
   </component>

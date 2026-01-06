@@ -2,6 +2,7 @@ package com.github.paopaoyue.wljmod;
 
 import basemod.*;
 import basemod.abstracts.CustomRelic;
+import basemod.eventUtil.AddEventParams;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -13,7 +14,9 @@ import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.evacipated.cardcrawl.modthespire.lib.SpireSideload;
-import com.github.paopaoyue.wljmod.card.*;
+import com.github.paopaoyue.wljmod.card.AbstractWorkerCard;
+import com.github.paopaoyue.wljmod.card.AvatarHp;
+import com.github.paopaoyue.wljmod.card.LayoffAmount;
 import com.github.paopaoyue.wljmod.character.Wlj;
 import com.github.paopaoyue.wljmod.component.AvatarManager;
 import com.github.paopaoyue.wljmod.component.AvatarStrings;
@@ -131,8 +134,8 @@ public class WljMod implements PostInitializeSubscriber, EditCharactersSubscribe
         }));
         BaseMod.registerModBadge(badgeTexture, info.Name, Strings.join(Arrays.asList(info.Authors), ','), info.Description, settingsPanel);
 
-        BaseMod.addEvent("Wlj:Frog", FrogEvent.class, Exordium.ID, TheCity.ID);
-        BaseMod.addEvent("Wlj:Ceremony", CeremonyEvent.class, TheCity.ID, TheBeyond.ID);
+        BaseMod.addEvent(new AddEventParams.Builder(FrogEvent.ID, FrogEvent.class).playerClass(PlayerClassEnum.WLJ).dungeonIDs(Exordium.ID, TheCity.ID).create());
+        BaseMod.addEvent(new AddEventParams.Builder(CeremonyEvent.ID, CeremonyEvent.class).playerClass(PlayerClassEnum.WLJ).dungeonIDs(TheCity.ID, TheBeyond.ID).create());
     }
 
 
